@@ -12,7 +12,7 @@ Artisan::command('deploy', function () {
     // reset all changes
     $output = shell_exec('git reset --hard');
     $output = shell_exec('git pull origin main');
-    $output = shell_exec('composer install');
+    // $output = shell_exec('composer install');
     $output = shell_exec('php artisan migrate');
     $output = shell_exec('php artisan config:cache');
     $output = shell_exec('php artisan route:cache');
