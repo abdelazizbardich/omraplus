@@ -11,6 +11,10 @@
     "file": "assets/droid-arabic-kufi-C6Wv-IVi.woff",
     "src": "resources/fonts/woff/droid-arabic-kufi.woff"
   },
+  "resources/images/Kaaba.webp": {
+    "file": "assets/Kaaba-DxOYsQrj.webp",
+    "src": "resources/images/Kaaba.webp"
+  },
   "resources/images/logo.webp": {
     "file": "assets/logo-BDLVlnoD.webp",
     "src": "resources/images/logo.webp"
