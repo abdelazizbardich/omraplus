@@ -19,7 +19,7 @@
         <x-atoms.title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('welcome to our agency for the omrah in marrakech')"></x-atoms.title>
     </div>
     <x-atoms.spacer></x-atoms.spacer>
-    <div class="container m-auto flex justify-between items-start">
+    <div class="container m-auto flex justify-between items-start gap-12">
         <div class="w-4/12 flex items-start justify-center">
             <x-offer-card></x-offer-card>
         </div>

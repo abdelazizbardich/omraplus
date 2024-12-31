@@ -28,12 +28,12 @@
     "src": "resources/images/umrah.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CBhoEwvM.js",
+    "file": "assets/app-DBxJDp0p.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-70MILUFf.css"
+      "assets/app-DkFYyLS-.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",

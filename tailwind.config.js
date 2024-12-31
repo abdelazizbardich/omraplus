@@ -10,11 +10,7 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ["bein-black", ...defaultTheme.fontFamily.sans],
-            },
-        },
+        extend: {},
         colors: {
             transparent: "transparent",
             current: "currentColor",
@@ -26,6 +22,19 @@ export default {
             silver: "#ecebff",
             "bubble-gum": "#ff77e9",
             bermuda: "#78dcca",
+            black: {
+                50: "#f7f7f7",
+                100: "#e3e3e3",
+                200: "#c8c8c8",
+                300: "#a4a4a4",
+                400: "#818181",
+                500: "#666666",
+                600: "#515151",
+                700: "#434343",
+                800: "#383838",
+                900: "#000000",
+                950: "#000000",
+            },
             yellow: {
                 50: "#fffeea",
                 100: "#fffac5",
@@ -60,6 +69,7 @@ export default {
                 300: "#82f3b9",
                 400: "#45e393",
                 500: "#1ed779",
+                550: "#27d793",
                 600: "#11a85c",
                 700: "#11844a",
                 800: "#13683e",
@@ -80,6 +90,11 @@ export default {
                 950: "#020617",
             },
         },
+        fontFamily: {
+            "bein-black" : ["bein-black"],
+            "bein-normal" : ["bein-normal"],
+            "droid-arabic-kufi" : ["droid-arabic-kufi"],
+          }
     },
     plugins: [],
 };

@@ -1,12 +1,5 @@
-<div class="
-w-full 
-bg-blue-1000 
-hero-header
-bg-cover
-bg-center
-mb-12
-" style="background-image: url({{ Vite::asset('resources/images/hero-header.webp') }});">
-    <div class="relative z-10 container h-full mx-auto flex items-start justify-center flex-col pb-30">
+<div class="w-full bg-blue-1000 hero-header bg-cover bg-center mb-12" style="background-image: url({{ Vite::asset('resources/images/hero-header.webp') }});">
+    <div class="relative z-10 container h-full mx-auto flex items-start justify-center flex-col pb-28">
         <h1 class="drop-shadow-md text-white text-5xl leading-relaxed mb-5 font-bold">{{ __('hero header title') }} <br> {{ __('hero header title 2') }}</h1>
         <p class="text-white text-2xl leading-relaxed">{{ __('hero header description') }}</p>
     </div>
