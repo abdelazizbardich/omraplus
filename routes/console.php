@@ -9,19 +9,26 @@ Artisan::command('inspire', function () {
 
 
 Artisan::command('deploy', function () {
-    // reset all changes
+    // Reset all changes
+    $output = shell_exec('php artisan optimize:clear');
     $output = shell_exec('git reset --hard');
     $output = shell_exec('git pull origin main');
-    // $output = shell_exec('composer install');
+    $output = shell_exec('composer install');
     $output = shell_exec('php artisan migrate');
     $output = shell_exec('php artisan config:cache');
     $output = shell_exec('php artisan route:cache');
     $output = shell_exec('php artisan view:cache');
-    // $output = shell_exec('php artisan queue:restart');
+    $output = shell_exec('php artisan queue:restart');
     $output = shell_exec('php artisan optimize');
-    // move .htaccess file to public folder
-    $output = shell_exec('cp ../deploy-files/.htaccess ./.htaccess');
-    // move .env file to root folder
     $output = shell_exec('cp ../deploy-files/.env.production ./.env');
     $this->comment($output);
 })->purpose('Deploy the latest changes from GitHub');
+
+
+Artisan::command('down-serve', function () {
+    // reset all changes
+    $output = shell_exec('php artisan up');
+    $output = shell_exec('php artisan down --with-secret --secret=pass');
+    $output = shell_exec('php artisan serve');
+    $this->comment($output);
+})->purpose('Rollback the latest changes from GitHub');
