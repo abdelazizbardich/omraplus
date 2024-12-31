@@ -66,7 +66,7 @@
             <hr class="border-b-2 border-white w-20 mx-auto mb-5" />
             <h1 class="text-4xl font-bold text-white">@yield('code')</h1>
             <p class="mt-2 text-lg text-white">@yield('title')!</p>
-            <p class="mt-2 text-lg text-white block w-6/12">@yield('message')</p>
+            <p class="mt-2 text-lg text-white block">@yield('message')</p>
         </div>
     </div>
 </body>

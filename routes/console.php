@@ -36,10 +36,9 @@ Artisan::command('deploy', function () {
 })->purpose('Deploy the latest changes from GitHub');
 
 
-Artisan::command('down-serve', function () {
+Artisan::command('stop', function () {
     // reset all changes
     $output = shell_exec('php artisan up');
     $output = shell_exec('php artisan down --with-secret --secret=pass');
-    $output = shell_exec('php artisan serve');
     $this->comment($output);
 })->purpose('Rollback the latest changes from GitHub');
