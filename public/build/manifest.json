@@ -23,13 +23,17 @@
     "file": "assets/logo-BDLVlnoD.webp",
     "src": "resources/images/logo.webp"
   },
+  "resources/images/umrah.jpg": {
+    "file": "assets/umrah-CA_nbRNO.jpg",
+    "src": "resources/images/umrah.jpg"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-HlaO8aQP.js",
+    "file": "assets/app-CBhoEwvM.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-Dk1eg1GP.css"
+      "assets/app-70MILUFf.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
