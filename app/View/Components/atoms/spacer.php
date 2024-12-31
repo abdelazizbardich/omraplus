@@ -6,21 +6,20 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class text-offer-card extends Component
+class spacer extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
-    {
-        //
-    }
+    public function __construct(public string $size = "0"){}
 
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
-        return view('components.atoms.text-offer-card');
+        return view('components.atoms.spacer', [
+            'size' => $this->size
+        ]);
     }
 }

@@ -4,6 +4,7 @@ bg-blue-1000
 hero-header
 bg-cover
 bg-center
+mb-12
 " style="background-image: url({{ Vite::asset('resources/images/hero-header.webp') }});">
     <div class="relative z-10 container h-full mx-auto flex items-start justify-center flex-col pb-30">
         <h1 class="drop-shadow-md text-white text-5xl leading-relaxed mb-5 font-bold">{{ __('hero header title') }} <br> {{ __('hero header title 2') }}</h1>
@@ -15,7 +16,7 @@ bg-center
                 {{__('fast booking')}}
             </div>
             <div class="w-2/12">
-                <x-atoms.select name="month" :label="__('the month')" :options="['January','February','March','April','May','June','July','August','September','October','November','December']"></x-atoms.select>
+                <x-atoms.select name="month" :label="__('chose the omra')" :options="['January','February','March','April','May','June','July','August','September','October','November','December']"></x-atoms.select>
             </div>
             <div class="w-2/12">
                 <x-atoms.select name="month" :label="__('travlers count')" :options="[1,2,3,4,5,6]"></x-atoms.select>
