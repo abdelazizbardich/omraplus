@@ -55,7 +55,7 @@
     
     <!-- CSRF token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <!-- Styles -->
     @vite('resources/js/app.js')
 </head>

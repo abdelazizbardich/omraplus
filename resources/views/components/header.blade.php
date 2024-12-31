@@ -26,6 +26,7 @@
                 <a href="{{ route('home') }}" class="px-4 border-solid border-e h-24 flex items-center justify-center border-blue-1000 text-white header-nav-btn">{{__('Ramadan omra')}}</a>
                 <a href="{{ route('home') }}" class="px-4 border-solid border-e h-24 flex items-center justify-center border-blue-1000 text-white header-nav-btn">{{__('Personalizd omra')}}</a>
                 <a href="{{ route('home') }}" class="px-4 border-solid border-e h-24 flex items-center justify-center border-blue-1000 text-white header-nav-btn">{{__('Hadj 2025')}}</a>
+                <a href="{{ route('home') }}" class="px-4 border-solid border-e h-24 flex items-center justify-center border-blue-1000 text-white header-nav-btn">{{__('Request e-visa')}}</a>
                 <a href="{{ route('home') }}" class="px-4 border-solid border-e h-24 flex items-center justify-center border-blue-1000 text-white header-nav-btn">{{__('Contact us')}}</a>
             </div>
         </div>

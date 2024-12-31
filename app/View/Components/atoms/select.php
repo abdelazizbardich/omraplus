@@ -11,7 +11,16 @@ class select extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public string $name,
+        public string $label,
+        public array $options,
+        public string $value = '',
+        public string $class = '',
+        public string $id = '',
+        public bool $required = false,
+        public string $placeholder = '',
+    )
     {
         //
     }
@@ -21,6 +30,17 @@ class select extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.atoms.select');
+        return view('components.atoms.select',
+        [
+            'name' => $this->name,
+            'label' => $this->label,
+            'options' => $this->options,
+            'value' => $this->value,
+            'class' => $this->class,
+            'id' => $this->id,
+            'required' => $this->required,
+            'placeholder' => $this->placeholder,
+        ]
+    );
     }
 }
