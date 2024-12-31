@@ -14,4 +14,8 @@
         <x-atoms.text-offer-card :description="__('Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('24/7 support service')"></x-atoms.text-offer-card>
     </div>
 </div>
+<x-atoms.spacer></x-atoms.spacer>
+<div class="container m-auto flex justify-between items-start">
+    <x-atoms.title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('welcome to our agency for the omrah in marrakech')"></x-atoms.title>
+</div>
 @endsection
