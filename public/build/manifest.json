@@ -1,0 +1,32 @@
+{
+  "resources/fonts/woff/bein-black.woff": {
+    "file": "assets/bein-black-DgIw4-Hw.woff",
+    "src": "resources/fonts/woff/bein-black.woff"
+  },
+  "resources/fonts/woff/bein-normal.woff": {
+    "file": "assets/bein-normal-6Drpe53X.woff",
+    "src": "resources/fonts/woff/bein-normal.woff"
+  },
+  "resources/fonts/woff/droid-arabic-kufi.woff": {
+    "file": "assets/droid-arabic-kufi-C6Wv-IVi.woff",
+    "src": "resources/fonts/woff/droid-arabic-kufi.woff"
+  },
+  "resources/images/logo.webp": {
+    "file": "assets/logo-BDLVlnoD.webp",
+    "src": "resources/images/logo.webp"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BHyXDWtw.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-C9LKVZu3.css"
+    ],
+    "assets": [
+      "assets/bein-black-DgIw4-Hw.woff",
+      "assets/bein-normal-6Drpe53X.woff",
+      "assets/droid-arabic-kufi-C6Wv-IVi.woff"
+    ]
+  }
+}
