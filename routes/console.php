@@ -9,13 +9,12 @@ Artisan::command('inspire', function () {
 
 
 Artisan::command('deploy', function () {
-    // Reset all changes
         logger('Deploying the latest changes from GitHub');
     $output = shell_exec('php artisan optimize:clear');
         logger("php artisan optimize:clear =>".$output);
-    // $output = shell_exec('git reset --hard');
+    $output = shell_exec('git reset --hard');
         logger("git reset --hard =>".$output);
-    // $output = shell_exec('git pull origin main');
+    $output = shell_exec('git pull origin main');
         logger("git pull origin main =>".$output);
     $output = shell_exec('composer install');
         logger("composer install =>".$output);
