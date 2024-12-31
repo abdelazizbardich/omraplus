@@ -34,8 +34,8 @@ body {
     .header-nav-btn-active {
         @apply after:translate-y-0;
     }
-    .hero-header{
+    .hero-header {
+        @apply relative after:content-[''] after:h-full after:absolute after:left-0 after:bottom-0 after:w-full after:bg-gradient-to-t after:bg-midnight after:opacity-60 z-0;
         height: 600px;
-        @apply relative after:content-[''] after:h-full after:absolute after:left-0 after:bottom-0 after:w-full after:bg-gradient-to-t after:bg-midnight after:opacity-60 z-0
     }
 }

@@ -24,12 +24,12 @@
     "src": "resources/images/logo.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-Cdo7bugR.js",
+    "file": "assets/app-HlaO8aQP.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-5JNU-Vd3.css"
+      "assets/app-Dk1eg1GP.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
