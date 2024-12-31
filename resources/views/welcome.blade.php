@@ -26,7 +26,7 @@
     <meta name="twitter:site" content="@agenceomramarrakech">
     
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     
@@ -54,7 +54,7 @@
     @vite('resources/js/app.js')
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased" style="background-image: url('{{ Vite::asset('resources/images/Kaaba.webp') }}'); background-blend-mode: overlay; background-size: cover; background-position: center; background-attachment: fixed;">
     <div class="min-h-screen flex items-center justify-center flex-col">
         <div class="">
             <img src="{{ Vite::asset('resources/images/logo.webp') }}" alt="{{ __(config('app.name')) }} {{__('logo')}}" />
