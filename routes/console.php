@@ -10,17 +10,29 @@ Artisan::command('inspire', function () {
 
 Artisan::command('deploy', function () {
     // Reset all changes
+        logger('Deploying the latest changes from GitHub');
     $output = shell_exec('php artisan optimize:clear');
-    $output = shell_exec('git reset --hard');
-    $output = shell_exec('git pull origin main');
+        logger("php artisan optimize:clear =>".$output);
+    // $output = shell_exec('git reset --hard');
+        logger("git reset --hard =>".$output);
+    // $output = shell_exec('git pull origin main');
+        logger("git pull origin main =>".$output);
     $output = shell_exec('composer install');
+        logger("composer install =>".$output);
     $output = shell_exec('php artisan migrate');
+        logger("php artisan migrate =>".$output);
     $output = shell_exec('php artisan config:cache');
+        logger("php artisan config:cache =>".$output);
     $output = shell_exec('php artisan route:cache');
+        logger("php artisan route:cache =>".$output);
     $output = shell_exec('php artisan view:cache');
+        logger("php artisan view:cache =>".$output);
     $output = shell_exec('php artisan queue:restart');
+        logger("php artisan queue:restart =>".$output);
     $output = shell_exec('php artisan optimize');
+        logger("php artisan optimize =>".$output);
     $output = shell_exec('cp ../deploy-files/.env.production ./.env');
+        logger("copy .env.production to .env =>".$output);
     $this->comment($output);
 })->purpose('Deploy the latest changes from GitHub');
 
