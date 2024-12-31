@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* import fonts from fonts woff folder */
+@font-face {
+    font-family: 'bein-black';
+    font-style: black;
+    font-weight: 900;
+    src: url('../fonts/woff/bein-black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'bein-normal';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/woff/bein-normal.woff') format('woff');
+}
+@font-face {
+    font-family: 'droid-arabic-kufi';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/woff/droid-arabic-kufi.woff') format('woff');
+}
+
+
+
+body {
+    background-color: #0129c7;
+    font-family: 'droid-arabic-kufi', sans-serif !important;
+}

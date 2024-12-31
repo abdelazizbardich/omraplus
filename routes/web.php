@@ -3,6 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
+$locale = App::currentLocale();
+ 
+if (App::isLocale('en')) {
+    // ...
+}
+
+// set Defualt language
+App::setLocale('ar');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
