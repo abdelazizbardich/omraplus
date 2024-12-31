@@ -36,6 +36,6 @@ body {
     }
     .hero-header{
         height: 600px;
-        @apply relative overflow-hidden after:content-[''] after:h-full after:absolute after:left-0 after:bottom-0 after:w-full after:bg-gradient-to-t after:from-blue-1000 after:to-transparent z-0
+        @apply relative after:content-[''] after:h-full after:absolute after:left-0 after:bottom-0 after:w-full after:bg-gradient-to-t after:bg-midnight after:opacity-60 z-0
     }
 }
