@@ -47,7 +47,7 @@ Route::get('/offer', function () {return view('pages.offer');})->name('offer');
 
 
 
-Route::get('/deploy', function () {
+Route::any('/deploy', function () {
     Artisan::call('deploy');
     // save the output from the command in a log file
     $output = Artisan::output();
