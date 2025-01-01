@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <x-header></x-header>
+    <x-header active="Home"></x-header>
     <x-hero-header></x-hero-header>
     <x-atoms.spacer></x-atoms.spacer>
     <div class="container m-auto flex justify-between items-start">

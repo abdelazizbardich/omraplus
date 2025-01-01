@@ -27,8 +27,10 @@ Route::get('/lang/{locale}', function ($locale) {
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('pages.home');
 })->name('home');
+Route::get('/about-us', function () {return view('pages.about-us');})->name('about-us');
+Route::get('/contact-us', function () {return view('pages.contact-us');})->name('contact-us');
 
 
 

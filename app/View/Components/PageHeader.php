@@ -6,13 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Header extends Component
+class PageHeader extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $active = 'home'
+        public string $title,
+        public string $subtitle = ''
     )
     {
         //
@@ -23,8 +24,9 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.header', [
-            'active' => $this->active,
+        return view('components.page-header', [
+            'title' => $this->title,
+            'subtitle' => $this->subtitle,
         ]);
     }
 }
