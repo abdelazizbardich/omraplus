@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class LanguageSwitcher extends Component
+class ThemeSwitcher extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class LanguageSwitcher extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.language-switcher');
+        return view('components.atoms.theme-switcher');
     }
 }
