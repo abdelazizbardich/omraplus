@@ -55,7 +55,7 @@
     @vite('resources/js/app.js')
 </head>
 
-<body class="font-sans antialiased"
+<body class="font-sans antialiased bg-blue-950"
     style="background-image: url('{{ Vite::asset('resources/images/Kaaba.webp') }}'); background-blend-mode: overlay; background-size: cover; background-position: center; background-attachment: fixed;">
     <div class="min-h-screen flex items-center justify-center flex-col">
         <div class="">

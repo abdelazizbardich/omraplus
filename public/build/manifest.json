@@ -1,8 +1,4 @@
 {
-  "resources/fonts/droid-arabic-kufi-black.ttf": {
-    "file": "assets/droid-arabic-kufi-black-B8EFdGcs.ttf",
-    "src": "resources/fonts/droid-arabic-kufi-black.ttf"
-  },
   "resources/fonts/woff/bein-black.woff": {
     "file": "assets/bein-black-DgIw4-Hw.woff",
     "src": "resources/fonts/woff/bein-black.woff"
@@ -95,6 +91,10 @@
     "file": "assets/transport icon-ea16Lpga.svg",
     "src": "resources/images/transport icon.svg"
   },
+  "resources/images/umrah-offer-main.webp": {
+    "file": "assets/umrah-offer-main-Q4EKWy9s.webp",
+    "src": "resources/images/umrah-offer-main.webp"
+  },
   "resources/images/umrah.jpg": {
     "file": "assets/umrah-1JK-a0od.jpg",
     "src": "resources/images/umrah.jpg"
@@ -104,12 +104,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CSW_ynK8.js",
+    "file": "assets/app-c57ah-P8.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-QuN1Ya0W.css"
+      "assets/app-DJEaIsuJ.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
