@@ -24,16 +24,20 @@
     "src": "resources/images/logo.webp"
   },
   "resources/images/umrah.jpg": {
-    "file": "assets/umrah-CA_nbRNO.jpg",
+    "file": "assets/umrah-1JK-a0od.jpg",
     "src": "resources/images/umrah.jpg"
   },
+  "resources/images/umrah2.jpg": {
+    "file": "assets/umrah2-D5ipDe6U.jpg",
+    "src": "resources/images/umrah2.jpg"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-DBxJDp0p.js",
+    "file": "assets/app-DGRwTCMZ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-DkFYyLS-.css"
+      "assets/app-C3G56HFq.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
