@@ -13,7 +13,13 @@
         <x-atoms.carousel :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-atoms.carousel>
     </div>
     <div class="w-4/12">
-        
+        <div class="border rounded-3xl p-6 w-full">
+            <span class="block opacity-60 text-base font-bold">17.000,00</span>
+            <span class="text-2xl block font-black">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
+            <span class="text-base font-black block">({{__('Price varies depending on the size of the collection')}})</span>
+            <div class="divider"></div>
+            
+        </div>
     </div>
 </div>
 <x-atoms.spacer></x-atoms.spacer>
