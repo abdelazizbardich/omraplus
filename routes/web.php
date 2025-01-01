@@ -53,5 +53,5 @@ Route::any('/deploy', function () {
     $output = Artisan::output();
     file_put_contents(storage_path('logs/deploy.log'), $output);
 
-    return redirect()->route('home');
+    return response(true);
 });
