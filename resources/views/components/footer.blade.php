@@ -1,3 +1,5 @@
-<div>
-    <!-- The best way to take care of the future is to take care of the present moment. - Thich Nhat Hanh -->
+<div class="w-full h-full bg-black-950">
+    <div class="container">
+        
+    </div>
 </div>

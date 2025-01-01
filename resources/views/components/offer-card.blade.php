@@ -15,17 +15,17 @@
             <span class="font-black text-lg w-full rounded-full w-fit m-auto mb-2 block">{{ __('Upcoming flights') }}</span>
             <div class="mb-3">
                 <div class="flex items-end justify-between w-full text-sm mb-1">
-                    <span class="font-semibold">12 نوفمبر</span>
+                    <span class="font-semibold text">12 نوفمبر</span>
                     <span class="dots flex-1 border-b-2 mb-1 mx-3 border-dotted border-blue-1000 h-full"></span>
-                    <span class="font-semibold">{{__('with')}} الخطوط الملكية المغربية</span>
+                    <span class="font-semibold text">{{__('with')}} الخطوط الملكية المغربية</span>
                 </div>
                 <div class="flex items-end justify-between w-full text-sm mb-1">
-                    <span class="font-semibold">13 نوفمبر</span>
+                    <span class="font-semibold text">13 نوفمبر</span>
                     <span class="dots flex-1 border-b-2 mb-1 mx-3 border-dotted border-blue-1000 h-full"></span>
-                    <span class="font-semibold">{{__('with')}} الخطوط الملكية المغربية</span>
+                    <span class="font-semibold text">{{__('with')}} الخطوط الملكية المغربية</span>
                 </div>
                 <div class="flex items-end justify-between w-full text-sm mb-1">
-                    <span class="font-semibold">14 نوفمبر</span>
+                    <span class="font-semibold text">14 نوفمبر</span>
                     <span class="dots flex-1 border-b-2 mb-1 mx-3 border-dotted border-blue-1000 h-full"></span>
                     <span class="font-semibold">{{__('with')}} الخطوط الملكية المغربية</span>
                 </div>

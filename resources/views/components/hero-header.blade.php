@@ -9,7 +9,7 @@
                 {{__('fast booking')}}
             </div>
             <div class="w-2/12">
-                <x-atoms.select name="month" :label="__('chose the omra')" :options="['January','February','March','April','May','June','July','August','September','October','November','December']"></x-atoms.select>
+                <x-atoms.select name="month" :label="__('chose the omra')" :options="[__('January Umrah'), __('February Umrah'), __('March Umrah'), __('April Umrah'), __('May Umrah'), __('June Umrah'), __('July Umrah'), __('August Umrah'), __('September Umrah'), __('October Umrah'), __('November Umrah'), __('December Umrah')]"></x-atoms.select>
             </div>
             <div class="w-2/12">
                 <x-atoms.select name="month" :label="__('travlers count')" :options="[1,2,3,4,5,6]"></x-atoms.select>

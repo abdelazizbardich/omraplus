@@ -31,25 +31,29 @@
         </div>
     </div>
     <x-atoms.spacer></x-atoms.spacer>
-    <div class="container m-auto flex justify-between items-start">
-        <x-atoms.title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('welcome to our agency for the omrah in marrakech')"></x-atoms.title>
+    <div class="bg-blue-50">
+        <x-atoms.spacer></x-atoms.spacer>
+        <div class="container m-auto flex justify-between items-start">
+            <x-atoms.title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('welcome to our agency for the omrah in marrakech')"></x-atoms.title>
+        </div>
+        <x-atoms.spacer></x-atoms.spacer>
+        <div class="container m-auto flex justify-between items-start gap-6">
+            <div class="w-3/12 flex items-start justify-center">
+                <x-offer-card-with-preview></x-offer-card>
+            </div>
+            <div class="w-3/12 flex items-start justify-center">
+                <x-offer-card-with-preview></x-offer-card>
+            </div>
+            <div class="w-3/12 flex items-start justify-center">
+                <x-offer-card-with-preview></x-offer-card>
+            </div>
+            <div class="w-3/12 flex items-start justify-center">
+                <x-offer-card-with-preview></x-offer-card>
+            </div>
+        </div>
+        <a href="#" class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">{{__('Discover more')}}</a>
+        <x-atoms.spacer></x-atoms.spacer>
     </div>
-    <x-atoms.spacer></x-atoms.spacer>
-    <div class="container m-auto flex justify-between items-start gap-6">
-        <div class="w-3/12 flex items-start justify-center">
-            <x-offer-card-with-preview></x-offer-card>
-        </div>
-        <div class="w-3/12 flex items-start justify-center">
-            <x-offer-card-with-preview></x-offer-card>
-        </div>
-        <div class="w-3/12 flex items-start justify-center">
-            <x-offer-card-with-preview></x-offer-card>
-        </div>
-        <div class="w-3/12 flex items-start justify-center">
-            <x-offer-card-with-preview></x-offer-card>
-        </div>
-    </div>
-    <a href="#" class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">{{__('Discover more')}}</a>
     <x-atoms.spacer></x-atoms.spacer>
     <x-atoms.spacer></x-atoms.spacer>
     <div class="container m-auto">
