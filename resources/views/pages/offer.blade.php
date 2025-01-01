@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <x-header active=""></x-header>
-<x-page-header :title="__('Offer')" />
+<x-page-header :title="__('Offer')" :breadcrumbs="[__('Home'),__('Offer')]"/>
 <x-atoms.spacer></x-atoms.spacer>
 <div class="container w-full mx-auto">
     <div class="w-full mb-12">

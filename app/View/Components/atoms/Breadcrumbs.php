@@ -1,20 +1,18 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class PageHeader extends Component
+class Breadcrumbs extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $title,
-        public string $subtitle = '',
-        public array $breadcrumbs = []
+        public array $links = []
     )
     {
         //
@@ -25,10 +23,8 @@ class PageHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.page-header', [
-            'title' => $this->title,
-            'subtitle' => $this->subtitle,
-            'breadcrumbs' => $this->breadcrumbs
+        return view('components.atoms.breadcrumbs', [
+            'links' => $this->links
         ]);
     }
 }
