@@ -15,6 +15,14 @@
     "file": "assets/Kaaba-DxOYsQrj.webp",
     "src": "resources/images/Kaaba.webp"
   },
+  "resources/images/evisa icon.svg": {
+    "file": "assets/evisa icon-CZi9Nn4y.svg",
+    "src": "resources/images/evisa icon.svg"
+  },
+  "resources/images/flight icon.svg": {
+    "file": "assets/flight icon-Bn8RCD9X.svg",
+    "src": "resources/images/flight icon.svg"
+  },
   "resources/images/help-desk.jpg": {
     "file": "assets/help-desk-Bqda6MSO.jpg",
     "src": "resources/images/help-desk.jpg"
@@ -23,9 +31,21 @@
     "file": "assets/hero-header-DwEDWNff.webp",
     "src": "resources/images/hero-header.webp"
   },
+  "resources/images/hotel icon.svg": {
+    "file": "assets/hotel icon-CHUny_i5.svg",
+    "src": "resources/images/hotel icon.svg"
+  },
   "resources/images/logo.webp": {
     "file": "assets/logo-BDLVlnoD.webp",
     "src": "resources/images/logo.webp"
+  },
+  "resources/images/mourchid icon.svg": {
+    "file": "assets/mourchid icon-UouNJRXl.svg",
+    "src": "resources/images/mourchid icon.svg"
+  },
+  "resources/images/transport icon.svg": {
+    "file": "assets/transport icon-ea16Lpga.svg",
+    "src": "resources/images/transport icon.svg"
   },
   "resources/images/umrah.jpg": {
     "file": "assets/umrah-1JK-a0od.jpg",
@@ -36,12 +56,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BZRLDnG9.js",
+    "file": "assets/app-C2o5NNn5.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-CNzj0F8m.css"
+      "assets/app-DFZIF7vI.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
