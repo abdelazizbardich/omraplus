@@ -51,4 +51,8 @@
     </div>
     <a href="#" class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">Discover more</a>
     <x-atoms.spacer></x-atoms.spacer>
+    <div class="container m-auto">
+        <x-help-desk></x-help-desk>
+    </div>
+    <x-atoms.spacer></x-atoms.spacer>
 @endsection

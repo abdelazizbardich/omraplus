@@ -15,6 +15,10 @@
     "file": "assets/Kaaba-DxOYsQrj.webp",
     "src": "resources/images/Kaaba.webp"
   },
+  "resources/images/help-desk.jpg": {
+    "file": "assets/help-desk-Bqda6MSO.jpg",
+    "src": "resources/images/help-desk.jpg"
+  },
   "resources/images/hero-header.webp": {
     "file": "assets/hero-header-DwEDWNff.webp",
     "src": "resources/images/hero-header.webp"
@@ -32,12 +36,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DGRwTCMZ.js",
+    "file": "assets/app-BZRLDnG9.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-C3G56HFq.css"
+      "assets/app-CNzj0F8m.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
