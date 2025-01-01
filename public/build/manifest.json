@@ -19,6 +19,10 @@
     "file": "assets/Kaaba-DxOYsQrj.webp",
     "src": "resources/images/Kaaba.webp"
   },
+  "resources/images/checked.svg": {
+    "file": "assets/checked-DAZhNu5q.svg",
+    "src": "resources/images/checked.svg"
+  },
   "resources/images/evisa icon.svg": {
     "file": "assets/evisa icon-CZi9Nn4y.svg",
     "src": "resources/images/evisa icon.svg"
@@ -104,12 +108,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-c57ah-P8.js",
+    "file": "assets/app-qpjbWTK8.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-DJEaIsuJ.css"
+      "assets/app-4nyFLQxe.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
