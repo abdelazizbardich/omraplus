@@ -14,9 +14,9 @@
     </div>
     <div class="w-4/12">
         <div class="border rounded-3xl p-6 w-full">
-            <span class="block opacity-60 text-base font-bold">17.000,00</span>
-            <span class="text-2xl block font-black">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
-            <span class="text-base font-black block">({{__('Price varies depending on the size of the collection')}})</span>
+            <span class="block opacity-45 text-base font-black">17.000,00 {{__('dh')}}</span>
+            <span class="text-3xl block font-black">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
+            <span class="text-base font-base block">({{__('Price varies depending on the size of the collection')}})</span>
             <div class="divider"></div>
             
         </div>
