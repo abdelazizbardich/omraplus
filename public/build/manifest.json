@@ -47,6 +47,14 @@
     "file": "assets/hotel icon-CHUny_i5.svg",
     "src": "resources/images/hotel icon.svg"
   },
+  "resources/images/kaaba-1.jpg": {
+    "file": "assets/kaaba-1-RfCmUxxG.jpg",
+    "src": "resources/images/kaaba-1.jpg"
+  },
+  "resources/images/kaaba-2.jpg": {
+    "file": "assets/kaaba-2-BItF2R2c.jpg",
+    "src": "resources/images/kaaba-2.jpg"
+  },
   "resources/images/logo-w.png": {
     "file": "assets/logo-w-BLOSxTs_.png",
     "src": "resources/images/logo-w.png"
@@ -92,12 +100,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DFxCH44f.js",
+    "file": "assets/app-CSW_ynK8.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-BHF_FNfc.css"
+      "assets/app-QuN1Ya0W.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
