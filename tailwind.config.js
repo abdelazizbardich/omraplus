@@ -34,6 +34,7 @@ export default {
                 800: "#383838",
                 900: "#000000",
                 950: "#000000",
+                1000: "#1c1c1c",
             },
             yellow: {
                 50: "#fffeea",
@@ -61,6 +62,7 @@ export default {
                 900: "#0046b3",
                 950: "#003581",
                 1000: "#001e49",
+                1100: "#000102",
             },
             emerald: {
                 50: "#f0fdf6",
@@ -107,6 +109,7 @@ export default {
             "bein-black" : ["bein-black"],
             "bein-normal" : ["bein-normal"],
             "droid-arabic-kufi" : ["droid-arabic-kufi"],
+            "droid-arabic-kufi" : ["droid-arabic-kufi-black"],
         },
         fontWeight: {
             thin: "100",

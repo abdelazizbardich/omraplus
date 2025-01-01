@@ -22,6 +22,12 @@
     font-weight: 400;
     src: url("../fonts/woff/droid-arabic-kufi.woff") format("woff");
 }
+@font-face {
+    font-family: "droid-arabic-kufi-black";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/woff/droid-arabic-kufi-black.woff") format("woff");
+}
 
 body {
     font-family: "droid-arabic-kufi", sans-serif !important;

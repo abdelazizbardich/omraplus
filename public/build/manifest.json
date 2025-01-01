@@ -1,4 +1,8 @@
 {
+  "resources/fonts/droid-arabic-kufi-black.ttf": {
+    "file": "assets/droid-arabic-kufi-black-B8EFdGcs.ttf",
+    "src": "resources/fonts/droid-arabic-kufi-black.ttf"
+  },
   "resources/fonts/woff/bein-black.woff": {
     "file": "assets/bein-black-DgIw4-Hw.woff",
     "src": "resources/fonts/woff/bein-black.woff"
@@ -6,6 +10,10 @@
   "resources/fonts/woff/bein-normal.woff": {
     "file": "assets/bein-normal-6Drpe53X.woff",
     "src": "resources/fonts/woff/bein-normal.woff"
+  },
+  "resources/fonts/woff/droid-arabic-kufi-black.woff": {
+    "file": "assets/droid-arabic-kufi-black-JyGIZ3XA.woff",
+    "src": "resources/fonts/woff/droid-arabic-kufi-black.woff"
   },
   "resources/fonts/woff/droid-arabic-kufi.woff": {
     "file": "assets/droid-arabic-kufi-C6Wv-IVi.woff",
@@ -39,6 +47,10 @@
     "file": "assets/hotel icon-CHUny_i5.svg",
     "src": "resources/images/hotel icon.svg"
   },
+  "resources/images/logo-w.png": {
+    "file": "assets/logo-w-BLOSxTs_.png",
+    "src": "resources/images/logo-w.png"
+  },
   "resources/images/logo.webp": {
     "file": "assets/logo-BDLVlnoD.webp",
     "src": "resources/images/logo.webp"
@@ -63,6 +75,10 @@
     "file": "assets/mourchid icon-UouNJRXl.svg",
     "src": "resources/images/mourchid icon.svg"
   },
+  "resources/images/plane-taking.svg": {
+    "file": "assets/plane-taking-DjFZUvgG.svg",
+    "src": "resources/images/plane-taking.svg"
+  },
   "resources/images/transport icon.svg": {
     "file": "assets/transport icon-ea16Lpga.svg",
     "src": "resources/images/transport icon.svg"
@@ -76,17 +92,18 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-C68BlvXm.js",
+    "file": "assets/app-SOR4qOUQ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-BjqVJwcI.css"
+      "assets/app-BwiBeRer.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
       "assets/bein-normal-6Drpe53X.woff",
-      "assets/droid-arabic-kufi-C6Wv-IVi.woff"
+      "assets/droid-arabic-kufi-C6Wv-IVi.woff",
+      "assets/droid-arabic-kufi-black-JyGIZ3XA.woff"
     ]
   }
 }

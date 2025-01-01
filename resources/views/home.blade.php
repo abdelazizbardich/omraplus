@@ -51,7 +51,7 @@
                 <x-offer-card-with-preview></x-offer-card>
             </div>
         </div>
-        <a href="#" class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">{{__('Discover more')}}</a>
+        <a href="{{ route('home') }}" class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">{{__('Discover more')}}</a>
         <x-atoms.spacer></x-atoms.spacer>
     </div>
     <x-atoms.spacer></x-atoms.spacer>
@@ -64,4 +64,7 @@
         <x-mission></x-mission>
     </div>
     <x-atoms.spacer></x-atoms.spacer>
+    <div class="w-ful">
+        <x-footer></x-footer>
+    </div>
 @endsection
