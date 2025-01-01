@@ -55,7 +55,7 @@
                 <img src="{{ Vite::asset('resources/images/logo-w.png') }}" class="h-8" alt="logo">
             </div>
             <div class="w-auto">
-                <img src="{{ Vite::asset('resources/images/logo-w.png') }}" class="h-8" alt="logo">
+                <img src="{{ Vite::asset('resources/images/payment method.png') }}" class="h-8" alt="logo">
             </div>
         </div>
     </div>
