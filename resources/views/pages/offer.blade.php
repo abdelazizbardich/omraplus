@@ -35,6 +35,24 @@
                 </div>
             </div>
         </div>
+        <x-atoms.spacer></x-atoms.spacer>
+        <div class="w-full">
+            <span class="block text-2xl font-bold w-full block mb-6">مميزات هذا العرض</span>
+            <div class="rounded-lg bg-emerald-200 p-6 grid grid-cols-3 grid-rows-2 gap-x-6 gap-y-6">
+                @foreach ([1,2,3,4,5,6] as $item)
+                    <div class="flex items-start justify-start w-full gap-3">
+                        <div class="bg-emerald-300 w-4/12 aspect-square rounded-xl mb-1 overflow-hidden p-1">
+                            <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
+                        </div>
+                        <div class="flex flex-col justify-start items-start w-8/12">
+                            <span class="text-lg font-semibold">الإقامة</span>
+                            <p class="text-xs line-clamp-4">يتم توفير الإقامة في فنادق مميزة بالقرب من المسجد الحرام والمعالم الدينية، لتجربة إقامة مريحة ولائقة برحلتكم.</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        <x-atoms.spacer></x-atoms.spacer>
     </div>
     <div class="w-4/12 h-auto sticky top-10">
         <div class="border rounded-3xl p-6 mb-6 w-full">
