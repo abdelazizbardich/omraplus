@@ -5,7 +5,7 @@
 <x-atoms.spacer></x-atoms.spacer>
 <div class="container w-full mx-auto">
     <div class="w-full mb-12">
-        <h1 class="text-3xl">عمرة شعبان - من19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
+        <h1 class="text-3xl font-bold">عمرة شعبان - من19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
     </div>
 </div>
 <div class="container w-full mx-auto flex gap-12 items-start relative">
@@ -13,16 +13,33 @@
         <x-atoms.carousel :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-atoms.carousel>
         <x-atoms.spacer></x-atoms.spacer>
         <div class="w-full">
-            <div class="rounded-t-xl px-6 py-3 pb-5 -mb-2 mb-6 w-full bg-emerald-300 text-base">
-            <span class="font-semibold">خط مباشر مع الخطوط الملكية المغربية</span>
+            <div class="rounded-t-xl px-6 py-3 pb-5 w-full bg-emerald-300 text-base">
+                <span class="font-semibold">خط مباشر مع الخطوط الملكية المغربية</span>
             </div>
-
+            <div class="-mt-3">
+                <div class="flex items-center justify-between w-full text-lg mb-3 px-6 py-4 bg-white border border-black-200 rounded-xl shadow-md">
+                    <span class="font-black text-lg">الذهاب</span>
+                    <span class="dots flex-1 border-b-2 mx-3 border-black-500 h-full"></span>
+                    <span class="flex items-center">
+                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}" class="w-8 h-8 me-3">
+                        <span class="font-semibold text-lg">19 فبراير 2024</span>
+                    </span>
+                </div>
+                <div class="flex items-center justify-between w-full text-lg mb-3 px-6 py-4 bg-white border border-black-200 rounded-xl shadow-md">
+                    <span class="font-black text-lg">العودة</span>
+                    <span class="dots flex-1 border-b-2 mx-3 border-black-500 h-full"></span>
+                    <span class="flex items-center">
+                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}" class="w-8 -scale-x-100 h-8 me-3">
+                        <span class="font-semibold text-lg">19 مارس 2024</span>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="w-4/12 h-auto sticky top-10">
         <div class="border rounded-3xl p-6 mb-6 w-full">
-            <span class="block opacity-45 text-base font-black">17.000,00 {{__('dh')}}</span>
-            <span class="text-3xl block font-black">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
+            <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums">17.000,00 {{__('dh')}}</span>
+            <span class="text-3xl block font-black lining-nums">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
             <span class="text-base font-base block">({{__('Price varies depending on the size of the collection')}})</span>
             <div class="divider"></div>
             <div class="mb-6">
@@ -56,7 +73,21 @@
         <div class="p-3 flex items-center justify-center w-full">
             <img src="{{ Vite::asset('resources/images/google-reviews.webp') }}" class="w-10/12" alt="">
         </div>
+        <x-atoms.spacer></x-atoms.spacer>
     </div>
 </div>
+<x-atoms.spacer></x-atoms.spacer>
+    <div class="container m-auto flex justify-between items-start">
+        <div class="w-4/12 flex items-start justify-center">
+            <x-atoms.text-offer-card :description="__('Effortless Booking Anywhere in Morocco')" :title="__('Book Umrah from anywhere in Morocco')"></x-atoms.text-offer-card>
+        </div>
+        <div class="w-4/12 flex items-start justify-center">
+            <x-atoms.text-offer-card :description="__('Exclusive Packages and Seasonal Offers at Competitive Prices')" :title="__('Special packages and offers throughout the year')"></x-atoms.text-offer-card>
+        </div>
+        <div class="w-4/12 flex items-start justify-center">
+            <x-atoms.text-offer-card :description="__('Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('24/7 support service')"></x-atoms.text-offer-card>
+        </div>
+    </div>
+    <x-atoms.spacer></x-atoms.spacer>
 <x-footer></x-footer>
 @endsection

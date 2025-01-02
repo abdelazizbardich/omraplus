@@ -109,7 +109,7 @@ export default {
             "bein-black" : ["bein-black"],
             "bein-normal" : ["bein-normal"],
             "droid-arabic-kufi" : ["droid-arabic-kufi"],
-            "droid-arabic-kufi" : ["droid-arabic-kufi-black"],
+            "droid-arabic-kufi-black" : ["droid-arabic-kufi-black"],
         },
         fontWeight: {
             thin: "100",

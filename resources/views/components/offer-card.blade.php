@@ -9,8 +9,8 @@
             <h1 class="font-black text-xl w-full rounded-full w-fit m-auto">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر
                 الخطوط السعودية</h1>
             <hr class="my-3">
-            <p class="text-sm mb-3">
-                {{__('Lorem ipsum')}}
+            <p class="text-sm mb-3 line-clamp-3">
+                {{__('Lorem ipsum')}} {{__('Lorem ipsum')}}
             </p>
             <span class="font-black text-lg w-full rounded-full w-fit m-auto mb-2 block">{{ __('Upcoming flights') }}</span>
             <div class="mb-3">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="flex flex-col mb-3">
-                <span class="text-2xl font-black">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
+                <span class="text-2xl font-black lining-nums">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
                 <span class="text-xl font-black">({{__('Price varies depending on the size of the collection')}})</span>
             </div>
             <div class="rounded-full bg-black-900 flex justify-between items-stretch w-full ms-1 shadow">

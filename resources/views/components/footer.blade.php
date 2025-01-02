@@ -5,7 +5,7 @@
                 
         </div>
         <div class="w-9/12 p-6 pe-0">
-            <p class="w-full text-base text-justify leading-relaxed">{{ __('Lorem ipsum') }} {{ __('Lorem ipsum') }} {{ __('Lorem ipsum') }}.</p>
+            <p class="w-full text-base text-justify leading-relaxed line-clamp-4">{{ __('Lorem ipsum') }} {{ __('Lorem ipsum') }} {{ __('Lorem ipsum') }}.</p>
         </div>
     </div>
     <div class="container opacity-95 m-auto flex justify-between items-center border-b py-8 border-white">

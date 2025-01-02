@@ -60,7 +60,7 @@
     @vite('resources/js/app.js')
 </head>
 
-<body>
+<body class="font-sans antialiased bg-white text-black-900">
     @yield('content')
 </body>
 </html>
