@@ -11,6 +11,13 @@
 <div class="container w-full mx-auto flex gap-12 items-start relative">
     <div class="w-8/12">
         <x-atoms.carousel :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-atoms.carousel>
+        <x-atoms.spacer></x-atoms.spacer>
+        <div class="w-full">
+            <div class="rounded-t-xl px-6 py-3 pb-5 -mb-2 mb-6 w-full bg-emerald-300 text-base">
+            <span class="font-semibold">خط مباشر مع الخطوط الملكية المغربية</span>
+            </div>
+
+        </div>
     </div>
     <div class="w-4/12 h-auto sticky top-10">
         <div class="border rounded-3xl p-6 mb-6 w-full">
