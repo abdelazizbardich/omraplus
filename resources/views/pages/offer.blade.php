@@ -8,20 +8,48 @@
         <h1 class="text-3xl">عمرة شعبان - من19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
     </div>
 </div>
-<div class="container w-full mx-auto flex gap-12">
+<div class="container w-full mx-auto flex gap-12 items-start relative">
     <div class="w-8/12">
         <x-atoms.carousel :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-atoms.carousel>
     </div>
-    <div class="w-4/12">
-        <div class="border rounded-3xl p-6 w-full">
+    <div class="w-4/12 h-auto sticky top-10">
+        <div class="border rounded-3xl p-6 mb-6 w-full">
             <span class="block opacity-45 text-base font-black">17.000,00 {{__('dh')}}</span>
             <span class="text-3xl block font-black">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
             <span class="text-base font-base block">({{__('Price varies depending on the size of the collection')}})</span>
             <div class="divider"></div>
-            
+            <div class="mb-6">
+                <span class="text-base font-base block mb-3 flex items-center">
+                    <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer" class="w-6 h-6 inline-block text-emerald-550 me-2">
+                    <span>
+                        حجز من أي منطقة في المغرب
+                    </span>
+                </span>
+                <span class="text-base font-base block mb-3 flex items-center">
+                    <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer" class="w-6 h-6 inline-block text-emerald-550 me-2">
+                    <span>
+                        مركز خدمة الزبناء متوفرة 24/7
+                    </span>
+                </span>
+                <span class="text-base font-base block mb-3 flex items-center">
+                    <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer" class="w-6 h-6 inline-block text-emerald-550 me-2">
+                    <span>
+                        خدمات عالية الجودة بأسعار تنافسية
+                    </span>
+                </span>
+            </div>
+            <div class="flex flex-col">
+                <button class="btn btn-lg text-xl rounded-xl hover:bg-yellow-600 hover:shadow-lg font-black bg-yellow-500 mb-3">إختر الباقة</button>
+                <button class="btn btn-lg text-xl rounded-xl hover:bg-emerald-600 hover:shadow-lg font-black text-white bg-emerald-550 mb-3">
+                    <em class="fa-brands fa-whatsapp text-3xl m1-3"></em> {{__('The Fast booking')}}
+                </button>
+                <button class="btn btn-lg text-xl rounded-xl border border-black-200 hover:shadow-lg font-black mb-3">لديك استفسار</button>
+            </div>
+        </div>
+        <div class="p-3 flex items-center justify-center w-full">
+            <img src="{{ Vite::asset('resources/images/google-reviews.webp') }}" class="w-10/12" alt="">
         </div>
     </div>
 </div>
-<x-atoms.spacer></x-atoms.spacer>
 <x-footer></x-footer>
 @endsection
