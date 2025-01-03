@@ -14,7 +14,7 @@
                 <span class="bg-black-900 w-20 h-16 me-3 rounded-md text-white block text-base text-center font-bold flex items-center justify-center flex-col leading-5"><span>7</span><span>{{__('Days')}}</span></span>
                 <h1 class="font-black text-lg w-full rounded-full w-fit m-auto">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
             </div>
-            <hr class="my-3 opacity-60">
+            <hr class="my-3 opacity-30">
             <div class="flex justify-between items-stretch mb-3 text-black-800 text-sm">
                 <div class="flex flex-col items-center">
                     <div class="from-yellow-200 to-yellow-300 bg-gradient-to-l h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
@@ -65,7 +65,7 @@
                     <span class="font-normal text-base">19 مارس 2024</span>
                 </div>
             </div>
-            <hr class="my-3 opacity-60">
+            <hr class="my-3 opacity-30">
             <div class="flex justify-between items-center mb-2">
                 <div class="flex flex-col">
                     <span class="text-xl font-black lining-nums">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
