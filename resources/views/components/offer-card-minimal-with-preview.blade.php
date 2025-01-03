@@ -17,7 +17,7 @@
             <hr class="my-3">
             <div class="flex justify-between items-stretch mb-2 text-black-800 text-sm">
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="from-yellow-200 to-yellow-300 bg-gradient-to-l h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span>الإقامة</span>
