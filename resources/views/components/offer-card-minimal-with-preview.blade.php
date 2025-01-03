@@ -12,7 +12,7 @@
         <div class="p-3">
             <div class="flex">
                 <span class="bg-black-900 w-20 h-16 me-3 rounded-md text-white block text-base text-center font-bold flex items-center justify-center flex-col leading-5"><span>7</span><span>{{__('Days')}}</span></span>
-                <h1 class="font-black text-lg w-full rounded-full w-fit m-auto">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
+                <h1 class="font-black text-base w-full rounded-full w-fit m-auto bg-black-800">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
             </div>
             <hr class="my-3">
             <div class="flex justify-between items-stretch mb-2">
