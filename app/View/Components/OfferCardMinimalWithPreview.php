@@ -15,7 +15,7 @@ class OfferCardMinimalWithPreview extends Component
         public bool $featured = false
     )
     {
-        //
+        // 
     }
 
     /**
