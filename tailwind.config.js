@@ -15,6 +15,7 @@ export default {
             transparent: "transparent",
             current: "currentColor",
             white: "#ffffff",
+            light: "#898989",
             purple: "#3f3cbb",
             midnight: "#121063",
             metal: "#565584",
@@ -35,6 +36,7 @@ export default {
                 900: "#000000",
                 950: "#000000",
                 1000: "#1c1c1c",
+                1100: "#24282d",
             },
             yellow: {
                 50: "#fffeea",

@@ -128,12 +128,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DZRG9UuL.js",
+    "file": "assets/app-B6w4tgUv.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-Cd-mug1q.css"
+      "assets/app-ChvfURYm.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
