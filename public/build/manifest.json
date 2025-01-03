@@ -60,7 +60,7 @@
     "src": "resources/images/kaaba-2.jpg"
   },
   "resources/images/logo-w.png": {
-    "file": "assets/logo-w-BLOSxTs_.png",
+    "file": "assets/logo-w-DOCBsBvS.png",
     "src": "resources/images/logo-w.png"
   },
   "resources/images/logo.webp": {
@@ -128,12 +128,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-B6w4tgUv.js",
+    "file": "assets/app-CDaI4xKi.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-ChvfURYm.css"
+      "assets/app-DwEcAtwy.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
