@@ -21,7 +21,7 @@
                         <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="aspect-square h-20" alt="Offer">
                         <div class="flex-1">
                             <span class="block text-sm mb-1 text-nowrap">الفندق في <span class="font-bold">مكة المكرمة</span>:</span>
-                            <span class="block px-3 py-2 text-lg text-nowrap font-black bg-emerald-300 rounded-xl w-fit mb-1">أبراج التيسير</span>
+                            <span class="block px-3 py-2 text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">أبراج التيسير</span>
                             <a href="#" class="hover:underline text-nowrap block text-xs w-fit">مشاهدة صور الفندق</a>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                         <img src="{{ Vite::asset('resources/images/media-hotel.webp') }}" class="aspect-square h-20" alt="Offer">
                         <div class="flex-1">
                             <span class="block text-sm mb-1 text-nowrap">الفندق في <span class="font-bold">المدينة المنورة</span>:</span>
-                            <span class="block px-3 py-2 text-lg text-nowrap font-black bg-emerald-300 rounded-xl w-fit mb-1">المنطقة المكزية</span>
+                            <span class="block px-3 py-2 text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">المنطقة المكزية</span>
                             <a href="#" class="hover:underline text-nowrap block text-xs w-fit">مشاهدة صور الفندق</a>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
             <div class="flex flex-col justify-between items-start border-s border-black-200 ms-6 ps-6">
                 <div class="w-full mb-6">
                     <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums">17.000,00 {{__('dh')}}</span>
-                    <span class="text-2xl block font-black lining-nums">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
+                    <span class="text-xl block font-black lining-nums"><span class="text-3xl">14.000,00</span> {{__('dh')}} {{__('For a person')}}</span>
                     <span class="text-sm font-base block">({{__('Price varies depending on the size of the collection')}})</span>
                 </div>
                 <div class="btn border-0 rounded-xl w-full from-yellow-600  bg-gradient-to-l to-yellow-500 shadow hover:shadow-md duration-300 text-nowrap shadow-yellow-700 hover:shadow-yellow-600 px-4 text-xl font-bein-black group duration-300 transition-colors cursor-pointer">
