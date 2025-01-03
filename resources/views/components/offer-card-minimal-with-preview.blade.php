@@ -15,7 +15,7 @@
                 <h1 class="font-black text-lg w-full rounded-full w-fit m-auto">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
             </div>
             <hr class="my-3">
-            <div class="flex justify-between items-stretch mb-2">
+            <div class="flex justify-between items-stretch mb-2 text-black-800">
                 <div class="flex flex-col items-center">
                     <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
