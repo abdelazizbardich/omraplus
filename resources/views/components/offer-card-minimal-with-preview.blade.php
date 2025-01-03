@@ -77,6 +77,7 @@
             </div>
         </div>
     </div>
+    @if($featured)
     <div class="overflow-hidden -mt-6 w-full flex flex-nowrap flex-col rounded-b-3xl border-t-0 border border-black-200 text-base">
         <span for="group-discount" class="from-yellow-500 pb-3 pt-9 text-lg bg-gradient-to-r to-yellow-600 px-6 w-full flex flex-nowrap text-nowrap flex-row justify-between items-center">
             <span class="font-semibold">
@@ -85,4 +86,5 @@
             <img src="{{ Vite::asset('resources/images/medal.webp') }}" class="aspect-square h-full object-contain" alt="Offer">
         </span>
     </div>
+    @endif
 </div>

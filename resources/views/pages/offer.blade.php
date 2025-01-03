@@ -137,7 +137,7 @@
 <x-atoms.spacer></x-atoms.spacer>
 <div class="container m-auto flex justify-between items-start gap-6">
     <div class="w-3/12 flex items-start justify-center">
-        <x-offer-card-minimal-with-preview></x-offer-card-minimal-with-preview>
+        <x-offer-card-minimal-with-preview :featured="true"></x-offer-card-minimal-with-preview>
     </div>
     <div class="w-3/12 flex items-start justify-center">
         <x-offer-card-minimal-with-preview></x-offer-card-minimal-with-preview>

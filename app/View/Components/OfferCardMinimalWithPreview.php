@@ -11,7 +11,9 @@ class OfferCardMinimalWithPreview extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public boolean $featured = false
+    )
     {
         //
     }
@@ -21,6 +23,10 @@ class OfferCardMinimalWithPreview extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.offer-card-minimal-with-preview');
+        return view('components.offer-card-minimal-with-preview',
+            [
+                'featured' => $this->featured
+            ]
+        );
     }
 }
