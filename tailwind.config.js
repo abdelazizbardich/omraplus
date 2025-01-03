@@ -16,6 +16,7 @@ export default {
             current: "currentColor",
             white: "#ffffff",
             light: "#898989",
+            "light-600": "#1a1d20",
             purple: "#3f3cbb",
             midnight: "#121063",
             metal: "#565584",
