@@ -70,57 +70,12 @@
         <x-atoms.spacer></x-atoms.spacer>
         <div class="w-full">
             <span class="block text-2xl font-bold w-full block mb-6">الحجوزات المتاحة</span>
-            <div class="rounded-t-xl px-6 py-3 pb-5 w-full bg-yellow-200 text-base">
-                <span class="pe-3 text-center font-semibold inline-block">البرنامج الإقتصادي</span>
-                <span class="border-e border-black-700"></span>
-                <span class="px-3 text-center font-normal inline-block">8 مقاعد</span>
-                <span class="border-e border-black-700"></span>
-                <span class="px-3 text-center font-normal inline-block">بدون وجبات</span>
-                <span class="border-e border-black-700"></span>
-                <span class="ps-3 font-normal inline-block">700 متر عن الحرم</span>
+            @foreach ([(object)["featured"=>true]] as $index=>$booking)
+            <div class="mb-6">
+                <x-booking-card :booking="$booking" :index="$index"></x-booking-card>
             </div>
-            <div class="-mt-3">
-                <div class="flex items-stretch justify-between w-full text-lg mb-3 px-6 py-4 bg-white border border-black-200 rounded-xl shadow-md">
-                    <div class="flex-1 pe-3 border-e border-black-200 h-full">
-                        <div class="flex w-full gap-x-3">
-                            <div class="flex flex-1 gap-3 px-3">
-                                <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="aspect-square h-full" alt="Offer">
-                                <div class="flex-1">
-                                    <span class="block text-base mb-3">الفندق في <span class="font-bold">مكة المكرمة</span>:</span>
-                                    <span class="block px-3 py-2 text-lg font-black bg-emerald-300 rounded-xl w-fit mb-1">أبراج التيسير</span>
-                                    <a href="#" class="hover:underline block text-xs w-fit">مشاهدة صور الفندق</a>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 gap-3 px-3">
-                                <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="aspect-square h-full" alt="Offer">
-                                <div class="flex-1">
-                                    <span class="block text-base mb-3">الفندق في <span class="font-bold">المدينة المنورة</span>:</span>
-                                    <span class="block px-3 py-2 text-lg font-black bg-emerald-300 rounded-xl w-fit mb-1">المنطقة المكزية</span>
-                                    <a href="#" class="hover:underline block text-xs w-fit">مشاهدة صور الفندق</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="flex justify-between items-center gap-3">
-                            <span class="underline w-2/6 underline-offset-3">اختر نوع الغرفة:</span>
-                            <label for="room-2" class="btn btn-outline h-auto w-1/6 py-2 text-wrap text-xl font-bold">غرفة<br>ثنائية</label>
-                            <label for="room-2" class="btn btn-outline h-auto w-1/6 py-2 text-wrap text-xl font-bold">غرفة<br>ثلاثية</label>
-                            <label for="room-2" class="btn btn-outline h-auto w-1/6 py-2 text-wrap text-xl font-bold">غرفة<br>رباعية</label>
-                            <label for="room-2" class="btn btn-outline h-auto w-1/6 py-2 text-wrap text-xl font-bold">غرفة<br>خماسية</label>
-                        </div>
-                    </div>
-                    <div class="ps-3 flex flex-col justify-between items-start">
-                        <div class="w-full mb-6">
-                            <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums">17.000,00 {{__('dh')}}</span>
-                            <span class="text-2xl block font-black lining-nums">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
-                            <span class="text-base font-base block">({{__('Price varies depending on the size of the collection')}})</span>
-                        </div>
-                        <div class="btn btn-lg border-0 rounded-xl w-full from-yellow-600  bg-gradient-to-l to-yellow-500 shadow hover:shadow-md duration-300 text-nowrap shadow-yellow-700 hover:shadow-yellow-600  py-2 px-4 text-2xl font-bein-black group duration-300 transition-colors cursor-pointer">
-                            <em class="text-xl fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('Booook now')}}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+            
         </div>
         <x-atoms.spacer></x-atoms.spacer>
         
@@ -158,7 +113,7 @@
             </div>
             <div class="flex flex-col">
                 <button
-                    class="btn btn-lg text-xl rounded-xl hover:bg-yellow-600 hover:shadow-lg font-black bg-yellow-500 mb-3">إختر
+                    class="btn btn-lg text-xl rounded-xl hover:bg-yellow-600 hover:shadow-lg font-black from-yellow-600  bg-gradient-to-l to-yellow-500 mb-3">إختر
                     الباقة</button>
                 <button
                     class="btn btn-lg text-xl rounded-xl hover:bg-emerald-600 hover:shadow-lg font-black text-white bg-emerald-550 mb-3">

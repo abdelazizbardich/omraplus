@@ -31,10 +31,10 @@
                     <span class="text-base font-black opacity-65">{{__('with')}} الخطوط الملكية المغربية</span>
                 </div>
                 <div class="flex items-end border-b justify-between w-full text-sm mb-2 pb-1">
-                <span class="flex items-center">
-                    <img src="{{ Vite::asset('resources/images/plane-taking.svg') }}" alt="{{__('Plane Taking Off')}}" class="w-8 h-8 me-1">
-                    <span class="font-black text-base text-emerald-550">14 نوفمبر</span>
-                </span>    
+                    <span class="flex items-center">
+                        <img src="{{ Vite::asset('resources/images/plane-taking.svg') }}" alt="{{__('Plane Taking Off')}}" class="w-8 h-8 me-1">
+                        <span class="font-black text-base text-emerald-550">14 نوفمبر</span>
+                    </span>    
                     <!-- <span class="dots flex-1 border-b-2 mb-1 mx-3 border-dotted border-blue-1000 h-full"></span> -->
                     <span class="text-base font-black opacity-65">{{__('with')}} الخطوط الملكية المغربية</span>
                 </div>

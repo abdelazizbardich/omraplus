@@ -67,6 +67,10 @@
     "file": "assets/logo-BDLVlnoD.webp",
     "src": "resources/images/logo.webp"
   },
+  "resources/images/medal.webp": {
+    "file": "assets/medal-DgKWPZem.webp",
+    "src": "resources/images/medal.webp"
+  },
   "resources/images/media-hotel.webp": {
     "file": "assets/media-hotel-dRn2Qkk4.webp",
     "src": "resources/images/media-hotel.webp"
@@ -124,12 +128,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CZF0NLFx.js",
+    "file": "assets/app-a5RwIg9e.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-qdytFVe4.css"
+      "assets/app-Vf0XYuQo.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
