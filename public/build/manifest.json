@@ -72,11 +72,11 @@
     "src": "resources/images/medal.webp"
   },
   "resources/images/media-hotel.webp": {
-    "file": "assets/media-hotel-dRn2Qkk4.webp",
+    "file": "assets/media-hotel-DVgETNdG.webp",
     "src": "resources/images/media-hotel.webp"
   },
   "resources/images/mekka-hotel.webp": {
-    "file": "assets/mekka-hotel-DjkQKmGK.webp",
+    "file": "assets/mekka-hotel-jg511CxQ.webp",
     "src": "resources/images/mekka-hotel.webp"
   },
   "resources/images/mission-1.jpg": {
@@ -128,12 +128,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DeCqti_a.js",
+    "file": "assets/app-Umvecq5s.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-B9mFwOt0.css"
+      "assets/app-A-dTyW9Q.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",

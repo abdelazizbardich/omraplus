@@ -18,52 +18,51 @@
             <div class="flex-1 h-full">
                 <div class="flex w-full gap-x-3 mb-2">
                     <div class="flex flex-1 gap-3 px-3">
-                        <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="aspect-square h-full" alt="Offer">
+                        <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="aspect-square h-20" alt="Offer">
                         <div class="flex-1">
-                            <span class="block text-base mb-1 text-nowrap">الفندق في <span class="font-bold">مكة المكرمة</span>:</span>
+                            <span class="block text-sm mb-1 text-nowrap">الفندق في <span class="font-bold">مكة المكرمة</span>:</span>
                             <span class="block px-3 py-2 text-lg text-nowrap font-black bg-emerald-300 rounded-xl w-fit mb-1">أبراج التيسير</span>
                             <a href="#" class="hover:underline text-nowrap block text-xs w-fit">مشاهدة صور الفندق</a>
                         </div>
                     </div>
                     <div class="flex flex-1 gap-3 px-3">
-                        <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="aspect-square h-full" alt="Offer">
+                        <img src="{{ Vite::asset('resources/images/media-hotel.webp') }}" class="aspect-square h-20" alt="Offer">
                         <div class="flex-1">
-                            <span class="block text-base mb-1 text-nowrap">الفندق في <span class="font-bold">المدينة المنورة</span>:</span>
+                            <span class="block text-sm mb-1 text-nowrap">الفندق في <span class="font-bold">المدينة المنورة</span>:</span>
                             <span class="block px-3 py-2 text-lg text-nowrap font-black bg-emerald-300 rounded-xl w-fit mb-1">المنطقة المكزية</span>
                             <a href="#" class="hover:underline text-nowrap block text-xs w-fit">مشاهدة صور الفندق</a>
                         </div>
                     </div>
                 </div>
-                <div class="divider m-0 p-0"></div>
+                <hr class="my-3 opacity-30">
                 <div class="flex justify-between items-center gap-3">
                     <span class="underline w-fit underline-offset-3 text-nowrap">اختر نوع الغرفة:</span>
                     <div class="h-auto w-full">
                         <input hidden class="peer" type="radio" name="room_type" id="room-2">
-                        <label for="room-2" class="peer-checked:bg-black-1000 peer-checked:text-white btn btn-outline h-auto w-full px-3 py-2 text-wrap text-xl font-bold">غرفة<br>ثنائية</label>
+                        <label for="room-2" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">غرفة ثنائية</label>
                     </div>
                     <div class="h-auto w-full">
                         <input hidden class="peer" type="radio" name="room_type" id="room-3">
-                        <label for="room-3" class="peer-checked:bg-black-1000 peer-checked:text-white btn btn-outline h-auto w-full px-3 py-2 text-wrap text-xl font-bold">غرفة<br>ثلاثية</label>
+                        <label for="room-3" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">غرفة ثلاثية</label>
                     </div>
                     <div class="h-auto w-full">
                         <input hidden class="peer" type="radio" name="room_type" id="room-4">
-                        <label for="room-4" class="peer-checked:bg-black-1000 peer-checked:text-white btn btn-outline h-auto w-full px-3 py-2 text-wrap text-xl font-bold">غرفة<br>رباعية</label>
+                        <label for="room-4" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">غرفة رباعية</label>
                     </div>
                     <div class="h-auto w-full">
                         <input hidden class="peer" type="radio" name="room_type" id="room-5">
-                        <label for="room-5" class="peer-checked:bg-black-1000 peer-checked:text-white btn btn-outline h-auto w-full px-3 py-2 text-wrap text-xl font-bold">غرفة<br>خماسية</label>
+                        <label for="room-5" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">غرفة خماسية</label>
                     </div>
                 </div>
             </div>
-            <div class="divider divider-horizontal"></div>
-            <div class="flex flex-col justify-between items-start">
+            <div class="flex flex-col justify-between items-start border-s border-black-200 ms-6 ps-6">
                 <div class="w-full mb-6">
                     <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums">17.000,00 {{__('dh')}}</span>
                     <span class="text-2xl block font-black lining-nums">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
-                    <span class="text-base font-base block">({{__('Price varies depending on the size of the collection')}})</span>
+                    <span class="text-sm font-base block">({{__('Price varies depending on the size of the collection')}})</span>
                 </div>
-                <div class="btn btn-lg border-0 rounded-xl w-full from-yellow-600  bg-gradient-to-l to-yellow-500 shadow hover:shadow-md duration-300 text-nowrap shadow-yellow-700 hover:shadow-yellow-600  py-2 px-4 text-2xl font-bein-black group duration-300 transition-colors cursor-pointer">
-                    <em class="text-xl fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('Booook now')}}
+                <div class="btn border-0 rounded-xl w-full from-yellow-600  bg-gradient-to-l to-yellow-500 shadow hover:shadow-md duration-300 text-nowrap shadow-yellow-700 hover:shadow-yellow-600 px-4 text-xl font-bein-black group duration-300 transition-colors cursor-pointer">
+                    <em class="text-base fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('Booook now')}}
                 </div>
             </div>
         </div>
