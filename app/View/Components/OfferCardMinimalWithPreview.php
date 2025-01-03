@@ -12,7 +12,7 @@ class OfferCardMinimalWithPreview extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public boolean $featured = false
+        public bool $featured = false
     )
     {
         //
