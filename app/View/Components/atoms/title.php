@@ -13,6 +13,7 @@ class title extends Component
      */
     public function __construct(
         public string $title,
+        public string $titleSize = '3xl',
         public string $subtitle = '',
     )
     {
@@ -26,7 +27,8 @@ class title extends Component
     {
         return view('components.atoms.title',[
             'title' => $this->title,
-            'subtitle' => $this->subtitle
+            'subtitle' => $this->subtitle,
+            'titleSize' => $this->titleSize
         ]);
     }
 }
