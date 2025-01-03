@@ -67,6 +67,14 @@
     "file": "assets/logo-BDLVlnoD.webp",
     "src": "resources/images/logo.webp"
   },
+  "resources/images/media-hotel.webp": {
+    "file": "assets/media-hotel-dRn2Qkk4.webp",
+    "src": "resources/images/media-hotel.webp"
+  },
+  "resources/images/mekka-hotel.webp": {
+    "file": "assets/mekka-hotel-DjkQKmGK.webp",
+    "src": "resources/images/mekka-hotel.webp"
+  },
   "resources/images/mission-1.jpg": {
     "file": "assets/mission-1-B7BQGrqM.jpg",
     "src": "resources/images/mission-1.jpg"
@@ -95,6 +103,10 @@
     "file": "assets/plane-taking-DjFZUvgG.svg",
     "src": "resources/images/plane-taking.svg"
   },
+  "resources/images/plane.webp": {
+    "file": "assets/plane-B10572BR.webp",
+    "src": "resources/images/plane.webp"
+  },
   "resources/images/transport icon.svg": {
     "file": "assets/transport icon-ea16Lpga.svg",
     "src": "resources/images/transport icon.svg"
@@ -112,12 +124,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CiZdRANJ.js",
+    "file": "assets/app-CZF0NLFx.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-tiwr3j_h.css"
+      "assets/app-qdytFVe4.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
