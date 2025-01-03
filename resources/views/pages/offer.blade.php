@@ -132,6 +132,25 @@
 </div>
 <x-atoms.spacer></x-atoms.spacer>
 <div class="container m-auto flex justify-between items-start">
+    <x-atoms.title :title="__('upcomming flights')"></x-atoms.title>
+</div>
+<x-atoms.spacer></x-atoms.spacer>
+<div class="container m-auto flex justify-between items-start gap-6">
+    <div class="w-3/12 flex items-start justify-center">
+        <x-offer-card-minimal-with-preview></x-offer-card-minimal-with-preview>
+    </div>
+    <div class="w-3/12 flex items-start justify-center">
+        <x-offer-card-minimal-with-preview></x-offer-card-minimal-with-preview>
+    </div>
+    <div class="w-3/12 flex items-start justify-center">
+        <x-offer-card-minimal-with-preview></x-offer-card-minimal-with-preview>
+    </div>
+    <div class="w-3/12 flex items-start justify-center">
+        <x-offer-card-minimal-with-preview></x-offer-card-minimal-with-preview>
+    </div>
+</div>
+<x-atoms.spacer></x-atoms.spacer>
+<div class="container m-auto flex justify-between items-start">
     <div class="w-4/12 flex items-start justify-center">
         <x-atoms.text-offer-card :description="__('Effortless Booking Anywhere in Morocco')" :title="__('Book Umrah from anywhere in Morocco')"></x-atoms.text-offer-card>
     </div>
