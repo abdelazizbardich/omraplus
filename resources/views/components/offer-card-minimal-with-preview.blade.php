@@ -1,6 +1,6 @@
 <div class="relative w-full h-full mt-8">
     <span class="bg-black-900 rounded-full py-1 px-10 text-white text-lg font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
-    <div class="hover:shadow-md duration-300 border border-slate-600 bg-white rounded-3xl w-full h-full mt-3 overflow-hidden relative">
+    <div class="hover:shadow-md duration-300 border border-slate-200 bg-white rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
             <div class="w-full h-60 bg-black-300">
                 <img src="{{ Vite::asset('resources/images/umrah2.jpg') }}" class="w-full h-full object-cover"  alt="umrah">
