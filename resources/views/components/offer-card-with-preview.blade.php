@@ -2,7 +2,7 @@
     <span class="bg-black-900 rounded-full py-1 px-10 text-white text-lg font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
     <div class="border border-slate-600 bg-white rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
-            <div class="w-full h-80 bg-black-300">
+            <div class="w-full h-60 bg-black-300">
                 <img src="{{ Vite::asset('resources/images/umrah2.jpg') }}" class="w-full h-full object-cover"  alt="umrah">
             </div>
             <span class="cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
@@ -17,34 +17,34 @@
             <hr class="my-3">
             <div class="flex justify-between items-stretch mb-2">
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="from-yellow-200 to-yellow-300 bg-gradient-to-l h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span>الإقامة</span>
+                    <span class="opacity-60">الإقامة</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="from-yellow-200 to-yellow-300 bg-gradient-to-l h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/flight icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span>الطيران</span>
+                    <span class="opacity-60">الطيران</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="from-yellow-200 to-yellow-300 bg-gradient-to-l h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/evisa icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span>التأشيرة</span>
+                    <span class="opacity-60">التأشيرة</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="from-yellow-200 to-yellow-300 bg-gradient-to-l h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/transport icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span>التنقل</span>
+                    <span class="opacity-60">التنقل</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="from-yellow-200 to-yellow-300 bg-gradient-to-l h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/mourchid icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span>المؤطرين</span>
+                    <span class="opacity-60">المؤطرين</span>
                 </div>
             </div>
             <span class="font-black text-lg w-full rounded-full w-fit m-auto underline-offset-8 underline mb-3 block">{{ __('Upcoming flights') }}</span>
