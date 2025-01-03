@@ -132,7 +132,7 @@
 </div>
 <x-atoms.spacer></x-atoms.spacer>
 <div class="container m-auto flex justify-between items-start">
-    <x-atoms.title :title="__('upcomming flights')"></x-atoms.title>
+    <x-atoms.title :title="__('upcomming flights')" :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')"></x-atoms.title>
 </div>
 <x-atoms.spacer></x-atoms.spacer>
 <div class="container m-auto flex justify-between items-start gap-6">
