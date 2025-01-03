@@ -65,6 +65,7 @@
                     <span class="font-normal opacity-60">{{__('with')}} الخطوط الملكية المغربية</span>
                 </div>
             </div>
+            <hr class="my-3 opacity-30">
             <div class="flex justify-between items-center mb-2">
                 <div class="flex flex-col">
                     <span class="font-black lining-nums"><span class="text-xl">14.000,00</span> {{__('dh')}} {{__('For a person')}}</span>
