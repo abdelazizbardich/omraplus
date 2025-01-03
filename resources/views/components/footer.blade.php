@@ -12,10 +12,10 @@
         <div class="w-3/12">
             <span class="block font-bold text-xl mb-3">{{__('Our Services')}}</span>
             <ul class="ps-6">
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Who are we?')}}</a></li>
-                <li><a href="{{ route('home') }}" class="text-light">{{__('Booking instructions')}}</a></li>
-                <li><a href="{{ route('home') }}" class="text-light">{{__('Privacy policy')}}</a></li>
-                <li><a href="{{ route('contact-us') }}" class="text-light">{{__('Contact us')}}</a></li>
+                <li><a href="{{route('about-us')}}" class="text-light">{{__('Who are we?')}}</a></li>
+                <li><a href="{{route('home')}}" class="text-light">{{__('Booking instructions')}}</a></li>
+                <li><a href="{{route('home')}}" class="text-light">{{__('Privacy policy')}}</a></li>
+                <li><a href="{{route('contact-us')}}" class="text-light">{{__('Contact us')}}</a></li>
             </ul>
         </div>
         <div class="w-3/12">

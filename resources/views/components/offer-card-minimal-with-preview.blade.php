@@ -1,6 +1,6 @@
 <div class="relative w-full h-full mt-8">
     <span class="bg-black-900 rounded-full py-1 px-10 text-white text-lg font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
-    <div class="hover:shadow-md duration-300 border border-black-200 bg-white rounded-3xl w-full h-full mt-3 overflow-hidden relative">
+    <div class="hover:shadow-md duration-300 border border-black-200 bg-white featured rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
             <div class="w-full h-60 bg-black-300">
                 <img src="{{ Vite::asset('resources/images/umrah2.jpg') }}" class="w-full h-full object-cover"  alt="umrah">
@@ -68,7 +68,7 @@
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-center mb-2">
                 <div class="flex flex-col">
-                    <span class="text-xl font-black lining-nums">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
+                    <span class=" font-black lining-nums"><span class="text-xl">14.000,00</span> {{__('dh')}} {{__('For a person')}}</span>
                     <span class="text-xs text-nowrap">({{__('Price varies depending on the size of the collection')}})</span>
                 </div>
                 <div class="bg-yellow-500 shadow w-fit text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
@@ -76,5 +76,13 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="overflow-hidden -mt-6 w-full flex flex-nowrap flex-col rounded-b-3xl border-t-0 border border-black-200 text-base">
+        <span for="group-discount" class="from-yellow-500 pb-3 pt-9 text-lg bg-gradient-to-r to-yellow-600 px-6 w-full flex flex-nowrap text-nowrap flex-row justify-between items-center">
+            <span class="font-semibold">
+                العرض الموصي به
+            </span>
+            <img src="{{ Vite::asset('resources/images/medal.webp') }}" class="aspect-square h-full object-contain" alt="Offer">
+        </span>
     </div>
 </div>
