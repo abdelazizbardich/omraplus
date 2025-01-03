@@ -49,10 +49,10 @@
                 <span class="text-md">({{__('Price varies depending on the size of the collection')}})</span>
             </div>
             <div class="flex justify-between gap-2">
-                <a href="#" class="text-base flex font-black justify-center bg-gradient-to-l from-emerald-500 to-emerald-600 items-center btn bg-emerald-550 flex-1 hover:shadow-lg">
+                <a href="#" class="text-black-900 text-base flex font-black justify-center bg-gradient-to-l from-emerald-500 to-emerald-600 items-center btn bg-emerald-550 flex-1 hover:shadow-lg">
                     <em class="fa-brands fa-whatsapp text-2xl me-2"></em> {{__('The Fast booking')}}
                 </a>
-                <a href="#" class="group text-base flex font-black justify-center items-center btn bg-gradient-to-l from-yellow-500 to-yellow-600 flex-1 hover:shadow-lg hover:">
+                <a href="#" class="group text-black-900 text-base flex font-black justify-center items-center btn bg-gradient-to-l from-yellow-500 to-yellow-600 flex-1 hover:shadow-lg hover:">
                     <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 duration-300"></em> {{__('Book now')}}
                 </a>
             </div>
