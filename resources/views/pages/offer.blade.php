@@ -124,9 +124,9 @@
                     استفسار</button>
             </div>
         </div>
-        <div class="p-3 flex items-center justify-center w-full">
+        <!-- <div class="p-3 flex items-center justify-center w-full">
             <img src="{{ Vite::asset('resources/images/google-reviews.webp') }}" class="w-10/12" alt="">
-        </div>
+        </div> -->
         <x-atoms.spacer></x-atoms.spacer>
     </div>
 </div>
