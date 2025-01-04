@@ -26,7 +26,7 @@
     </div>
     <div class="relative z-20 container w-full -mt-16 mx-auto">
         <form action="" class="rounded-2xl w-12/12 mx-auto bg-emerald-500 bg-gradient-to-l from-emerald-550 to-emerald-500 flex items-center p-6 flex items-center justify-between shadow-2xl">
-            <div class="w-24 text-2xl font-bold text-white">
+            <div class=" text-2xl font-bold text-nowrap text-white">
                 {{__('fast booking')}}
             </div>
             <div class="w-2/12">
@@ -38,7 +38,7 @@
             <div class="w-2/12">
                 <x-atoms.select name="month" :label="__('programe')" :options="[]"></x-atoms.select>
             </div>
-            <div class="w-3/12">
+            <div class="w-2/12">
                 <x-atoms.select name="month" :label="__('')" :options="[]"></x-atoms.select>
             </div>
             <div class="w-auto">
