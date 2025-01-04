@@ -118,8 +118,8 @@
         </form>
     </div>
     <div class="w-4/12 h-auto sticky top-10">
-        <div class="border rounded-3xl p-6 mb-6 w-full">
-            <div class="flex items-center gap-6">
+        <div class="border border-black-200 bg-white rounded-3xl p-6 mb-6 w-full">
+            <div class="flex items-center gap-6 mb-3">
                 <div class="w-4/12">
                     <img src="{{ Vite::asset('resources/images/help-desk.jpg') }}" class="rounded-2xl w-full aspect-square object-cover" alt="offer photo">
                 </div>
@@ -154,11 +154,10 @@
                 <span class="w-6/12 font-bold">1550 {{ __('dh') }}</span>
             </div>
             <hr class="my-3 opacity-30">
-            <div class="flex">
+            <div class="flex mb-4">
                 <span class="w-6/12">{{__('Total')}}:</span>
                 <span class="w-6/12 font-bold">54 {{ __('dh') }}</span>
             </div>
-            <hr class="my-3 opacity-30">
             <button class="w-full btn btn-lg text-xl rounded-xl hover:bg-yellow-600 hover:shadow-lg font-black from-yellow-600  bg-gradient-to-l to-yellow-500">{{ __('Book now') }}</button>
         </div>
         <x-atoms.spacer></x-atoms.spacer>

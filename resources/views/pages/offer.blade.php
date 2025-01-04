@@ -81,7 +81,7 @@
         
     </div>
     <div class="w-4/12 h-auto sticky top-10">
-        <div class="border rounded-3xl p-6 mb-6 w-full">
+        <div class="border border-black-200 bg-white rounded-3xl p-6 mb-6 w-full">
             <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums">17.000,00
                 {{__('dh')}}</span>
             <span class="text-3xl block font-black lining-nums">14.000,00 {{__('dh')}} {{__('For a person')}}</span>
