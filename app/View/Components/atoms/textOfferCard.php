@@ -15,7 +15,8 @@ class textOfferCard extends Component
         public string $title,
         public string $description,
         public string $buttonText = "",
-        public string $buttonLink = ""
+        public string $buttonLink = "",
+        public string $icon = ""
     )
     {
         //
@@ -31,7 +32,8 @@ class textOfferCard extends Component
             'title' => $this->title,
             'description' => $this->description,
             'buttonText' => $this->buttonText,
-            'buttonLink' => $this->buttonLink
+            'buttonLink' => $this->buttonLink,
+            'icon' => $this->icon
         ]
     );
     }
