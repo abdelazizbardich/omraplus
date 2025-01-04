@@ -88,8 +88,19 @@
                             </div>
                             <div class="flex gap-2">
                                 <img src="{{ Vite::asset('resources/images/wafa-bank.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
-                                <img src="{{ Vite::asset('resources/images/credit-card.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
                                 <img src="{{ Vite::asset('resources/images/popularbank.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-black-200 rounded-lg p-3 w-full mb-3 cursor-pointer hover:shadow-md h-16 flex items-center">
+                        <div class="flex items-center justify-between w-full">
+                            <div class="flex items-center">
+                                <input id="PAY_BY_CARD" type="radio" name="payment_way" value="PAY_BY_CARD" class="radio radio-info me-3 checked:bg-blue-950"/>
+                                <label for="PAY_BY_CARD">{{ __('Pay by Card') }}</label>
+                            </div>
+                            <div class="flex gap-2">
+                                <img src="{{ Vite::asset('resources/images/credit-card.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
 
                             </div>
                         </div>
