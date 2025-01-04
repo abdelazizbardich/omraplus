@@ -23,6 +23,10 @@
     "file": "assets/blog-post-DChHjhhC.jpg",
     "src": "resources/images/blog-post.jpg"
   },
+  "resources/images/booking.webp": {
+    "file": "assets/booking-BezrIu1n.webp",
+    "src": "resources/images/booking.webp"
+  },
   "resources/images/cachplus.jpg": {
     "file": "assets/cachplus-C6-WJulj.jpg",
     "src": "resources/images/cachplus.jpg"
@@ -34,6 +38,14 @@
   "resources/images/credit-card.jpg": {
     "file": "assets/credit-card-Dqwmicv5.jpg",
     "src": "resources/images/credit-card.jpg"
+  },
+  "resources/images/customer-offer.webp": {
+    "file": "assets/customer-offer-TxLk6uWK.webp",
+    "src": "resources/images/customer-offer.webp"
+  },
+  "resources/images/customer-service.webp": {
+    "file": "assets/customer-service-VJy-AP1q.webp",
+    "src": "resources/images/customer-service.webp"
   },
   "resources/images/evisa icon.svg": {
     "file": "assets/evisa icon-CZi9Nn4y.svg",
@@ -152,12 +164,12 @@
     "src": "resources/images/wafa-bank.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-fPYAEyJy.js",
+    "file": "assets/app-CwoUYTEt.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-CrN9ULuv.css"
+      "assets/app-CsHCUzOs.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",
