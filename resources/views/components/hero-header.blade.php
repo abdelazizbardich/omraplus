@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="relative z-20 container w-full -mt-16 mx-auto">
-        <form action="" class="rounded-2xl w-12/12 mx-auto bg-emerald-500 bg-gradient-to-l from-emerald-550 to-emerald-500 flex items-center p-6 flex items-center justify-between">
+        <form action="" class="rounded-2xl w-12/12 mx-auto bg-emerald-500 bg-gradient-to-l from-emerald-550 to-emerald-500 flex items-center p-6 flex items-center justify-between shadow-2xl">
             <div class="w-24 text-2xl font-bold text-white">
                 {{__('fast booking')}}
             </div>
