@@ -89,7 +89,7 @@
                             <div class="flex gap-2">
                                 <img src="{{ Vite::asset('resources/images/wafa-bank.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
                                 <img src="{{ Vite::asset('resources/images/credit-card.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
-                                <img src="{{ Vite::asset('resources/images/popularBank.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
+                                <img src="{{ Vite::asset('resources/images/popularbank.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
 
                             </div>
                         </div>
