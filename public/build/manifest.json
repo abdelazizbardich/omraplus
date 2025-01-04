@@ -19,6 +19,10 @@
     "file": "assets/Kaaba-DxOYsQrj.webp",
     "src": "resources/images/Kaaba.webp"
   },
+  "resources/images/blog-post.jpg": {
+    "file": "assets/blog-post-DChHjhhC.jpg",
+    "src": "resources/images/blog-post.jpg"
+  },
   "resources/images/checked.webp": {
     "file": "assets/checked-DSH1lPFd.webp",
     "src": "resources/images/checked.webp"
@@ -111,6 +115,10 @@
     "file": "assets/plane-B10572BR.webp",
     "src": "resources/images/plane.webp"
   },
+  "resources/images/site-avatar.jpg": {
+    "file": "assets/site-avatar-BzIZj2Fv.jpg",
+    "src": "resources/images/site-avatar.jpg"
+  },
   "resources/images/transport icon.svg": {
     "file": "assets/transport icon-ea16Lpga.svg",
     "src": "resources/images/transport icon.svg"
@@ -128,12 +136,12 @@
     "src": "resources/images/umrah2.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BjyPisuZ.js",
+    "file": "assets/app-CYDWVrBl.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-CF1qctdz.css"
+      "assets/app-n0B14zwv.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",

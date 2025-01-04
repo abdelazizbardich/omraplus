@@ -64,6 +64,25 @@
         <x-mission></x-mission>
     </div>
     <x-atoms.spacer></x-atoms.spacer>
+    <div class="container m-auto flex justify-between items-start">
+        <x-atoms.title :subtitle="__('')" :title="__('Our blog')"></x-atoms.title>
+    </div>
+    <x-atoms.spacer></x-atoms.spacer>
+    <div class="container m-auto flex justify-between items-start gap-8">
+        <div class="w-3/12 flex items-start justify-center">
+            <x-blog-card></x-blog-card>
+        </div>
+        <div class="w-3/12 flex items-start justify-center">
+            <x-blog-card></x-blog-card>
+        </div>
+        <div class="w-3/12 flex items-start justify-center">
+            <x-blog-card></x-blog-card>
+        </div>
+        <div class="w-3/12 flex items-start justify-center">
+            <x-blog-card></x-blog-card>
+        </div>
+    </div>
+    <x-atoms.spacer></x-atoms.spacer>
     <div class="w-ful">
         <x-footer></x-footer>
     </div>

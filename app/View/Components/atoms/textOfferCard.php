@@ -15,7 +15,8 @@ class textOfferCard extends Component
         public string $title,
         public string $description,
         public string $buttonText = "",
-        public string $buttonLink = ""
+        public string $buttonLink = "",
+        public string $icon = ""
     )
     {
         //
