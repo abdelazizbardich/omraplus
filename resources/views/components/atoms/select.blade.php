@@ -1,5 +1,5 @@
 <div class="grid items-center relative">
-  <select name="{{ $name }}" class="text-black-500 select appearance-none row-start-1 col-start-1 bg-slate-50 w-full rounded-lg border-gray-50 py-3 px-3">
+  <select name="{{ $name }}" class="text-black-500  appearance-none row-start-1 col-start-1 bg-slate-50 w-full rounded-lg border-gray-50 py-3 px-3">
     <option>{{$label}}</option>
     @foreach ($options as $option)
       <option value="{{$option}}">{{$option}}</option>
