@@ -31,3 +31,4 @@ Route::get('/', function () {
 Route::get('/about-us', function () {return view('pages.about-us');})->name('about-us');
 Route::get('/contact-us', function () {return view('pages.contact-us');})->name('contact-us');
 Route::get('/offer', function () {return view('pages.offer');})->name('offer');
+Route::get('/checkout', function () {return view('pages.checkout');})->name('checkout');

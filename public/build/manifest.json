@@ -23,9 +23,17 @@
     "file": "assets/blog-post-DChHjhhC.jpg",
     "src": "resources/images/blog-post.jpg"
   },
+  "resources/images/cachplus.jpg": {
+    "file": "assets/cachplus-C6-WJulj.jpg",
+    "src": "resources/images/cachplus.jpg"
+  },
   "resources/images/checked.webp": {
     "file": "assets/checked-DSH1lPFd.webp",
     "src": "resources/images/checked.webp"
+  },
+  "resources/images/credit-card.jpg": {
+    "file": "assets/credit-card-Dqwmicv5.jpg",
+    "src": "resources/images/credit-card.jpg"
   },
   "resources/images/evisa icon.svg": {
     "file": "assets/evisa icon-CZi9Nn4y.svg",
@@ -115,6 +123,10 @@
     "file": "assets/plane-B10572BR.webp",
     "src": "resources/images/plane.webp"
   },
+  "resources/images/popularbank.jpg": {
+    "file": "assets/popularbank-IoZjQBw3.jpg",
+    "src": "resources/images/popularbank.jpg"
+  },
   "resources/images/site-avatar.jpg": {
     "file": "assets/site-avatar-BzIZj2Fv.jpg",
     "src": "resources/images/site-avatar.jpg"
@@ -135,13 +147,17 @@
     "file": "assets/umrah2-D5ipDe6U.jpg",
     "src": "resources/images/umrah2.jpg"
   },
+  "resources/images/wafa-bank.jpg": {
+    "file": "assets/wafa-bank-DSeDlFY6.jpg",
+    "src": "resources/images/wafa-bank.jpg"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-CYDWVrBl.js",
+    "file": "assets/app-fPYAEyJy.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-n0B14zwv.css"
+      "assets/app-CrN9ULuv.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",

@@ -61,9 +61,9 @@
                     <span class="text-xl block font-black lining-nums"><span class="text-3xl">14.000,00</span> {{__('dh')}} {{__('For a person')}}</span>
                     <span class="text-sm font-base block">({{__('Price varies depending on the size of the collection')}})</span>
                 </div>
-                <div class="btn border-0 rounded-xl w-full from-yellow-600  bg-gradient-to-l to-yellow-500 shadow hover:shadow-md duration-300 text-nowrap shadow-yellow-700 hover:shadow-yellow-600 px-4 text-xl font-bein-black group duration-300 transition-colors cursor-pointer">
+                <a href="{{ route('checkout') }}" class="btn border-0 rounded-xl w-full from-yellow-600  bg-gradient-to-l to-yellow-500 shadow hover:shadow-md duration-300 text-nowrap shadow-yellow-700 hover:shadow-yellow-600 px-4 text-xl font-bein-black group duration-300 transition-colors cursor-pointer">
                     <em class="text-base fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('Booook now')}}
-                </div>
+                </a>
             </div>
         </div>
         <input type="checkbox" class="peer" id="group-discount" hidden class="hidden">
