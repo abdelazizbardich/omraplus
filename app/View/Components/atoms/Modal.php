@@ -1,22 +1,21 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class OfferCardWithPreview extends Component
+class Modal extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        // index
+        public string $id = "#",
         public string $index = "0"
     )
     {
-        //
     }
 
     /**
@@ -24,8 +23,9 @@ class OfferCardWithPreview extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.offer-card-with-preview',
+        return view('components.atoms.modal',
         [
+            'id' => $this->id,
             'index' => $this->index
         ]);
     }

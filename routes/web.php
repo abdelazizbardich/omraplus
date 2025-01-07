@@ -23,12 +23,21 @@ Route::get('/lang/{locale}', function ($locale) {
 
 
 
+Route::middleware(['detect.device'])->group(function () {
 
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
-Route::get('/about-us', function () {return view('pages.about-us');})->name('about-us');
-Route::get('/contact-us', function () {return view('pages.contact-us');})->name('contact-us');
-Route::get('/offer', function () {return view('pages.offer');})->name('offer');
-Route::get('/checkout', function () {return view('pages.checkout');})->name('checkout');
+        Route::get('/', function () {
+            $device = request()->get('device');
+            if($device === 'mobile'){
+                return view('mobile.pages.home');
+            }else{
+                return view('pages.home');
+            }
+        })->name('home');
+        Route::get('/about-us', function () {return view('pages.about-us');})->name('about-us');
+        Route::get('/contact-us', function () {return view('pages.contact-us');})->name('contact-us');
+        Route::get('/offer', function () {return view('pages.offer');})->name('offer');
+        Route::get('/checkout', function () {return view('pages.checkout');})->name('checkout');
+        Route::get('/umrah-guide', function () {return view('pages.umrah-guide');})->name('umrah-guide');
+
+});
