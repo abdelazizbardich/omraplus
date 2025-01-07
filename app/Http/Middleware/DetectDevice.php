@@ -18,7 +18,7 @@ class DetectDevice
     public function handle(Request $request, Closure $next): Response
     {
         $detect = new MobileDetect;
-        
+
         if ($detect->isMobile() && !$detect->isTablet()) {
             $device =  'mobile';
         } elseif ($detect->isTablet()) {
