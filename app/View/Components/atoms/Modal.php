@@ -23,7 +23,7 @@ class Modal extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.atoms.modal',
+        return view('desktop.components.atoms.modal',
         [
             'id' => $this->id,
             'index' => $this->index

@@ -24,7 +24,7 @@ class OfferCardWithPreview extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.offer-card-with-preview',
+        return view('desktop.components.offer-card-with-preview',
         [
             'index' => $this->index
         ]);

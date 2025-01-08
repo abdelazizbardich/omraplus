@@ -21,6 +21,6 @@ class HelpDesk extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.help-desk');
+        return view('desktop.components.help-desk');
     }
 }

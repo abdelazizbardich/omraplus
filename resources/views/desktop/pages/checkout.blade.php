@@ -1,8 +1,8 @@
 @extends('desktop.layouts.app')
 @section('content')
-<x-desktop.header active=""></x-desktop.header>
-<x-desktop.page-header :title="__('confirmation & paimenent')" :breadcrumbs="[__('Home'), __('confirmation & paimenent')]" />
-<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+<x-desktop.components.header active=""></x-desktop.components.header>
+<x-desktop.components.page-header :title="__('confirmation & paimenent')" :breadcrumbs="[__('Home'), __('confirmation & paimenent')]" />
+<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
 <div class="container w-full mx-auto">
     <div class="w-full mb-12">
         <h1 class="text-3xl font-bold">{{ __('confirmation & paimenent')}}</h1>
@@ -160,9 +160,9 @@
             </div>
             <button class="w-full btn btn-lg text-xl rounded-xl hover:bg-yellow-600 hover:shadow-lg font-black from-yellow-600  bg-gradient-to-l to-yellow-500">{{ __('Book now') }}</button>
         </div>
-        <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+        <x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
     </div>
 </div>
-<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
-<x-desktop.footer></x-desktop.footer>
+<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
+<x-desktop.components.footer></x-desktop.components.footer>
 @endsection

@@ -23,7 +23,7 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.header', [
+        return view('desktop.components.header', [
             'active' => $this->active,
         ]);
     }

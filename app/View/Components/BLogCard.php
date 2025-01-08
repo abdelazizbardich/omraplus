@@ -21,6 +21,6 @@ class BlogCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.blog-card');
+        return view('desktop.components.blog-card');
     }
 }

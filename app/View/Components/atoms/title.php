@@ -24,7 +24,7 @@ class title extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.atoms.title',[
+        return view('desktop.components.atoms.title',[
             'title' => $this->title,
             'subtitle' => $this->subtitle
         ]);

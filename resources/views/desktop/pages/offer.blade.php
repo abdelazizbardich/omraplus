@@ -1,8 +1,8 @@
 @extends('desktop.layouts.app')
 @section('content')
-<x-desktop.header active=""></x-desktop.header>
-<x-desktop.page-header :title="__('Offer')" :breadcrumbs="[__('Home'), __('Offer')]" />
-<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+<x-desktop.components.header active=""></x-desktop.components.header>
+<x-desktop.components.page-header :title="__('Offer')" :breadcrumbs="[__('Home'), __('Offer')]" />
+<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
 <div class="container w-full mx-auto">
     <div class="w-full mb-12">
         <h1 class="text-3xl font-bold">عمرة شعبان - من19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
@@ -10,8 +10,8 @@
 </div>
 <div class="container w-full mx-auto flex gap-12 items-start relative">
     <div class="w-8/12">
-        <x-desktop.atoms.carousel :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-desktop.atoms.carousel>
-        <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+        <x-desktop.components.atoms.carousel :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-desktop.components.atoms.carousel>
+        <x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
         <div class="w-full">
             <div class="rounded-t-xl px-6 py-3 pb-5 w-full bg-emerald-300 text-base">
                 <span class="font-semibold">خط مباشر مع الخطوط الملكية المغربية</span>
@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+        <x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
         <div class="w-full">
             <span class="block text-2xl font-bold w-full block mb-6">مميزات هذا العرض</span>
             <div class="rounded-lg bg-emerald-200 p-6 grid grid-cols-3 grid-rows-2 gap-x-6 gap-y-6">
@@ -58,7 +58,7 @@
                 @endforeach
             </div>
         </div>
-        <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+        <x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
         <div class="w-full">
             <span class="block text-2xl font-bold w-full block mb-6">وصف العرض</span>
             <div class="text-base font-normal">
@@ -67,17 +67,17 @@
                     <p>تشمل الرحلة زيارة مكة المكرمة وأداء الطواف حول الكعبة، والسعي بين الصفا والمروة، بالإضافة إلى تخصيص وقت للصلاة والتضرع والدعاء في الأماكن المقدسة. كما تُعتبر عُمرة شعبان فرصة للتأمل والعبادة، وهي محببة لكثير من المسلمين الذين يسعون للاستعداد الروحي لشهر رمضان.</p>
             </div>
         </div>
-        <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+        <x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
         <div class="w-full">
             <span class="block text-2xl font-bold w-full block mb-6">الحجوزات المتاحة</span>
             @foreach ([(object)["featured"=>true]] as $index=>$booking)
             <div class="mb-6">
-                <x-desktop.booking-card :booking="$booking" :index="$index"></x-desktop.booking-card>
+                <x-desktop.components.booking-card :booking="$booking" :index="$index"></x-desktop.components.booking-card>
             </div>
             @endforeach
             
         </div>
-        <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+        <x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
         
     </div>
     <div class="w-4/12 h-auto sticky top-10">
@@ -127,41 +127,41 @@
         <!-- <div class="p-3 flex items-center justify-center w-full">
             <img src="{{ Vite::asset('resources/images/google-reviews.webp') }}" class="w-10/12" alt="">
         </div> -->
-        <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+        <x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
     </div>
 </div>
-<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
 <div class="container m-auto flex justify-between items-start">
-    <x-desktop.atoms.title :title="__('upcomming flights')" :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')"></x-desktop.atoms.title>
+    <x-desktop.components.atoms.title :title="__('upcomming flights')" :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')"></x-desktop.components.atoms.title>
 </div>
-<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
 <div class="container m-auto flex justify-between items-start gap-6">
     <div class="w-3/12 flex items-start justify-center">
-        <x-desktop.offer-card-minimal-with-preview featured="true"></x-desktop.offer-card-minimal-with-preview>
+        <x-desktop.components.offer-card-minimal-with-preview featured="true"></x-desktop.components.offer-card-minimal-with-preview>
     </div>
     <div class="w-3/12 flex items-start justify-center">
-        <x-desktop.offer-card-minimal-with-preview></x-desktop.offer-card-minimal-with-preview>
+        <x-desktop.components.offer-card-minimal-with-preview></x-desktop.components.offer-card-minimal-with-preview>
     </div>
     <div class="w-3/12 flex items-start justify-center">
-        <x-desktop.offer-card-minimal-with-preview></x-desktop.offer-card-minimal-with-preview>
+        <x-desktop.components.offer-card-minimal-with-preview></x-desktop.components.offer-card-minimal-with-preview>
     </div>
     <div class="w-3/12 flex items-start justify-center">
-        <x-desktop.offer-card-minimal-with-preview></x-desktop.offer-card-minimal-with-preview>
+        <x-desktop.components.offer-card-minimal-with-preview></x-desktop.components.offer-card-minimal-with-preview>
     </div>
 </div>
-<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
 <div class="container m-auto flex justify-between items-start">
     <div class="w-4/12 flex items-start justify-center">
-        <x-desktop.atoms.text-offer-card icon="{{ Vite::asset('resources/images/booking.webp') }}" :description="__('Effortless Booking Anywhere in Morocco')" :title="__('Book Umrah from anywhere in Morocco')"></x-desktop.atoms.text-offer-card>
+        <x-desktop.components.atoms.text-offer-card icon="{{ Vite::asset('resources/images/booking.webp') }}" :description="__('Effortless Booking Anywhere in Morocco')" :title="__('Book Umrah from anywhere in Morocco')"></x-desktop.components.atoms.text-offer-card>
     </div>
     <div class="w-4/12 flex items-start justify-center">
-        <x-desktop.atoms.text-offer-card icon="{{ Vite::asset('resources/images/customer-offer.webp') }}" :description="__('Exclusive Packages and Seasonal Offers at Competitive Prices')"
-            :title="__('Special packages and offers throughout the year')"></x-desktop.atoms.text-offer-card>
+        <x-desktop.components.atoms.text-offer-card icon="{{ Vite::asset('resources/images/customer-offer.webp') }}" :description="__('Exclusive Packages and Seasonal Offers at Competitive Prices')"
+            :title="__('Special packages and offers throughout the year')"></x-desktop.components.atoms.text-offer-card>
     </div>
     <div class="w-4/12 flex items-start justify-center">
-        <x-desktop.atoms.text-offer-card icon="{{ Vite::asset('resources/images/customer-service.webp') }}" :description="__('Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('24/7 support service')"></x-desktop.atoms.text-offer-card>
+        <x-desktop.components.atoms.text-offer-card icon="{{ Vite::asset('resources/images/customer-service.webp') }}" :description="__('Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('24/7 support service')"></x-desktop.components.atoms.text-offer-card>
     </div>
 </div>
-<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
-<x-desktop.footer></x-desktop.footer>
+<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
+<x-desktop.components.footer></x-desktop.components.footer>
 @endsection

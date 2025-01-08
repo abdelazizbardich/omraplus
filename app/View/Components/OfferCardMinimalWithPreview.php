@@ -23,7 +23,7 @@ class OfferCardMinimalWithPreview extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.offer-card-minimal-with-preview',
+        return view('desktop.components.offer-card-minimal-with-preview',
             [
                 'featured' => $this->featured
             ]

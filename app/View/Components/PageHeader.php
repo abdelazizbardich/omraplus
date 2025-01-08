@@ -25,7 +25,7 @@ class PageHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.page-header', [
+        return view('desktop.components.page-header', [
             'title' => $this->title,
             'subtitle' => $this->subtitle,
             'breadcrumbs' => $this->breadcrumbs
