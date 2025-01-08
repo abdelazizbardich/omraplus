@@ -21,6 +21,6 @@ class OfferCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.offer-card');
+        return view('components.desktop.offer-card');
     }
 }

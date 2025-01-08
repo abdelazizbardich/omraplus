@@ -23,7 +23,7 @@ class carousel extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.atoms.carousel', [
+        return view('components.desktop.atoms.carousel', [
             'images' => $this->images
         ]);
     }

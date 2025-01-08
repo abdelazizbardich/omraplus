@@ -21,6 +21,6 @@ class LanguageSwitcher extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.atoms.language-switcher');
+        return view('components.desktop.atoms.language-switcher');
     }
 }

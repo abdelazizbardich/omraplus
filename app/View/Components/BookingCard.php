@@ -29,7 +29,7 @@ class BookingCard extends Component
     public function render(): View|Closure|string
     {
         // alfabet letter by index
-        return view('components.booking-card', [
+        return view('components.desktop.booking-card', [
             'booking' => $this->booking,
             'index' => $this->index
         ]);

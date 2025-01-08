@@ -23,7 +23,7 @@ class Breadcrumbs extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.atoms.breadcrumbs', [
+        return view('components.desktop.atoms.breadcrumbs', [
             'links' => $this->links
         ]);
     }

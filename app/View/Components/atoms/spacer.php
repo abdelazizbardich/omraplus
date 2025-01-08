@@ -18,7 +18,7 @@ class spacer extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.atoms.spacer', [
+        return view('components.desktop.atoms.spacer', [
             'size' => $this->size
         ]);
     }

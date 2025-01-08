@@ -21,6 +21,6 @@ class ThemeSwitcher extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.atoms.theme-switcher');
+        return view('components.desktop.atoms.theme-switcher');
     }
 }

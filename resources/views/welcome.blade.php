@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('desktop.layouts.app')
 @section('content')
 <div class="min-h-screen flex items-center justify-center flex-col" style="background-color: #0129c7;background-image: url('{{ Vite::asset('resources/images/Kaaba.webp') }}'); background-blend-mode: overlay; background-size: cover; background-position: center; background-attachment: fixed;">
     <div class="">

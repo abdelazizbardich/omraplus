@@ -21,6 +21,6 @@ class HeroHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.hero-header');
+        return view('components.desktop.hero-header');
     }
 }

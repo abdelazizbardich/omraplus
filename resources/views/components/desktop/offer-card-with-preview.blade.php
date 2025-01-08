@@ -5,7 +5,7 @@
             <div class="w-full h-60 bg-black-300">
                 <img src="{{ Vite::asset('resources/images/umrah2.jpg') }}" class="w-full h-full object-cover"  alt="umrah">
             </div>
-            <span onclick="quick_view_modal_{{ $index }}.showModal()" class="quick_view_modal_{{ $index }} cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
+            <span class="cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
                 <em class="fa-regular fa-eye me-3"></em>{{__('Quick view')}}
             </span>
         </div>
@@ -78,4 +78,3 @@
         </div>
     </div>
 </div>
-<x-atoms.modal :id="'quick_view_modal'" :$index></x-atoms.modal>

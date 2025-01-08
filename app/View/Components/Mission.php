@@ -21,6 +21,6 @@ class Mission extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.mission');
+        return view('components.desktop.mission');
     }
 }

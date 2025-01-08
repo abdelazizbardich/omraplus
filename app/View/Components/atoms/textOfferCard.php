@@ -27,7 +27,7 @@ class textOfferCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.atoms.text-offer-card',
+        return view('components.desktop.atoms.text-offer-card',
         [
             'title' => $this->title,
             'description' => $this->description,
