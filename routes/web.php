@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-App::setLocale(session('locale', 'ar'));
+App::setLocale('ar');
 
 // save transate local value
 Route::get('/lang/{locale}', function ($locale) {
