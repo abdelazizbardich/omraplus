@@ -1,6 +1,7 @@
 <?php
 
-namespace App\View\Components\atoms;
+
+namespace App\View\Components\Desktop\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -23,7 +24,7 @@ class Modal extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.atoms.modal',
+        return view('components.desktop.atoms.modal',
         [
             'id' => $this->id,
             'index' => $this->index

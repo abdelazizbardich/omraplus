@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\mobile\compoents;
+namespace App\View\Components\Desktop;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -11,7 +11,9 @@ class Header extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public string $active = 'home'
+    )
     {
         //
     }
@@ -21,6 +23,8 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.mobile.compoents.header');
+        return view('components.desktop.header', [
+            'active' => $this->active,
+        ]);
     }
 }

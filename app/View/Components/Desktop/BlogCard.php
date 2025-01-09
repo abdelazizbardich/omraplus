@@ -1,19 +1,17 @@
 <?php
 
-namespace App\View\Components\atoms;
+namespace App\View\Components\Desktop;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Breadcrumbs extends Component
+class BlogCard extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public array $links = []
-    )
+    public function __construct()
     {
         //
     }
@@ -23,8 +21,6 @@ class Breadcrumbs extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.atoms.breadcrumbs', [
-            'links' => $this->links
-        ]);
+        return view('components.desktop.blog-card');
     }
 }

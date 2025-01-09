@@ -1,12 +1,13 @@
 <?php
 
-namespace App\View\Components;
+
+namespace App\View\Components\Desktop\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class HelpDesk extends Component
+class LanguageSwitcher extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +22,6 @@ class HelpDesk extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.help-desk');
+        return view('components.desktop.atoms.language-switcher');
     }
 }

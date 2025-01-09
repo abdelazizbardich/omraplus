@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Desktop;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class OfferCard extends Component
+class HelpDesk extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class OfferCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.offer-card');
+        return view('components.desktop.help-desk');
     }
 }

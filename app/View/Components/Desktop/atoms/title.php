@@ -1,6 +1,7 @@
 <?php
 
-namespace App\View\Components\atoms;
+
+namespace App\View\Components\Desktop\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -24,7 +25,7 @@ class title extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.atoms.title',[
+        return view('components.desktop.atoms.title',[
             'title' => $this->title,
             'subtitle' => $this->subtitle
         ]);

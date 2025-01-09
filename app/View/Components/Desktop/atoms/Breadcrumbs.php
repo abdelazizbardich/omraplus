@@ -1,17 +1,20 @@
 <?php
 
-namespace App\View\Components\atoms;
+
+namespace App\View\Components\Desktop\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class LanguageSwitcher extends Component
+class Breadcrumbs extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public array $links = []
+    )
     {
         //
     }
@@ -21,6 +24,8 @@ class LanguageSwitcher extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.atoms.language-switcher');
+        return view('components.desktop.atoms.breadcrumbs', [
+            'links' => $this->links
+        ]);
     }
 }

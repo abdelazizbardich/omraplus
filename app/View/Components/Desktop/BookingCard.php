@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Desktop;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -29,7 +29,7 @@ class BookingCard extends Component
     public function render(): View|Closure|string
     {
         // alfabet letter by index
-        return view('desktop.components.booking-card', [
+        return view('components.desktop.booking-card', [
             'booking' => $this->booking,
             'index' => $this->index
         ]);

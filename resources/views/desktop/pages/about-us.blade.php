@@ -1,6 +1,6 @@
 @extends('desktop.layouts.app')
 @section('content')
-<x-desktop.components.header active=""></x-desktop.components.header>
-<x-desktop.components.page-header :title="__('About us')"></x-desktop.components.page-header>
-<x-desktop.components.footer></x-desktop.components.footer>
+<x-desktop.header active=""></x-desktop.header>
+<x-desktop.page-header :title="__('About us')"></x-desktop.page-header>
+<x-desktop.footer></x-desktop.footer>
 @endsection

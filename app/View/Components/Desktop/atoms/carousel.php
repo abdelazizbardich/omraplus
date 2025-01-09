@@ -1,17 +1,20 @@
 <?php
 
-namespace App\View\Components\mobile\compoents;
+
+namespace App\View\Components\Desktop\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class HeroHeader extends Component
+class carousel extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public array $images = []
+    )
     {
         //
     }
@@ -21,6 +24,8 @@ class HeroHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.mobile.compoents.hero-header');
+        return view('components.desktop.atoms.carousel', [
+            'images' => $this->images
+        ]);
     }
 }

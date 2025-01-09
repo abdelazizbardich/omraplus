@@ -9,8 +9,8 @@
                 <a href="{{ route('home') }}" class="me-4 text-sm">{{__('Booking instructions')}}</a>
                 <a href="{{ route('home') }}" class="me-4 text-sm">{{__('Privacy policy')}}</a>
                 <a href="{{ route('contact-us') }}" class="me-4 text-sm">{{__('Contact us')}}</a>
-                <x-atoms.language-switcher></x-atoms.language-switcher>
-                <x-atoms.theme-switcher></x-atoms.theme-switcher>
+                <x-desktop.atoms.language-switcher></x-desktop.atoms.language-switcher>
+                <x-desktop.atoms.theme-switcher></x-desktop.atoms.theme-switcher>
             </div>
         </div>
     </div>

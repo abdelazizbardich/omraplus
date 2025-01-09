@@ -31,16 +31,16 @@
                     {{__('fast booking')}}
                 </div>
                 <div class="w-2/12">
-                    <x-atoms.select name="month" :label="__('chose the omra')" :options="[__('January Umrah'), __('February Umrah'), __('March Umrah'), __('April Umrah'), __('May Umrah'), __('June Umrah'), __('July Umrah'), __('August Umrah'), __('September Umrah'), __('October Umrah'), __('November Umrah'), __('December Umrah')]"></x-atoms.select>
+                    <x-desktop.atoms.select name="month" :label="__('chose the omra')" :options="[__('January Umrah'), __('February Umrah'), __('March Umrah'), __('April Umrah'), __('May Umrah'), __('June Umrah'), __('July Umrah'), __('August Umrah'), __('September Umrah'), __('October Umrah'), __('November Umrah'), __('December Umrah')]"></x-desktop.atoms.select>
                 </div>
                 <div class="w-2/12">
-                    <x-atoms.select name="month" :label="__('travlers count')" :options="[1,2,3,4,5,6]"></x-atoms.select>
+                    <x-desktop.atoms.select name="month" :label="__('travlers count')" :options="[1,2,3,4,5,6]"></x-desktop.atoms.select>
                 </div>
                 <div class="w-2/12">
-                    <x-atoms.select name="month" :label="__('programe')" :options="[]"></x-atoms.select>
+                    <x-desktop.atoms.select name="month" :label="__('programe')" :options="[]"></x-desktop.atoms.select>
                 </div>
                 <div class="w-2/12">
-                    <x-atoms.select name="month" :label="__('')" :options="[]"></x-atoms.select>
+                    <x-desktop.atoms.select name="month" :label="__('')" :options="[]"></x-desktop.atoms.select>
                 </div>
                 <div class="w-1/12">
                     <button class="btn border-none w-full bg-blue-950 px-6 py-3 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg hover:bg-blue-1000">{{ __('search') }}</button>

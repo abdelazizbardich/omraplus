@@ -1,19 +1,17 @@
 <?php
 
-namespace App\View\Components\atoms;
+namespace App\View\Components\Desktop;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class carousel extends Component
+class OfferCard extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public array $images = []
-    )
+    public function __construct()
     {
         //
     }
@@ -23,8 +21,6 @@ class carousel extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.atoms.carousel', [
-            'images' => $this->images
-        ]);
+        return view('components.desktop.offer-card');
     }
 }

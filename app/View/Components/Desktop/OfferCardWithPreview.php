@@ -1,17 +1,20 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Desktop;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Mission extends Component
+class OfferCardWithPreview extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        // index
+        public string $index = "0"
+    )
     {
         //
     }
@@ -21,6 +24,9 @@ class Mission extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.mission');
+        return view('components.desktop.offer-card-with-preview',
+        [
+            'index' => $this->index
+        ]);
     }
 }

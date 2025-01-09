@@ -1,10 +1,10 @@
 @extends('desktop.layouts.app')
 @section('content')
-<x-desktop.components.header active=""></x-desktop.components.header>
-<x-desktop.components.page-header :title="__('Umrah guide')" :breadcrumbs="[__('Home'), __('Umrah guide')]" />
-<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
-<x-desktop.components.atoms.title :title="''" :suTitle="'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى.'"></x-desktop.components.atoms.title>
-<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
+<x-desktop.header active=""></x-desktop.header>
+<x-desktop.page-header :title="__('Umrah guide')" :breadcrumbs="[__('Home'), __('Umrah guide')]" />
+<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+<x-desktop.atoms.title :title="''" :suTitle="'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى.'"></x-desktop.atoms.title>
+<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
 <div class="container m-auto">
     <div role="tablist" class="tabs tabs-lifted">
         <input type="radio" name="my_tabs_2" role="tab" class="tab py-16" aria-label="العمرة: دليل مختصر للمعتمرين"
@@ -89,7 +89,7 @@
         </div>
     </div>
 </div>
-<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
-<x-desktop.components.atoms.spacer></x-desktop.components.atoms.spacer>
-<x-desktop.components.footer></x-desktop.components.footer>
+<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+<x-desktop.atoms.spacer></x-desktop.atoms.spacer>
+<x-desktop.footer></x-desktop.footer>
 @endsection

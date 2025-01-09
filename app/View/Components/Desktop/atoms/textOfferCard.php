@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\atoms;
+namespace App\View\Components\Desktop\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class textOfferCard extends Component
+class TextOfferCard extends Component
 {
     /**
      * Create a new component instance.
@@ -27,7 +27,7 @@ class textOfferCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.atoms.text-offer-card',
+        return view('components.desktop.atoms.text-offer-card',
         [
             'title' => $this->title,
             'description' => $this->description,

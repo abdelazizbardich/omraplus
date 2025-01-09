@@ -1,12 +1,13 @@
 <?php
 
-namespace App\View\Components;
+
+namespace App\View\Components\Desktop\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class HeroHeader extends Component
+class ThemeSwitcher extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +22,6 @@ class HeroHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.hero-header');
+        return view('components.desktop.atoms.theme-switcher');
     }
 }

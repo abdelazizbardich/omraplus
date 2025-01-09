@@ -1,6 +1,7 @@
 <?php
 
-namespace App\View\Components\atoms;
+
+namespace App\View\Components\Desktop\atoms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -30,7 +31,7 @@ class select extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('desktop.components.atoms.select',
+        return view('components.desktop.atoms.select',
         [
             'name' => $this->name,
             'label' => $this->label,
