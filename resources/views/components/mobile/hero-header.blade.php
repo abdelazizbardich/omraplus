@@ -11,5 +11,5 @@
         <h1 class="text-white font-semibold text-sm">{{ __('Your ideal destination for booking Umrah and Hajj tours from Marrakech, Morocco') }}</h1>
     </div>
     <div class="blockw-full border-b border-white opacity-30 mb-3"></div>
-    <h1 class="text-white text-sm">{{ __('Dedicated to Making Umrah and Hajj a Seamless Experience') }}</h1>
+    <p class="text-white text-sm">{{ __('Dedicated to Making Umrah and Hajj a Seamless Experience') }}</p>
 </div>
