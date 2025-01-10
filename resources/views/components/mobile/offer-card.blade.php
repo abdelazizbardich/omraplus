@@ -56,9 +56,9 @@
                 </div>
                 <div class="flex justify-between gap-2 rounded-3xl bg-black-950 w-full">
                     <a href="#" class="text-white text-base rounded-3xl py-2 px-4 flex font-black justify-center bg-gradient-to-l from-emerald-500 to-emerald-600 items-center bg-emerald-550 w-fit hover:shadow-lg">
-                        <em class="fa-brands fa-whatsapp text-2xl me-2"></em> {{__('The Fast booking')}}
+                        <em class="fa-brands fa-whatsapp text-base me-2"></em> {{__('The Fast booking')}}
                     </a>
-                    <a href="#" class="group text-white text-base w-fit flex font-black justify-center items-center me-3 hover:shadow-lg hover:">
+                    <a href="#" class="group text-white text-sm w-fit flex font-black justify-center items-center me-3 hover:shadow-lg hover:">
                         <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 duration-300"></em> {{__('Book now')}}
                     </a>
                 </div>

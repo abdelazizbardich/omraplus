@@ -3,11 +3,8 @@
 <x-mobile.header></x-mobile.header>
 <x-mobile.hero-header></x-mobile.hero-header>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
-<div class="px-6 flex gap-3 items-center">
-    <div class="w-7/12">
-        <x-mobile.offer-card></x-mobile.offer-card>
-    </div>
-    <div class="w-5/12">
+<div class="px-6 flex flex-col gap-3 items-center">
+    <div class="w-full">
         <h1 class=" font-semibold text-sm mb-3">{{ __('Welcome to your Hajj and Umrah agency in Marrakech.') }}</h1>
         <p class="text-sm mb-6">{{ __('Dedicated to Making Umrah and Hajj a Seamless Experience') }}</p>
         <div class="mb-6">
@@ -33,6 +30,9 @@
                 </span>
             </span>
         </div>
+    </div>
+    <div class="w-full">
+        <x-mobile.offer-card></x-mobile.offer-card>
     </div>
 </div>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
