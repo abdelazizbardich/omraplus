@@ -64,5 +64,3 @@
     </div>
 </div>
 @endsection
-
-p 206+ blue ess 2014 
