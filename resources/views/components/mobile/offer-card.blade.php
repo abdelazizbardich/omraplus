@@ -17,31 +17,31 @@
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-stretch mb-3 text-black-800 text-xs">
                 <div class="flex flex-col items-center">
-                    <div class="bg-black-50 h-8 w-8 rounded-FULL mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-12 w-12 rounded-full mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60 text-xs">الإقامة</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-black-50 h-8 w-8 rounded-FULL mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-12 w-12 rounded-full mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/flight icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60 text-xs">الطيران</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-black-50 h-8 w-8 rounded-FULL mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-12 w-12 rounded-full mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/evisa icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60 text-xs">التأشيرة</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-black-50 h-8 w-8 rounded-FULL mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-12 w-12 rounded-full mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/transport icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60 text-xs">التنقل</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-black-50 h-8 w-8 rounded-FULL mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-12 w-12 rounded-full mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/mourchid icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60 text-xs">المؤطرين</span>
