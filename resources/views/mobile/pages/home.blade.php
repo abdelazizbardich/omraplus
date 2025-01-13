@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="w-full">
-        <x-mobile.offer-card></x-mobile.offer-card>
+        <x-offer-card-with-preview></x-offer-card>
     </div>
 </div>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
@@ -65,7 +65,7 @@
 </div>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
 <div class="px-6 w-full">
-    <div class="flex gap-3 overflow-x-auto w-full">
+    <div class="flex gap-3 overflow-x-auto overflow-y-visible w-full">
         @foreach ([1,2,3,4,5,6,7,8,9] as $offer)
         <div class="w-full">
             <x-mobile.offer-card></x-mobile.offer-card>
