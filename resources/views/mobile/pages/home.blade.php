@@ -67,7 +67,7 @@
 <div class="px-6 w-full pb-44">
     <!-- <div class="flex gap-3 overflow-x-auto overflow-y-visible w-full"> -->
         @foreach ([1,2,3,4,5,6,7,8,9] as $offer)
-        <div class="w-full">
+        <div class="w-8/12">
             <x-mobile.offer-card></x-mobile.offer-card>
         </div>
         @endforeach
