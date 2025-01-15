@@ -4,35 +4,40 @@
 <x-mobile.hero-header></x-mobile.hero-header>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
 <div class="px-6 flex flex-col gap-3 items-center">
-    <div class="w-full">
-        <h1 class=" font-semibold text-sm mb-3">{{ __('Welcome to your Hajj and Umrah agency in Marrakech.') }}</h1>
-        <p class="text-sm mb-6">{{ __('Dedicated to Making Umrah and Hajj a Seamless Experience') }}</p>
-        <div class="mb-6">
-            <span class="text-base font-base block mb-3 flex items-center">
-                <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
-                    class="w-5 h-5 inline-block text-emerald-550 me-3">
-                <span>
-                    حجز من أي منطقة في المغرب
-                </span>
+    <h1 class=" font-semibold text-sm mb-3">{{ __('Welcome to your Hajj and Umrah agency in Marrakech.') }}</h1>
+    <p class="text-sm mb-6">{{ __('Dedicated to Making Umrah and Hajj a Seamless Experience') }}</p>
+    <div class="mb-3">
+        <span class="text-base font-base block mb-3 flex items-center">
+            <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
+                class="w-5 h-5 inline-block text-emerald-550 me-3">
+            <span>
+                حجز من أي منطقة في المغرب
             </span>
-            <span class="text-base font-base block mb-3 flex items-center">
-                <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
-                    class="w-5 h-5 inline-block text-emerald-550 me-3">
-                <span>
-                    مركز خدمة الزبناء متوفرة 24/7
-                </span>
+        </span>
+        <span class="text-base font-base block mb-3 flex items-center">
+            <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
+                class="w-5 h-5 inline-block text-emerald-550 me-3">
+            <span>
+                مركز خدمة الزبناء متوفرة 24/7
             </span>
-            <span class="text-base font-base block mb-3 flex items-center">
-                <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
-                    class="w-5 h-5 inline-block text-emerald-550 me-3">
-                <span>
-                    خدمات عالية الجودة بأسعار تنافسية
-                </span>
+        </span>
+        <span class="text-base font-base block mb-3 flex items-center">
+            <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
+                class="w-5 h-5 inline-block text-emerald-550 me-3">
+            <span>
+                خدمات عالية الجودة بأسعار تنافسية
             </span>
-        </div>
+        </span>
     </div>
-    <div class="w-full">
+</div>
+<x-mobile.atoms.spacer></x-mobile.atoms.spacer>
+<div class="px-6 w-full">
+    <div class="flex gap-3 overflow-x-auto overflow-y-visible w-full h-fit pb-3 justify-start items-start">
+        @foreach ([1,2,3,4,5,6,7,9] as $offer)
+        <div class="min-w-60">
         <x-offer-card-with-preview></x-offer-card>
+        </div>
+        @endforeach
     </div>
 </div>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
@@ -73,6 +78,7 @@
         @endforeach
     </div>
 </div>
+
 
 
 <ul class="menu bg-white lg:menu-horizontal rounded-none px-6 shadow-2xl shadow-black-950 fixed bottom-0 start-0 z-50 end-0 flex justify-between items-center w-full flex-nowrap flex-row">
@@ -119,7 +125,6 @@
     </a>
   </li>
 </ul>
-
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
