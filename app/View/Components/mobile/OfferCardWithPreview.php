@@ -8,10 +8,12 @@ use Illuminate\View\Component;
 
 class OfferCardWithPreview extends Component
 {
-    /**
+     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public bool $featured = false
+    )
     {
         //
     }
@@ -21,6 +23,8 @@ class OfferCardWithPreview extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.mobile.offer-card-with-preview');
+        return view('components.mobile.offer-card-with-preview',[
+            'featured' => $this->featured
+        ]);
     }
 }

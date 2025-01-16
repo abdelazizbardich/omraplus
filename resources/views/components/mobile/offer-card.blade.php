@@ -5,7 +5,7 @@
     <span class="text-xs w-fit px-3 py-1 border block rounded-md border-black text-black font-black uppercase">طلب قوي</span>
     <h1 class="font-black text-base w-full rounded-full w-fit m-auto">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
     <hr class="opacity-30">
-    <div class="w-full">
+    <div class="w-full flex flex-col">
         <div class="flex flex-col mb-3">
             <span class="font-black lining-nums"><span class="text-xl">14.000,00</span> {{__('dh')}} {{__('For a person')}}</span>
             <span class="text-xs text-nowrap">({{__('Price varies depending on the size of the collection')}})</span>

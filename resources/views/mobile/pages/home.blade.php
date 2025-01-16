@@ -33,10 +33,14 @@
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
 <div class="px-6 w-full">
     <div class="flex gap-3 overflow-x-auto overflow-y-visible w-full h-fit pb-3 justify-start items-start">
-        @foreach ([1,2,3,4,5,6,7,9] as $offer)
-        <div class="min-w-60">
-        <x-offer-card-with-preview></x-offer-card>
-        </div>
+        @foreach ([1,2,3,4,5,6,7,9] as $index => $offer)
+            <div class="min-w-72">
+                @if($index == 0)
+                    <x-mobile.offer-card-with-preview :featured="true"></x-mobile.ffer-card-with-preview>
+                @else
+                    <x-mobile.offer-card-with-preview></x-mobile.ffer-card-with-preview>
+                @endif
+            </div>
         @endforeach
     </div>
 </div>
