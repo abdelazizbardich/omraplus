@@ -37,7 +37,7 @@
             @if($index == 0)
                 <x-mobile.offer-card-with-preview :featured="true"></x-mobile.offer-card-with-preview>
             @else
-                <x-mobile.offer-card-with-preview></x-mobile.offer-card-with-preview>
+                <x-mobile.offer-card-with-preview :featured="false"></x-mobile.offer-card-with-preview>
             @endif
         @endforeach
     </div>
