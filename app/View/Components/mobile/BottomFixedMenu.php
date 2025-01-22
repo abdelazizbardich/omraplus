@@ -6,14 +6,12 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class OfferCardWithPreview extends Component
+class BottomFixedMenu extends Component
 {
-     /**
+    /**
      * Create a new component instance.
      */
-    public function __construct(
-        public bool $featured = false
-    )
+    public function __construct()
     {
         //
     }
@@ -23,8 +21,6 @@ class OfferCardWithPreview extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.mobile.offer-card-with-preview',[
-            'featured' => $this->featured
-        ]);
+        return view('components.mobile.bottom-fixed-menu');
     }
 }
