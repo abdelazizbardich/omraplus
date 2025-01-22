@@ -1,6 +1,6 @@
-<div class="relative w-full h-full gap-3 flex flex-col mb-6">
+<div class="relative w-full h-full gap-3 flex flex-col mb-3">
     <div class="rounded-lg overflow-hidden w-full">
-        <img src="{{ Vite::asset('resources/images/mission-1.jpg') }}" alt="" class="aspect-square w-full object-cover">
+        <img src="{{ Vite::asset('resources/images/mission-1.jpg') }}" alt="" class="h-36 w-full object-cover">
     </div>
     <span class="text-xs w-fit px-3 py-1 border block rounded-md border-black text-black font-black uppercase">طلب قوي</span>
     <h1 class="font-black text-base w-full rounded-full w-fit m-auto">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
