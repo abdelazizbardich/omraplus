@@ -60,7 +60,10 @@
     @vite('resources/js/app.js')
 </head>
 
-<body class="font-sans antialiased bg-white text-black-900">
+<body class="font-sans antialiased bg-white text-black-900 px-6">
+    <x-mobile.header></x-mobile.header>
     @yield('content')
+    <x-mobile.bottom-fixed-menu></x-mobile.bottom-fixed-menu>
+    <x-mobile.drawer-menu></x-mobile.drawer-menu>
 </body>
 </html>

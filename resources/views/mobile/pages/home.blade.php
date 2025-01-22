@@ -1,10 +1,9 @@
 @extends('layouts.mobile')
 @section('content')
-<x-mobile.header></x-mobile.header>
 <x-mobile.hero-header></x-mobile.hero-header>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
-<div class="px-6 flex flex-col gap-3">
-    <h1 class=" font-semibold text-sm mb-3">{{ __('Welcome to your Hajj and Umrah agency in Marrakech.') }}</h1>
+<div class="flex flex-col gap-3">
+    <h1 class="font-semibold text-sm mb-3">{{ __('Welcome to your Hajj and Umrah agency in Marrakech.') }}</h1>
     <p class="text-sm mb-6">{{ __('Dedicated to Making Umrah and Hajj a Seamless Experience') }}</p>
     <div class="mb-3">
         <span class="text-base font-base block mb-3 flex items-center">
@@ -31,7 +30,7 @@
     </div>
 </div>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
-<div class="w-full overflow-x-auto no-scrollbar px-6">
+<div class="w-full overflow-x-auto no-scrollbar">
     <div class="flex flex-row gap-3 items-center justify-start w-fit gap-3">
         @foreach ([1, 2, 3] as $index => $item)
             @if($index == 0)
@@ -43,7 +42,7 @@
     </div>
 </div>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
-<div class="px-6 items-center">
+<div class="items-center">
     <h1 class="font-black text-sm mb-3">{{ __('Welcome to your Hajj and Umrah agency in Marrakech.') }}</h1>
     <p class="text-sm mb-6">{{ __('Dedicated to Making Umrah and Hajj a Seamless Experience') }}</p>
     <div class="mb-6">
@@ -71,7 +70,7 @@
     </div>
 </div>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
-<div class="w-full overflow-x-auto overflow-y-visible no-scrollbar px-6">
+<div class="w-full overflow-x-auto overflow-y-visible no-scrollbar">
     <div class="flex flex-row gap-3 items-center justify-start w-fit gap-3">
         @foreach ([1, 2, 3] as $offer)
             <div class="min-w-60">
@@ -80,10 +79,5 @@
         @endforeach
     </div>
 </div>
-
-<x-mobile.bottom-fixed-menu></x-mobile.bottom-fixed-menu>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
-<x-mobile.atoms.spacer></x-mobile.atoms.spacer>
-<x-mobile.atoms.spacer></x-mobile.atoms.spacer>
-<x-mobile.drawer-menu></x-mobile.drawer-menu>
 @endsection

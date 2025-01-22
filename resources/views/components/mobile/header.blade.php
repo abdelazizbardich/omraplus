@@ -1,4 +1,4 @@
-<header>
+<header class="-mx-6">
   <div class="navbar bg-base-100 w-full flex justify-between bg-blue-950 py-3 px-6">
     <div class="">
       <a href="{{ route('home') }}">
