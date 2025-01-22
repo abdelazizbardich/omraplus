@@ -1,5 +1,5 @@
 <div class="relative w-full h-full mt-8">
-    <span class="bg-black-900 rounded-full py-1 px-10 text-white text-lg font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
+<span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
     <div class="border bg-white border-black-200 hover:shadow-md duration-300 rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
             <img src="{{ Vite::asset('resources/images/umrah.jpg') }}" class="w-full h-80" alt="umrah">
@@ -16,33 +16,6 @@
             <p class="text-sm mb-3 line-clamp-3">
                 {{__('Lorem ipsum')}} {{__('Lorem ipsum')}}
             </p>
-            <span class="font-black text-lg w-full rounded-full w-fit m-auto mb-2 block">{{ __('Upcoming flights') }}</span>
-            <div class="mb-4">
-                <div class="flex items-end justify-between w-full text-sm mb-2">
-                    <span class="flex items-end">
-                        <img src="{{ Vite::asset('resources/images/plane-taking.svg') }}" alt="{{__('Plane Taking Off')}}" class="w-8 h-8 me-1 -mb-1">
-                        <span class="font-black">12 نوفمبر</span>
-                    </span>
-                    <span class="dots flex-1 border-b-2 mb-1 mx-3 border-dotted border-blue-1000 h-full"></span>
-                    <span class="font-normal opacity-60">{{__('with')}} الخطوط الملكية المغربية</span>
-                </div>
-                <div class="flex items-end justify-between w-full text-sm mb-2">
-                <span class="flex items-end">
-                    <img src="{{ Vite::asset('resources/images/plane-taking.svg') }}" alt="{{__('Plane Taking Off')}}" class="w-8 h-8 me-1 -mb-1">
-                    <span class="font-black">13 نوفمبر</span>
-                </span>
-                    <span class="dots flex-1 border-b-2 mb-1 mx-3 border-dotted border-blue-1000 h-full"></span>
-                    <span class="font-normal opacity-60">{{__('with')}} الخطوط الملكية المغربية</span>
-                </div>
-                <div class="flex items-end justify-between w-full text-sm mb-2">
-                <span class="flex items-end">
-                    <img src="{{ Vite::asset('resources/images/plane-taking.svg') }}" alt="{{__('Plane Taking Off')}}" class="w-8 h-8 me-1 -mb-1">
-                    <span class="font-black">14 نوفمبر</span>
-                </span>
-                    <span class="dots flex-1 border-b-2 mb-1 mx-3 border-dotted border-blue-1000 h-full"></span>
-                    <span class="font-normal opacity-60">{{__('with')}} الخطوط الملكية المغربية</span>
-                </div>
-            </div>
             <hr class="my-3 opacity-30">
             <div class="flex flex-col mb-3">
                 <span class="font-black lining-nums"><span class="text-2xl">14.000,00</span> {{__('dh')}} {{__('For a person')}}</span>

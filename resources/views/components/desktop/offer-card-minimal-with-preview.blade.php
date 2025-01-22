@@ -1,5 +1,5 @@
 <div class="relative w-full h-full mt-8">
-    <span class="bg-black-900 rounded-full py-1 px-10 text-white text-lg font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
+<span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
     <div class="z-10 hover:shadow-md duration-300 border border-black-200 bg-white featured rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
             <div class="w-full h-60 bg-black-300">
@@ -17,51 +17,51 @@
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-stretch mb-3 text-black-800 text-sm">
                 <div class="flex flex-col items-center">
-                    <div class="from-yellow-200 to-yellow-300 bg-gradient-to-l h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">الإقامة</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/flight icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">الطيران</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/evisa icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">التأشيرة</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/transport icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">التنقل</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="bg-yellow-200 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
+                    <div class="bg-black-50 h-16 w-16 rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/mourchid icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">المؤطرين</span>
                 </div>
             </div>
             <div class="">
-                <div class="flex items-center justify-between w-full text-base mb-2 px-3 py-2 bg-emerald-550 text-white rounded-xl">
+                <div class="flex items-center justify-between w-full text-base mb-2 px-3 py-2 bg-black-50 rounded-xl">
                     <span class="font-normal text-base">الذهاب</span>
-                    <span class="dots flex-1 border-b-2 mx-3 border-white h-full"></span>
+                    <span class="dots flex-1 border-b mx-3 border-black-400 h-full"></span>
                     <span class="flex items-center">
-                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}" class="w-6 h-6 me-3 invert">
+                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}" class="w-6 h-6 me-3">
                         <span class="font-normal text-base">19 فبراير 2024</span>
                     </span>
                 </div>
-                <div class="flex items-center justify-between w-full text-base px-3 py-2  bg-emerald-550 text-white rounded-xl">
+                <div class="flex items-center justify-between w-full text-base px-3 py-2  bg-black-50 rounded-xl">
                     <span class="flex items-center">
                         <span class="font-normal text-base">العودة</span>
-                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}" class="w-6 -scale-x-100 h-6 ms-3 invert">
+                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}" class="w-6 -scale-x-100 h-6 ms-3">
                     </span>
-                    <span class="dots flex-1 border-b-2 mx-3 border-white h-full"></span>
+                    <span class="dots flex-1 border-b mx-3 border-black-400 h-full"></span>
                     <span class="font-normal text-base">19 مارس 2024</span>
                 </div>
             </div>
