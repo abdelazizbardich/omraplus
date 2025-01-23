@@ -9,7 +9,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::post('/deploy', function () {
+Route::any('/deploy', function () {
     Artisan::call('deploy');
     // save the output from the command in a log file
     // $output = Artisan::output();
