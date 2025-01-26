@@ -15,13 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 App::setLocale('ar');
 
-// save transate local value
-Route::get('/lang/{locale}', function ($locale) {
-    
-})->name('lang');
-
-
-
 
 Route::middleware(['detect.device'])->group(function () {
         Route::get('/', function () {
