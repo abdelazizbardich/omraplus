@@ -64,7 +64,7 @@
 </head>
 
 <body class="font-sans antialiased bg-white text-black-900">
-    <div class="drawer drawer-start bg-blue-950 text-white">
+    <div class="drawer drawer-start bg-blue-950 text-white z-50">
         <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
         <div class="drawer-side">
             <span class="drawer-overlay"></span>

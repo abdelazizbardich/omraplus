@@ -1,6 +1,5 @@
 @extends('mobile.layouts.app')
 @section('content')
-<x-mobile.header></x-mobile.header>
 <x-mobile.hero-header></x-mobile.hero-header>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
 <div class="px-6 flex flex-col gap-3 items-center">
@@ -32,7 +31,7 @@
         </div>
     </div>
     <div class="w-full">
-        <x-offer-card-with-preview></x-offer-card>
+        <x-mobile.offer-card-with-preview></x-mobile.offer-card-with-preview>
     </div>
 </div>
 <x-mobile.atoms.spacer></x-mobile.atoms.spacer>
