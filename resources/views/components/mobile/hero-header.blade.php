@@ -1,4 +1,4 @@
-<div class="bg-blue-950 px-6 pb-16 pt-6">
+<div class="-mx-6 bg-blue-950 px-6 pb-16 pt-6">
     <span class="text-white text-3xl font-semibold block mb-6">{{__('fast booking')}}</span>
     <div class="grid gap-6 grid-cols-2 grid-rows-2 mb-6">
         <a href="#" class="btn btn-warning text-white font-normal">دليل الحج</a>

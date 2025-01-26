@@ -50,4 +50,7 @@ body {
     .checked.room{
         @apply bg-black-1000 text-white;
     }
+    .no-scrollbar {
+        scrollbar-width: none;
+    }
 }
