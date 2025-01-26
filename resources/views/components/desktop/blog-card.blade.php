@@ -27,7 +27,7 @@
             </div>
             <div class="float-end flex w-auto">
                 <div class="border border-black-200 w-fit text-nowrap  rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
-                    <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('Book now')}}
+                    <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('Discover more')}}
                 </div>
             </div>
         </div>

@@ -12,13 +12,13 @@
             </div>
             <div class="flex flex-col items-center justify-center w-full h-full">
                 <ul class="w-full">
-                    <li class="hover:bg-blue-1000"><a href="{{ route('home') }}" class=" w-full px-8 h-16 flex items-center justify-center text-white text-2xl"><em class="fa fa-home text-3xl" title="{{__('Home')}}"></em></a></li>
-                    <li class="hover:bg-blue-1000"><a href="{{ route('home') }}" class=" w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Omra packs')}}</a></li>
-                    <li class="hover:bg-blue-1000"><a href="{{ route('home') }}" class=" w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Ramadan omra')}}</a></li>
-                    <li class="hover:bg-blue-1000"><a href="{{ route('home') }}" class=" w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Personalizd omra')}}</a></li>
-                    <li class="hover:bg-blue-1000"><a href="{{ route('home') }}" class=" w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Hadj 2025')}}</a></li>
-                    <li class="hover:bg-blue-1000"><a href="{{ route('home') }}" class=" w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Request e-visa')}}</a></li>
-                    <li class="hover:bg-blue-1000"><a href="{{ route('contact-us') }}" class=" w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Contact us')}}</a></li>
+                    <li class="hover:bg-blue-1000 px-12"><a href="{{ route('home') }}" class="border-b border-blue-1000 w-full px-8 h-16 flex items-center justify-center text-white text-2xl"><em class="fa fa-home text-3xl" title="{{__('Home')}}"></em></a></li>
+                    <li class="hover:bg-blue-1000 px-12"><a href="{{ route('home') }}" class="border-b border-blue-1000 w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Omra packs')}}</a></li>
+                    <li class="hover:bg-blue-1000 px-12"><a href="{{ route('home') }}" class="border-b border-blue-1000 w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Ramadan omra')}}</a></li>
+                    <li class="hover:bg-blue-1000 px-12"><a href="{{ route('home') }}" class="border-b border-blue-1000 w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Personalizd omra')}}</a></li>
+                    <li class="hover:bg-blue-1000 px-12"><a href="{{ route('home') }}" class="border-b border-blue-1000 w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Hadj 2025')}}</a></li>
+                    <li class="hover:bg-blue-1000 px-12"><a href="{{ route('home') }}" class="border-b border-blue-1000 w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Request e-visa')}}</a></li>
+                    <li class="hover:bg-blue-1000 px-12"><a href="{{ route('contact-us') }}" class=" w-full px-4 h-16 flex items-center justify-center text-white text-2xl">{{__('Contact us')}}</a></li>
                 </ul>
             </div>
         </div>

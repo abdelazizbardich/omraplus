@@ -19,12 +19,10 @@ return new class  extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('hotels');
         Schema::create('hotels', function (Blueprint $table) {
-            
             $table->id('id');
-            $table->string('name', 45)->nullable();
-            $table->string('distance_from_mekkah', 45)->nullable();
-            $table->string('localisation', 45)->nullable();
-            $table->integer('hotel_photos_id');
+            $table->string('name', 255)->nullable();
+            $table->string('distance_from_mekkah', 255)->nullable();
+            $table->string('localisation', 255)->nullable();
         });
  Schema::enableForeignKeyConstraints();
     }

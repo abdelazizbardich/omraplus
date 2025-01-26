@@ -21,14 +21,14 @@ return new class  extends Migration
         Schema::create('flight_photos', function (Blueprint $table) {
             
             $table->id('id');
-            $table->string('url', 45)->nullable();
-            $table->string('features', 45)->nullable();
-            $table->unsignedBigInteger('flights_id');
+            $table->string('url', 255)->nullable();
+            $table->string('features', 255)->nullable();
+            $table->unsignedBigInteger('flight_id');
 
-            $table->index(["flights_id"], 'fk_flight_photos_flights1_idx');
+            $table->index(["flight_id"], 'fk_flight_photos_flights1_idx');
 
 
-            $table->foreign('flights_id')
+            $table->foreign('flight_id')
                 ->references('id')->on('flights')
                 ->onDelete('no action')
                 ->onUpdate('no action');

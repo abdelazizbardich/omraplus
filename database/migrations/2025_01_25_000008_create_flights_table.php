@@ -21,12 +21,15 @@ return new class  extends Migration
         Schema::create('flights', function (Blueprint $table) {
             
             $table->id('id');
-            $table->string('title', 45)->nullable();
-            $table->string('going_date', 45)->nullable();
-            $table->string('return_date', 45)->nullable();
+            $table->string('title', 255)->nullable();
+            $table->date('going_date', 255)->nullable();
+            $table->date('return_date', 255)->nullable();
             $table->unsignedBigInteger('flight_going');
             $table->unsignedBigInteger('flight_return');
-            $table->string('description', 45)->nullable();
+            $table->longText('description', 255)->nullable();
+
+            $table->boolean('is_umrah')->default(0)->nullable();
+            $table->boolean('is_hadj')->default(0)->nullable();
 
             $table->index(["flight_going"], 'fk_flights_flight_lines1_idx');
 

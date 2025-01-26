@@ -29,4 +29,9 @@ class Flight extends Model
     {
         return $this->belongsTo(FlightLine::class, 'flight_return');
     }
+
+    public function flightPhotos()
+    {
+        return $this->hasMany(FlightPhoto::class, 'flight_id');
+    }
 }

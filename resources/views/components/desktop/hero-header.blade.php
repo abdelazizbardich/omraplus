@@ -6,23 +6,23 @@
     <div class="border border-white relative rounded-lg p-6 container m-auto z-20 -mb-32">
         <div class="flex w-full me-auto mt-6 mb-6 text-3xl justify-between text-shadow">
             <span class="relative text-white items-center group overflow-hidden flex flex-col justify-center w-full">
-                <span class="text-xl group-hover:scale-95 text-nowrap group-hover:opacity-65 duration-300  mb-8 font-black">دليل الحج</span>
-                <span class="group-hover:bottom-3 duration-300 text-xs cursor-pointer text-nowrap absolute -bottom-full undeline">إكتشف المزيد</span>
+                <span class="text-xl group-hover:scale-95 text-nowrap group-hover:opacity-65 duration-300  mb-8 font-black">{{__('Hajj guide')}}</span>
+                <span class="group-hover:bottom-3 duration-300 text-xs cursor-pointer text-nowrap absolute -bottom-full undeline">{{__('Discover more')}}</span>
             </span>
             <span class="h-10 border-e border-black-100 opacity-65"></span>
             <span class="relative text-white items-center group overflow-hidden flex flex-col justify-center w-full">
-                <span class="text-xl group-hover:scale-95 text-nowrap group-hover:opacity-65 duration-300  mb-8 font-black">دليل العمرة</span>
-                <span class="group-hover:bottom-3 duration-300 text-xs cursor-pointer text-nowrap absolute -bottom-full undeline">إكتشف المزيد</span>
+                <span class="text-xl group-hover:scale-95 text-nowrap group-hover:opacity-65 duration-300  mb-8 font-black">{{__('Umrah guide')}}</span>
+                <span class="group-hover:bottom-3 duration-300 text-xs cursor-pointer text-nowrap absolute -bottom-full undeline">{{__('Discover more')}}</span>
             </span>
             <span class="h-10 border-e border-black-100 opacity-65"></span>
             <span class="relative text-white items-center group overflow-hidden flex flex-col justify-center w-full">
-                <span class="text-xl group-hover:scale-95 text-nowrap group-hover:opacity-65 duration-300  mb-8 font-black">تعرّف على مكة المكرمة</span>
-                <span class="group-hover:bottom-3 duration-300 text-xs cursor-pointer text-nowrap absolute -bottom-full undeline">إكتشف المزيد</span>
+                <span class="text-xl group-hover:scale-95 text-nowrap group-hover:opacity-65 duration-300  mb-8 font-black">{{__('Learn about Mecca')}}</span>
+                <span class="group-hover:bottom-3 duration-300 text-xs cursor-pointer text-nowrap absolute -bottom-full undeline">{{__('Discover more')}}</span>
             </span>
             <span class="h-10 border-e border-black-100 opacity-65"></span>
             <span class="relative text-white items-center group overflow-hidden flex flex-col justify-center w-full">
-                <span class="text-xl group-hover:scale-95 text-nowrap group-hover:opacity-65 duration-300  mb-8 font-black">تعرّف على المدينة المنورة</span>
-             <span class="group-hover:bottom-3 duration-300 text-xs cursor-pointer text-nowrap absolute -bottom-full undeline">إكتشف المزيد</span>
+                <span class="text-xl group-hover:scale-95 text-nowrap group-hover:opacity-65 duration-300  mb-8 font-black">{{__('Get to know Medina')}}</span>
+             <span class="group-hover:bottom-3 duration-300 text-xs cursor-pointer text-nowrap absolute -bottom-full undeline">{{__('Discover more')}}</span>
             </span>
         </div>
         <div class="relative z-20  w-full mx-auto">

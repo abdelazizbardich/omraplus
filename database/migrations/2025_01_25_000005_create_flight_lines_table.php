@@ -21,8 +21,8 @@ return new class  extends Migration
         Schema::create('flight_lines', function (Blueprint $table) {
             
             $table->id('id');
-            $table->string('title', 45)->nullable();
-            $table->string('capacity', 45)->nullable();
+            $table->string('title', 255)->nullable();
+            $table->string('capacity', 255)->nullable();
         });
  Schema::enableForeignKeyConstraints();
     }

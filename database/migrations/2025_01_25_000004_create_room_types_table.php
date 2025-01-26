@@ -16,8 +16,8 @@ return new class  extends Migration
         Schema::create('room_types', function (Blueprint $table) {
             
             $table->id('id');
-            $table->string('name', 45)->nullable();
-            $table->string('per_number', 45)->nullable();
+            $table->string('name', 255)->nullable();
+            $table->string('per_number', 255)->nullable();
         });
         Schema::enableForeignKeyConstraints();
     }

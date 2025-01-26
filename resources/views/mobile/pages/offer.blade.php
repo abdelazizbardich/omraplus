@@ -1,4 +1,4 @@
-@extends('layouts.mobile')
+@extends('mobile.layouts.app')
 @section('content')
 <div class="-mx-6 mb-6">
     <img src="{{Vite::asset('resources/images/mission-1.jpg')}}" alt="Offer" class="w-full h-60 object-cover">

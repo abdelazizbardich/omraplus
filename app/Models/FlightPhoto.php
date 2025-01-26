@@ -5,20 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Photo extends Model
+class FlightPhoto extends Model
 {
     use HasFactory;
 
-    protected $table = 'photo';
+    protected $table = 'flight_photos';
 
     protected $fillable = [
         'url',
         'features',
-        'hotels_id',
+        'flight_id'
     ];
 
-    public function hotel()
+    public function flight()
     {
-        return $this->belongsTo(Hotel::class, 'hotels_id');
+        return $this->belongsTo(Flight::class, 'id');
     }
+
+
 }

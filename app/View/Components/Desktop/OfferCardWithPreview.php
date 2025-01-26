@@ -13,7 +13,8 @@ class OfferCardWithPreview extends Component
      */
     public function __construct(
         // index
-        public string $index = "0"
+        public ?string $index = "0",
+        public mixed $data = null 
     )
     {
         //
@@ -26,7 +27,8 @@ class OfferCardWithPreview extends Component
     {
         return view('components.desktop.offer-card-with-preview',
         [
-            'index' => $this->index
+            'index' => $this->index,
+            'data' => $this->data
         ]);
     }
 }

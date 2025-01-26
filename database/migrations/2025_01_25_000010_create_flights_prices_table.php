@@ -23,10 +23,10 @@ return new class  extends Migration
             $table->id('flights_id');
             $table->unsignedBigInteger('room_types_id');
             $table->unsignedBigInteger('bookings_id');
-            $table->string('price', 45)->nullable();
-            $table->string('price_two_to_three_p', 45)->nullable();
-            $table->string('price_three_to_five_p', 45)->nullable();
-            $table->string('price_five_to_eight_p', 45)->nullable();
+            $table->string('price', 255)->nullable();
+            $table->string('price_two_to_three_p', 255)->nullable();
+            $table->string('price_three_to_five_p', 255)->nullable();
+            $table->string('price_five_to_eight_p', 255)->nullable();
 
             $table->index(["room_types_id"], 'fk_flights_has_room_types_room_types1_idx');
 

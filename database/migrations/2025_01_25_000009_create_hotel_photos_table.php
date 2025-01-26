@@ -17,12 +17,12 @@ return new class  extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('photo');
-        Schema::create('photo', function (Blueprint $table) {
+        Schema::dropIfExists('hotel_photos');
+        Schema::create('hotel_photos', function (Blueprint $table) {
             
             $table->id('id');
-            $table->string('url', 45)->nullable();
-            $table->string('features', 45)->nullable();
+            $table->string('url', 255)->nullable();
+            $table->string('features', 255)->nullable();
             $table->unsignedBigInteger('hotels_id');
 
             $table->index(["hotels_id"], 'fk_photo_hotels1_idx');
@@ -41,6 +41,6 @@ return new class  extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('photo');
+        Schema::dropIfExists('hotel_photos');
     }
 };

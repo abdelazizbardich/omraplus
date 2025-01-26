@@ -11,7 +11,10 @@ class OfferCard extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public ?string $index = '0',
+        public object $data
+    )
     {
         //
     }
@@ -21,6 +24,9 @@ class OfferCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.offer-card');
+        return view('components.desktop.offer-card',[
+            'index' => $this->index,
+            'data' => $this->data
+        ]);
     }
 }
