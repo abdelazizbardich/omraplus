@@ -19,7 +19,7 @@ return new class  extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('hotels');
         Schema::create('hotels', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
+            
             $table->id('id');
             $table->string('name', 45)->nullable();
             $table->string('distance_from_mekkah', 45)->nullable();

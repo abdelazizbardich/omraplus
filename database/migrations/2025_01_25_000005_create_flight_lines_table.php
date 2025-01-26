@@ -19,7 +19,7 @@ return new class  extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('flight_lines');
         Schema::create('flight_lines', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
+            
             $table->id('id');
             $table->string('title', 45)->nullable();
             $table->string('capacity', 45)->nullable();

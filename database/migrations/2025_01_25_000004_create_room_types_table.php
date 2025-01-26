@@ -14,7 +14,7 @@ return new class  extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('room_types');
         Schema::create('room_types', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
+            
             $table->id('id');
             $table->string('name', 45)->nullable();
             $table->string('per_number', 45)->nullable();

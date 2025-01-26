@@ -19,7 +19,7 @@ return new class  extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('flights_prices');
         Schema::create('flights_prices', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
+            
             $table->id('flights_id');
             $table->unsignedBigInteger('room_types_id');
             $table->unsignedBigInteger('bookings_id');
