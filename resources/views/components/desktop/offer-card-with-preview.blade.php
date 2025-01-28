@@ -1,18 +1,29 @@
-<div class="relative w-full h-full mt-8">
+<div class="relative w-full mt-8">
     <span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
     <div class="hover:shadow-md duration-300 border border-black-200 bg-white rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
             <div class="w-full aspect-video bg-black-300">
-                <img src="{{ Vite::asset('resources/images/umrah2.jpg') }}" class="w-full h-full object-cover"  alt="umrah">
+                <img src="{{ $data->flightPhotos()->where('features',1)->first()?->url }}" class="w-full h-full object-cover"  alt="umrah">
             </div>
-            <span class="cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
+            <span onclick="openQuickView({{$data->id}})" class="cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
                 <em class="fa-regular fa-eye me-3"></em>{{__('Quick view')}}
             </span>
         </div>
         <div class="p-3">
             <div class="flex">
-                <span class="bg-black-900 w-20 h-16 me-3 rounded-md text-white block text-base text-center font-bold flex items-center justify-center flex-col leading-5"><span>7</span><span>{{__('Days')}}</span></span>
-                <h1 class="font-black text-lg w-full rounded-full w-fit m-auto line-clamp-2">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
+                <span class="bg-black-900 w-20 h-16 me-3 rounded-md text-white block text-base text-center font-bold flex items-center justify-center flex-col leading-5">
+                    <span>
+                        {{ moment($data->going_date)->from($data->return_date)->getDays() }}
+                    </span>
+                    <span>
+                        @if(moment($data->going_date)->from($data->return_date)->getDays() > 10)
+                            {{__('day')}}
+                        @else
+                            {{__('Days')}}
+                        @endif
+                    </span>
+                </span>
+                <h1 class="font-black text-lg w-full w-fit m-auto line-clamp-2">{{ $data->title }}</h1>
             </div>
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-stretch mb-3 text-black-800 text-sm gap-1">
@@ -50,12 +61,12 @@
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-center mb-2 flex-row lg:flex-col gap-y-3">
                 <div class="flex flex-col">
-                    <span class="font-black lining-nums"><span class="text-xl">14.000,00</span> {{__('dh')}} <span>{{__('For a person')}}</span></span>
+                    <span class="font-black lining-nums"><span class="text-xl">{{ money($data->price) }}</span> {{__('dh')}} <span>{{__('For a person')}}</span></span>
                     <span class="text-xs text-nowrap">({{__('Price varies depending on the size of the collection')}})</span>
                 </div>
-                <div class="text-center flex-nowrap bg-yellow-500 shadow w-full text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
+                <a href="{{ route('checkout', $data->id) }}" class="text-center flex-nowrap bg-yellow-500 shadow w-full text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
                     <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> <span class="inline-block text-nowrap">{{__('Book now')}}</span>
-                </div>
+                </a>
             </div>
         </div>
     </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Flight;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -18,7 +19,7 @@ class CheckoutController extends Controller
         }
     }
 
-    public function checkout()
+    public function checkout(Flight $flight)
     {
         return view($this->devicePrefix.'pages.checkout');
     }

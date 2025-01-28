@@ -123,4 +123,7 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /** */
+    'whtasppNumber' => env('APP_WHATSAPP_NUMBER', '1234567890')
+
 ];

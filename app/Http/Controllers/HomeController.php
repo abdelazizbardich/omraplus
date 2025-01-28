@@ -21,8 +21,15 @@ class HomeController extends Controller
 
     public function index()
     {
-        $umrahOffers = Flight::with(['flightGoing','flightReturn','flightPhotos'])->where('is_umrah',1)->get();
-        $hadjOffers = Flight::with(['flightGoing','flightReturn','flightPhotos'])->where('is_hadj',1)->get();
+        $umrahOffers = Flight::with(['flightGoing','flightReturn','flightPhotos','flightPrices'])->where('is_umrah',1)->get()->map(function($offer){
+            $offer->price = $offer->flightPrices->min('price_five_to_eight_p');
+            return $offer;
+        }); 
+        $hadjOffers = Flight::with(['flightGoing','flightReturn','flightPhotos','flightPrices'])->where('is_hadj',1)->get()->map(function($offer){
+            $offer->price = $offer->flightPrices->min('price_five_to_eight_p');
+            return $offer;
+        }); 
+        
         $data = [
             "hadjOffers" => $hadjOffers,
             "umrahOffers" => $umrahOffers

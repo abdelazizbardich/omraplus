@@ -34,4 +34,9 @@ class Flight extends Model
     {
         return $this->hasMany(FlightPhoto::class, 'flight_id');
     }
+
+    public function flightPrices()
+    {
+        return $this->hasMany(FlightPrice::class, 'flight_id');
+    }
 }

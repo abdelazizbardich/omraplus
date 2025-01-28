@@ -51,8 +51,7 @@
             @endforeach
         </x-shared.carousel>
     </div>
-    <a href="{{ route('home') }}"
-        class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">{{__('Discover more')}}</a>
+    <!-- <a href="{{ route('home') }}" class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">{{__('Discover more')}}</a> -->
     <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
 </div>
 <x-desktop.atoms.spacer></x-desktop.atoms.spacer>

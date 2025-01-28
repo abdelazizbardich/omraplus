@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Flight;
 use Illuminate\Http\Request;
 
 class OfferController extends Controller
@@ -18,8 +19,11 @@ class OfferController extends Controller
     }
     
     
-    public function index(Request $request)
+    public function index(Request $request, Flight $flight)
     {
-        return view($this->devicePrefix.'pages.offer');
+        $data = [
+            'flight' => $flight
+        ];
+        return view($this->devicePrefix.'pages.offer',$data);
     }
 }
