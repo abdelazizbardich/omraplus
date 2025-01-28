@@ -17,6 +17,7 @@ class BookingCard extends Component
      */
     public function __construct(
         public object $booking = new BookingObject(),
+        public ?string $size = 'big',
         public int $index
     )
     {
@@ -31,7 +32,8 @@ class BookingCard extends Component
         // alfabet letter by index
         return view('components.desktop.booking-card', [
             'booking' => $this->booking,
-            'index' => $this->index
+            'index' => $this->index,
+            'size' => $this->size
         ]);
     }
 }

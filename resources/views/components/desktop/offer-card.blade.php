@@ -1,9 +1,9 @@
-<div class="relative w-full mt-8">
-<span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
+<div class="relative w-full mt-8 offer-card">
+    <span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
     <div class="border bg-white border-black-200 hover:shadow-md duration-300 rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
             <img src="{{ $data->flightPhotos()->where('features',1)->first()?->url }}" class="w-full aspect-video" alt="umrah">
-            <span onclick="openQuickView({{$data->id}})" class="quick-view cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
+            <span class="quick-view cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
                 <em class="fa-regular fa-eye me-3"></em>{{__('Quick view')}}
             </span>
         </div>
@@ -29,7 +29,6 @@
             </div>
             <hr class="my-3 opacity-30">
             <div class="flex flex-col mb-3">
-                <span class="font-black lining-nums"><span class="text-2xl">{{ money($data->price) }}</span> {{__('dh')}} {{__('For a person')}}</span>
                 <span class="text-md">({{__('Price varies depending on the size of the collection')}})</span>
             </div>
             <div class="flex justify-between gap-2">
@@ -42,4 +41,5 @@
             </div>
         </div>
     </div>
+    <x-shared.offer-details-modal :data=$data></x-shared.offer-details-modal>
 </div>

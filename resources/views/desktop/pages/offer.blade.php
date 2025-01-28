@@ -70,7 +70,7 @@
         <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
         <div class="w-full">
             <span class="block text-2xl font-bold w-full block mb-6">الحجوزات المتاحة</span>
-            @foreach ([(object)["featured"=>true]] as $index=>$booking)
+            @foreach ([(object)["featured"=>true, "id"=>1]] as $index=>$booking)
             <div class="mb-6">
                 <x-desktop.booking-card :booking="$booking" :index="$index"></x-desktop.booking-card>
             </div>

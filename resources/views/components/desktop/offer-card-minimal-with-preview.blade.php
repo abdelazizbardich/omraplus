@@ -1,11 +1,11 @@
-<div class="relative w-full h-full mt-8">
+<div class="relative w-full h-full mt-8 offer-card">
 <span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
     <div class="z-10 hover:shadow-md duration-300 border border-black-200 bg-white featured rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
             <div class="w-full h-60 bg-black-300">
                 <img src="{{ Vite::asset('resources/images/umrah2.jpg') }}" class="w-full h-full object-cover"  alt="umrah">
             </div>
-            <span class="cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
+            <span class="quick-view cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
                 <em class="fa-regular fa-eye me-3"></em>{{__('Quick view')}}
             </span>
         </div>

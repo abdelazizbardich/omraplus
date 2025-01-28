@@ -33,5 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 behavior: "smooth",
             });
         });
-    })
+    });
+
+    // Manage modals
+    const offerCards = document.querySelectorAll(".offer-card");
+    offerCards.forEach(offerCard => {
+        const showBtn = offerCard.querySelector(".quick-view");
+        const modal = offerCard.querySelector(".modal");
+        if(showBtn === null) return;
+        showBtn.addEventListener("click", () => {
+            modal.showModal();
+        });
+    });
 });
+
