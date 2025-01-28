@@ -24,6 +24,7 @@ return new class  extends Migration
             $table->string('url', 255)->nullable();
             $table->string('features', 255)->nullable();
             $table->unsignedBigInteger('flight_id');
+            $table->timestamps();
 
             $table->index(["flight_id"], 'fk_flight_photos_flights1_idx');
 

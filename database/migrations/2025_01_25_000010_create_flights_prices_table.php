@@ -27,6 +27,7 @@ return new class  extends Migration
             $table->string('price_two_to_three_p', 255)->nullable();
             $table->string('price_three_to_five_p', 255)->nullable();
             $table->string('price_five_to_eight_p', 255)->nullable();
+            $table->timestamps();
 
             $table->index(["room_type_id"], 'fk_flights_has_room_types_room_types1_idx');
 

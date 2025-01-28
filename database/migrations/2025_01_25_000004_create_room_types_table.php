@@ -18,6 +18,7 @@ return new class  extends Migration
             $table->id('id');
             $table->string('name', 255)->nullable();
             $table->string('per_number', 255)->nullable();
+            $table->timestamps();
         });
         Schema::enableForeignKeyConstraints();
     }

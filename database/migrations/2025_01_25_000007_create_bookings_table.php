@@ -23,6 +23,7 @@ return new class  extends Migration
             $table->id('id');
             $table->unsignedBigInteger('hotel_mekka');
             $table->unsignedBigInteger('hotel_medina');
+            $table->timestamps();
 
             $table->index(["hotel_mekka"], 'fk_bookings_hotels1_idx');
 

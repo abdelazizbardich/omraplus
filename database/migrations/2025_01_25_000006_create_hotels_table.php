@@ -23,6 +23,7 @@ return new class  extends Migration
             $table->string('name', 255)->nullable();
             $table->string('distance_from_mekkah', 255)->nullable();
             $table->string('localisation', 255)->nullable();
+            $table->timestamps();
         });
  Schema::enableForeignKeyConstraints();
     }

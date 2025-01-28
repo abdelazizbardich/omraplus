@@ -27,6 +27,7 @@ return new class  extends Migration
             $table->unsignedBigInteger('flight_going');
             $table->unsignedBigInteger('flight_return');
             $table->longText('description', 255)->nullable();
+            $table->timestamps();
 
             $table->boolean('is_umrah')->default(0)->nullable();
             $table->boolean('is_hadj')->default(0)->nullable();

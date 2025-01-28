@@ -24,6 +24,7 @@ return new class  extends Migration
             $table->string('url', 255)->nullable();
             $table->string('features', 255)->nullable();
             $table->unsignedBigInteger('hotels_id');
+            $table->timestamps();
 
             $table->index(["hotels_id"], 'fk_photo_hotels1_idx');
 

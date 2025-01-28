@@ -23,6 +23,7 @@ return new class  extends Migration
             $table->id('id');
             $table->string('title', 255)->nullable();
             $table->string('capacity', 255)->nullable();
+            $table->timestamps();
         });
  Schema::enableForeignKeyConstraints();
     }
