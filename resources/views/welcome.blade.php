@@ -6,7 +6,7 @@
     </div>
     <div class="text-center mt-4 w-6/12">
         <hr class="border-b-2 border-white w-20 mx-auto mb-5" />
-        <x-header></x-header>
+        
         <h1 class="text-4xl font-bold text-white">{{__('Coming Soon')}}</h1>
         <p class="mt-2 text-lg text-white">{{__('We are working hard to bring you the best experience. Stay tuned')}}!</p>
         <p class="mt-2 text-lg text-white">{{__('For any inquiries, please contact us at')}} 
