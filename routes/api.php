@@ -11,8 +11,6 @@ Route::get('/user', function (Request $request) {
 
 Route::any('/deploy', function () {
     Artisan::call('deploy');
-    // save the output from the command in a log file
-    // $output = Artisan::output();
-    // file_put_contents(storage_path('logs/deploy-' . date('Y-m-d') . '.log'), $output);
-    return response(true);
+    // json response
+    return response()->json(true);
 });
