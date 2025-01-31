@@ -18,10 +18,11 @@ Artisan::command('deploy', function () {
     $output = shell_exec('php artisan route:cache');
     $output = shell_exec('php artisan view:cache');
     $output = shell_exec('php artisan queue:restart');
+    $output = shell_exec('npm run build');
     $output = shell_exec('php artisan optimize');
-    $output = shell_exec('cp ../deploy-files/.env.production ./.env');
+    // $output = shell_exec('cp ../deploy-files/.env.production ./.env');
     $this->comment($output);
-    
+
 })->purpose('Deploy the latest changes from GitHub');
 
 
