@@ -11,6 +11,4 @@ Route::get('/user', function (Request $request) {
 
 Route::any('/deploy', function () {
     Artisan::call('deploy');
-    // json response
-    return response()->json(true);
 });
