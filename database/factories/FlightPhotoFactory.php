@@ -18,7 +18,7 @@ class FlightPhotoFactory extends Factory
     public function definition(): array
     {
         return [
-            "url" => $this->faker->imageUrl(),
+            "url" => "https://omraprivee.com/wp-content/uploads/2023/09/kaaba-a2wif1x8on9qihxv-1.jpg",
             "features" => $this->faker->sentence(3),
             "flight_id" => Flight::get()->random()->id,
         ];
