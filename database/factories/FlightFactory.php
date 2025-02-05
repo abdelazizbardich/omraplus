@@ -2,11 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\FlightLine;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\flight>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Flight>
  */
 class FlightFactory extends Factory
 {
@@ -18,14 +17,14 @@ class FlightFactory extends Factory
     public function definition(): array
     {
         return [
-            "title" => $this->faker->sentence(3),
+            "title" => $this->faker->name,
+            "slug" => $this->faker->slug,
             "going_date" => $this->faker->date(),
             "return_date" => $this->faker->date(),
-            "flight_going" => FlightLine::get()->random()->id,
-            "flight_return" => FlightLine::get()->random()->id,
-            "description" => $this->faker->paragraph(3),
-            "is_umrah" => $this->faker->boolean(),
-            "is_hadj" => $this->faker->boolean()
+            "description" => $this->faker->sentence(10),
+            "is_recommended" => $this->faker->boolean,
+            "is_economic" => $this->faker->boolean,
+            "category_id" => $this->faker->numberBetween(1, 10),
         ];
     }
 }

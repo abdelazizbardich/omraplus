@@ -5,16 +5,16 @@
 <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
 <div class="container w-full mx-auto">
     <div class="w-full mb-12">
-        <h1 class="text-3xl font-bold">عمرة شعبان - من19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
+        <h1 class="text-3xl font-bold">{{ $flight->title }}</h1>
     </div>
 </div>
 <div class="container w-full mx-auto flex gap-12 items-start relative">
     <div class="w-8/12">
-        <x-desktop.atoms.carousel :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-desktop.atoms.carousel>
+        <x-desktop.atoms.carousel :images="$flight->flightPhotos"></x-desktop.atoms.carousel>
         <x-desktop.atoms.spacer></x-desktop.atoms.spacer>
         <div class="w-full">
             <div class="rounded-t-xl px-6 py-3 pb-5 w-full bg-emerald-300 text-base">
-                <span class="font-semibold">خط مباشر مع الخطوط الملكية المغربية</span>
+                <span class="font-semibold">خط مباشر مع {{  $flight->flightGoing->title }}</span>
             </div>
             <div class="-mt-3">
                 <div
@@ -24,7 +24,7 @@
                     <span class="flex items-center">
                         <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}"
                             class="w-8 h-8 me-3">
-                        <span class="font-semibold text-lg">19 فبراير 2024</span>
+                        <span class="font-semibold text-lg">{{ $flight->going_date }}</span>
                     </span>
                 </div>
                 <div
@@ -34,7 +34,7 @@
                     <span class="flex items-center">
                         <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}"
                             class="w-8 -scale-x-100 h-8 me-3">
-                        <span class="font-semibold text-lg">19 مارس 2024</span>
+                        <span class="font-semibold text-lg">{{ $flight->return_date }}</span>
                     </span>
                 </div>
             </div>
@@ -62,9 +62,7 @@
         <div class="w-full">
             <span class="block text-2xl font-bold w-full block mb-6">وصف العرض</span>
             <div class="text-base font-normal">
-                    <p>عُمرة شعبان هي فرصة روحانية مميزة تُقام خلال شهر شعبان المبارك، وهي تحضير واستعداد لشهر رمضان الكريم. تُعتبر هذه العُمرة مناسبة مثالية للزوار الذين يتطلعون إلى تعميق صلتهم بالله، وتجديد نواياهم، وتنقية أرواحهم من خلال أداء مناسك العُمرة في أجواء إيمانية مفعمة بالخشوع.</p>
-                    <br>
-                    <p>تشمل الرحلة زيارة مكة المكرمة وأداء الطواف حول الكعبة، والسعي بين الصفا والمروة، بالإضافة إلى تخصيص وقت للصلاة والتضرع والدعاء في الأماكن المقدسة. كما تُعتبر عُمرة شعبان فرصة للتأمل والعبادة، وهي محببة لكثير من المسلمين الذين يسعون للاستعداد الروحي لشهر رمضان.</p>
+                    {!! $flight->description !!}
             </div>
         </div>
         <x-desktop.atoms.spacer></x-desktop.atoms.spacer>

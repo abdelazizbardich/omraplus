@@ -8,35 +8,29 @@ use Illuminate\Database\Eloquent\Model;
 class Flight extends Model
 {
     use HasFactory;
-
-    protected $table = 'flights';
-
     protected $fillable = [
-        'title',
-        'going_date',
-        'return_date',
-        'flight_going',
-        'flight_return',
-        'description',
+        "title",
+        "slug",
+        "going_date",
+        "return_date",
+        "description",
+        "is_recommended",
+        "is_economic",
+        "category_id"
     ];
 
-    public function flightGoing()
+    public function category()
     {
-        return $this->belongsTo(FlightLine::class, 'flight_going');
+        return $this->belongsTo(Category::class);
     }
 
-    public function flightReturn()
+    public function photos()
     {
-        return $this->belongsTo(FlightLine::class, 'flight_return');
+        return $this->hasMany(Photo::class, 'post_id');
     }
 
-    public function flightPhotos()
+    public function programs()
     {
-        return $this->hasMany(FlightPhoto::class, 'flight_id');
-    }
-
-    public function flightPrices()
-    {
-        return $this->hasMany(FlightPrice::class, 'flight_id');
+        return $this->hasMany(Program::class);
     }
 }

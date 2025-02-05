@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Hotel>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Discount>
  */
-class HotelFactory extends Factory
+class DiscountFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,10 +18,9 @@ class HotelFactory extends Factory
     {
         return [
             "name" => $this->faker->name,
-            "slug" => $this->faker->slug,
-            "address" => $this->faker->address(),
-            "city" => $this->faker->city,
-            "distance" => $this->faker->randomFloat(2, 0, 1000)
+            "code" => $this->faker->slug,
+            "type" => $this->faker->randomElement(["percentage", "fixed"]),
+            "value" => $this->faker->randomFloat(2, 1, 100),
         ];
     }
 }

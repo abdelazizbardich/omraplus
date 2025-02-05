@@ -22,8 +22,15 @@ class OfferController extends Controller
     public function index(Request $request, Flight $flight)
     {
         $data = [
-            'flight' => $flight
+            'flight' => $flight->with(['booking','flightGoing','flightReturn','flightPhotos','flightPrices'])->first()
         ];
+        // map photos
+        $data['flight']->flightPhotos = $data['flight']->flightPhotos->map(function($photo){
+            return $photo->url;
+        })->toArray();
+
+        dd($data);
+
         return view($this->devicePrefix.'pages.offer',$data);
     }
 }
