@@ -57,7 +57,7 @@ class GuestController extends Controller
     }
 
     public function checkout(){
-
+        return view('guest.checkout');
     }
 
     public function umrahGuide(){

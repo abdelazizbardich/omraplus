@@ -8,9 +8,9 @@
   </div>
   <div class="flex justify-start items-start gap-3 mt-1 w-full">
     @foreach ($images as $index => $image)
-    <a href="#item{{ $index + 1 }}" class="rounded-xl">
+    <span data-id="#item{{ $index + 1 }}" class="slider-nev-item rounded-xl">
       <img src="{{ $image }}" class="aspect-square object-cover w-full rounded-xl max-h-36">
-    </a>
+    </span>
   @endforeach
   </div>
 </div>
