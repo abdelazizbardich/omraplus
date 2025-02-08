@@ -11,7 +11,6 @@ class ProgramPrice extends Model
     protected $fillable = [
         "room_id",
         "program_id",
-        "discount_id",
         "old_price",
         "price"
     ];
@@ -19,10 +18,5 @@ class ProgramPrice extends Model
     public function room()
     {
         return $this->belongsTo(Room::class);
-    }
-
-    public function discount()
-    {
-        return $this->belongsTo(Discount::class);
     }
 }

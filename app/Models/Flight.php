@@ -15,8 +15,8 @@ class Flight extends Model
         "return_date",
         "description",
         "is_recommended",
-        "is_economic",
-        "category_id"
+        "category_id",
+        "airline_id"
     ];
 
     public function category()
@@ -31,6 +31,13 @@ class Flight extends Model
 
     public function programs()
     {
-        return $this->hasMany(Program::class);
+        return $this->hasMany(Program::class, 'flight_id');
     }
+
+    // airline
+    public function airline()
+    {
+        return $this->hasOne(Airline::class, 'id', 'airline_id');
+    }
+
 }

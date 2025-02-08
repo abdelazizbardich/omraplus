@@ -17,7 +17,7 @@ class PhotoFactory extends Factory
     public function definition(): array
     {
         return [
-            "url" => $this->faker->url,
+            "url" => "https://placehold.co/600x400",
             "type" => $this->faker->randomElement(["image/jpeg", "image/png", "image/gif", "image/webp"]),
             "post_id" => $this->faker->numberBetween(1, 10),
             "is_main" => $this->faker->boolean

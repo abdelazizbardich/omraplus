@@ -19,12 +19,13 @@ return new class extends Migration
             $table->date('return_date');
             $table->text('description')->nullable();
             $table->boolean('is_recommended')->default(false);
-            $table->boolean('is_economic')->default(false);
+            $table->enum('type', ['hajj', 'umrah']);
             $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('airline_id');
+            $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-
-            $table->timestamps();
+            $table->foreign(columns: 'airline_id')->references('id')->on('airlines')->onDelete('cascade');
         });
     }
 

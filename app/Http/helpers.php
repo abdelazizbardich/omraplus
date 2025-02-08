@@ -22,3 +22,10 @@ function whatsappLink(string $type = null,$data = null){
 function money($amount){
     return number_format($amount, 2, '.', ',');
 }
+
+function getDiscountPrice($price,$discount,$type){
+    if($type == 'percentage'){
+        $discount = ($price * $discount) / 100;
+    }
+    return $price - $discount;
+}

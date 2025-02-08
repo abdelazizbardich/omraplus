@@ -17,11 +17,10 @@ class ProgramPriceFactory extends Factory
     public function definition(): array
     {
         return [
-            "room_id" => $this->faker->numberBetween(1, 10),
+            "room_id" => $this->faker->numberBetween(1, 5),
             "program_id" => $this->faker->numberBetween(1, 10),
-            "discount_id" => $this->faker->numberBetween(1, 10),
-            "old_price" => $this->faker->randomFloat(2, 0, 100),
-            "price" => $this->faker->randomFloat(2, 0, 100),
+            "old_price" => $this->faker->randomFloat(0, 10000, 30000),
+            "price" => $this->faker->randomFloat(0, 10000, 30000)
         ];
     }
 }

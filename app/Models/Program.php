@@ -12,8 +12,10 @@ class Program extends Model
         "flight_id",
         "hotel_id_mecca",
         "hotel_id_medina",
+        "is_economic",
+        "is_recommended",
         "seat_count",
-        "have_meals",
+        "have_meals"
     ];
 
     public function flight()
@@ -34,5 +36,10 @@ class Program extends Model
     public function prices()
     {
         return $this->hasMany(ProgramPrice::class);
+    }
+
+    public function discounts()
+    {
+        return $this->hasMany(Discount::class);
     }
 }

@@ -17,14 +17,15 @@ class FlightFactory extends Factory
     public function definition(): array
     {
         return [
-            "title" => $this->faker->name,
+            "title" => $this->faker->realText($maxNbChars = 70, $indexSize = 2),
             "slug" => $this->faker->slug,
-            "going_date" => $this->faker->date(),
-            "return_date" => $this->faker->date(),
-            "description" => $this->faker->sentence(10),
+            "going_date" => "2025-02-01",
+            "return_date" => "2025-03-01",
+            "description" => $this->faker->realText($maxNbChars = 600, $indexSize = 2),
             "is_recommended" => $this->faker->boolean,
-            "is_economic" => $this->faker->boolean,
+            "type" => $this->faker->randomElement(["hajj", "umrah"]),
             "category_id" => $this->faker->numberBetween(1, 10),
+            "airline_id" => $this->faker->numberBetween(1, 10),
         ];
     }
 }

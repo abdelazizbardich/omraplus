@@ -20,8 +20,10 @@ class ProgramFactory extends Factory
             "flight_id" => $this->faker->numberBetween(1, 10),
             "hotel_id_mecca" => $this->faker->numberBetween(1, 10),
             "hotel_id_medina" => $this->faker->numberBetween(1, 10),
+            "is_economic" => $this->faker->boolean,
+            "is_recommended" => $this->faker->boolean,
             "seat_count" => $this->faker->numberBetween(1, 10),
-            "have_meals" => $this->faker->boolean,
+            "have_meals" => $this->faker->boolean
         ];
     }
 }

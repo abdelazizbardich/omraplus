@@ -17,10 +17,11 @@ class DiscountFactory extends Factory
     public function definition(): array
     {
         return [
-            "name" => $this->faker->name,
+            "name" => $this->faker->realText($maxNbChars = 25, $indexSize = 2),
             "code" => $this->faker->slug,
             "type" => $this->faker->randomElement(["percentage", "fixed"]),
             "value" => $this->faker->randomFloat(2, 1, 100),
+            "program_id" => $this->faker->numberBetween(1, 10)
         ];
     }
 }

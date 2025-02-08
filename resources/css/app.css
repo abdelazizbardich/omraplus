@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+    display: none;
+}
+
 /* import fonts from fonts woff folder */
 @font-face {
     font-family: "bein-black";
@@ -27,6 +31,10 @@
     font-style: normal;
     font-weight: 900;
     src: url("../fonts/woff/droid-arabic-kufi-black.woff") format("woff");
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {

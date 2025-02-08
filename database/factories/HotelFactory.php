@@ -17,11 +17,11 @@ class HotelFactory extends Factory
     public function definition(): array
     {
         return [
-            "name" => $this->faker->name,
+            "name" => $this->faker->company,
             "slug" => $this->faker->slug,
             "address" => $this->faker->address(),
             "city" => $this->faker->city,
-            "distance" => $this->faker->randomFloat(2, 0, 1000)
+            "distance" => $this->faker->randomFloat(0, 0, 1000)
         ];
     }
 }

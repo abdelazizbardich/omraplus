@@ -14,4 +14,9 @@ class Discount extends Model
         "type",
         "value"
     ];
+
+    public function program()
+    {
+        return $this->belongsTo(Program::class);
+    }
 }

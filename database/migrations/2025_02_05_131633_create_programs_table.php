@@ -16,13 +16,17 @@ return new class extends Migration
             $table->unsignedBigInteger('flight_id');
             $table->unsignedBigInteger('hotel_id_mecca');
             $table->unsignedBigInteger('hotel_id_medina');
+            $table->boolean('is_economic')->default(false);
+            $table->boolean('is_recommended')->default(false);
             $table->integer('seat_count');
             $table->boolean('have_meals')->default(false);
+
+            
+            $table->timestamps();
             
             $table->foreign('flight_id')->references('id')->on('flights')->onDelete('cascade');
             $table->foreign('hotel_id_mecca')->references('id')->on('hotels')->onDelete('cascade');
             $table->foreign('hotel_id_medina')->references('id')->on('hotels')->onDelete('cascade');
-            $table->timestamps();
         });
     }
 

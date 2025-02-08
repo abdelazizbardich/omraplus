@@ -12,9 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->web()->alias([
-            'detect.device' => App\Http\Middleware\DetectDevice::class
-        ]);
+        //
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
