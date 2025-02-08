@@ -31,7 +31,7 @@ class Select extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.atoms.select',
+        return view('components.select',
         [
             'name' => $this->name,
             'label' => $this->label,

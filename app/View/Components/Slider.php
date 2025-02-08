@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\View\Components\Desktop\atoms;
+namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -24,7 +24,7 @@ class Slider extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.desktop.atoms.carousel', [
+        return view('components.carousel', [
             'images' => $this->images
         ]);
     }
