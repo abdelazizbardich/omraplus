@@ -7,7 +7,7 @@
     <div class="border-b w-full h-0 mb-3 opacity-25"></div>
     <div class="flex items-stretch mb-3">
         <div class="w-5/12">
-            <x-carousel :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-carousel>
+            <x-slider :images="[Vite::asset('resources/images/umrah-offer-main.webp'), Vite::asset('resources/images/mission-1.jpg'), Vite::asset('resources/images/mission-2.jpg'), Vite::asset('resources/images/mission-3.jpg'), Vite::asset('resources/images/mission-4.jpg')]"></x-slider>
         </div>
         <div class="w-7/12 px-3">
             <span class="block text-xl font-bold mb-3">الحجوزات المتاحة:</span>

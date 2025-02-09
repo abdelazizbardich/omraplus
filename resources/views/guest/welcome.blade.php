@@ -18,8 +18,8 @@
 </div>
 <x-spacer></x-spacer>
 <div class="container m-auto flex justify-between items-start">
-    <x-title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')"
-        :title="__('welcome to our agency for the omrah in marrakech')"></x-title>
+    <x-title :title="__('Hajj Agency: The best offers and distinguished services for pilgrims to the House of Allah')"
+        :subtitle="__('With OmraPlus, we offer you the best Hajj packages at competitive prices and integrated services. We guarantee you a comfortable and easy Hajj experience under the supervision of a professional and experienced team. Book with us today and choose the best for your trip.')"></x-title>
 </div>
 <x-spacer></x-spacer>
 <div class="container m-auto">
@@ -38,7 +38,7 @@
 <div class="bg-blue-50">
     <x-spacer></x-spacer>
     <div class="container m-auto flex justify-between items-start">
-        <x-title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('welcome to our agency for the omrah in marrakech')"></x-title>
+        <x-title :subtitle="__('Choose OmraPlus for a hassle-free Umrah! We offer you the best offers at competitive prices and integrated services for a comfortable and distinctive Umrah experience.')" :title="__('OmraPlus: Easy Umrah with special prices and integrated services')"></x-title>
     </div>
     <x-spacer></x-spacer>
     <div class="container m-auto">
@@ -64,7 +64,7 @@
 </div>
 <x-spacer></x-spacer>
 <div class="container m-auto flex justify-between items-start">
-    <x-title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('Our blog')"></x-title>
+    <x-title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('Our Blog – Your Comprehensive Guide to Hajj and Umrah')"></x-title>
 </div>
 <x-spacer></x-spacer>
 <div class="container m-auto flex justify-center items-start flex-wrap">

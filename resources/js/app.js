@@ -45,5 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.showModal();
         });
     });
+
+    document.querySelectorAll('.slider').forEach((slider)=>{
+        slider.querySelectorAll('.slider-nev-item ').forEach(item=>{
+            item.addEventListener('click', ()=>{
+                const id =item.dataset.id;
+                slider.querySelector('#'+id).scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+            });
+        })
+    });
 });
 

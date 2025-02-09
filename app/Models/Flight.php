@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use DB;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -34,10 +35,23 @@ class Flight extends Model
         return $this->hasMany(Program::class, 'flight_id');
     }
 
-    // airline
     public function airline()
     {
         return $this->hasOne(Airline::class, 'id', 'airline_id');
     }
+
+    public function getLowestPrice()
+    {
+        $price =  $this->programs()
+            ->selectRaw('program_prices.price as price, program_prices.old_price as old_price')
+            ->leftJoin('program_prices', 'programs.id', '=', 'program_prices.program_id')
+            ->orderBy('program_prices.price')
+            ->limit(1)
+            ->groupBy('flight_id', 'program_prices.price', 'program_prices.old_price', 'program_prices.id');
+            // dd($price->get());
+            return $price->first();
+    }
+
+
 
 }

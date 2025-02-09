@@ -31,11 +31,8 @@
             </div>
             <hr class="my-3 opacity-30">
             <div class="flex flex-col mb-3">
-                @if (false)
-                
-                <span class="block opacity-45 text-xs font-bold line-through line-clamp-2 lining-nums">{{ $data->programs[0]->prices[0]->old_price }} {{__('dh')}}</span>
-                <span class="text-xs block font-black lining-nums"><span class="text-3xl">{{ $data->programs[0]->prices[0]->price }}</span> {{__('dh')}} {{__('For a person')}}</span>
-                @endif
+                <span class="block opacity-45 text-xs font-bold line-through line-clamp-2 lining-nums">{{ @$data->getLowestPrice()->old_price }} {{__('dh')}}</span>
+                <span class="text-xs block font-black lining-nums"><span class="text-3xl">{{ @$data->getLowestPrice()->price }}</span> {{__('dh')}} {{__('For a person')}}</span>
                 <span class="text-md">({{__('Price varies depending on the size of the collection')}})</span>
             </div>
             <div class="flex justify-between gap-2">

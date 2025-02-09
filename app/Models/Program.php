@@ -42,4 +42,12 @@ class Program extends Model
     {
         return $this->hasMany(Discount::class);
     }
+
+    public function getLowestPrice()
+    {
+        $price =  $this->prices()
+        ->orderBy('program_prices.price')
+        ->limit(1);
+        return $price->first();
+    }
 }

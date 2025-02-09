@@ -24,7 +24,7 @@ class Slider extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.carousel', [
+        return view('components.slider', [
             'images' => $this->images
         ]);
     }

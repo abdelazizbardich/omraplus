@@ -125,7 +125,7 @@
     <x-title :title="__('upcomming flights')" :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')"></x-title>
 </div>
 <x-spacer></x-spacer>
-<div class="container m-auto flex justify-between items-start gap-6">
+<div class="container m-auto flex justify-center items-start gap-6">
     @foreach ($nexFligths as $index=>$nexFligth)
         <div class="w-3/12 flex items-start justify-center">
             <x-offer-card-minimal-with-preview :data="$nexFligth"></x-offer-card-minimal-with-preview>
