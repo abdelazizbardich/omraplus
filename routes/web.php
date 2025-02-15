@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-App::setLocale('ar');
+App::setLocale('en');
 Route::get('/lang/{locale}', function ($locale) { })->name('lang');
 
 Route::get('/', [App\Http\Controllers\GuestController::class, 'home'])->name('home');

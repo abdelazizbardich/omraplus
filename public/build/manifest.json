@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-BSMWaDBx.css",
+    "file": "assets/app-C7RNL5G2.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -40,6 +40,10 @@
     "file": "assets/cachplus-C6-WJulj.jpg",
     "src": "resources/images/cachplus.jpg"
   },
+  "resources/images/categories.png": {
+    "file": "assets/categories-Jd9Qmfu_.png",
+    "src": "resources/images/categories.png"
+  },
   "resources/images/checked.webp": {
     "file": "assets/checked-DSH1lPFd.webp",
     "src": "resources/images/checked.webp"
@@ -56,9 +60,21 @@
     "file": "assets/customer-service-VJy-AP1q.webp",
     "src": "resources/images/customer-service.webp"
   },
+  "resources/images/dashboard.png": {
+    "file": "assets/dashboard-SEF-K2Qu.png",
+    "src": "resources/images/dashboard.png"
+  },
+  "resources/images/delete.png": {
+    "file": "assets/delete-BoW6drIl.png",
+    "src": "resources/images/delete.png"
+  },
   "resources/images/discount.png": {
     "file": "assets/discount-hNX39-Cw.png",
     "src": "resources/images/discount.png"
+  },
+  "resources/images/edit.png": {
+    "file": "assets/edit-MIk-D_ps.png",
+    "src": "resources/images/edit.png"
   },
   "resources/images/evisa icon.svg": {
     "file": "assets/evisa icon-CZi9Nn4y.svg",
@@ -120,6 +136,10 @@
     "file": "assets/logo-CkGFKdsM.webp",
     "src": "resources/images/logo.webp"
   },
+  "resources/images/logout.png": {
+    "file": "assets/logout-2pKdcEBl.png",
+    "src": "resources/images/logout.png"
+  },
   "resources/images/medal.webp": {
     "file": "assets/medal-DgKWPZem.webp",
     "src": "resources/images/medal.webp"
@@ -172,9 +192,21 @@
     "file": "assets/prices-Cs-3Ki2W.png",
     "src": "resources/images/prices.png"
   },
+  "resources/images/profile.png": {
+    "file": "assets/profile-DBxf7nc1.png",
+    "src": "resources/images/profile.png"
+  },
   "resources/images/programs.png": {
     "file": "assets/programs-OBHX66MB.png",
     "src": "resources/images/programs.png"
+  },
+  "resources/images/room.png": {
+    "file": "assets/room-JM4NSBuK.png",
+    "src": "resources/images/room.png"
+  },
+  "resources/images/settings.png": {
+    "file": "assets/settings-Dv6U9FtG.png",
+    "src": "resources/images/settings.png"
   },
   "resources/images/site-avatar.jpg": {
     "file": "assets/site-avatar-BzIZj2Fv.jpg",
@@ -201,14 +233,16 @@
     "src": "resources/images/wafa-bank.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-1vaaDpGO.js",
+    "file": "assets/app-CFs2cpmF.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-BSMWaDBx.css"
+      "assets/app-C7RNL5G2.css"
     ],
     "assets": [
+      "assets/delete-BoW6drIl.png",
+      "assets/edit-MIk-D_ps.png",
       "assets/bein-black-DgIw4-Hw.woff",
       "assets/bein-normal-6Drpe53X.woff",
       "assets/droid-arabic-kufi-C6Wv-IVi.woff",

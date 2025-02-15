@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{(App::isLocale('ar') ? 'rtl' : 'ltr')}}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{getLanguageDirection()}}">
 
 <head>
     <title>{{ __(config('app.name')) }} - {{ __('Home') }}</title>
