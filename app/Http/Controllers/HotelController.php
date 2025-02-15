@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HotelController extends Controller
+{
+    public function index()
+    {
+        return view('hotels',["name"=> "Hotels"]);
+    }
+
+    public function save(Request $request){
+        dd($request);
+    }
+}

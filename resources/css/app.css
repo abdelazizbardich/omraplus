@@ -61,6 +61,27 @@ body {
     .no-scrollbar {
         scrollbar-width: none;
     }
+    .delete{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: white !important;
+        background-image: url('../images/delete.png');
+        background-position: center;
+        background-size: 60% auto;
+        background-repeat: no-repeat;
+    }
+    .edit{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: white !important;
+        background-image: url('../images/edit.png');
+        background-position: center;
+        background-size: 60% auto;
+        background-repeat: no-repeat;
+    }
+    input:focus{
+        box-shadow: none;
+    }
 }
 
 

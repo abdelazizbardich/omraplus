@@ -9,9 +9,8 @@
                 <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
             </svg>
         </label>
-        <label for="logout" href="{{route('logout')}}" class="px-1 cursor-pointer hover:text-gray-700">
-            <i class="fa-solid fa-arrow-right-from-bracket p-2 bg-red-600 text-white rounded-full w-8 rotate-180"></i>
-            </i>
+        <label for="logout" href="{{route('logout')}}" class="cursor-pointer hover:text-gray-700 flex items-center justify-center">
+        <img src="{{ Vite::asset('resources/images/logout.png') }}" alt="{{ __('Logo') }}"  class="me-3 h-6 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
         </label>
         <form action="{{route('logout')}}" class="hidden" method="post">
             @csrf
