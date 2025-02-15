@@ -2,7 +2,7 @@
     <main class="flex-1 flex gap-4">
         <div class="w-2/5">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
-                <form action="{{ route('airlines') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('categories.save') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label class="input input-bordered flex items-center gap-2">
