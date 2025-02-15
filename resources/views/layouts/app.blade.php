@@ -73,7 +73,7 @@
             <!-- Main Content -->
             <div class="px-6">
                 <div class="mb-3">
-                    <x-breadcrumbs :links="['Dashboard']" :dark="true"></x-breadcrumbs>
+                    <x-breadcrumbs :links="[$name]" :dark="true"></x-breadcrumbs>
                 </div>
                 {{ $slot }}
             </div>

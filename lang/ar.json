@@ -210,11 +210,18 @@
     "password.user" : "We can't find a user with that email address.",
     "Dashboard": "لوحة التحكم",
     "Hajj Flights": "رحلات الحج",
+    "Omra Flights": "رحلات العمرة",
+    "Hajj Flight": "رحلة الحج",
+    "Omra Flight": "رحلة العمرة",
+    "Flights": "رحلات",
     "Programs": "البرامج",
     "Hotels": "الفنادق",
     "Airlines": "خطوط الطيران",
     "Pricing": "الأسعار",
     "Discounts": "الخصومات",
     "reservations": "الحجوزات",
-    "Not confirmed yet": "لم يتم تأكيدها بعد"
+    "Not confirmed yet": "لم يتم تأكيدها بعد",
+    "and": "و",
+    "users": "المستخدمين",
+    "Logout": "خروج"
 }

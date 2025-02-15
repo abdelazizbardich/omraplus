@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-mi6_zF_J.css",
+    "file": "assets/app-BSMWaDBx.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -23,6 +23,10 @@
   "resources/images/Kaaba.webp": {
     "file": "assets/Kaaba-DxOYsQrj.webp",
     "src": "resources/images/Kaaba.webp"
+  },
+  "resources/images/airline.png": {
+    "file": "assets/airline-C98g7wKr.png",
+    "src": "resources/images/airline.png"
   },
   "resources/images/blog-post.jpg": {
     "file": "assets/blog-post-DChHjhhC.jpg",
@@ -51,6 +55,10 @@
   "resources/images/customer-service.webp": {
     "file": "assets/customer-service-VJy-AP1q.webp",
     "src": "resources/images/customer-service.webp"
+  },
+  "resources/images/discount.png": {
+    "file": "assets/discount-hNX39-Cw.png",
+    "src": "resources/images/discount.png"
   },
   "resources/images/evisa icon.svg": {
     "file": "assets/evisa icon-CZi9Nn4y.svg",
@@ -160,6 +168,10 @@
     "file": "assets/popularbank-IoZjQBw3.jpg",
     "src": "resources/images/popularbank.jpg"
   },
+  "resources/images/prices.png": {
+    "file": "assets/prices-Cs-3Ki2W.png",
+    "src": "resources/images/prices.png"
+  },
   "resources/images/programs.png": {
     "file": "assets/programs-OBHX66MB.png",
     "src": "resources/images/programs.png"
@@ -189,12 +201,12 @@
     "src": "resources/images/wafa-bank.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-TwpR6Of_.js",
+    "file": "assets/app-1vaaDpGO.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-mi6_zF_J.css"
+      "assets/app-BSMWaDBx.css"
     ],
     "assets": [
       "assets/bein-black-DgIw4-Hw.woff",

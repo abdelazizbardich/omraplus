@@ -17,12 +17,12 @@ Route::get('/faqs', [App\Http\Controllers\GuestController::class, 'faqs'])->name
 
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])->group(function () {
+    Route::get('/dashboard/home', function () {return view('dashboard', ["name" => "Dashboard"]);})->name('dashboard');
+    Route::get('/dashboard/flights', function () {return view('flights',["name"=> "Flights"]);})->name('flights');
+    Route::get('/dashboard/programs', function () {return view('programs',["name"=> "Programs"]);})->name('programs');
+    Route::get('/dashboard/hotels', function () {return view('hotels',["name"=> "Hotels"]);})->name('hotels');
+    Route::get('/dashboard/airlines', function () {return view('airlines',["name"=> "Airlines"]);})->name('airlines');
+    Route::get('/dashboard/pricing', function () {return view('pricing',["name"=> "Pricing"]);})->name('pricing');
+    Route::get('/dashboard/discounts', function () {return view('discounts',["name"=> "Discounts"]);})->name('discounts');
 });
