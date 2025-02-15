@@ -83,7 +83,7 @@
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-center mb-2">
                 <div class="flex flex-col justify-center">
-                    <span class="font-black lining-nums"><span class="text-xl">14.000,00</span> {{__('dh')}} {{__('For a person')}}</span>
+                    <span class="font-black lining-nums"><span class="text-xl">{{ money(@$data->getLowestPrice()->old_price) }}</span> {{__('dh')}} {{__('For a person')}}</span>
                     <span class="text-xs text-nowrap">({{__('Price varies depending on the size of the collection')}})</span>
                 </div>
                 <div class="bg-yellow-500 shadow w-fit text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">

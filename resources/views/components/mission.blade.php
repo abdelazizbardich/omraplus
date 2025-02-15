@@ -36,12 +36,6 @@
                         <p class="text-base mb-4 text-justify">{{ __('why.religious_guidance.description') }}</p>
                     </div>
                 </div>
-                <div class="flex items-center">
-                    <div class="">
-                        <li class="text-lg list-disc block w-full font-semibold mb-6">{{__('why.customer_support')}}</li>
-                        <p class="text-base mb-4 text-justify">{{ __('why.customer_support.description') }}</p>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="w-5/12 -mt-20">

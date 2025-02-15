@@ -1,6 +1,6 @@
 <x-guest-layout>
 <x-header active=""></x-header>
-<x-page-header :title="__('confirmation & paimenent')" :breadcrumbs="[__('Home'), __('confirmation & paimenent')]" />
+<x-page-header :title="__('confirmation & paimenent')" :breadcrumbs="['Home', 'confirmation & paimenent']" />
 <x-spacer></x-spacer>
 <div class="container w-full mx-auto">
     <div class="w-full mb-12">

@@ -63,7 +63,7 @@
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-center mb-2 flex-row lg:flex-col gap-y-3">
                 <div class="flex flex-col justify-center items-center">
-                    <span class="font-black lining-nums"><span class="text-xl">{{ money($data->price) }}</span> {{__('dh')}} <span>{{__('For a person')}}</span></span>
+                    <span class="font-black lining-nums"><span class="text-xl">{{ money(@$data->getLowestPrice()->old_price) }}</span> {{__('dh')}} <span>{{__('For a person')}}</span></span>
                     <span class="text-xs text-nowrap">({{__('Price varies depending on the size of the collection')}})</span>
                 </div>
                 <a href="{{ route('checkout', $data->id) }}" class="text-center flex-nowrap bg-yellow-500 shadow w-full text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
