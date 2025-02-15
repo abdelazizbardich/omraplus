@@ -24,26 +24,26 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     Route::get('/dashboard/settings', [App\Http\Controllers\DashboardController::class, 'settings'])->name('settings');
 
     Route::get('/dashboard/flights', [App\Http\Controllers\FligthController::class, 'index'])->name('flights');
-    Route::post('/dashboard/flights', [App\Http\Controllers\FligthController::class, 'save'])->name('flights');
+    Route::post('/dashboard/flights/save', [App\Http\Controllers\FligthController::class, 'save'])->name('flights');
 
     Route::get('/dashboard/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories');
-    Route::post('/dashboard/categories', [App\Http\Controllers\CategoryController::class, 'save'])->name('categories');
+    Route::post('/dashboard/categories/save', [App\Http\Controllers\CategoryController::class, 'save'])->name('categories');
     
     Route::get('/dashboard/programs', [App\Http\Controllers\ProgramController::class, 'index'])->name('programs');
-    Route::post('/dashboard/programs', [App\Http\Controllers\ProgramController::class, 'save'])->name('programs');
+    Route::post('/dashboard/programs/save', [App\Http\Controllers\ProgramController::class, 'save'])->name('programs');
 
     Route::get('/dashboard/hotels', [App\Http\Controllers\HotelController::class, 'index'])->name('hotels');
-    Route::post('/dashboard/hotels', [App\Http\Controllers\HotelController::class, 'save'])->name('hotels');
+    Route::post('/dashboard/hotels/save', [App\Http\Controllers\HotelController::class, 'save'])->name('hotels');
     
     Route::get('/dashboard/airlines', [App\Http\Controllers\AirlineController::class, 'index'])->name('airlines');
-    Route::post('/dashboard/airlines', [App\Http\Controllers\AirlineController::class, 'save'])->name('airlines');
+    Route::post('/dashboard/airlines/save', [App\Http\Controllers\AirlineController::class, 'save'])->name('airlines');
 
     Route::get('/dashboard/pricing', [App\Http\Controllers\PricingController::class, 'index'])->name('pricing');
-    Route::post('/dashboard/pricing', [App\Http\Controllers\PricingController::class, 'save'])->name('pricing');
+    Route::post('/dashboard/pricing/save', [App\Http\Controllers\PricingController::class, 'save'])->name('pricing');
 
     Route::get('/dashboard/discounts', [App\Http\Controllers\DiscountController::class, 'index'])->name('discounts');
-    Route::post('/dashboard/discounts', [App\Http\Controllers\DiscountController::class, 'save'])->name('discounts');
+    Route::post('/dashboard/discounts/save', [App\Http\Controllers\DiscountController::class, 'save'])->name('discounts');
 
     Route::get('/dashboard/rooms', [App\Http\Controllers\RoomController::class, 'index'])->name('rooms');
-    Route::post('/dashboard/rooms', [App\Http\Controllers\RoomController::class, 'save'])->name('rooms');
+    Route::post('/dashboard/rooms/save', [App\Http\Controllers\RoomController::class, 'save'])->name('rooms');
 });
