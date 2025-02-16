@@ -68,7 +68,7 @@
 <body class="bg-gray-100 dashboard">
     <div class="flex h-screen">
         <x-dashboard.side-nav></x-dashboard.side-nav>
-        <div class="w-full min-h-screen">
+        <div class="w-full h-screen overflow-y-auto">
             <x-dashboard.header></x-dashboard.header>
             <!-- Main Content -->
             <div class="px-6">

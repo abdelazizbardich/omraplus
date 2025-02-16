@@ -1,4 +1,4 @@
-<div class="p-4 w-full">
+<div class="p-4 w-full sticky top-0 z-50">
     <div class="p-2 text-gray-900 bg-white rounded-lg shadow-md flex justify-between items-center">
         <label class="btn btn-circle swap swap-rotate">
             <input type="checkbox" hidden class="hidden menu-toggle" checked/>
