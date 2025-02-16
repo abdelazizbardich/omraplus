@@ -7,41 +7,40 @@
                     <div class="mb-3">
                         <label class="input input-bordered inpu flex items-center gap-2">
                             {{__('Title')}}:
-                            <input type="text" name="title" class="grow border-none focus:shadow-none shadow-none"
-                                placeholder="" />
+                            <input type="text" name="title" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                         </label>
                         <input type="text" name="slug" class="input input-sm w-full mt-1" placeholder="" value="Lorem ipsum dolor sit amet" disabled />
                     </div>
                     <div class="mb-3 grid grid-cols-3 gap-4 items-center">
                         <label class="text-nowrap input input-bordered flex items-center gap-2">
                             {{__('Going date')}}:
-                            <input type="text" name="going_date" class="grow border-none focus:shadow-none shadow-none"
-                                placeholder="" />
+                            <input type="date" name="going_date" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                         </label>
                         <label class="text-nowrap input input-bordered flex items-center gap-2">
                             {{__('Return date')}}:
-                            <input type="text" name="return_date" class="grow border-none focus:shadow-none shadow-none"
-                                placeholder="" />
+                            <input type="date" name="return_date" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                         </label>
                         <label class="text-nowrap input input-bordered flex items-center gap-2">
                             {{__('Type')}}:
                             <select name="type" class="grow border-none focus:shadow-none shadow-none">
-                                <option value="percentage">{{__('percentage')}}</option>
-                                <option value="fixed">{{__('fixed')}}</option>
+                                <option value="omra">{{__('Omra')}}</option>
+                                <option value="hajj">{{__('Hajj')}}</option>
                             </select>
                         </label>
                         <label class="text-nowrap input input-bordered flex items-center gap-2">
                             {{__('Category')}}:
                             <select name="category" class="grow border-none focus:shadow-none shadow-none">
-                                <option value="percentage">{{__('percentage')}}</option>
-                                <option value="fixed">{{__('fixed')}}</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
                             </select>
                         </label>
                         <label class="text-nowrap input input-bordered flex items-center gap-2">
                             {{__('Aireline')}}:
                             <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
-                                <option value="percentage">{{__('percentage')}}</option>
-                                <option value="fixed">{{__('fixed')}}</option>
+                            @foreach ($airelines as $aireline)
+                                    <option value="{{ $aireline->id }}">{{ $aireline->name }}</option>
+                                @endforeach
                             </select>
                         </label>
                         <div class="form-control">
@@ -55,8 +54,7 @@
                         <label class="mb-1 block">{{__('Description')}}:</label>
                         <textarea placeholder="{{__('Fligth Description')}}" rows="7" class="textarea textarea-bordered w-full text-small"></textarea>
                     </div>
-                    <button type="submit"
-                        class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
                 </form>
             </div>
         </div>

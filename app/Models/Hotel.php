@@ -21,4 +21,10 @@ class Hotel extends Model
     {
         return $this->hasMany(Photo::class, 'post_id');
     }
+
+    // Get photo where is_main = true
+    public function mainPhoto()
+    {
+        return $this->hasOne(Photo::class, 'post_id')->where('is_main', true);
+    }
 }
