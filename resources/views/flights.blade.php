@@ -49,6 +49,18 @@
                                 <input type="checkbox" class="toggle" name="recomanded" />
                             </label>
                         </div>
+                        <div class="mb-3">
+                            <label class="input input-bordered flex items-center gap-2">
+                                {{__('Primary photo')}}
+                                <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="input input-bordered flex items-center gap-2">
+                                {{__('Fligth photos')}}
+                                <input type="file" name="fligth_photos[]" class="grow w-full max-w-xs" multiple />
+                            </label>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="mb-1 block">{{__('Description')}}:</label>
