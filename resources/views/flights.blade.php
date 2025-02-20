@@ -64,7 +64,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="mb-1 block">{{__('Description')}}:</label>
-                        <textarea placeholder="{{__('Fligth Description')}}" rows="7" class="textarea textarea-bordered w-full text-small"></textarea>
+                        <x-text-editor placeholder="{{__('Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small"></x-text-editor>
                     </div>
                     <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
                 </form>

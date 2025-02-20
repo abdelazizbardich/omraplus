@@ -1,6 +1,8 @@
 import "./bootstrap";
-import "../css/app.css";
+import "../css/app.scss";
 import.meta.glob(["../images/**", "../fonts/**"]);
+
+import Quill from "quill";
 
 document.addEventListener("DOMContentLoaded", () => {
     const carousels = document.querySelectorAll(".carousel-container");
@@ -47,13 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
         slider.querySelectorAll(".slider-nev-item ").forEach((item) => {
             item.addEventListener("click", () => {
                 const id = item.dataset.id;
-                slider
-                    .querySelector("#" + id)
-                    .scrollIntoView({
-                        behavior: "smooth",
-                        block: "nearest",
-                        inline: "nearest",
-                    });
+                slider.querySelector("#" + id).scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest",
+                    inline: "nearest",
+                });
             });
         });
     });
@@ -61,11 +61,65 @@ document.addEventListener("DOMContentLoaded", () => {
     const dashboard = document.querySelector(".dashboard");
     const menuToggle = dashboard.querySelector(".menu-toggle");
     const dashboardSideMenu = dashboard.querySelector(".dashboard-side-menu");
-    menuToggle.addEventListener("change", () => {        
-        if(menuToggle.checked){           
+    menuToggle.addEventListener("change", () => {
+        if (menuToggle.checked) {
             dashboardSideMenu.classList.remove("closed");
-        }else{
+        } else {
             dashboardSideMenu.classList.add("closed");
         }
+    });
+
+    // Text editor
+    const textEditor = document.querySelector("#text-editor");
+    console.log("textEditor", textEditor);
+    const quill = new Quill(textEditor, {
+        theme: "snow",
+        readOnly: false,
+        formats: [
+            "bold",
+            "italic",
+            "underline",
+            "strike",
+            "color",
+            "background",
+            "align",
+            "list",
+            "indent",
+            "link",
+            "image",
+            "header",
+            "direction",
+        ],
+        modules: {
+            toolbar: [
+                [{ 'direction': 'rtl' }],
+                [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                ['bold', 'italic', 'underline', 'strike'],
+                [{ 'color': [] }, { 'background': [] }],
+                [{ 'align': [] }],
+                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                [{ 'indent': '-1' }, { 'indent': '+1' }],
+                ['link', 'image'],
+                ['clean']
+            ],
+            clipboard: {
+                matchVisual: false,
+            },
+            history: {
+                delay: 2000,
+                maxStack: 500,
+                userOnly: true
+            }
+
+        },
+        debug: "info",
+        strict: true,
+        bounds: document.body,
+        scrollingContainer: document.body,
+        history: {
+            delay: 2000,
+            maxStack: 500,
+            userOnly: true
+        },
     });
 });
