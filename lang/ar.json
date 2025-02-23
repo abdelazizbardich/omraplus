@@ -262,5 +262,16 @@
     "Omra": "عمرة",
     "Hajj": "حج",
     "Fligth photos": "صور الرحلة",
-    "New flight": "رحلة جديدة"
+    "New flight": "رحلة جديدة",
+
+    "validation.required": "الحقل :attribute مطلوب.",
+    "validation.required_array_keys": "The :attribute field must contain entries for: :values.",
+    "validation.required_if": "The :attribute field is required when :other is :value.",
+    "validation.required_if_accepted": "The :attribute field is required when :other is accepted.",
+    "validation.required_if_declined": "The :attribute field is required when :other is declined.",
+    "validation.required_unless": "The :attribute field is required unless :other is in :values.",
+    "validation.required_with": "The :attribute field is required when :values is present.",
+    "validation.required_with_all": "The :attribute field is required when :values are present.",
+    "validation.required_without": "The :attribute field is required when :values is not present.",
+    "validation.required_without_all": "The :attribute field is required when none of :values are present."
 }
