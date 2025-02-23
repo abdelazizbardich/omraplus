@@ -108,7 +108,7 @@
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
                                     {{__('Type')}}:
                                     <select name="type" class="grow border-none focus:shadow-none shadow-none">
-                                        <option value="omra" @if(old('type') === 'omra') selected @endif>{{__('Omra')}}</option>
+                                        <option value="umrah" @if(old('type') === 'umrah') selected @endif>{{__('Omra')}}</option>
                                         <option value="hajj" @if(old('type') === 'hajj') selected @endif>{{__('Hajj')}}</option>
                                     </select>
                                 </label>
