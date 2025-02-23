@@ -52,7 +52,7 @@ class FligthController extends Controller
             "type" => $request->type,
             "category_id" => $request->category,
             "airline_id" => $request->aireline,
-            "is_recommended" => $request->is_recommended,
+            "is_recommended" => $request->is_recommended === "on",
             "description" => $request->description
         ]);
 
