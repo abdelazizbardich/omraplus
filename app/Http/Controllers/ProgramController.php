@@ -37,9 +37,9 @@ class ProgramController extends Controller
             "hotel_id_mecca" => $request->hotel_macca,
             "hotel_id_medina" => $request->hotel_medina,
             "seat_count" => $request->seats_count,
-            "is_economic" => $request->is_economic || 0,
-            "have_meals" => $request->have_meals || 0,
-            "is_recommended" => $request->is_recommended || 0,
+            "is_economic" => $request->is_economic === "on",
+            "have_meals" => $request->have_meals === "on",
+            "is_recommended" => $request->is_recommended === "on"
         ]);
 
         return redirect()->route('programs')->with('success', 'Flight created successfully');
