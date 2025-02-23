@@ -64,6 +64,13 @@ body {
     .no-scrollbar {
         scrollbar-width: none;
     }
+    .input{
+        @apply bg-gray-100
+    }
+    select,input{
+        @apply bg-transparent;
+        box-shadow: none !important;
+    }
     .delete{
         width: 1.5rem;
         height: 1.5rem;

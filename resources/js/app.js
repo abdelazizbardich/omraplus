@@ -2,8 +2,6 @@ import "./bootstrap";
 import "../css/app.scss";
 import.meta.glob(["../images/**", "../fonts/**"]);
 
-import Quill from "quill";
-
 document.addEventListener("DOMContentLoaded", () => {
     const carousels = document.querySelectorAll(".carousel-container");
     carousels.forEach((carouselContainer) => {
@@ -71,55 +69,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Text editor
     const textEditor = document.querySelector("#text-editor");
-    console.log("textEditor", textEditor);
-    const quill = new Quill(textEditor, {
-        theme: "snow",
-        readOnly: false,
-        formats: [
-            "bold",
-            "italic",
-            "underline",
-            "strike",
-            "color",
-            "background",
-            "align",
-            "list",
-            "indent",
-            "link",
-            "image",
-            "header",
-            "direction",
+    $(textEditor).summernote({
+        tabsize: 4,
+        height: 520,
+        inheritPlaceholder: true,
+        dialogsInBody: false,
+        lang: getSummernoteLang(),
+        toolbar:[
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['fontname', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture']],
+            ['view', ['codeview', 'help']]
         ],
-        modules: {
-            toolbar: [
-                [{ 'direction': 'rtl' }],
-                [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                ['bold', 'italic', 'underline', 'strike'],
-                [{ 'color': [] }, { 'background': [] }],
-                [{ 'align': [] }],
-                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                [{ 'indent': '-1' }, { 'indent': '+1' }],
-                ['link', 'image'],
-                ['clean']
-            ],
-            clipboard: {
-                matchVisual: false,
-            },
-            history: {
-                delay: 2000,
-                maxStack: 500,
-                userOnly: true
-            }
-
-        },
-        debug: "info",
-        strict: true,
-        bounds: document.body,
-        scrollingContainer: document.body,
-        history: {
-            delay: 2000,
-            maxStack: 500,
-            userOnly: true
-        },
-    });
+        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Bein black','Bein normal', 'Droid arabic kufi', 'Droid arabic kufi black'],
+        fontNamesIgnoreCheck: ['Bein black','Bein normal', 'Droid arabic kufi', 'Droid arabic kufi black']
+      });
+    function getSummernoteLang() {
+        if (lang === "ar") {
+            return "ar-AR";
+        } else if (lang === "fr") {
+            return "fr-FR";
+        } else {
+            return "en-US";
+        }
+    }
 });
+
+

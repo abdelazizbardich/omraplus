@@ -93,8 +93,8 @@ class HotelController extends Controller
     
             // Validate file primary_photo and hotel_photos
             $request->validate([
-                'primary_photo' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'hotel_photos.*' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'primary_photo' => 'required|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'hotel_photos.*' => 'mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]);
     
             // Save data to database

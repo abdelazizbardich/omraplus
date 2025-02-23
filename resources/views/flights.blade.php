@@ -1,75 +1,166 @@
 <x-app-layout :name=$name>
     <main class="flex-1 flex flex-col gap-12">
-        <div class="w-full">
-            <div class="bg-white rounded-xl shadow-lg px-3 py-3">
-                <form action="{{ route('flights.save') }}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="mb-3">
-                        <label class="input input-bordered inpu flex items-center gap-2">
-                            {{__('Title')}}:
-                            <input type="text" name="title" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
-                        </label>
-                        <input type="text" name="slug" class="input input-sm w-full mt-1" placeholder="" value="Lorem ipsum dolor sit amet" disabled />
-                    </div>
-                    <div class="mb-3 grid grid-cols-3 gap-4 items-center">
-                        <label class="text-nowrap input input-bordered flex items-center gap-2">
-                            {{__('Going date')}}:
-                            <input type="date" name="going_date" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
-                        </label>
-                        <label class="text-nowrap input input-bordered flex items-center gap-2">
-                            {{__('Return date')}}:
-                            <input type="date" name="return_date" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
-                        </label>
-                        <label class="text-nowrap input input-bordered flex items-center gap-2">
-                            {{__('Type')}}:
-                            <select name="type" class="grow border-none focus:shadow-none shadow-none">
-                                <option value="omra">{{__('Omra')}}</option>
-                                <option value="hajj">{{__('Hajj')}}</option>
-                            </select>
-                        </label>
-                        <label class="text-nowrap input input-bordered flex items-center gap-2">
-                            {{__('Category')}}:
-                            <select name="category" class="grow border-none focus:shadow-none shadow-none">
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
-                        </label>
-                        <label class="text-nowrap input input-bordered flex items-center gap-2">
-                            {{__('Aireline')}}:
-                            <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
-                            @foreach ($airelines as $aireline)
-                                    <option value="{{ $aireline->id }}">{{ $aireline->name }}</option>
-                                @endforeach
-                            </select>
-                        </label>
-                        <div class="form-control">
-                            <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
-                                <span class="label-text">{{__('Recomanded')}}</span>
-                                <input type="checkbox" class="toggle" name="recomanded" />
-                            </label>
-                        </div>
-                        <div class="mb-3">
-                            <label class="input input-bordered flex items-center gap-2">
-                                {{__('Primary photo')}}
-                                <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
-                            </label>
-                        </div>
-                        <div class="mb-3">
-                            <label class="input input-bordered flex items-center gap-2">
-                                {{__('Fligth photos')}}
-                                <input type="file" name="fligth_photos[]" class="grow w-full max-w-xs" multiple />
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="mb-1 block">{{__('Description')}}:</label>
-                        <x-text-editor placeholder="{{__('Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small"></x-text-editor>
-                    </div>
-                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
-                </form>
+        <div  class="collapse collapse-plus border-base-300 bg-base-200 border">
+            <input id="collapse-toggler" type="checkbox" hidden class="hidden" />
+            <label for="collapse-toggler" class="collapse-title text-xl font-medium shadow bg-white">{{ __('New flight') }}</label >
+            <div class="collapse-content bg-white rounded-xl rounded-t-none shadow-lg">
+                <div class="w-full p-0 px-3 py-3 pt-6">
+                    @if(isset($edit))
+                        <form action="{{ route('flights.update', $flight->id) }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="mb-3">
+                                <label class="input input-bordered inpu flex items-center gap-2">
+                                    {{__('Title')}}:
+                                    <input type="text" id="fligth-title" name="title" value="{{ old('title', $flight->title) }}"
+                                        class="grow border-none focus:shadow-none shadow-none" placeholder="" />
+                                </label>
+                            </div>
+                            <div class="mb-3 grid grid-cols-3 gap-4 items-center">
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Going date')}}:
+                                    <input type="date" name="going_date" value="{{ old('going_date', $flight->going_date) }}"
+                                        class="grow border-none focus:shadow-none shadow-none" placeholder="" />
+                                </label>
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Return date')}}:
+                                    <input type="date" name="return_date" value="{{ old('return_date', $flight->return_date) }}"
+                                        class="grow border-none focus:shadow-none shadow-none" placeholder="" />
+                                </label>
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Type')}}:
+                                    <select name="type" class="grow border-none focus:shadow-none shadow-none"
+                                        value="{{ old('type', $flight->type) }}">
+                                        <option value="omra" @if(old('type', $flight->type) === "omra") selected @endif>
+                                            {{__('Omra')}}</option>
+                                        <option value="hajj" @if(old('type', $flight->type) === "hajj") selected @endif>
+                                            {{__('Hajj')}}</option>
+                                    </select>
+                                </label>
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Category')}}:
+                                    <select name="category" class="grow border-none focus:shadow-none shadow-none">
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}"
+                                                @if(old('category', $flight->category->id) == $category->id) selected @endif>
+                                                {{ $category->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </label>
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Aireline')}}:
+                                    <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
+                                        @foreach ($airelines as $aireline)
+                                            <option value="{{ $aireline->id }}"
+                                                @if(old('aireline', $flight->airline->id) == $aireline->id) selected @endif>{{ $aireline->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </label>
+                                <div class="form-control">
+                                    <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
+                                        <span class="label-text">{{__('Recomanded')}}</span>
+                                        <input type="checkbox" class="checkbox" checked="{{$flight->is_recommended == 1}}" name="is_recommended" />
+                                    </label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="input input-bordered flex items-center gap-2">
+                                        {{__('Primary photo')}}
+                                        <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
+                                    </label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="input input-bordered flex items-center gap-2">
+                                        {{__('Fligth photos')}}
+                                        <input type="file" name="fligth_photos[]" class="grow w-full max-w-xs" multiple />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-1 block">{{__('Description')}}:</label>
+                                <textarea id="text-editor" name="description" placeholder="{{__('Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">
+                                    {{ old('description', $flight->description) }}
+                                </textarea>
+                                </div>
+                                <div class="flex justify-start">
+                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                                    <a href="{{ route('flights') }}" type="submit" class="btn btn-wide">{{__('Cansel')}}</a>
+                                </div>
+                            </form>
+                    @else
+                        <form action="{{ route('flights.save') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="mb-3">
+                                <label class="input input-bordered inpu flex items-center gap-2">
+                                    {{__('Title')}}:
+                                    <input type="text" id="fligth-title" name="title" value="{{ old('title') }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
+                                </label>
+                            </div>
+                            <div class="mb-3 grid grid-cols-3 gap-4 items-center">
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Going date')}}:
+                                    <input type="date" name="going_date" value="{{ old('going_date') }}" class="grow border-none focus:shadow-none shadow-none"
+                                        placeholder="" />
+                                </label>
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Return date')}}:
+                                    <input type="date" name="return_date" value="{{ old('return_date') }}" class="grow border-none focus:shadow-none shadow-none"
+                                        placeholder="" />
+                                </label>
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Type')}}:
+                                    <select name="type" class="grow border-none focus:shadow-none shadow-none">
+                                        <option value="omra" @if(old('type') === 'omra') selected @endif>{{__('Omra')}}</option>
+                                        <option value="hajj" @if(old('type') === 'hajj') selected @endif>{{__('Hajj')}}</option>
+                                    </select>
+                                </label>
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Category')}}:
+                                    <select name="category" class="grow border-none focus:shadow-none shadow-none">
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}" @if(old('category') == $category->id) selected @endif>{{ $category->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </label>
+                                <label class="text-nowrap input input-bordered flex items-center gap-2">
+                                    {{__('Aireline')}}:
+                                    <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
+                                        @foreach ($airelines as $aireline)
+                                            <option value="{{ $aireline->id }}" @if(old('aireline') == $aireline->id) selected @endif>{{ $aireline->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </label>
+                                <div class="form-control">
+                                    <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
+                                        <span class="label-text">{{__('Recomanded')}}</span>
+                                        <input type="checkbox" class="checkbox" name="is_recommended" checked="{{ old('is_recommended') }}" />
+                                    </label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="input input-bordered flex items-center gap-2">
+                                        {{__('Primary photo')}}
+                                        <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
+                                    </label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="input input-bordered flex items-center gap-2">
+                                        {{__('Fligth photos')}}
+                                        <input type="file" name="fligth_photos[]" class="grow w-full max-w-xs" multiple />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-1 block">{{__('Description')}}:</label>
+                                <textarea id="text-editor" name="description" placeholder="{{__('Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">
+                                {{ old('description') }}
+                                </textarea>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                            </div>
+                        </form>
+                    @endif
+                </div>
             </div>
-        </div>
+        </div >
         <div class="w-fill">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
                 <div class="overflow-x-auto">
@@ -90,32 +181,40 @@
                         </thead>
                         <tbody>
                             <!-- row 1 -->
-                            <tr>
-                                <td>
-                                    <div class="flex items-center gap-3">
-                                        <div class="avatar">
-                                            <div class="mask mask-squircle h-12 w-12">
-                                                <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-                                                    alt="Avatar Tailwind CSS Component" />
+                            @foreach ($flights as $flight)
+                                <tr>
+                                    <td>
+                                        <div class="flex items-center gap-3">
+                                            <div class="avatar">
+                                                <div class="mask mask-squircle h-12 w-12">
+                                                    <img src="{{ $flight->mainPhoto->url }}" alt="{{ $flight->title }}" />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold">{{ $flight->title }}</div>
                                             </div>
                                         </div>
-                                        <div>
-                                            <div class="font-bold">{{__('Title')}}</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <th>{{__('Going date')}}</th>
-                                <th>{{__('Return date')}}</th>
-                                <th>{{__('Description')}}</th>
-                                <th>{{__('Category')}}</th>
-                                <th>{{__('Type')}}</th>
-                                <th>{{__('Recomanded')}}</th>
-                                <th>{{__('Aireline')}}</th>
-                                <th>
-                                    <a href="#" class="btn btn-xs btn-info edit"></a>
-                                    <a href="#" class="btn btn-xs btn-error delete"></a>
-                                </th>
-                            </tr>
+                                    </td>
+                                    <td class="text-nowrap">{{ $flight->going_date }}</td>
+                                    <td class="text-nowrap">{{ $flight->return_date }}</td>
+                                    <td>{!! $flight->short_description() !!}</td>
+                                    <td>{{ $flight->category->name }}</td>
+                                    <td>{{ __($flight->type) }}</td>
+                                    <td>
+                                        @if($flight->is_recommended)
+                                            <em
+                                                class="fa fa-check rounded-full p-1 bg-emerald-700 text-white aspect-square"></em>
+                                        @else
+                                            <em class="fa fa-check rounded-full p-1 bg-red-800 text-white aspect-square"></em>
+                                        @endif
+                                    </td>
+                                    <td>{{ $flight->airline->name }}</td>
+                                    <td>
+                                        <a href="{{ route('flights.edit', $flight->id) }}" class="btn btn-xs btn-info edit"></a>
+                                        <a href="{{ route('flights.delete', $flight->id) }}" class="btn btn-xs btn-error delete"></a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

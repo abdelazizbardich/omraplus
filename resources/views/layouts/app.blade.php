@@ -7,6 +7,9 @@
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var lang = "{{ str_replace('_', '-', app()->getLocale()) }}";
+    </script>
     <meta name="description" content="{{ __('main description') }}">
     <meta name="keywords" content="keyword1, keyword2, keyword3">
     <meta name="author" content="{{ __(config('app.name')) }}">
@@ -58,6 +61,12 @@
     <!-- CSRF token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-ar-AR.min.js"></script>
     <!-- Styles -->
     @vite('resources/js/app.js')
 
@@ -79,6 +88,13 @@
             </div>
         </div>
         @livewireScripts
+        <script>
+            function showSlug(input, target) {                
+                const value = document.querySelector(input).value;
+                const slug = value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                document.querySelector(target).value = slug;
+            }
+        </script>
 </body>
 
 </html>

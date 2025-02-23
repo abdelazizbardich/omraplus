@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use DB;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,6 +16,7 @@ class Flight extends Model
         "going_date",
         "return_date",
         "description",
+        "type",
         "is_recommended",
         "category_id",
         "airline_id"
@@ -28,6 +30,11 @@ class Flight extends Model
     public function photos()
     {
         return $this->hasMany(Photo::class, 'post_id');
+    }
+
+    public function mainPhoto()
+    {
+        return $this->hasOne(Photo::class, 'post_id')->where('is_main', true);
     }
 
     public function programs()
@@ -48,8 +55,20 @@ class Flight extends Model
             ->orderBy('program_prices.price')
             ->limit(1)
             ->groupBy('flight_id', 'program_prices.price', 'program_prices.old_price', 'program_prices.id');
-            // dd($price->get());
             return $price->first();
+    }
+
+    // description cast
+    public function short_description()
+    {
+        // return sort value from decription
+        $description = $this->description;
+        $description = strip_tags($description);
+        $description = substr($description, 0, 100);
+        $description = substr($description, 0, strrpos($description, ' '));
+        $description = $description . '...';
+        return $description;
+        
     }
 
 

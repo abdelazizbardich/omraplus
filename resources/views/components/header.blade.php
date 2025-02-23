@@ -12,11 +12,7 @@
                 <x-language-switcher></x-language-switcher>
                 <x-theme-switcher></x-theme-switcher>
                 @if(Auth::check())
-                    <form action="{{ route('logout') }}" method="POST" hidden class="hidden">
-                        @csrf
-                        <button type="submit" id="logout"></button>
-                    </form>
-                    <label for="logout" class="ms-4 text-sm font-black pointer">{{__('Logout')}}</label>
+                    <a href="{{ route('login') }}" class="ms-4 text-sm font-black">{{__('Dashboard')}}</a>
                 @else
                     <a href="{{ route('login') }}" class="ms-4 text-sm font-black">{{__('Login')}}</a>
                 @endif

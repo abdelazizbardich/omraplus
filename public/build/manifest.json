@@ -1,7 +1,7 @@
 {
-  "resources/css/app.css": {
-    "file": "assets/app-C7RNL5G2.css",
-    "src": "resources/css/app.css",
+  "resources/css/app.scss": {
+    "file": "assets/app-mc2QtMm6.css",
+    "src": "resources/css/app.scss",
     "isEntry": true
   },
   "resources/fonts/woff/bein-black.woff": {
@@ -79,6 +79,10 @@
   "resources/images/evisa icon.svg": {
     "file": "assets/evisa icon-CZi9Nn4y.svg",
     "src": "resources/images/evisa icon.svg"
+  },
+  "resources/images/favicon.ico": {
+    "file": "assets/favicon-C6edU8Sm.ico",
+    "src": "resources/images/favicon.ico"
   },
   "resources/images/flight icon.svg": {
     "file": "assets/flight icon-Bn8RCD9X.svg",
@@ -233,12 +237,12 @@
     "src": "resources/images/wafa-bank.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CFs2cpmF.js",
+    "file": "assets/app-DZqm57pY.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-C7RNL5G2.css"
+      "assets/app-mc2QtMm6.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",

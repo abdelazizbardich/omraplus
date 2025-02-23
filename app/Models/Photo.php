@@ -16,9 +16,6 @@ class Photo extends Model
         "is_main"
     ];
 
-    /**
-     * Get the user's first name.
-     */
     protected function url(): Attribute
     {
         return Attribute::make(

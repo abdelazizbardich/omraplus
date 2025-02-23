@@ -11,7 +11,9 @@ class TextEditor extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public string $name = ''
+    )
     {
         //
     }
@@ -21,6 +23,8 @@ class TextEditor extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.text-editor');
+        return view('components.text-editor', [
+            "name" => $this->name
+        ]);
     }
 }

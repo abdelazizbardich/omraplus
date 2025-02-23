@@ -25,6 +25,9 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
 
     Route::get('/dashboard/flights', [App\Http\Controllers\FligthController::class, 'index'])->name('flights');
     Route::post('/dashboard/flights/save', [App\Http\Controllers\FligthController::class, 'save'])->name('flights.save');
+    Route::get('/dashboard/flights/edit/{flight:id}', [App\Http\Controllers\FligthController::class, 'edit'])->name('flights.edit');
+    Route::post('/dashboard/flights/update/{flight:id}', [App\Http\Controllers\FligthController::class, 'update'])->name('flights.update');
+    Route::get('/dashboard/flights/delete/{flight:id}', [App\Http\Controllers\FligthController::class, 'delete'])->name('flights.delete');
 
     Route::get('/dashboard/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories');
     Route::post('/dashboard/categories/save', [App\Http\Controllers\CategoryController::class, 'save'])->name('categories.save');
@@ -34,6 +37,9 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     
     Route::get('/dashboard/programs', [App\Http\Controllers\ProgramController::class, 'index'])->name('programs');
     Route::post('/dashboard/programs/save', [App\Http\Controllers\ProgramController::class, 'save'])->name('programs.save');
+    Route::get('/dashboard/programs/edit/{program:id}', [App\Http\Controllers\ProgramController::class, 'edit'])->name('programs.edit');
+    Route::post('/dashboard/programs/update/{program:id}', [App\Http\Controllers\ProgramController::class, 'update'])->name('programs.update');
+    Route::delete('/dashboard/programs/delete/{program:id}', [App\Http\Controllers\ProgramController::class, 'delete'])->name('programs.delete');
 
     Route::get('/dashboard/hotels', [App\Http\Controllers\HotelController::class, 'index'])->name('hotels');
     Route::post('/dashboard/hotels/save', [App\Http\Controllers\HotelController::class, 'save'])->name('hotels.save');
