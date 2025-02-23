@@ -85,7 +85,7 @@
                     <x-breadcrumbs :links="[$name]" :dark="true"></x-breadcrumbs>
                 </div>
                 @if (isset($errors) && $errors->any())
-                    <div class="alert alert-danger">
+                    <div class="alert alert-error">
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
