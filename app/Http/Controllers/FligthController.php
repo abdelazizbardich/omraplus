@@ -33,7 +33,7 @@ class FligthController extends Controller
             "type" => "required",
             "category" => "required",
             "aireline" => "required",
-            "recomanded" => "required",
+            "is_recommended" => "required",
             "description" => "required",
         ]);
 
