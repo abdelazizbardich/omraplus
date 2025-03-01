@@ -60,7 +60,7 @@ class FligthController extends Controller
 
         Photo::create([
             "url" => $primary_photo,
-            "type" => $request->file('primary_photo')->getClientOriginalExtension(),
+            "type" => 'flight',
             "post_id" => $flight->id,
             "is_main" => true
         ]);
@@ -68,7 +68,7 @@ class FligthController extends Controller
             $fligth_photos = $photo->store('flights', ["disk" => "public"]);
             Photo::create([
                 "url" => $fligth_photos,
-                "type" => $photo->getClientOriginalExtension(),
+                "type" => 'flight',
                 "post_id" => $flight->id,
                 "is_main" => false
             ]);

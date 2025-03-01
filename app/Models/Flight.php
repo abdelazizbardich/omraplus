@@ -29,12 +29,12 @@ class Flight extends Model
 
     public function photos()
     {
-        return $this->hasMany(Photo::class, 'post_id');
+        return $this->hasMany(Photo::class, 'post_id')->where('type', 'flight');
     }
 
     public function mainPhoto()
     {
-        return $this->hasOne(Photo::class, 'post_id')->where('is_main', true);
+        return $this->hasOne(Photo::class, 'post_id')->where('type', 'flight')->where('is_main', true);
     }
 
     public function programs()

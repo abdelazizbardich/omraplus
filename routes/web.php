@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\RoleMiddleware;
 use Illuminate\Support\Facades\Route;
 
 // App::setLocale('ar');
@@ -17,7 +18,7 @@ Route::get('/faqs', [App\Http\Controllers\GuestController::class, 'faqs'])->name
 
 
 
-Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])->group(function () {
+Route::middleware(['auth:sanctum','role:super_admin',config('jetstream.auth_session'),'verified'])->group(function () {
     Route::get('/dashboard/home', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/dashboard/profile', [App\Http\Controllers\DashboardController::class, 'profile'])->name('profile');
@@ -67,4 +68,10 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     Route::get('/dashboard/rooms/edit/{room:id}', [App\Http\Controllers\RoomController::class, 'edit'])->name('rooms.edit');
     Route::post('/dashboard/rooms/update/{room:id}', [App\Http\Controllers\RoomController::class, 'update'])->name('rooms.update');
     Route::get('/dashboard/rooms/delete/{room:id}', [App\Http\Controllers\RoomController::class, 'delete'])->name('rooms.delete');
+    
+    Route::get('/dashboard/users', [App\Http\Controllers\UserController::class, 'index'])->name('users');
+    Route::post('/dashboard/users/save', [App\Http\Controllers\UserController::class, 'save'])->name('users.save');
+    Route::get('/dashboard/users/edit/{user:id}', [App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
+    Route::post('/dashboard/users/update/{user:id}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
+    Route::get('/dashboard/users/delete/{user:id}', [App\Http\Controllers\UserController::class, 'delete'])->name('users.delete');
 });

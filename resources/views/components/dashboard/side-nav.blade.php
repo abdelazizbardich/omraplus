@@ -42,6 +42,11 @@
                 <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('Rooms')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('Rooms')}}</span>
             </a>
+            <hr>
+            <a href="{{ route('users') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Users')}}">
+                <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('Users')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('Users')}}</span>
+            </a>
         </div>
         <div class="">
             <hr class="border-0 border-b opacity-65 mb-5">

@@ -64,4 +64,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function photo()
+    {
+        return $this->hasOne(Photo::class, 'post_id')->where('type', 'user');
+    }
 }

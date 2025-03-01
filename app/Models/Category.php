@@ -17,6 +17,6 @@ class Category extends Model
     // Photo
     public function photo()
     {
-        return $this->hasMany(Photo::class, 'post_id');
+        return $this->hasMany(Photo::class, 'post_id')->where('type', 'category');
     }
 }

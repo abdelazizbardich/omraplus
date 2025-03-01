@@ -273,5 +273,19 @@
     "validation.required_with": "The :attribute field is required when :values is present.",
     "validation.required_with_all": "The :attribute field is required when :values are present.",
     "validation.required_without": "The :attribute field is required when :values is not present.",
-    "validation.required_without_all": "The :attribute field is required when none of :values are present."
+    "validation.required_without_all": "The :attribute field is required when none of :values are present.",
+    "Users": "المستخدمين",
+    "Create new account": "إنشاء حساب جديد",
+    "Register": "تسجيل",
+    "Already have account?": "هل لديك حساب؟",
+    "Whoops! Something went wrong.": "عذرًا! حدث خطأ ما.",
+    "Account status": "حالة الحساب",
+    "Active": "نشط",
+    "Inactive": "غير نشط",
+    "admin": "مدير",
+    "user": "مستخدم",
+    "super_admin": "مدير عام",
+    "content_manager": "مدير المحتوى",
+    "sales_manager": "مدير المبيعات",
+    "Role": "الدور"
 }

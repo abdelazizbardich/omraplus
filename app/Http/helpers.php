@@ -105,3 +105,12 @@ function getLanguageDirection(){
             return 'ltr';
     }
 }
+
+function getRoles(){
+    return [
+        'admin',
+        'user',
+        'content_manager',
+        'sales_manager'
+    ];
+}

@@ -48,7 +48,7 @@ class HotelController extends Controller
     
             Photo::create([
                 "url" => $primary_photo,
-                "type" => $request->file('primary_photo')->getClientOriginalExtension(),
+                "type" => 'hotel',
                 "post_id" => $hotel->id,
                 "is_main" => true
             ]);
@@ -56,7 +56,7 @@ class HotelController extends Controller
                 $hotel_photos = $photo->store('hotels', ["disk"=> "public"]);
                 Photo::create([
                     "url" => $hotel_photos,
-                    "type" => $photo->getClientOriginalExtension(),
+                    "type" => 'hotel',
                     "post_id" => $hotel->id,
                     "is_main" => false
                 ]);
