@@ -288,5 +288,7 @@
     "content_manager": "مدير المحتوى",
     "sales_manager": "مدير المبيعات",
     "Role": "الدور",
-    "Room type": "نوع الغرفة"
+    "Room type": "نوع الغرفة",
+    "New pricing": "تسعيرة جديدة",
+    "Room pricings": "تسعيرات الغرف"
 }

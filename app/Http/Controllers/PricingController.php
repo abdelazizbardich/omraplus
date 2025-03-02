@@ -15,64 +15,75 @@ class PricingController extends Controller
             "name" => "Pricing",
             "rooms" => Room::orderBy('id', 'desc')->get(),
             "programs" => Program::with(['flight', 'hotelMecca', 'hotelMedina'])->orderBy('id', 'desc')->get(),
-            "prices" => ProgramPrice::with(['program', 'room'])->orderBy('id', 'desc')->get()
+            "prices" => Program::with(['flight', 'hotelMecca', 'hotelMedina', 'prices'])->orderBy('id', 'asc')->get()
         ];
-        return view('pricing',$data);
+        return view('pricing', $data);
     }
 
-    public function save(Request $request){
+    public function save(Request $request)
+    {
         $request->validate([
             "program" => "required",
-            "room" => "required",
-            "old_price" => "required",
-            "price" => "required"
+            "room.*" => "required",
+            "old_price.*" => "required",
+            "price.*" => "required"
         ]);
 
-        $pricing = ProgramPrice::create([
-            "program_id" => $request->program,
-            "room_id" => $request->room,
-            "old_price" => $request->old_price,
-            "price" => $request->price
-        ]);
+        foreach ($request->room as $key => $room) {
+            ProgramPrice::create([
+                "program_id" => $request->program,
+                "room_id" => $room,
+                "old_price" => $request->old_price[$key],
+                "price" => $request->price[$key]
+            ]);
+        }
 
         return redirect()->route('pricing');
     }
 
     public function edit(ProgramPrice $programPrice)
     {
+        $programPrice = Program::where('id', $programPrice->program_id)->with(['flight', 'hotelMecca', 'hotelMedina', 'prices'])->orderBy('id', 'desc')->first();
         $data = [
             "name" => "Pricing",
             "rooms" => Room::orderBy('id', 'desc')->get(),
             "programs" => Program::with(['flight', 'hotelMecca', 'hotelMedina'])->orderBy('id', 'desc')->get(),
-            "prices" => ProgramPrice::with(['program', 'room'])->orderBy('id', 'desc')->get(),
+            "prices" => Program::with(['flight', 'hotelMecca', 'hotelMedina', 'prices'])->orderBy('id', 'asc')->get(),
             "edit" => true,
             "price" => $programPrice
         ];
-        return view('pricing',$data);
+        return view('pricing', $data);
     }
 
-    public function update(ProgramPrice $programPrice, Request $request){
+    public function update(ProgramPrice $programPrice, Request $request)
+    {
         $request->validate([
             "program" => "required",
-            "room" => "required",
-            "old_price" => "required",
-            "price" => "required"
+            "room.*" => "required",
+            "old_price.*" => "required",
+            "price.*" => "required"
         ]);
-
-        $programPrice->update([
-            "program_id" => $request->program,
-            "room_id" => $request->room,
-            "old_price" => $request->old_price,
-            "price" => $request->price
-        ]);
-
-        $programPrice->save();
-
+        foreach ($request->room as $key => $room) {
+            $programPrice = ProgramPrice::where('program_id', $request->program)->where('room_id', $room)->first();
+            if ($programPrice) {
+                $programPrice->old_price = $request->old_price[$key];
+                $programPrice->price = $request->price[$key];
+                $programPrice->save();
+            } else {
+                ProgramPrice::create([
+                    "program_id" => $request->program,
+                    "room_id" => $room,
+                    "old_price" => $request->old_price[$key],
+                    "price" => $request->price[$key]
+                ]);
+            }
+        }
         return redirect()->route('pricing');
     }
 
-    public function delete(ProgramPrice $programPrice){
-        $programPrice->delete();
+    public function delete(ProgramPrice $programPrice)
+    {
+        ProgramPrice::where('program_id', $programPrice->program_id)->delete();
         return redirect()->route('pricing');
     }
 }

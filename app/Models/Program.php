@@ -35,7 +35,8 @@ class Program extends Model
 
     public function prices()
     {
-        return $this->hasMany(ProgramPrice::class);
+        // order by room_id desc
+        return $this->hasMany(ProgramPrice::class)->orderBy('room_id', 'asc');
     }
 
     public function discounts()
