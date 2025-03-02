@@ -23,10 +23,7 @@ class PricingController extends Controller
     public function save(Request $request)
     {
         $request->validate([
-            "program" => "required",
-            "room.*" => "required",
-            "old_price.*" => "required",
-            "price.*" => "required"
+            "program" => "required"
         ]);
 
         foreach ($request->room as $key => $room) {
@@ -58,10 +55,7 @@ class PricingController extends Controller
     public function update(ProgramPrice $programPrice, Request $request)
     {
         $request->validate([
-            "program" => "required",
-            "room.*" => "required",
-            "old_price.*" => "required",
-            "price.*" => "required"
+            "program" => "required"
         ]);
         foreach ($request->room as $key => $room) {
             $programPrice = ProgramPrice::where('program_id', $request->program)->where('room_id', $room)->first();
