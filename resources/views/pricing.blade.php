@@ -37,14 +37,14 @@
                                                 <label class="input input-bordered flex items-center gap-2">
                                                     <span
                                                         class="text-nowrap">{{__('Price before discount')}}({{__('dh')}}):</span>
-                                                    <input type="number" name="old_price[]" class="w-auto grow border-none focus:shadow-none shadow-none" value="{{ old('old_price',@$price->prices->where('room_id', $room->id)->first()->old_price) }}" placeholder="" required />
+                                                    <input type="number" name="old_price[]" class="w-auto grow border-none focus:shadow-none shadow-none" value="{{ old('old_price',@$price->prices->where('room_id', $room->id)->first()->old_price) }}" placeholder=""/>
                                                 </label>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="input input-bordered flex items-center gap-2">
                                                     <span
                                                         class="text-nowrap">{{__('Price after discount')}}({{__('dh')}}):</span>
-                                                    <input type="number" name="price[]" class="w-auto grow border-none focus:shadow-none shadow-none" value="{{ old('price',@$price->prices->where('room_id', $room->id)->first()->price) }}" placeholder="" required />
+                                                    <input type="number" name="price[]" class="w-auto grow border-none focus:shadow-none shadow-none" value="{{ old('price',@$price->prices->where('room_id', $room->id)->first()->price) }}" placeholder=""/>
                                                 </label>
                                             </div>
                                         </div>
@@ -89,7 +89,7 @@
                                                         class="text-nowrap">{{__('Price before discount')}}({{__('dh')}}):</span>
                                                     <input type="number" name="old_price[]"
                                                         class="w-auto grow border-none focus:shadow-none shadow-none"
-                                                        value="{{ old('old_price') }}" placeholder="" required />
+                                                        value="{{ old('old_price') }}" placeholder="" />
                                                 </label>
                                             </div>
                                             <div class="mb-3">
@@ -98,7 +98,7 @@
                                                         class="text-nowrap">{{__('Price after discount')}}({{__('dh')}}):</span>
                                                     <input type="number" name="price[]"
                                                         class="w-auto grow border-none focus:shadow-none shadow-none"
-                                                        value="{{ old('price') }}" placeholder="" required />
+                                                        value="{{ old('price') }}" placeholder="" />
                                                 </label>
                                             </div>
                                         </div>
