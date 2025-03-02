@@ -93,36 +93,60 @@ class HotelController extends Controller
     
             // Validate file primary_photo and hotel_photos
             $request->validate([
-                'primary_photo' => 'required|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'primary_photo' => 'mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
                 'hotel_photos.*' => 'mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]);
     
             // Save data to database
-            $hotel = Hotel::create([
+            $hotel->update([
                 "name" => $request->name,
                 "slug" => STR::slug($request->name),
                 "city" => $request->city,
                 "address" => $request->address,
                 "distance" => $request->distance,
             ]);
+
+            $hotel->save();
     
-            $primary_photo = $request->file('primary_photo')->store('hotels', ["disk"=> "public"]);
+            
+            if($request->has('primary_photo')){
+                $primary_photo = $request->file('primary_photo')->store('hotels', ["disk"=> "public"]);
+                $photo = Photo::where('post_id', $hotel->id)->where('is_main', true)->first();
     
-            Photo::create([
-                "url" => $primary_photo,
-                "type" => $request->file('primary_photo')->getClientOriginalExtension(),
-                "post_id" => $hotel->id,
-                "is_main" => true
-            ]);
-            foreach ($request->file('hotel_photos') as $photo) {
-                $hotel_photos = $photo->store('hotels', ["disk"=> "public"]);
-                Photo::create([
-                    "url" => $hotel_photos,
-                    "type" => $photo->getClientOriginalExtension(),
-                    "post_id" => $hotel->id,
-                    "is_main" => false
-                ]);
+                if($photo){
+                    $photo->update([
+                        "url" => $primary_photo,
+                        "type" => $request->file('primary_photo')->getClientOriginalExtension(),
+                        "post_id" => $hotel->id,
+                        "is_main" => true
+                    ]);
+                    $photo->save();
+                }else{
+                    Photo::create([
+                        "url" => $primary_photo,
+                        "type" => $request->file('primary_photo')->getClientOriginalExtension(),
+                        "post_id" => $hotel->id,
+                        "is_main" => true
+                    ]);
+                }
             }
+
+            if($request->has('hotel_photos') && count($request->file('hotel_photos')) > 0){
+                // delete all
+                Photo::where('post_id', $hotel->id)->where('is_main', false)->delete();
+
+                // save new ones
+                foreach ($request->file('hotel_photos') as $photo) {
+                    $hotel_photos = $photo->store('hotels', ["disk"=> "public"]);
+                    Photo::create([
+                        "url" => $hotel_photos,
+                        "type" => $photo->getClientOriginalExtension(),
+                        "post_id" => $hotel->id,
+                        "is_main" => false
+                    ]);
+                }
+            }
+
             \DB::commit();
             return redirect()->route('hotels')->with('success', 'Hotel created successfully');
         } catch (\Throwable $th) {
