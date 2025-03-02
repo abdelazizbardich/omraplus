@@ -10,7 +10,7 @@
                                 {{__('Program')}}:
                                 <select name="program" class="grow border-none focus:shadow-none shadow-none" required>
                                     @foreach ($programs as $program)
-                                        <option value="{{ $program->id }}" @if($program->id == old('program',$price->program_id)) selected @endif>{{ $program->flight->title }}</option>
+                                        <option value="{{ $program->id }}" @if($program->id == old('program',$price->program_id)) selected @endif>{{ $program->flight->title }}- {{ $program->flight->title }} -> {{ $program->flight->title }}</option>
                                     @endforeach
                                 </select>
                             </label>
@@ -47,7 +47,7 @@
                                 {{__('Program')}}:
                                 <select name="program" class="grow border-none focus:shadow-none shadow-none" required>
                                     @foreach ($programs as $program)
-                                        <option value="{{ $program->id }}" @if($program->id == old('program')) selected @endif>{{ $program->flight->title }}</option>
+                                        <option value="{{ $program->id }}" @if($program->id == old('program')) selected @endif>{{ $program->flight->title }}- {{ $program->hotelMecca->name }} - {{ $program->hotelMedina->name }}</option>
                                     @endforeach
                                 </select>
                             </label>
