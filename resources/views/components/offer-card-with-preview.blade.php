@@ -4,7 +4,7 @@
         <div class="w-full relative mb-8">
             <div class="w-full aspect-video bg-black-300">
                 <a href="{{route('flight', $data->id)}}">
-                    <img src="{{ $data->photos()->where('is_main',1)->first()->url }}" class="w-full h-full object-cover"  alt="umrah">
+                    <img src="{{ @$data->photos()->where('is_main',1)->first()->url }}" class="w-full h-full object-cover"  alt="umrah">
                 </a>
             </div>
             <span data-modam-data="{{ json_encode($data) }}" class="quick-view cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">

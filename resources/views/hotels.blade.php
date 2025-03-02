@@ -33,7 +33,7 @@
                             </label>
                         </div>
                         <div class="mb-3 flex gap-3">
-                            <img src="{{ $hotel->mainPhoto->url }}" alt="" class="h-12 aspect-square rounded-md object-cover">
+                            <img src="{{ @$hotel->mainPhoto->url }}" alt="" class="h-12 aspect-square rounded-md object-cover">
                             <label class="w-full input input-bordered flex items-center gap-2">
                                 {{__('Primary photo')}}
                                 <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
@@ -46,7 +46,7 @@
                             </label>
                             <div class="flex mt-1 gap-1">
                                 @foreach ($hotel->photos as $photo)
-                                <img src="{{ $photo->url }}" alt="" class="h-12 aspect-square rounded-md object-cover">
+                                <img src="{{ @$photo->url }}" alt="" class="h-12 aspect-square rounded-md object-cover">
                                 @endforeach
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                                         <div class="flex items-center gap-3">
                                             <div class="avatar">
                                                 <div class="mask mask-squircle h-12 w-12">
-                                                    <img src="{{ $hotel->mainPhoto->url }}"
+                                                    <img src="{{ @$hotel->mainPhoto->url }}"
                                                         alt="Avatar Tailwind CSS Component" />
                                                 </div>
                                             </div>
