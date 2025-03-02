@@ -140,6 +140,8 @@
                                                     @if($room)
                                                         <span class="block opacity-45 text-sm font-bold line-through line-clamp-2 lining-nums">{{ @$room->old_price }} {{ __('dh') }}</span>
                                                         <span class="block text-base font-bold line-clamp-2 lining-nums">{{ @$room->price }} {{ __('dh') }}</span>
+                                                    @else
+                                                    ---
                                                     @endif
                                                 </td>
                                             @endforeach
