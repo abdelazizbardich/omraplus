@@ -19,7 +19,7 @@ class Hotel extends Model
     // Photos
     public function photos()
     {
-        return $this->hasMany(Photo::class, 'post_id')->where('type', 'hotel');
+        return $this->hasMany(Photo::class, 'post_id')->where('type', 'hotel')->where('is_main', false);
     }
 
     // Get photo where is_main = true
