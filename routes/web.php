@@ -56,6 +56,9 @@ Route::middleware(['auth:sanctum','role:super_admin',config('jetstream.auth_sess
 
     Route::get('/dashboard/pricing', [App\Http\Controllers\PricingController::class, 'index'])->name('pricing');
     Route::post('/dashboard/pricing/save', [App\Http\Controllers\PricingController::class, 'save'])->name('pricing.save');
+    Route::get('/dashboard/pricing/edit/{programPrice:id}', [App\Http\Controllers\PricingController::class, 'edit'])->name('pricing.edit');
+    Route::post('/dashboard/pricing/update/{programPrice:id}', [App\Http\Controllers\PricingController::class, 'update'])->name('pricing.update');
+    Route::get('/dashboard/pricing/delete/{programPrice:id}', [App\Http\Controllers\PricingController::class, 'delete'])->name('pricing.delete');
 
     Route::get('/dashboard/discounts', [App\Http\Controllers\DiscountController::class, 'index'])->name('discounts');
     Route::post('/dashboard/discounts/save', [App\Http\Controllers\DiscountController::class, 'save'])->name('discounts.save');

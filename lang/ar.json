@@ -287,5 +287,6 @@
     "super_admin": "مدير عام",
     "content_manager": "مدير المحتوى",
     "sales_manager": "مدير المبيعات",
-    "Role": "الدور"
+    "Role": "الدور",
+    "Room type": "نوع الغرفة"
 }
