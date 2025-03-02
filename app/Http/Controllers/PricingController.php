@@ -27,12 +27,14 @@ class PricingController extends Controller
         ]);
 
         foreach ($request->room as $key => $room) {
-            ProgramPrice::create([
-                "program_id" => $request->program,
-                "room_id" => $room,
-                "old_price" => $request->old_price[$key],
-                "price" => $request->price[$key]
-            ]);
+            if($request->old_price[$key]){
+                ProgramPrice::create([
+                    "program_id" => $request->program,
+                    "room_id" => $room,
+                    "old_price" => $request->old_price[$key],
+                    "price" => $request->price[$key]
+                ]);
+            }
         }
 
         return redirect()->route('pricing');
@@ -64,12 +66,14 @@ class PricingController extends Controller
                 $programPrice->price = $request->price[$key];
                 $programPrice->save();
             } else {
-                ProgramPrice::create([
-                    "program_id" => $request->program,
-                    "room_id" => $room,
-                    "old_price" => $request->old_price[$key],
-                    "price" => $request->price[$key]
-                ]);
+                if($request->old_price[$key]){
+                    ProgramPrice::create([
+                        "program_id" => $request->program,
+                        "room_id" => $room,
+                        "old_price" => $request->old_price[$key],
+                        "price" => $request->price[$key]
+                    ]);
+                }
             }
         }
         return redirect()->route('pricing');
