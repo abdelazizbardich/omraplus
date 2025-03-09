@@ -42,7 +42,7 @@
                         <span class="underline w-fit underline-offset-3 text-nowrap">{{ __('index.Select room type') }}:</span>
                         @foreach ($booking->prices as $index=>$price)
                             <div class="h-auto w-fit">
-                                <input @if($index==0) checked @endif hidden required class="peer hidden room-type" data-price="{{$price->price}}" data-old-price="{{$price->old_price}}" value="{{$price->room->id}}" type="radio" name="room" id="room-{{$price->room->id}}">
+                                <input onclick="updateBookingcardPrice({{ $booking->id}})" @if($index==0) checked @endif hidden required class="peer hidden room-type room-{{ $booking->id }}" data-price="{{$price->price}}" data-old-price="{{$price->old_price}}" value="{{$price->room->id}}" type="radio" name="room" id="room-{{$price->room->id}}">
                                 <label for="room-{{$price->room->id}}" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">{{ $price->room->name }}</label>
                             </div>
                         @endforeach
@@ -50,8 +50,8 @@
                 </div>
                 <div class="flex flex-col justify-center items-start border-s border-black-200 ms-6 ps-6">
                     <div class="w-full mb-6">
-                        <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums">{{$booking->getLowestPrice()->old_price}} {{__('index.dh')}}</span>
-                        <span class="text-xl block font-black lining-nums"><span class="text-3xl">{{$booking->getLowestPrice()->price}}</span> {{__('index.dh')}} {{__('index.For a person')}}</span>
+                        <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums"><span class="old-price-{{ $booking->id }}">{{$booking->getLowestPrice()->old_price}}</span> {{__('index.dh')}}</span>
+                        <span class="text-xl block font-black lining-nums"><span class="text-3xl price-{{ $booking->id }}">{{$booking->getLowestPrice()->price}}</span> {{__('index.dh')}} {{__('index.For a person')}}</span>
                         <span class="text-sm font-base block">({{__('index.Price varies depending on the size of the collection')}})</span>
                     </div>
                     <button type="submit" class="btn border-0 rounded-xl w-full from-yellow-600  bg-gradient-to-l to-yellow-500 shadow hover:shadow-md duration-300 text-nowrap shadow-yellow-700 hover:shadow-yellow-600 px-4 text-xl font-bein-black group duration-300 transition-colors cursor-pointer">
@@ -85,5 +85,15 @@
                 </label>
             </div>
         @endif
+
+        <script>
+            function updateBookingcardPrice(bookingId){
+                let room = document.querySelector(`.room-${bookingId}`);
+                let price = event.target.getAttribute('data-price');
+                let oldPrice = event.target.getAttribute('data-old-price');
+                document.querySelector(`.price-${bookingId}`).innerText = price;
+                document.querySelector(`.old-price-${bookingId}`).innerText = oldPrice;
+            }
+        </script>
     </div>
 </div>
