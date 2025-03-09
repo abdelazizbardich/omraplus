@@ -1,6 +1,6 @@
 <div class="relative w-full h-full mt-8 offer-card">
     @if($data->is_recommended)
-        <span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('Best Seller')}}</span>
+        <span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('index.Best Seller')}}</span>
     @endif
     <div class="z-10 hover:shadow-md duration-300 border border-black-200 bg-white featured rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
@@ -10,7 +10,7 @@
                 </a>
             </div>
             <span data-modam-data="{{ json_encode($data) }}" class="quick-view cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
-                <em class="fa-regular fa-eye me-3"></em>{{__('Quick view')}}
+                <em class="fa-regular fa-eye me-3"></em>{{__('index.Quick view')}}
             </span>
         </div>
         <div class="p-3">
@@ -21,9 +21,9 @@
                     </span>
                     <span>
                         @if(moment($data->going_date)->from($data->return_date)->getDays() > 10)
-                            {{__('day')}}
+                            {{__('index.day')}}
                         @else
-                            {{__('Days')}}
+                            {{__('index.Days')}}
                         @endif
                     </span>
                 </span>
@@ -67,14 +67,14 @@
                     <span class="font-normal text-base">الذهاب</span>
                     <span class="dots flex-1 border-b mx-3 border-black-400 h-full"></span>
                     <span class="flex items-center">
-                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}" class="w-6 h-6 me-3">
+                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('index.Plane')}}" class="w-6 h-6 me-3">
                         <span class="font-normal text-base">19 فبراير 2024</span>
                     </span>
                 </div>
                 <div class="flex items-center justify-between w-full text-base px-3 py-2  bg-black-50 rounded-xl">
                     <span class="flex items-center">
                         <span class="font-normal text-base">العودة</span>
-                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('Plane')}}" class="w-6 -scale-x-100 h-6 ms-3">
+                        <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('index.Plane')}}" class="w-6 -scale-x-100 h-6 ms-3">
                     </span>
                     <span class="dots flex-1 border-b mx-3 border-black-400 h-full"></span>
                     <span class="font-normal text-base">19 مارس 2024</span>
@@ -83,11 +83,11 @@
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-center mb-2">
                 <div class="flex flex-col justify-center">
-                    <span class="font-black lining-nums"><span class="text-xl">{{ money(@$data->getLowestPrice()->old_price) }}</span> {{__('dh')}} {{__('For a person')}}</span>
-                    <span class="text-xs text-nowrap">({{__('Price varies depending on the size of the collection')}})</span>
+                    <span class="font-black lining-nums"><span class="text-xl">{{ money(@$data->getLowestPrice()->old_price) }}</span> {{__('index.dh')}} {{__('index.For a person')}}</span>
+                    <span class="text-xs text-nowrap">({{__('index.Price varies depending on the size of the collection')}})</span>
                 </div>
                 <div class="bg-yellow-500 shadow w-fit text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
-                    <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('Book now')}}
+                    <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.Book now')}}
                 </div>
             </div>
         </div>

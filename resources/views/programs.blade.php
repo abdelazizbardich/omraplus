@@ -6,7 +6,7 @@
                     @csrf
                     <div class="mb-3">
                         <label class="input input-bordered flex items-center gap-2 text-nowrap">
-                            {{__('Flight')}}:
+                            {{__('index.Flight')}}:
                             <select name="flight" class="grow border-none focus:shadow-none shadow-none">
                                 @foreach ($flights as $flight)
                                     <option value="{{ $flight->id }}">{{ $flight->title }}</option>
@@ -16,7 +16,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="input input-bordered flex items-center gap-2 text-nowrap">
-                            {{__('Hotel in macca')}}:
+                            {{__('index.Hotel in macca')}}:
                             <select name="hotel_macca" class="grow border-none focus:shadow-none shadow-none">
                                 @foreach ($maccaHotels as $maccaHotel)
                                     <option value="{{ $maccaHotel->id }}">{{ $maccaHotel->name }}</option>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="input input-bordered flex items-center gap-2">
-                            {{__('Hotel in medina')}}:
+                            {{__('index.Hotel in medina')}}:
                             <select name="hotel_medina" class="grow border-none focus:shadow-none shadow-none">
                                 @foreach ($medinaHotels as $medinaHotel)
                                     <option value="{{ $medinaHotel->id }}">{{ $medinaHotel->name }}</option>
@@ -36,48 +36,48 @@
                     </div>
                     <div class="mb-3">
                         <label class="input input-bordered flex items-center gap-2">
-                            {{__('Seats count')}}:
+                            {{__('index.Seats count')}}:
                             <input type="number" name="seats_count" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                         </label>
                     </div>
                     <div class="mb-3 flex gap-6">
                         <div class="form-control">
                             <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
-                                <span class="label-text">{{__('Economic')}}</span>
+                                <span class="label-text">{{__('index.Economic')}}</span>
                                 <input type="checkbox" class="checkbox" name="is_economic" />
                             </label>
                         </div>
                         <div class="form-control">
                             <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
-                                <span class="label-text">{{__('Meals included')}}</span>
+                                <span class="label-text">{{__('index.Meals included')}}</span>
                                 <input type="checkbox" class="checkbox" name="have_meals" />
                             </label>
                         </div>
                         <div class="form-control">
                             <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
-                                <span class="label-text">{{__('Recomanded')}}</span>
+                                <span class="label-text">{{__('index.Recomanded')}}</span>
                                 <input type="checkbox" class="checkbox" name="is_recommended" />
                             </label>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
                 </form>
             </div>
         </div>
         <div class="w-3/5">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
                 <div class="overflow-x-auto datatable">
-                    <input type="text" class="search input" placeholder="{{__('Search')}}...">
+                    <input type="text" class="search input" placeholder="{{__('index.Search')}}...">
                     <table class="table ">
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th>{{__('Flight')}}</th>
-                                <th>{{__('Hotel')}}</th>
-                                <th>{{__('Seats count')}}</th>
-                                <th>{{__('Economic')}}</th>
-                                <th>{{__('Meals included')}}</th>
-                                <th>{{__('Recomanded')}}</th>
+                                <th>{{__('index.Flight')}}</th>
+                                <th>{{__('index.Hotel')}}</th>
+                                <th>{{__('index.Seats count')}}</th>
+                                <th>{{__('index.Economic')}}</th>
+                                <th>{{__('index.Meals included')}}</th>
+                                <th>{{__('index.Recomanded')}}</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -88,10 +88,10 @@
                                     <td class="w-6/12">{{ $program->flight->title }}</td>
                                     <td>
                                         <span class="block text-nowrap">
-                                            <span class="font-bold">{{__('Mecca')}}</span>: {{ $program->hotelMecca->name }}
+                                            <span class="font-bold">{{__('index.Mecca')}}</span>: {{ $program->hotelMecca->name }}
                                         </span>
                                         <span class="block text-nowrap">
-                                            <span class="font-bold">{{__('Medina')}}</span>: {{ $program->hotelMedina->name }}
+                                            <span class="font-bold">{{__('index.Medina')}}</span>: {{ $program->hotelMedina->name }}
                                         </span>
                                     </td>
                                     <td>{{ $program->seat_count }}</td>

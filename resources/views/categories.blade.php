@@ -7,13 +7,13 @@
                         @csrf
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Name')}}:
+                                {{__('index.Name')}}:
                                 <input type="text" value="{{ $category->name }}" name="name" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                     <div class="flex justify-between">
-                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Edit')}}</button>
-                            <a href="{{ route('categories') }}" type="submit" class="btn btn-wide">{{__('Cansel')}}</a>
+                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
+                            <a href="{{ route('categories') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
                         </div>
                     </form>
                 @else
@@ -21,13 +21,13 @@
                         @csrf
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Name')}}:
+                                {{__('index.Name')}}:
                                 <input type="text" name="name" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <button type="submit"
-                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
                     </form>
                 @endif
             </div>
@@ -35,12 +35,12 @@
         <div class="w-3/5">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
                 <div class="overflow-x-auto datatable">
-                    <input type="text" class="search input" placeholder="{{__('Search')}}...">
+                    <input type="text" class="search input" placeholder="{{__('index.Search')}}...">
                     <table class="table">
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th>{{__('Name')}}</th>
+                                <th>{{__('index.Name')}}</th>
                                 <th></th>
                             </tr>
                         </thead>

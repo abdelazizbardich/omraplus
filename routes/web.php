@@ -15,8 +15,10 @@ Route::get('/faqs', [App\Http\Controllers\GuestController::class, 'faqs'])->name
 
 Route::get('/about-us', [App\Http\Controllers\GuestController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUs'])->name('contact-us');
-Route::post('/checkout/{program:id}', [App\Http\Controllers\GuestController::class, 'checkout'])->name('checkout');
+Route::get('/checkout/{program:id}', [App\Http\Controllers\GuestController::class, 'checkout'])->name('checkout');
 Route::post('/checkout', [App\Http\Controllers\GuestController::class, 'confirmCheckout'])->name('checkout.save');
+Route::get('/checkout/success/{order:id}', [App\Http\Controllers\GuestController::class, 'checkoutSuccess'])->name('checkout.success');
+
 Route::get('/umrah-guide', [App\Http\Controllers\GuestController::class, 'umrahGuide'])->name('umrah-guide');
 
 

@@ -5,21 +5,21 @@
 <div class="container m-auto flex justify-between items-start">
     <div class="w-4/12 flex items-start justify-center">
         <x-text-offer-card :index="'0'" icon="{{ Vite::asset('resources/images/booking.webp') }}"
-            :description="__('Effortless Booking Anywhere in Morocco')" :title="__('Book Umrah from anywhere in Morocco')"></x-text-offer-card>
+            :description="__('index.Effortless Booking Anywhere in Morocco')" :title="__('index.Book Umrah from anywhere in Morocco')"></x-text-offer-card>
     </div>
     <div class="w-4/12 flex items-start justify-center">
         <x-text-offer-card :index="'1'" icon="{{ Vite::asset('resources/images/customer-offer.webp') }}"
-            :description="__('Exclusive Packages and Seasonal Offers at Competitive Prices')" :title="__('Special packages and offers throughout the year')"></x-text-offer-card>
+            :description="__('index.Exclusive Packages and Seasonal Offers at Competitive Prices')" :title="__('index.Special packages and offers throughout the year')"></x-text-offer-card>
     </div>
     <div class="w-4/12 flex items-start justify-center">
         <x-text-offer-card :index="'2'" icon="{{ Vite::asset('resources/images/customer-service.webp') }}"
-            :description="__('Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('24/7 support service')"></x-text-offer-card>
+            :description="__('index.Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('index.24/7 support service')"></x-text-offer-card>
     </div>
 </div>
 <x-spacer></x-spacer>
 <div class="container m-auto flex justify-between items-start">
-    <x-title :title="__('Hajj Agency: The best offers and distinguished services for pilgrims to the House of Allah')"
-        :subtitle="__('With OmraPlus, we offer you the best Hajj packages at competitive prices and integrated services. We guarantee you a comfortable and easy Hajj experience under the supervision of a professional and experienced team. Book with us today and choose the best for your trip.')"></x-title>
+    <x-title :title="__('index.Hajj Agency: The best offers and distinguished services for pilgrims to the House of Allah')"
+        :subtitle="__('index.With OmraPlus, we offer you the best Hajj packages at competitive prices and integrated services. We guarantee you a comfortable and easy Hajj experience under the supervision of a professional and experienced team. Book with us today and choose the best for your trip.')"></x-title>
 </div>
 <x-spacer></x-spacer>
 <div class="container m-auto">
@@ -38,7 +38,7 @@
 <div class="bg-blue-50">
     <x-spacer></x-spacer>
     <div class="container m-auto flex justify-between items-start">
-        <x-title :subtitle="__('Choose OmraPlus for a hassle-free Umrah! We offer you the best offers at competitive prices and integrated services for a comfortable and distinctive Umrah experience.')" :title="__('OmraPlus: Easy Umrah with special prices and integrated services')"></x-title>
+        <x-title :subtitle="__('index.Choose OmraPlus for a hassle-free Umrah! We offer you the best offers at competitive prices and integrated services for a comfortable and distinctive Umrah experience.')" :title="__('index.OmraPlus: Easy Umrah with special prices and integrated services')"></x-title>
     </div>
     <x-spacer></x-spacer>
     <div class="container m-auto">
@@ -50,7 +50,7 @@
             @endforeach
         </x-carousel>
     </div>
-    <!-- <a href="{{ route('home') }}" class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">{{__('Discover more')}}</a> -->
+    <!-- <a href="{{ route('home') }}" class="border-yellow-500 border-2 px-6 py-2 m-auto block w-fit rounded-md text-yellow-500 font-black mt-8 hover:bg-yellow-500 hover:text-white duration-300">{{__('index.Discover more')}}</a> -->
     <x-spacer></x-spacer>
 </div>
 <x-spacer></x-spacer>
@@ -64,7 +64,7 @@
 </div>
 <x-spacer></x-spacer>
 <div class="container m-auto flex justify-between items-start">
-    <x-title :subtitle="__('Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('Our Blog – Your Comprehensive Guide to Hajj and Umrah')"></x-title>
+    <x-title :subtitle="__('index.Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('index.Our Blog – Your Comprehensive Guide to Hajj and Umrah')"></x-title>
 </div>
 <x-spacer></x-spacer>
 <div class="container m-auto flex justify-center items-start flex-wrap">

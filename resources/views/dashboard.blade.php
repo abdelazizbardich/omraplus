@@ -4,64 +4,64 @@
         <div class="grid grid-cols-4 gap-4 mb-6">
             <div class="stats shadow-xl">
                 <div class="stat">
-                    <div class="stat-title text-yellow-600 mb-3">{{__('reservations')}}</div>
+                    <div class="stat-title text-yellow-600 mb-3">{{__('index.reservations')}}</div>
                     <div class="stat-value text-blue-950 mb-1">8940</div>
-                    <div class="stat-desc text-blue-950">15 {{__('Not confirmed yet')}}</div>
+                    <div class="stat-desc text-blue-950">15 {{__('index.Not confirmed yet')}}</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
-                    <div class="stat-title text-yellow-600 mb-3">{{__('Flights')}}</div>
+                    <div class="stat-title text-yellow-600 mb-3">{{__('index.Flights')}}</div>
                     <div class="stat-value text-blue-950 mb-1">30</div>
-                    <div class="stat-desc text-blue-950">15 {{__('Hajj Flight')}} {{__('and')}} 15 {{__('Omra Flight')}}
+                    <div class="stat-desc text-blue-950">15 {{__('index.Hajj Flight')}} {{__('index.and')}} 15 {{__('index.Omra Flight')}}
                     </div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
-                    <div class="stat-title text-yellow-600 mb-3">{{__('Programs')}}</div>
+                    <div class="stat-title text-yellow-600 mb-3">{{__('index.Programs')}}</div>
                     <div class="stat-value text-blue-950 mb-1">8940</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
-                    <div class="stat-title text-yellow-600 mb-3">{{__('Hotels')}}</div>
+                    <div class="stat-title text-yellow-600 mb-3">{{__('index.Hotels')}}</div>
                     <div class="stat-value text-blue-950 mb-1">8940</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
-                    <div class="stat-title text-yellow-600 mb-3">{{__('Airlines')}}</div>
+                    <div class="stat-title text-yellow-600 mb-3">{{__('index.Airlines')}}</div>
                     <div class="stat-value text-blue-950 mb-1">8940</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
-                    <div class="stat-title text-yellow-600 mb-3">{{__('Pricing')}}</div>
+                    <div class="stat-title text-yellow-600 mb-3">{{__('index.Pricing')}}</div>
                     <div class="stat-value text-blue-950 mb-1">8940</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
-                    <div class="stat-title text-yellow-600 mb-3">{{__('Discounts')}}</div>
+                    <div class="stat-title text-yellow-600 mb-3">{{__('index.Discounts')}}</div>
                     <div class="stat-value text-blue-950 mb-1">8940</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
-                    <div class="stat-title text-yellow-600 mb-3">{{__('users')}}</div>
+                    <div class="stat-title text-yellow-600 mb-3">{{__('index.users')}}</div>
                     <div class="stat-value text-blue-950 mb-1">8940</div>
                 </div>
             </div>
         </div>
         <div class="bg-white rounded-xl shadow-lg px-3 py-3 mb-6">
-            <span class="text-lg mb-3 block">{{ __('reservations tracking') }}</span>
+            <span class="text-lg mb-3 block">{{ __('index.reservations tracking') }}</span>
             <canvas id="chart" height="100"></canvas>
         </div>
         <div class="bg-white rounded-xl shadow-lg px-3 py-3">
-            <span class="text-lg mb-3 block">{{ __('last 10 reservations') }}</span>
+            <span class="text-lg mb-3 block">{{ __('index.last 10 reservations') }}</span>
             <div class="overflow-x-auto datatable">
-                <input type="text" class="search input" placeholder="{{__('Search')}}...">
+                <input type="text" class="search input" placeholder="{{__('index.Search')}}...">
                 <table class="table">
                     <!-- head -->
                     <thead>

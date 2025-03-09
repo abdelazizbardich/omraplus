@@ -11,7 +11,7 @@
         </div>
         <h1 class="font-black text-lg w-full rounded-full w-fit m-auto text-justify opacity-90 mb-6">عمرة شعبان - من 19 فبراير إلى 06 مارس - عبر الخطوط السعودية</h1>
         <div class="mb-6">
-            <p class="text-gray-500 text-sm line-clamp-3 text-justify">{{ __('Lorem ipsum') }}</p>
+            <p class="text-gray-500 text-sm line-clamp-3 text-justify">{{ __('index.Lorem ipsum') }}</p>
         </div>
         <div class="flex items-center justify-between gap-2">
             <div class="flex items-center justify-start gap-2">
@@ -27,7 +27,7 @@
             </div>
             <div class="float-end flex w-auto">
                 <div class="border border-black-200 w-fit text-nowrap  rounded-md h-full py-2 px-3 text-gl font-black group duration-300 transition-colors cursor-pointer">
-                    <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('Discover more')}}
+                    <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.Discover more')}}
                 </div>
             </div>
         </div>

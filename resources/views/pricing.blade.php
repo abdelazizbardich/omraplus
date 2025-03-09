@@ -3,7 +3,7 @@
         <div class="collapse collapse-plus border-base-300 bg-base-200 border">
             <input id="collapse-toggler" type="checkbox" hidden class="hidden" @if(isset($edit)) checked @endif />
             <label for="collapse-toggler"
-                class="collapse-title text-xl font-medium shadow bg-white">{{ __('New pricing') }}</label>
+                class="collapse-title text-xl font-medium shadow bg-white">{{ __('index.New pricing') }}</label>
             <div class="collapse-content bg-white rounded-xl rounded-t-none shadow-lg overflow-hidden">
                 <div class="w-12/12">
                     <div class="bg-white mt-6">
@@ -12,7 +12,7 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('Program')}}:
+                                        {{__('index.Program')}}:
                                         <select name="program" class="grow border-none focus:shadow-none shadow-none"
                                             required>
                                             @foreach ($programs as $program)
@@ -28,7 +28,7 @@
                                         <div class="border rounded-xl p-3 flex flex-col w-2/6">
                                             <div class="mb-3">
                                                 <label class="input input-bordered flex items-center gap-2">
-                                                    {{__('Room type')}}:
+                                                    {{__('index.Room type')}}:
                                                     <input type="text" name="room[]" value="{{ $room->id }}" class="hidden" hidden>
                                                     <input type="text" value="{{ $room->name }}" class="w-auto border-none focus:shadow-none shadow-none" disabled>
                                                 </label>
@@ -36,14 +36,14 @@
                                             <div class="mb-3">
                                                 <label class="input input-bordered flex items-center gap-2">
                                                     <span
-                                                        class="text-nowrap">{{__('Price before discount')}}({{__('dh')}}):</span>
+                                                        class="text-nowrap">{{__('index.Price before discount')}}({{__('index.dh')}}):</span>
                                                     <input type="number" name="old_price[]" class="w-auto grow border-none focus:shadow-none shadow-none" value="{{ old('old_price',@$price->prices->where('room_id', $room->id)->first()->old_price) }}" placeholder=""/>
                                                 </label>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="input input-bordered flex items-center gap-2">
                                                     <span
-                                                        class="text-nowrap">{{__('Price after discount')}}({{__('dh')}}):</span>
+                                                        class="text-nowrap">{{__('index.Price after discount')}}({{__('index.dh')}}):</span>
                                                     <input type="number" name="price[]" class="w-auto grow border-none focus:shadow-none shadow-none" value="{{ old('price',@$price->prices->where('room_id', $room->id)->first()->price) }}" placeholder=""/>
                                                 </label>
                                             </div>
@@ -51,8 +51,8 @@
                                     @endforeach
                                 </div>
                                 <div class="flex justify-start gap-3">
-                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Edit')}}</button>
-                                    <a href="{{ route('pricing') }}" type="submit" class="btn btn-wide">{{__('Cansel')}}</a>
+                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
+                                    <a href="{{ route('pricing') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
                                 </div>
                             </form>
                         @else
@@ -60,7 +60,7 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('Program')}}:
+                                        {{__('index.Program')}}:
                                         <select name="program" class="grow border-none focus:shadow-none shadow-none"
                                             required>
                                             @foreach ($programs as $program)
@@ -76,7 +76,7 @@
                                         <div class="border rounded-xl p-3 flex flex-col w-2/6">
                                             <div class="mb-3">
                                                 <label class="input input-bordered flex items-center gap-2">
-                                                    {{__('Room type')}}:
+                                                    {{__('index.Room type')}}:
                                                     <input type="text" name="room[]" value="{{ $room->id }}" class="hidden"
                                                         hidden>
                                                     <input type="text" value="{{ $room->name }}"
@@ -86,7 +86,7 @@
                                             <div class="mb-3">
                                                 <label class="input input-bordered flex items-center gap-2">
                                                     <span
-                                                        class="text-nowrap">{{__('Price before discount')}}({{__('dh')}}):</span>
+                                                        class="text-nowrap">{{__('index.Price before discount')}}({{__('index.dh')}}):</span>
                                                     <input type="number" name="old_price[]"
                                                         class="w-auto grow border-none focus:shadow-none shadow-none"
                                                         value="{{ old('old_price') }}" placeholder="" />
@@ -95,7 +95,7 @@
                                             <div class="mb-3">
                                                 <label class="input input-bordered flex items-center gap-2">
                                                     <span
-                                                        class="text-nowrap">{{__('Price after discount')}}({{__('dh')}}):</span>
+                                                        class="text-nowrap">{{__('index.Price after discount')}}({{__('index.dh')}}):</span>
                                                     <input type="number" name="price[]"
                                                         class="w-auto grow border-none focus:shadow-none shadow-none"
                                                         value="{{ old('price') }}" placeholder="" />
@@ -105,7 +105,7 @@
                                     @endforeach
                                 </div>
                                 <button type="submit"
-                                    class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                                    class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
                             </form>
                         @endif
                     </div>
@@ -115,12 +115,12 @@
         <div class="w-12/12">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
                 <div class="overflow-x-auto datatable">
-                    <input type="text" class="s earch input" placeholder="{{__('Search')}}...">
+                    <input type="text" class="s earch input" placeholder="{{__('index.Search')}}...">
                     <table class="table ">
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th>{{__('Program')}}</th>
+                                <th>{{__('index.Program')}}</th>
                                 @foreach ($rooms as $room)
                                     <th>{{ $room->name }}</th>
                                 @endforeach
@@ -139,8 +139,8 @@
                                                 @endphp
                                                 <td>
                                                     @if($room)
-                                                        <span class="block opacity-45 text-sm font-bold line-through line-clamp-2 lining-nums">{{ @$room->old_price }} {{ __('dh') }}</span>
-                                                        <span class="block text-base font-bold line-clamp-2 lining-nums">{{ @$room->price }} {{ __('dh') }}</span>
+                                                        <span class="block opacity-45 text-sm font-bold line-through line-clamp-2 lining-nums">{{ @$room->old_price }} {{ __('index.dh') }}</span>
+                                                        <span class="block text-base font-bold line-clamp-2 lining-nums">{{ @$room->price }} {{ __('index.dh') }}</span>
                                                     @else
                                                     ---
                                                     @endif

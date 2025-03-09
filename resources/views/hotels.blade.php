@@ -7,41 +7,41 @@
                         @csrf
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Name')}}:
+                                {{__('index.Name')}}:
                                 <input type="text" name="name" value="{{ $hotel->name }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Address')}}:
+                                {{__('index.Address')}}:
                                 <input type="text" name="address" value="{{ $hotel->address }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                {{__('City')}}:
+                                {{__('index.City')}}:
                                 <select name="city" class="grow border-none focus:shadow-none shadow-none">
-                                    <option value="macca" @if($hotel->city === 'macca') selected @endif>{{__('Mecca')}}</option>
-                                    <option value="medina" @if($hotel->city === 'medina') selected @endif>{{__('Medina')}}</option>
+                                    <option value="macca" @if($hotel->city === 'macca') selected @endif>{{__('index.Mecca')}}</option>
+                                    <option value="medina" @if($hotel->city === 'medina') selected @endif>{{__('index.Medina')}}</option>
                                 </select>
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2 text-nowrap">
-                                {{__('Distance from macca')}} ({{__('meter')}}):
+                                {{__('index.Distance from macca')}} ({{__('index.meter')}}):
                                 <input type="number" name="distance" value="{{ $hotel->distance }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3 flex gap-3">
                             <img src="{{ @$hotel->mainPhoto->url }}" alt="" class="h-12 aspect-square rounded-md object-cover">
                             <label class="w-full input input-bordered flex items-center gap-2">
-                                {{__('Primary photo')}}
+                                {{__('index.Primary photo')}}
                                 <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Hotel photos')}}
+                                {{__('index.Hotel photos')}}
                                 <input type="file" name="hotel_photos[]" class="grow w-full max-w-xs" multiple />
                             </label>
                             <div class="flex mt-1 gap-1">
@@ -51,8 +51,8 @@
                             </div>
                         </div>
                         <div class="flex justify-between">
-                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Edit')}}</button>
-                            <a href="{{ route('hotels') }}" type="submit" class="btn btn-wide">{{__('Cansel')}}</a>
+                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
+                            <a href="{{ route('hotels') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
                         </div>
                     </form>
                 @else
@@ -60,48 +60,48 @@
                         @csrf
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Name')}}:
+                                {{__('index.Name')}}:
                                 <input type="text" name="name" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Address')}}:
+                                {{__('index.Address')}}:
                                 <input type="text" name="address" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                {{__('City')}}:
+                                {{__('index.City')}}:
                                 <select name="city" class="grow border-none focus:shadow-none shadow-none">
-                                    <option value="{{__('macca')}}">{{__('Mecca')}}</option>
-                                    <option value="{{__('medina')}}">{{__('Medina')}}</option>
+                                    <option value="{{__('index.macca')}}">{{__('index.Mecca')}}</option>
+                                    <option value="{{__('index.medina')}}">{{__('index.Medina')}}</option>
                                 </select>
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2 text-nowrap">
-                                {{__('Distance from macca')}} ({{__('meter')}}):
+                                {{__('index.Distance from macca')}} ({{__('index.meter')}}):
                                 <input type="number" name="distance" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Primary photo')}}
+                                {{__('index.Primary photo')}}
                                 <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Hotel photos')}}
+                                {{__('index.Hotel photos')}}
                                 <input type="file" name="hotel_photos[]" class="grow w-full max-w-xs" multiple />
                             </label>
                         </div>
                         <button type="submit"
-                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
                     </form>
                 @endif
             </div>
@@ -109,14 +109,14 @@
         <div class="w-3/5">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
                 <div class="overflow-x-auto datatable">
-                    <input type="text" class="search input" placeholder="{{__('Search')}}...">
+                    <input type="text" class="search input" placeholder="{{__('index.Search')}}...">
                     <table class="table ">
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th>{{__('Name')}}</th>
-                                <th>{{__('Address')}}</th>
-                                <th>{{__('Distance from macca')}}</th>
+                                <th>{{__('index.Name')}}</th>
+                                <th>{{__('index.Address')}}</th>
+                                <th>{{__('index.Distance from macca')}}</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -140,7 +140,7 @@
                                     <td>
                                         {{ $hotel->address }}
                                     </td>
-                                    <td>{{ $hotel->distance }} {{ __('meter') }}</td>
+                                    <td>{{ $hotel->distance }} {{ __('index.meter') }}</td>
                                     <th>
                                         <a href="{{ route('hotels.edit', $hotel->id) }}"
                                             class="btn btn-xs btn-info edit"></a>

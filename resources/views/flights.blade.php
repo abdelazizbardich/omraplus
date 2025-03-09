@@ -2,7 +2,7 @@
     <main class="flex-1 flex flex-col gap-12">
         <div  class="collapse collapse-plus border-base-300 bg-base-200 border">
             <input id="collapse-toggler" type="checkbox" hidden class="hidden" />
-            <label for="collapse-toggler" class="collapse-title text-xl font-medium shadow bg-white">{{ __('New flight') }}</label >
+            <label for="collapse-toggler" class="collapse-title text-xl font-medium shadow bg-white">{{ __('index.New flight') }}</label >
             <div class="collapse-content bg-white rounded-xl rounded-t-none shadow-lg">
                 <div class="w-full p-0 px-3 py-3 pt-6">
                     @if(isset($edit))
@@ -10,34 +10,34 @@
                             @csrf
                             <div class="mb-3">
                                 <label class="input input-bordered inpu flex items-center gap-2">
-                                    {{__('Title')}}:
+                                    {{__('index.Title')}}:
                                     <input type="text" id="fligth-title" name="title" value="{{ old('title', $flight->title) }}"
                                         class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                                 </label>
                             </div>
                             <div class="mb-3 grid grid-cols-3 gap-4 items-center">
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Going date')}}:
+                                    {{__('index.Going date')}}:
                                     <input type="date" name="going_date" value="{{ old('going_date', $flight->going_date) }}"
                                         class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Return date')}}:
+                                    {{__('index.Return date')}}:
                                     <input type="date" name="return_date" value="{{ old('return_date', $flight->return_date) }}"
                                         class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Type')}}:
+                                    {{__('index.Type')}}:
                                     <select name="type" class="grow border-none focus:shadow-none shadow-none"
                                         value="{{ old('type', $flight->type) }}">
                                         <option value="omra" @if(old('type', $flight->type) === "omra") selected @endif>
-                                            {{__('Omra')}}</option>
+                                            {{__('index.Omra')}}</option>
                                         <option value="hajj" @if(old('type', $flight->type) === "hajj") selected @endif>
-                                            {{__('Hajj')}}</option>
+                                            {{__('index.Hajj')}}</option>
                                     </select>
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Category')}}:
+                                    {{__('index.Category')}}:
                                     <select name="category" class="grow border-none focus:shadow-none shadow-none">
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}"
@@ -47,7 +47,7 @@
                                     </select>
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Aireline')}}:
+                                    {{__('index.Aireline')}}:
                                     <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
                                         @foreach ($airelines as $aireline)
                                             <option value="{{ $aireline->id }}"
@@ -57,32 +57,32 @@
                                 </label>
                                 <div class="form-control">
                                     <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
-                                        <span class="label-text">{{__('Recomanded')}}</span>
+                                        <span class="label-text">{{__('index.Recomanded')}}</span>
                                         <input type="checkbox" class="checkbox" checked="{{$flight->is_recommended == 1}}" name="is_recommended" />
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('Primary photo')}}
+                                        {{__('index.Primary photo')}}
                                         <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('Fligth photos')}}
+                                        {{__('index.Fligth photos')}}
                                         <input type="file" name="fligth_photos[]" class="grow w-full max-w-xs" multiple />
                                     </label>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="mb-1 block">{{__('Description')}}:</label>
-                                <textarea id="text-editor" name="description" placeholder="{{__('Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">
+                                <label class="mb-1 block">{{__('index.Description')}}:</label>
+                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">
                                     {{ old('description', $flight->description) }}
                                 </textarea>
                                 </div>
                                 <div class="flex justify-start gap-3">
-                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
-                                    <a href="{{ route('flights') }}" type="submit" class="btn btn-wide">{{__('Cansel')}}</a>
+                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
+                                    <a href="{{ route('flights') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
                                 </div>
                             </form>
                     @else
@@ -90,30 +90,30 @@
                             @csrf
                             <div class="mb-3">
                                 <label class="input input-bordered inpu flex items-center gap-2">
-                                    {{__('Title')}}:
+                                    {{__('index.Title')}}:
                                     <input type="text" id="fligth-title" name="title" value="{{ old('title') }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                                 </label>
                             </div>
                             <div class="mb-3 grid grid-cols-3 gap-4 items-center">
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Going date')}}:
+                                    {{__('index.Going date')}}:
                                     <input type="date" name="going_date" value="{{ old('going_date') }}" class="grow border-none focus:shadow-none shadow-none"
                                         placeholder="" />
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Return date')}}:
+                                    {{__('index.Return date')}}:
                                     <input type="date" name="return_date" value="{{ old('return_date') }}" class="grow border-none focus:shadow-none shadow-none"
                                         placeholder="" />
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Type')}}:
+                                    {{__('index.Type')}}:
                                     <select name="type" class="grow border-none focus:shadow-none shadow-none">
-                                        <option value="umrah" @if(old('type') === 'umrah') selected @endif>{{__('Omra')}}</option>
-                                        <option value="hajj" @if(old('type') === 'hajj') selected @endif>{{__('Hajj')}}</option>
+                                        <option value="umrah" @if(old('type') === 'umrah') selected @endif>{{__('index.Omra')}}</option>
+                                        <option value="hajj" @if(old('type') === 'hajj') selected @endif>{{__('index.Hajj')}}</option>
                                     </select>
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Category')}}:
+                                    {{__('index.Category')}}:
                                     <select name="category" class="grow border-none focus:shadow-none shadow-none">
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}" @if(old('category') == $category->id) selected @endif>{{ $category->name }}</option>
@@ -121,7 +121,7 @@
                                     </select>
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('Aireline')}}:
+                                    {{__('index.Aireline')}}:
                                     <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
                                         @foreach ($airelines as $aireline)
                                             <option value="{{ $aireline->id }}" @if(old('aireline') == $aireline->id) selected @endif>{{ $aireline->name }}</option>
@@ -130,31 +130,31 @@
                                 </label>
                                 <div class="form-control">
                                     <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
-                                        <span class="label-text">{{__('Recomanded')}}</span>
+                                        <span class="label-text">{{__('index.Recomanded')}}</span>
                                         <input type="checkbox" class="checkbox" name="is_recommended" checked="{{ old('is_recommended') }}" />
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('Primary photo')}}
+                                        {{__('index.Primary photo')}}
                                         <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('Fligth photos')}}
+                                        {{__('index.Fligth photos')}}
                                         <input type="file" name="fligth_photos[]" class="grow w-full max-w-xs" multiple />
                                     </label>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="mb-1 block">{{__('Description')}}:</label>
-                                <textarea id="text-editor" name="description" placeholder="{{__('Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">
+                                <label class="mb-1 block">{{__('index.Description')}}:</label>
+                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">
                                 {{ old('description') }}
                                 </textarea>
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                                <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
                             </div>
                         </form>
                     @endif
@@ -164,19 +164,19 @@
         <div class="w-fill">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
                 <div class="overflow-x-auto datatable">
-                    <input type="text" class="search input" placeholder="{{__('Search')}}...">
+                    <input type="text" class="search input" placeholder="{{__('index.Search')}}...">
                     <table class="table ">
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th>{{__('Title')}}</th>
-                                <th>{{__('Going date')}}</th>
-                                <th>{{__('Return date')}}</th>
-                                <th>{{__('Description')}}</th>
-                                <th>{{__('Category')}}</th>
-                                <th>{{__('Type')}}</th>
-                                <th>{{__('Recomanded')}}</th>
-                                <th>{{__('Aireline')}}</th>
+                                <th>{{__('index.Title')}}</th>
+                                <th>{{__('index.Going date')}}</th>
+                                <th>{{__('index.Return date')}}</th>
+                                <th>{{__('index.Description')}}</th>
+                                <th>{{__('index.Category')}}</th>
+                                <th>{{__('index.Type')}}</th>
+                                <th>{{__('index.Recomanded')}}</th>
+                                <th>{{__('index.Aireline')}}</th>
                                 <th></th>
                             </tr>
                         </thead>

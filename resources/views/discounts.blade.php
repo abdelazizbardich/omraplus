@@ -7,21 +7,21 @@
                         @csrf
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Name')}}:
+                                {{__('index.Name')}}:
                                 <input type="text" name="name" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Code')}}:
+                                {{__('index.Code')}}:
                                 <input type="text" name="code" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Program')}}:
+                                {{__('index.Program')}}:
                                 <select name="program" class="grow border-none focus:shadow-none shadow-none">
                                     @foreach ($programs as $program)
                                         <option value="{{ $program->id }}">{{ $program->name }}</option>                                    
@@ -31,43 +31,43 @@
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Type')}}:
+                                {{__('index.Type')}}:
                                 <select name="type" class="grow border-none focus:shadow-none shadow-none">
-                                    <option value="percentage">{{__('percentage')}}</option>
-                                    <option value="fixed">{{__('fixed')}}</option>
+                                    <option value="percentage">{{__('index.percentage')}}</option>
+                                    <option value="fixed">{{__('index.fixed')}}</option>
                                 </select>
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Value')}}:
+                                {{__('index.Value')}}:
                                 <input type="text" name="value" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <button type="submit"
-                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Edit')}}</button>
+                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
                     </form>
                 @else
                     <form action="{{ route('discounts.save') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Name')}}:
+                                {{__('index.Name')}}:
                                 <input type="text" name="name" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Code')}}:
+                                {{__('index.Code')}}:
                                 <input type="text" name="code" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Program')}}:
+                                {{__('index.Program')}}:
                                 <select name="program" class="grow border-none focus:shadow-none shadow-none">
                                     @foreach ($programs as $program)
                                         <option value="{{ $program->id }}">{{ $program->name }}</option>                                    
@@ -77,22 +77,22 @@
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Type')}}:
+                                {{__('index.Type')}}:
                                 <select name="type" class="grow border-none focus:shadow-none shadow-none">
-                                    <option value="percentage">{{__('percentage')}}</option>
-                                    <option value="fixed">{{__('fixed')}}</option>
+                                    <option value="percentage">{{__('index.percentage')}}</option>
+                                    <option value="fixed">{{__('index.fixed')}}</option>
                                 </select>
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('Value')}}:
+                                {{__('index.Value')}}:
                                 <input type="text" name="value" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <button type="submit"
-                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Add')}}</button>
+                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
                     </form>
                 @endif
             </div>
@@ -100,15 +100,15 @@
         <div class="w-3/5">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
                 <div class="overflow-x-auto datatable">
-                    <input type="text" class="search input" placeholder="{{__('Search')}}...">
+                    <input type="text" class="search input" placeholder="{{__('index.Search')}}...">
                     <table class="table ">
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th>{{__('Name')}}</th>
-                                <th>{{__('Code')}}</th>
-                                <th>{{__('Type')}}</th>
-                                <th>{{__('Value')}}</th>
+                                <th>{{__('index.Name')}}</th>
+                                <th>{{__('index.Code')}}</th>
+                                <th>{{__('index.Type')}}</th>
+                                <th>{{__('index.Value')}}</th>
                                 <th></th>
                             </tr>
                         </thead>

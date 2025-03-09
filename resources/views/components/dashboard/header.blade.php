@@ -10,7 +10,7 @@
             </svg>
         </label>
         <label for="logout" href="{{route('logout')}}" class="cursor-pointer hover:text-gray-700 flex items-center justify-center">
-        <img src="{{ Vite::asset('resources/images/logout.png') }}" alt="{{ __('Logo') }}"  class="me-3 h-6 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
+        <img src="{{ Vite::asset('resources/images/logout.png') }}" alt="{{ __('index.Logo') }}"  class="me-3 h-6 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
         </label>
         <form action="{{route('logout')}}" class="hidden" method="post">
             @csrf

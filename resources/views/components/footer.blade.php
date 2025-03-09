@@ -5,50 +5,50 @@
                 
         </div>
         <div class="w-9/12 p-6 pe-0">
-            <p class="w-full text-base text-justify leading-relaxed line-clamp-4">{{ __('footer.description') }}.</p>
+            <p class="w-full text-base text-justify leading-relaxed line-clamp-4">{{ __('index.footer.description') }}.</p>
         </div>
     </div>
     <div class="container opacity-95 m-auto flex justify-between items-center border-b py-8 border-light-600">
         <div class="w-3/12">
-            <span class="block font-bold text-xl mb-3">{{__('Our Services')}}</span>
+            <span class="block font-bold text-xl mb-3">{{__('index.Our Services')}}</span>
             <ul class="ps-6">
-                <li><a href="{{route('about-us')}}" class="text-light">{{__('Who are we?')}}</a></li>
-                <li><a href="{{route('home')}}" class="text-light">{{__('Booking instructions')}}</a></li>
-                <li><a href="{{route('home')}}" class="text-light">{{__('our services')}}</a></li>
-                <li><a href="{{route('contact-us')}}" class="text-light">{{__('Contact us')}}</a></li>
+                <li><a href="{{route('about-us')}}" class="text-light">{{__('index.Who are we?')}}</a></li>
+                <li><a href="{{route('home')}}" class="text-light">{{__('index.Booking instructions')}}</a></li>
+                <li><a href="{{route('home')}}" class="text-light">{{__('index.our services')}}</a></li>
+                <li><a href="{{route('contact-us')}}" class="text-light">{{__('index.Contact us')}}</a></li>
             </ul>
         </div>
         <div class="w-3/12">
-            <span class="block font-bold text-xl mb-3">{{__('Our Services')}}</span>
+            <span class="block font-bold text-xl mb-3">{{__('index.Our Services')}}</span>
             <ul class="ps-6">
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Hajj guide')}}</a></li>
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Umrah guide')}}</a></li>
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Learn about Mecca')}}</a></li>
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Get to know Medina')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Hajj guide')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Umrah guide')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Learn about Mecca')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Get to know Medina')}}</a></li>
             </ul>
         </div>
         <div class="w-3/12">
-            <span class="block font-bold text-xl mb-3">{{__('Our Services')}}</span>
+            <span class="block font-bold text-xl mb-3">{{__('index.Our Services')}}</span>
             <ul class="ps-6">
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Who are we?')}}</a></li>
-                <li><a href="{{ route('home') }}" class="text-light">{{__('Booking instructions')}}</a></li>
-                <li><a href="{{ route('home') }}" class="text-light">{{__('Privacy policy')}}</a></li>
-                <li><a href="{{ route('contact-us') }}" class="text-light">{{__('Contact us')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Who are we?')}}</a></li>
+                <li><a href="{{ route('home') }}" class="text-light">{{__('index.Booking instructions')}}</a></li>
+                <li><a href="{{ route('home') }}" class="text-light">{{__('index.Privacy policy')}}</a></li>
+                <li><a href="{{ route('contact-us') }}" class="text-light">{{__('index.Contact us')}}</a></li>
             </ul>
         </div>
         <div class="w-3/12">
-            <span class="block font-bold text-xl mb-3">{{__('Our Services')}}</span>
+            <span class="block font-bold text-xl mb-3">{{__('index.Our Services')}}</span>
             <ul class="ps-6">
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Privacy Policy')}}</a></li>
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Payment Policy')}}</a></li>
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Terms and Conditions')}}</a></li>
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('Umrati partner program')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Privacy Policy')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Payment Policy')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Terms and Conditions')}}</a></li>
+                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Umrati partner program')}}</a></li>
             </ul>
         </div>
     </div>
     <div class="container opacity-95 m-auto flex justify-between items-center py-6">
         <div class="w-auto">
-            <span class="text-base block">{{ __('All Rights Reserved') }} © {{ date('Y') }}</span>
+            <span class="text-base block">{{ __('index.All Rights Reserved') }} © {{ date('Y') }}</span>
         </div>
         <div class="w-auto flex flex-row justify-center items-center gap-4">
             <div class="w-auto">

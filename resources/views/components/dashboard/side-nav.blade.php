@@ -2,63 +2,63 @@
     <div class="w-full h-full flex flex-col py-4 px-3 text-gray-900 bg-white rounded-lg shadow-lg capitalize font-medium">
         <div class="flex-1 flex flex-col">
             <a href="{{ route('dashboard') }}">
-                <img src="{{ Vite::asset('resources/images/logo-d.png') }}" alt="{{ __('Logo') }}"  class="w-4/5 mx-auto mb-5 group-[.closed]:hidden">
-                <img src="{{ Vite::asset('resources/images/favicon.ico') }}" alt="{{ __('Logo') }}"  class="w-4/5 h-12 object-contain aspect-square mx-auto mb-5 hidden group-[.closed]:block">
+                <img src="{{ Vite::asset('resources/images/logo-d.png') }}" alt="{{ __('index.Logo') }}"  class="w-4/5 mx-auto mb-5 group-[.closed]:hidden">
+                <img src="{{ Vite::asset('resources/images/favicon.ico') }}" alt="{{ __('index.Logo') }}"  class="w-4/5 h-12 object-contain aspect-square mx-auto mb-5 hidden group-[.closed]:block">
             </a>
             <hr class="border-0 border-b opacity-65 mb-5">
-            <a href="{{ route('dashboard') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Hajj Flights')}}">
-                <img src="{{ Vite::asset('resources/images/dashboard.png') }}" alt="{{__('Hajj Flights')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Dashboard')}}</span>
+            <a href="{{ route('dashboard') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Hajj Flights')}}">
+                <img src="{{ Vite::asset('resources/images/dashboard.png') }}" alt="{{__('index.Hajj Flights')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Dashboard')}}</span>
             </a>
-            <a href="{{ route('flights') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Hajj Flights')}}">
-                <img src="{{ Vite::asset('resources/images/flights.png') }}" alt="{{__('Hajj Flights')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Flights')}}</span>
+            <a href="{{ route('flights') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Hajj Flights')}}">
+                <img src="{{ Vite::asset('resources/images/flights.png') }}" alt="{{__('index.Hajj Flights')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Flights')}}</span>
             </a>
-            <a href="{{ route('categories') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Flights Categories')}}">
-                <img src="{{ Vite::asset('resources/images/categories.png') }}" alt="{{__('Flights Categories')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Flights Categories')}}</span>
+            <a href="{{ route('categories') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Flights Categories')}}">
+                <img src="{{ Vite::asset('resources/images/categories.png') }}" alt="{{__('index.Flights Categories')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Flights Categories')}}</span>
             </a>
-            <a href="{{ route('programs') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Programs')}}">
-                <img src="{{ Vite::asset('resources/images/programs.png') }}" alt="{{__('Programs')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Programs')}}</span>
+            <a href="{{ route('programs') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Programs')}}">
+                <img src="{{ Vite::asset('resources/images/programs.png') }}" alt="{{__('index.Programs')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Programs')}}</span>
             </a>
-            <a href="{{ route('hotels') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Hotels')}}">
-                <img src="{{ Vite::asset('resources/images/hotel.png') }}" alt="{{__('Hotels')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Hotels')}}</span>
+            <a href="{{ route('hotels') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Hotels')}}">
+                <img src="{{ Vite::asset('resources/images/hotel.png') }}" alt="{{__('index.Hotels')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Hotels')}}</span>
             </a>
-            <a href="{{ route('airlines') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Airlines')}}">
-                <img src="{{ Vite::asset('resources/images/airline.png') }}" alt="{{__('Airlines')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Airlines')}}</span>
+            <a href="{{ route('airlines') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Airlines')}}">
+                <img src="{{ Vite::asset('resources/images/airline.png') }}" alt="{{__('index.Airlines')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Airlines')}}</span>
             </a>
-            <a href="{{ route('pricing') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Pricing')}}">
-                <img src="{{ Vite::asset('resources/images/prices.png') }}" alt="{{__('Pricing')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Pricing')}}</span>
+            <a href="{{ route('pricing') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Pricing')}}">
+                <img src="{{ Vite::asset('resources/images/prices.png') }}" alt="{{__('index.Pricing')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Pricing')}}</span>
             </a>
-            <a href="{{ route('discounts') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Discounts')}}">
-                <img src="{{ Vite::asset('resources/images/discount.png') }}" alt="{{__('Discounts')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Discounts')}}</span>
+            <a href="{{ route('discounts') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Discounts')}}">
+                <img src="{{ Vite::asset('resources/images/discount.png') }}" alt="{{__('index.Discounts')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Discounts')}}</span>
             </a>
-            <a href="{{ route('rooms') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Rooms')}}">
-                <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('Rooms')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Rooms')}}</span>
+            <a href="{{ route('rooms') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Rooms')}}">
+                <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('index.Rooms')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Rooms')}}</span>
             </a>
             <hr>
-            <a href="{{ route('users') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('Users')}}">
-                <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('Users')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('Users')}}</span>
+            <a href="{{ route('users') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Users')}}">
+                <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('index.Users')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Users')}}</span>
             </a>
         </div>
         <div class="">
             <hr class="border-0 border-b opacity-65 mb-5">
             <div class="flex">
                 <label for="logout" class="block w-4/12 h-8 flex items-center justify-center group-[.closed]:hidden">
-                    <img src="{{ Vite::asset('resources/images/logout.png') }}" alt="{{ __('Logo') }}"  class="h-4/5 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
+                    <img src="{{ Vite::asset('resources/images/logout.png') }}" alt="{{ __('index.Logo') }}"  class="h-4/5 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
                 </label>
                 <a href="{{ route('profile') }}" class="block w-4/12 h-8 flex items-center justify-center group-[.closed]:hidden">
-                    <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="{{ __('Logo') }}"  class="h-4/5 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
+                    <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="{{ __('index.Logo') }}"  class="h-4/5 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
                 </a>
                 <a href="{{ route('settings') }}" class="block w-4/12 group-[.closed]:w-full h-8 flex items-center justify-center">
-                    <img src="{{ Vite::asset('resources/images/settings.png') }}" alt="{{ __('Logo') }}"  class="h-4/5 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
+                    <img src="{{ Vite::asset('resources/images/settings.png') }}" alt="{{ __('index.Logo') }}"  class="h-4/5 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
                 </a>
             </div>
         </div>

@@ -1,5 +1,5 @@
 @extends('errors::minimal')
 
-@section('title', __('Service Unavailable'))
+@section('title', __('index.Service Unavailable'))
 @section('code', '503')
-@section('message', __('Service Unavailable message'))
+@section('message', __('index.Service Unavailable message'))

@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Flight;
+use App\Models\Order;
 use App\Models\Program;
 use App\Models\ProgramPrice;
 use App\Models\Room;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -64,18 +67,79 @@ class GuestController extends Controller
     }
 
     public function checkout(Program $program, Request $request){
-        $request->validate(['room_type' => 'required|exists:rooms,id']);
+        $request->validate(['room' => 'required|exists:rooms,id']);
         $data = [
-            'room' => Room::where('id',$request->room_type)->first(),
+            'room' => Room::where('id',$request->room)->first(),
             'program' => $program,
-            'price' => ProgramPrice::where('room_id',$request->room_type)->where('program_id',$program->id)->first(),
+            'price' => ProgramPrice::where('room_id',$request->room)->where('program_id',$program->id)->first(),
             "flight" => $program->load('flight')->flight
         ];
         return view('guest.checkout',$data);
     }
 
     public function confirmCheckout(Request $request){
-        dd($request->all());
+        $request->validate([
+            "flight_id" => 'required|numeric',
+            "price_id" => 'required|numeric',
+            "room_id" => 'required|numeric',
+            "program_id" => 'required|numeric',
+            "pilgrims_count" => 'required|numeric',
+            "first_name" => 'required',
+            "last_name" => 'required',
+            "city" => 'required',
+            "phone" => 'required',
+            "email" => 'required',
+            "payment_way" => 'required'
+        ]);
+
+        if($request->payment_way === "PAY_BY_CARD"){
+            $request->validate([
+                "card_number" => 'required',
+                "expiry_date" => 'required',
+                "cvc_code" => 'required'
+            ]);
+        }
+
+        if(!User::where('email', $request->email)->exists()){
+            // save the user
+            $user = new User();
+            $user->name = $request->first_name;
+            $user->first_name = $request->first_name;
+            $user->last_name = $request->last_name;
+            $user->city = $request->city;
+            $user->phone = $request->phone;
+            $user->email = $request->email;
+            $user->password = Hash::make(rand(100000,999999));
+            $user->save();
+        }else{
+            $user = User::where('email', $request->email)->first();
+        }
+
+
+        // save the order
+        $order = new Order();
+        $order->program_price_id = $request->price_id;
+        $order->pilgrims_count = $request->pilgrims_count;
+        $order->user_id = $user->id;
+        $order->payment_method = $request->payment_way;
+        $order->status = "pending";
+        $order->payment_status = "pending";
+        $order->pilgrims_count = $request->pilgrims_count;
+        $order->total_price = $request->pilgrims_count * ProgramPrice::where('id',$request->price_id)->first()->price;
+        $order->save();
+
+        return redirect()->route('checkout.success', $order->id);
+    }
+
+    public function checkoutSuccess(Order $order){
+        $data = [
+            "name" => "Checkout Success",
+            'order' => $order,
+            'program' => Program::where('id',$order->programPrice->program_id)->first(),
+            'price' => ProgramPrice::where('id',$order->program_price_id)->first(),
+            "flight" => Program::where('id',$order->programPrice->program_id)->first()->load('flight')->flight
+        ];
+        return view('guest.checkout-success',$data);
     }
 
     public function umrahGuide(){
