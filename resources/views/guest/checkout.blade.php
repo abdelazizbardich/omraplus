@@ -73,43 +73,43 @@
                 
                 <div class="flex flex-col items-center justify-between px-3 mb-3 pb-3">
                     <div class="border border-black-200 rounded-lg p-3 w-full mb-3 cursor-pointer hover:shadow-md h-16 flex items-center">
-                        <div class="flex w-full">
+                        <label class="flex w-full cursor-pointer" for="PAY_LATER" >
                             <input id="PAY_LATER" type="radio" name="payment_way" value="PAY_LATER" class="radio radio-info me-3 checked:bg-blue-950" checked/>
-                            <label class="cursor-pointer" for="PAY_LATER">{{ __('Book Now & Pay Later') }}</label>
-                        </div>
+                            <span>{{ __('Book Now & Pay Later') }}</span>
+                        </label>
                     </div>
                     <div class="border border-black-200 rounded-lg p-3 w-full mb-3 cursor-pointer hover:shadow-md h-16 flex items-center">
-                        <div class="flex items-center justify-between w-full">
+                        <label class="flex items-center justify-between w-full cursor-pointer" for="BANK_TRANSFER">
                             <div class="flex items-center">
                                 <input id="BANK_TRANSFER" type="radio" name="payment_way" value="BANK_TRANSFER" class="radio radio-info me-3 checked:bg-blue-950"/>
-                                <label class="cursor-pointer" for="BANK_TRANSFER">{{ __('Pay by bank transfer') }}</label>
+                                <span>{{ __('Pay by bank transfer') }}</span>
                             </div>
                             <div class="flex gap-2">
                                 <img src="{{ Vite::asset('resources/images/wafa-bank.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
                                 <img src="{{ Vite::asset('resources/images/popularbank.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
 
                             </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="border border-black-200 rounded-lg p-3 w-full mb-3 cursor-pointer hover:shadow-md h-16 flex items-center">
-                        <div class="flex items-center justify-between w-full">
+                        <label class="flex items-center justify-between w-full cursor-pointer" for="PAY_BY_CARD">
                             <div class="flex items-center">
                                 <input id="PAY_BY_CARD" type="radio" name="payment_way" value="PAY_BY_CARD" class="radio radio-info me-3 checked:bg-blue-950"/>
-                                <label class="cursor-pointer" for="PAY_BY_CARD">{{ __('Pay by Card') }}</label>
+                                <span>{{ __('Pay by Card') }}</span>
                             </div>
                             <div class="flex gap-2">
                                 <img src="{{ Vite::asset('resources/images/credit-card.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
                             </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="border border-black-200 rounded-lg p-3 w-full mb-3 cursor-pointer hover:shadow-md h-16 flex items-center">
-                        <div class="flex items-center justify-between w-full">
+                        <label class="flex items-center justify-between w-full cursor-pointer" for="CASHPLUS">
                             <div class="flex items-center">
                                 <input id="CASHPLUS" type="radio" name="payment_way" value="CASHPLUS" class="radio radio-info me-3 checked:bg-blue-950"/>
-                                <label class="cursor-pointer" for="CASHPLUS">{{ __('Pay via Cashplus') }}</label>
+                                <span>{{ __('Pay via Cashplus') }}</span>
                             </div>
                             <img src="{{ Vite::asset('resources/images/cachplus.jpg') }}" alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
-                        </div>
+                        </label>
                     </div>
                 </div>
             </div>

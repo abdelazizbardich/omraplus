@@ -48,12 +48,16 @@ class GuestController extends Controller
         return view('guest.flight',$data);
     }
 
-    public function aboutUs(){
+    public function faqs(){
+        return view('guest.faqs');
+    }
 
+    public function aboutUs(){
+        return view('guest.about-us');
     }
 
     public function contactUs(){
-
+        return view('guest.contact-us');
     }
 
     public function checkout(){
@@ -61,7 +65,7 @@ class GuestController extends Controller
     }
 
     public function umrahGuide(){
-
+        return view('guest.umrah-guide');
     }
 
 }
