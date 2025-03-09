@@ -2,7 +2,56 @@ import "./bootstrap";
 import "../css/app.scss";
 import.meta.glob(["../images/**", "../fonts/**"]);
 
+import Chart from "chart.js/auto";
+
 document.addEventListener("DOMContentLoaded", () => {
+    const chartCanva = document.getElementById("chart");
+    const DATA_COUNT = 12;
+    const labels = [];
+    for (let i = 0; i < DATA_COUNT; ++i) {
+        labels.push(i.toString());
+    }
+    const datapoints = [
+        0,
+        20,
+        20,
+        60,
+        60,
+        120,
+        180,
+        120,
+        125,
+        105,
+        110,
+        170,
+    ];
+    const data = {
+        labels: labels,
+        datasets: [
+            {
+                label: '',
+                data: datapoints,
+                fill: false,
+                tension: 0.4,
+            }
+        ],
+    };
+    const myChart = new Chart(chartCanva, {
+        type: "line",
+        data: data,
+        options: {
+            responsive: true,
+            interaction: {
+                intersect: false,
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                },
+            },
+        },
+    });
+
     const carousels = document.querySelectorAll(".carousel-container");
     carousels.forEach((carouselContainer) => {
         const carousel = carouselContainer.querySelector(".carousel");
@@ -113,21 +162,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // DataTable
-    const datatable = document.querySelectorAll('.datatable');
-    datatable.forEach(datatable => {
-        let table = datatable.querySelector('table');
+    const datatable = document.querySelectorAll(".datatable");
+    datatable.forEach((datatable) => {
+        let table = datatable.querySelector("table");
         // Sort
-        let tableCols = table.querySelectorAll('thead th');
+        let tableCols = table.querySelectorAll("thead th");
         tableCols.forEach((col, index) => {
-            if (col.classList.contains('sortable')) {
-                col.addEventListener('click', () => {
+            if (col.classList.contains("sortable")) {
+                col.addEventListener("click", () => {
                     let rows = Array.from(table.rows).slice(1);
                     let ascending = table.dataset.order === "asc";
                     rows.sort((rowA, rowB) => {
                         let cellA = rowA.cells[index].textContent.trim();
                         let cellB = rowB.cells[index].textContent.trim();
 
-                        return isNaN(cellA) || isNaN(cellB) ? cellA.localeCompare(cellB) * (ascending ? 1 : -1) : (cellA - cellB) * (ascending ? 1 : -1);
+                        return isNaN(cellA) || isNaN(cellB)
+                            ? cellA.localeCompare(cellB) * (ascending ? 1 : -1)
+                            : (cellA - cellB) * (ascending ? 1 : -1);
                     });
                     table.tBodies[0].append(...rows);
                     table.dataset.order = ascending ? "desc" : "asc";
@@ -135,13 +186,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
         // Search
-        let search = datatable.querySelector('.search');
-        search.addEventListener('keyup', () => {
+        let search = datatable.querySelector(".search");
+        search.addEventListener("keyup", () => {
             let query = search.value.toLowerCase();
             let rows = Array.from(table.rows).slice(1);
-            rows.forEach(row => {
+            rows.forEach((row) => {
                 let cells = Array.from(row.cells);
-                let match = cells.some(cell => cell.textContent.toLowerCase().includes(query));
+                let match = cells.some((cell) =>
+                    cell.textContent.toLowerCase().includes(query)
+                );
                 row.style.display = match ? "" : "none";
             });
         });

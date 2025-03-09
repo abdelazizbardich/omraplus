@@ -13,7 +13,8 @@
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('Flights')}}</div>
                     <div class="stat-value text-blue-950 mb-1">30</div>
-                    <div class="stat-desc text-blue-950">15 {{__('Hajj Flight')}} {{__('and')}} 15 {{__('Omra Flight')}}</div>
+                    <div class="stat-desc text-blue-950">15 {{__('Hajj Flight')}} {{__('and')}} 15 {{__('Omra Flight')}}
+                    </div>
                 </div>
             </div>
             <div class="stats shadow-xl">
@@ -53,9 +54,12 @@
                 </div>
             </div>
         </div>
-        <!-- Orders -->
-         <div class="bg-white rounded-xl shadow-lg px-3 py-3">
-            <span class="text-lg mb-3 block">{{ __('reservations') }}</span>
+        <div class="bg-white rounded-xl shadow-lg px-3 py-3 mb-6">
+            <span class="text-lg mb-3 block">{{ __('reservations tracking') }}</span>
+            <canvas id="chart" height="100"></canvas>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg px-3 py-3">
+            <span class="text-lg mb-3 block">{{ __('last 10 reservations') }}</span>
             <div class="overflow-x-auto datatable">
                 <input type="text" class="search input" placeholder="{{__('Search')}}...">
                 <table class="table">
@@ -176,6 +180,6 @@
                     </tbody>
                 </table>
             </div>
-         </div>
+        </div>
     </main>
 </x-app-layout>
