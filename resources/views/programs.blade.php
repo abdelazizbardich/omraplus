@@ -66,8 +66,9 @@
         </div>
         <div class="w-3/5">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
-                <div class="overflow-x-auto">
-                    <table class="table">
+                <div class="overflow-x-auto datatable">
+                    <input type="text" class="search input" placeholder="{{__('Search')}}...">
+                    <table class="table ">
                         <!-- head -->
                         <thead>
                             <tr>

@@ -92,6 +92,31 @@ body {
     input:focus{
         box-shadow: none;
     }
+
+    th.sortable { 
+        padding-right: 18px;
+        position: relative;
+        cursor: pointer;
+    }
+    .sortable:before,
+    .sortable:after {
+        border: 4px solid transparent;
+        content: "";
+        display: block;
+        height: 0;
+        right: 5px;
+        top: 50%;
+        position: absolute;
+        width: 0;
+    }
+    .sortable:before {
+        border-bottom-color: #666;
+        margin-top: -9px;
+    }
+    .sortable:after {
+        border-top-color: #666;
+        margin-top: 1px;
+    }
 }
 
 

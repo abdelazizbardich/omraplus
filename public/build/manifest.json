@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-mc2QtMm6.css",
+    "file": "assets/app-DBlyrV1J.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -25,7 +25,7 @@
     "src": "resources/images/Kaaba.webp"
   },
   "resources/images/airline.png": {
-    "file": "assets/airline-C98g7wKr.png",
+    "file": "assets/airline-Bep8eBou.png",
     "src": "resources/images/airline.png"
   },
   "resources/images/blog-post.jpg": {
@@ -41,7 +41,7 @@
     "src": "resources/images/cachplus.jpg"
   },
   "resources/images/categories.png": {
-    "file": "assets/categories-Jd9Qmfu_.png",
+    "file": "assets/categories-D3zt3eo1.png",
     "src": "resources/images/categories.png"
   },
   "resources/images/checked.webp": {
@@ -61,7 +61,7 @@
     "src": "resources/images/customer-service.webp"
   },
   "resources/images/dashboard.png": {
-    "file": "assets/dashboard-SEF-K2Qu.png",
+    "file": "assets/dashboard-Cy2sxDzu.png",
     "src": "resources/images/dashboard.png"
   },
   "resources/images/delete.png": {
@@ -69,7 +69,7 @@
     "src": "resources/images/delete.png"
   },
   "resources/images/discount.png": {
-    "file": "assets/discount-hNX39-Cw.png",
+    "file": "assets/discount-DHsFWYIy.png",
     "src": "resources/images/discount.png"
   },
   "resources/images/edit.png": {
@@ -89,11 +89,11 @@
     "src": "resources/images/flight icon.svg"
   },
   "resources/images/flight-line.png": {
-    "file": "assets/flight-line-CJ3Tnt_0.png",
-    "src": "resources/images/flight-line.png"
+    "file": "assets/airline-Bep8eBou.png",
+    "src": "resources/images/airline.png"
   },
   "resources/images/flights.png": {
-    "file": "assets/flights-DyT44AVl.png",
+    "file": "assets/flights-BMtu2dup.png",
     "src": "resources/images/flights.png"
   },
   "resources/images/google-reviews.webp": {
@@ -117,7 +117,7 @@
     "src": "resources/images/hotel icon.svg"
   },
   "resources/images/hotel.png": {
-    "file": "assets/hotel-DTxJ-jFa.png",
+    "file": "assets/hotel-DU_wswzB.png",
     "src": "resources/images/hotel.png"
   },
   "resources/images/kaaba-1.jpg": {
@@ -193,7 +193,7 @@
     "src": "resources/images/popularbank.jpg"
   },
   "resources/images/prices.png": {
-    "file": "assets/prices-Cs-3Ki2W.png",
+    "file": "assets/prices-t31qIUux.png",
     "src": "resources/images/prices.png"
   },
   "resources/images/profile.png": {
@@ -201,11 +201,11 @@
     "src": "resources/images/profile.png"
   },
   "resources/images/programs.png": {
-    "file": "assets/programs-OBHX66MB.png",
+    "file": "assets/programs-w2GNgAHf.png",
     "src": "resources/images/programs.png"
   },
   "resources/images/room.png": {
-    "file": "assets/room-JM4NSBuK.png",
+    "file": "assets/room-p-d-DfwJ.png",
     "src": "resources/images/room.png"
   },
   "resources/images/settings.png": {
@@ -232,17 +232,21 @@
     "file": "assets/umrah2-D5ipDe6U.jpg",
     "src": "resources/images/umrah2.jpg"
   },
+  "resources/images/users.png": {
+    "file": "assets/users-JKShSEp5.png",
+    "src": "resources/images/users.png"
+  },
   "resources/images/wafa-bank.jpg": {
     "file": "assets/wafa-bank-DSeDlFY6.jpg",
     "src": "resources/images/wafa-bank.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DZqm57pY.js",
+    "file": "assets/app-AH4keIY9.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-mc2QtMm6.css"
+      "assets/app-DBlyrV1J.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",

@@ -75,19 +75,33 @@ document.addEventListener("DOMContentLoaded", () => {
         inheritPlaceholder: true,
         dialogsInBody: false,
         lang: getSummernoteLang(),
-        toolbar:[
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['table', ['table']],
-            ['insert', ['link', 'picture']],
-            ['view', ['codeview', 'help']]
+        toolbar: [
+            ["style", ["style"]],
+            ["font", ["bold", "underline", "clear"]],
+            ["fontname", ["fontname"]],
+            ["color", ["color"]],
+            ["para", ["ul", "ol", "paragraph"]],
+            ["table", ["table"]],
+            ["insert", ["link", "picture"]],
+            ["view", ["codeview", "help"]],
         ],
-        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Bein black','Bein normal', 'Droid arabic kufi', 'Droid arabic kufi black'],
-        fontNamesIgnoreCheck: ['Bein black','Bein normal', 'Droid arabic kufi', 'Droid arabic kufi black']
-      });
+        fontNames: [
+            "Arial",
+            "Arial Black",
+            "Comic Sans MS",
+            "Courier New",
+            "Bein black",
+            "Bein normal",
+            "Droid arabic kufi",
+            "Droid arabic kufi black",
+        ],
+        fontNamesIgnoreCheck: [
+            "Bein black",
+            "Bein normal",
+            "Droid arabic kufi",
+            "Droid arabic kufi black",
+        ],
+    });
     function getSummernoteLang() {
         if (lang === "ar") {
             return "ar-AR";
@@ -97,6 +111,39 @@ document.addEventListener("DOMContentLoaded", () => {
             return "en-US";
         }
     }
+
+    // DataTable
+    const datatable = document.querySelectorAll('.datatable');
+    datatable.forEach(datatable => {
+        let table = datatable.querySelector('table');
+        // Sort
+        let tableCols = table.querySelectorAll('thead th');
+        tableCols.forEach((col, index) => {
+            if (col.classList.contains('sortable')) {
+                col.addEventListener('click', () => {
+                    let rows = Array.from(table.rows).slice(1);
+                    let ascending = table.dataset.order === "asc";
+                    rows.sort((rowA, rowB) => {
+                        let cellA = rowA.cells[index].textContent.trim();
+                        let cellB = rowB.cells[index].textContent.trim();
+
+                        return isNaN(cellA) || isNaN(cellB) ? cellA.localeCompare(cellB) * (ascending ? 1 : -1) : (cellA - cellB) * (ascending ? 1 : -1);
+                    });
+                    table.tBodies[0].append(...rows);
+                    table.dataset.order = ascending ? "desc" : "asc";
+                });
+            }
+        });
+        // Search
+        let search = datatable.querySelector('.search');
+        search.addEventListener('keyup', () => {
+            let query = search.value.toLowerCase();
+            let rows = Array.from(table.rows).slice(1);
+            rows.forEach(row => {
+                let cells = Array.from(row.cells);
+                let match = cells.some(cell => cell.textContent.toLowerCase().includes(query));
+                row.style.display = match ? "" : "none";
+            });
+        });
+    });
 });
-
-

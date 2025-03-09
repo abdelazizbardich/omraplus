@@ -98,7 +98,7 @@
         </div>
         @livewireScripts
         <script>
-            function showSlug(input, target) {                
+            function showSlug(input, target) {
                 const value = document.querySelector(input).value;
                 const slug = value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
                 document.querySelector(target).value = slug;

@@ -13,7 +13,8 @@
                             </label>
                         </div>
                         <div class="flex justify-between">
-                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Edit')}}</button>
+                            <button type="submit"
+                                class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('Edit')}}</button>
                             <a href="{{ route('rooms') }}" type="submit" class="btn btn-wide">{{__('Cansel')}}</a>
                         </div>
                     </form>
@@ -35,12 +36,13 @@
         </div>
         <div class="w-3/5">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto datatable">
+                    <input type="text" class="search input" placeholder="{{__('Search')}}...">
                     <table class="table">
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th>{{__('Name')}}</th>
+                                <th class="sortable">{{__('Name')}}</th>
                                 <th></th>
                             </tr>
                         </thead>

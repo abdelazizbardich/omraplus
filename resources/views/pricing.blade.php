@@ -114,8 +114,9 @@
         </div>
         <div class="w-12/12">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3">
-                <div class="overflow-x-auto">
-                    <table class="table">
+                <div class="overflow-x-auto datatable">
+                    <input type="text" class="s earch input" placeholder="{{__('Search')}}...">
+                    <table class="table ">
                         <!-- head -->
                         <thead>
                             <tr>
