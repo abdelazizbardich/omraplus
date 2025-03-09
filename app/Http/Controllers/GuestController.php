@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Flight;
+use App\Models\Program;
+use App\Models\ProgramPrice;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -60,8 +63,19 @@ class GuestController extends Controller
         return view('guest.contact-us');
     }
 
-    public function checkout(){
-        return view('guest.checkout');
+    public function checkout(Program $program, Request $request){
+        $request->validate(['room_type' => 'required|exists:rooms,id']);
+        $data = [
+            'room' => Room::where('id',$request->room_type)->first(),
+            'program' => $program,
+            'price' => ProgramPrice::where('room_id',$request->room_type)->where('program_id',$program->id)->first(),
+            "flight" => $program->load('flight')->flight
+        ];
+        return view('guest.checkout',$data);
+    }
+
+    public function confirmCheckout(Request $request){
+        dd($request->all());
     }
 
     public function umrahGuide(){

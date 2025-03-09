@@ -5,6 +5,36 @@ function moment(mixed $date = null){
     return $m;
 }
 
+function momentGetDiff($date1,$date2, $format = 'days'){
+    $m = new \Moment\Moment($date1);
+    $diff = $m->from($date2);
+
+    switch ($format) {
+        case 'days':
+            return $diff->getDays();
+        break;
+        case 'hours':
+            return $diff->getHours();
+        break;
+        case 'minutes':
+            return $diff->getMinutes();
+        break;
+        case 'seconds':
+            return $diff->getSeconds();
+        break;
+        case 'months':
+            return $diff->getMonths();
+        break;
+        case 'years':
+            return $diff->getYears();
+        break;
+        default:
+            return $diff;
+        break;
+    }
+
+}
+
 function whatsappLink(string $type = null,$data = null){
     $phone = config('app.whtasppNumber');
     $url = null;
