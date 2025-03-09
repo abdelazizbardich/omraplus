@@ -37,10 +37,10 @@
                     </div>
                 </div>
                 <hr class="my-3 opacity-30">
-                <div class="flex justify-between items-center gap-3">
+                <div class="flex justify-stretch flex-wrap items-center gap-3">
                     <span class="underline w-fit underline-offset-3 text-nowrap">{{ __('Select room type') }}:</span>
                     @foreach ($booking->prices as $price)
-                        <div class="h-auto w-full">
+                        <div class="h-auto w-fit">
                             <input hidden class="peer hidden room-type" data-price="{{$price->price}}" data-old-price="{{$price->old_price}}" value="{{$price->room->id}}" type="radio" name="room_type" id="room-{{$price->room->id}}">
                             <label for="room-{{$price->room->id}}" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">{{ $price->room->name }}</label>
                         </div>
