@@ -93,6 +93,8 @@
                 let oldPrice = event.target.getAttribute('data-old-price');
                 document.querySelector(`.price-${bookingId}`).innerText = price;
                 document.querySelector(`.old-price-${bookingId}`).innerText = oldPrice;
+                document.querySelector(`.flight-old-price`).innerText = oldPrice;
+                document.querySelector(`.flight-price`).innerText = price;
             }
         </script>
     </div>

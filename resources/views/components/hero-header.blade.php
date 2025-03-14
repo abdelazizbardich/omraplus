@@ -36,11 +36,8 @@
                 <div class="w-2/12">
                     <x-select name="month" :label="__('index.travlers count')" :options="[1,2,3,4,5,6]"></x-select>
                 </div>
-                <div class="w-2/12">
+                <div class="w-4/12">
                     <x-select name="month" :label="__('index.programe')" :options="[]"></x-select>
-                </div>
-                <div class="w-2/12">
-                    <x-select name="month" :label="__('index.')" :options="[]"></x-select>
                 </div>
                 <div class="w-1/12">
                     <button class="btn border-none w-full bg-blue-950 px-6 py-3 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg hover:bg-blue-1000">{{ __('index.search') }}</button>

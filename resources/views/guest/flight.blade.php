@@ -73,9 +73,9 @@
         <div class="w-4/12 h-auto sticky top-10">
             <div class="border border-black-200 bg-white rounded-3xl p-6 mb-6 w-full">
                 <span
-                    class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums">{{ $flight->old_price }}
+                    class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums"><span class="flight-old-price">{{ $flight->old_price }}</span>
                     {{__('index.dh')}}</span>
-                <span class="text-3xl block font-black lining-nums">{{ $flight->price }} {{__('index.dh')}}
+                <span class="text-3xl block font-black lining-nums"><span class="flight-price">{{ $flight->price }}</span> {{__('index.dh')}}
                     {{__('index.For a person')}}</span>
                 <span
                     class="text-base font-base block">({{__('index.Price varies depending on the size of the collection')}})</span>
