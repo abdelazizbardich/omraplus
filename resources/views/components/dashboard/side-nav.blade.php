@@ -43,6 +43,10 @@
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Rooms')}}</span>
             </a>
             <hr>
+            <a href="{{ route('orders') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Orders')}}">
+                <img src="{{ Vite::asset('resources/images/orders.png') }}" alt="{{__('index.Orders')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Orders')}}</span>
+            </a>
             <a href="{{ route('users') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Users')}}">
                 <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('index.Users')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Users')}}</span>

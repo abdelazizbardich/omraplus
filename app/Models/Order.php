@@ -31,4 +31,22 @@ class Order extends Model
     {
         return $this->programPrice()->price * $this->pilgrims_count;
     }
+
+    // flight
+    public function flight()
+    {
+        return $this->programPrice->program->flight;
+    }
+
+    // Program
+    public function program()
+    {
+        return $this->programPrice->program;
+    }
+
+    // room
+    public function room()
+    {
+        return $this->programPrice->room;
+    }
 }

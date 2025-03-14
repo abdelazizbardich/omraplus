@@ -51,4 +51,9 @@ class Program extends Model
         ->limit(1);
         return $price->first();
     }
+
+    public function name()
+    {
+        return $this->hotelMecca->name . ' - ' . $this->hotelMedina->name;
+    }
 }

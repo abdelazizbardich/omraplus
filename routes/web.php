@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Middleware\RoleMiddleware;
 use Illuminate\Support\Facades\Route;
 
 // App::setLocale('ar');
@@ -83,12 +82,10 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     Route::get('/dashboard/users/edit/{user:id}', [App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
     Route::post('/dashboard/users/update/{user:id}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
     Route::get('/dashboard/users/delete/{user:id}', [App\Http\Controllers\UserController::class, 'delete'])->name('users.delete');
-});
-
-
-
-Route::domain('admin.' . config('app.domain'))->group(function () {
-    Route::get('/', function () {
-        dd("sss"); // This will be called for admin.example.com
-    });
+    
+    Route::get('/dashboard/orders', [App\Http\Controllers\OrderController::class, 'index'])->name('orders');
+    Route::post('/dashboard/orders/save', [App\Http\Controllers\OrderController::class, 'save'])->name('orders.save');
+    Route::get('/dashboard/orders/edit/{user:id}', [App\Http\Controllers\OrderController::class, 'edit'])->name('orders.edit');
+    Route::post('/dashboard/orders/update/{user:id}', [App\Http\Controllers\OrderController::class, 'update'])->name('orders.update');
+    Route::get('/dashboard/orders/delete/{user:id}', [App\Http\Controllers\OrderController::class, 'delete'])->name('orders.delete');
 });
