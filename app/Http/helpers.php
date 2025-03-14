@@ -144,3 +144,14 @@ function getRoles(){
         'sales_manager'
     ];
 }
+
+function getFakeAvatar($name){
+    $url = 'https://ui-avatars.com/api/?name='.$name.'&size=256';
+    $contents = file_get_contents($url);
+    $name = substr($url, strrpos($url, '/') + 1);
+    return (object) [
+        'url' => $url,
+        'name' => $name,
+        'content' => $contents
+    ];
+}

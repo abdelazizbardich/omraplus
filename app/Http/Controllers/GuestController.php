@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Flight;
 use App\Models\Order;
+use App\Models\Photo;
 use App\Models\Program;
 use App\Models\ProgramPrice;
 use App\Models\Room;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GuestController extends Controller
 {
@@ -111,6 +113,13 @@ class GuestController extends Controller
             $user->email = $request->email;
             $user->password = Hash::make(rand(100000,999999));
             $user->save();
+
+            $photo = new Photo();
+            $photo->post_id = $user->id;
+            $photo->type = "user";
+            $file = getFakeAvatar($user->name);
+            $photo->url = Storage::put('user/'.$file->name, $file->contents,['disk' => 'public']);
+            $photo->save();
         }else{
             $user = User::where('email', $request->email)->first();
         }
