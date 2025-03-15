@@ -155,4 +155,34 @@ class GuestController extends Controller
         return view('guest.umrah-guide');
     }
 
+
+    // API
+
+    public function apiGetFight(Flight $flight)
+    {
+        $flight = Flight::with(['airline','category','photos','programs', 'programs.prices', 'programs.hotelMecca', 'programs.hotelMedina','programs.discounts'])->where('id',$flight->id)->first();
+        // map photos
+        $flight["photos"] = $flight->photos->map(function($photo){
+            return $photo->url;
+        })->toArray();
+        $flightPrice = 0;
+        $flightOldPrice = 0;
+        foreach ($flight->programs as $program) {   
+            foreach ($program->prices as $index=>$price) {
+                if($flightPrice == 0){
+                    $flightPrice = $price->price;
+                    $flightOldPrice = $price->old_price;
+                }else{
+                    if($flightPrice > $price->price){
+                        $flightPrice = $price->price;
+                        $flightOldPrice = $price->old_price;
+                    }
+                }
+            }
+        }
+        $flight['price'] = $flightPrice;
+        $flight['old_price'] = $flightOldPrice;
+        return response()->json($flight);
+    }
+
 }

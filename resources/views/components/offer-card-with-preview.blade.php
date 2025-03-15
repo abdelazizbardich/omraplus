@@ -1,4 +1,4 @@
-<div class="relative w-full h-full mt-8 offer-card">
+<div class="scroll-animate relative w-full h-full mt-8 offer-card">
     <span class="border border-emerald-500 rounded-full py-1 px-4  text-sm font-semibold absolute -top-8 start-0 block z-10">{{__('index.Best Seller')}}</span>
     <div class="hover:shadow-md duration-300 border border-black-200 bg-white rounded-3xl w-full h-full mt-3 overflow-hidden relative">
         <div class="w-full relative mb-8">
@@ -7,7 +7,7 @@
                     <img src="{{ @$data->photos()->where('is_main',1)->first()->url }}" class="w-full h-full object-cover"  alt="umrah">
                 </a>
             </div>
-            <span data-modam-data="{{ json_encode($data) }}" class="quick-view cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
+            <span data-id="{{ $data->id }}" class="quick-view cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
                 <em class="fa-regular fa-eye me-3"></em>{{__('index.Quick view')}}
             </span>
         </div>

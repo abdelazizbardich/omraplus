@@ -1,4 +1,4 @@
-<div class="w-full packages">
+<div class="scroll-animate w-full packages">
     <div class="flex rounded-t-xl px-6 py-3 pb-5 w-full from-yellow-600  bg-gradient-to-l to-yellow-500">
         @if ($booking->is_economic)
             <span class="pe-3 text-center font-semibold inline-block">{{__('index.Economy Program')}}</span>

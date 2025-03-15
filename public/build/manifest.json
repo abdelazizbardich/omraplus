@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-DBlyrV1J.css",
+    "file": "assets/app-DmFlbOGp.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -23,6 +23,10 @@
   "resources/images/Kaaba.webp": {
     "file": "assets/Kaaba-DxOYsQrj.webp",
     "src": "resources/images/Kaaba.webp"
+  },
+  "resources/images/affiliation.png": {
+    "file": "assets/affiliation-CB2qPzNQ.png",
+    "src": "resources/images/affiliation.png"
   },
   "resources/images/airline.png": {
     "file": "assets/airline-Bep8eBou.png",
@@ -112,6 +116,10 @@
     "file": "assets/hero-header-DwEDWNff.webp",
     "src": "resources/images/hero-header.webp"
   },
+  "resources/images/home.png": {
+    "file": "assets/home-C5h7mXXU.png",
+    "src": "resources/images/home.png"
+  },
   "resources/images/hotel icon.svg": {
     "file": "assets/hotel icon-CHUny_i5.svg",
     "src": "resources/images/hotel icon.svg"
@@ -175,6 +183,10 @@
   "resources/images/mourchid icon.svg": {
     "file": "assets/mourchid icon-UouNJRXl.svg",
     "src": "resources/images/mourchid icon.svg"
+  },
+  "resources/images/orders.png": {
+    "file": "assets/orders-CM8JW3hn.png",
+    "src": "resources/images/orders.png"
   },
   "resources/images/payment method.png": {
     "file": "assets/payment method-DnzAUsEj.png",
@@ -241,12 +253,12 @@
     "src": "resources/images/wafa-bank.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-AH4keIY9.js",
+    "file": "assets/app-DA8kynag.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-DBlyrV1J.css"
+      "assets/app-DmFlbOGp.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",

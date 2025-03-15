@@ -56,6 +56,11 @@
     <!-- CSRF token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- api url -->
+     <script>
+        window.api_url = "{{ config('app.url') }}/api";
+    </script>
+
     <!-- Styles -->
     @vite('resources/js/app.js')
 

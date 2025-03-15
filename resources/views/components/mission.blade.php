@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="w-5/12 -mt-20">
-            <div class="grid grid-cols-2 grid-rows-2 gap-12">
+            <div class="grid scroll-animate grid-cols-2 grid-rows-2 gap-12">
                 <div class="flex items-center justify-center -translate-y-28">
                     <img src="{{ Vite::asset('resources/images/mission-1.jpg') }}" alt="mission-1" class="w-full h-full object-cover rounded-xl shadow-2xl aspect-square object-cover">
                 </div>

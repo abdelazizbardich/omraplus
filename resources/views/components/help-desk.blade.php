@@ -1,6 +1,6 @@
 <div class="flex gap-12">
     <div class="lg:w-6/12 xl:w-6/12">
-        <img src="{{ Vite::asset('resources/images/help-desk.jpg') }}" class="w-full object-cover rounded-3xl" alt="">
+        <img src="{{ Vite::asset('resources/images/help-desk.jpg') }}" class="scroll-animate w-full object-cover rounded-3xl" alt="">
     </div>
     <div class="lg:w-6/12 xl:w-6/12">
         <div class="flex flex-row justify-start items-start mb-6">

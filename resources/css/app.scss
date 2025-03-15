@@ -117,6 +117,27 @@ body {
         border-top-color: #666;
         margin-top: 1px;
     }
+
+    .scroll-animate{
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    .scroll-animate{
+        animation: fadeIn 1s forwards;
+        animation-timeline: view();
+        animation-direction: normal;
+        animation-range: 0% 50%;
+    }
 }
 
 
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+        transform: scale(.8);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

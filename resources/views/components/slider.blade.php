@@ -6,7 +6,7 @@
     </div>
   @endforeach
   </div>
-  <div class="flex justify-start items-start gap-3 mt-1 w-full">
+  <div class="slider-nav flex justify-start items-start gap-3 mt-1 w-full">
     @foreach ($images as $index => $image)
     <span data-id="item-{{ $index + 1 }}" class="slider-nev-item rounded-xl cursor-pointer">
       <img src="{{ $image }}" class="skeleton  aspect-square object-cover w-full rounded-xl max-h-36">
