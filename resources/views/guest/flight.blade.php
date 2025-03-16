@@ -1,7 +1,12 @@
 <x-guest-layout>
     <x-header active=""></x-header>
-    <x-page-header :title="__('index.Offer')" :breadcrumbs="['Home', 'Offer']" />
+    <x-page-header :title="__('index.Offer')" :breadcrumbs="['Home', 'Flight']" />
     <x-spacer></x-spacer>
+    <div class="container w-full mx-auto">
+        <div class="w-full mb-12">
+            <h1 class="text-3xl font-bold">{{ $flight->title }}</h1>
+        </div>
+    </div>
     <div class="container w-full mx-auto flex gap-12 items-start relative">
         <div class="w-8/12">
             <x-slider :images="$flight->photos"></x-slider>
