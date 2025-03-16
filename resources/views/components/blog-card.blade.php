@@ -1,4 +1,4 @@
-<div class="w-full border border-black-200 p-3 rounded-3xl hover:shadow-md duration-300">
+<div class="scroll-animate w-full border border-black-200 p-3 rounded-3xl hover:shadow-md duration-300">
     <div class="rounded-3xl overflow-hidden bg-white mb-3 hover:shadow-md duration-300">
         <a href="#">
             <img src="{{ Vite::asset('resources/images/blog-post.jpg') }}" class="h-60 object-cover w-full border border-black-200" alt="blog thumbnail">
