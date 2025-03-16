@@ -155,3 +155,16 @@ function getFakeAvatar($name){
         'content' => $contents
     ];
 }
+
+function getStatusBg($status){
+    switch ($status) {
+        case 'pending':
+            return 'bg-yellow-500';
+        case 'approved':
+            return 'bg-emerald-500';
+        case 'rejected':
+            return 'bg-red-600';
+        default:
+            return 'bg-gray-200';
+    }
+}

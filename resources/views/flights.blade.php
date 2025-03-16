@@ -190,11 +190,15 @@
                                         <div class="flex items-center gap-3">
                                             <div class="avatar">
                                                 <div class="mask mask-squircle h-12 w-12">
+                                                <a href="{{ route('flight', $flight->id) }}">
                                                     <img src="{{ @$flight->mainPhoto->url }}" alt="{{ $flight->title }}" />
+                                                </a>    
                                                 </div>
                                             </div>
                                             <div>
-                                                <div class="font-bold">{{ $flight->title }}</div>
+                                                <div class="font-bold">
+                                                    <a href="{{ route('flight', $flight->id) }}">{{ $flight->title }}</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>

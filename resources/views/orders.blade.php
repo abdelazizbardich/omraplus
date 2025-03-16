@@ -12,9 +12,9 @@
                                 <th class="sortable">{{__('index.Program')}}</th>
                                 <th class="sortable">{{__('index.Pilgrims count')}}</th>
                                 <th class="sortable">{{__('index.Price')}}</th>
-                                <th class="sortable">{{__('index.Payment method')}}</th>
-                                <th class="sortable">{{__('index.Payment status')}}</th>
                                 <th class="sortable">{{__('index.Order status')}}</th>
+                                <th class="sortable">{{__('index.Payment status')}}</th>
+                                <th class="sortable">{{__('index.Payment method')}}</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -41,14 +41,10 @@
                                         {{ $order->program()->name()}}
                                     </td>
                                     <td>{{ $order->pilgrims_count}}</td>
-                                    <td>{{ $order->total_price}}</td>
+                                    <td>{{ $order->total_price}} {{ __('index.dh') }}</td>
+                                    <td><span class="badge text-xs p-3 {{getStatusBg($order->status)}}">{{ __('index.' . $order->status)}}</span></td>
+                                    <td><span class="badge text-xs p-3 {{getStatusBg($order->payment_status)}}">{{ __('index.' . $order->payment_status)}}</span></td>
                                     <td>{{ __('index.' . $order->payment_method)}}</td>
-                                    <td><span
-                                            class="badge text-xs p-3 bg-yellow-200">{{ __('index.' . $order->payment_status)}}</span>
-                                    </td>
-                                    <td><span
-                                            class="badge text-xs p-3 bg-yellow-200">{{ __('index.' . $order->status)}}</span>
-                                    </td>
                                     </td>
                                     <!-- <th>
                                         <a href="{{ route('orders.edit', $order->id) }}"
