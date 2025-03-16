@@ -12,7 +12,8 @@ class Discount extends Model
         "name",
         "code",
         "type",
-        "value"
+        "value",
+        "program_id"
     ];
 
     public function program()
