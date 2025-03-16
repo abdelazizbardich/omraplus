@@ -6,24 +6,22 @@ import Chart from "chart.js/auto";
 
 document.addEventListener("DOMContentLoaded", () => {
     const chartCanva = document.getElementById("chart");
-    const DATA_COUNT = 12;
-    const labels = [];
-    for (let i = 0; i < DATA_COUNT; ++i) {
-        labels.push(i.toString());
-    }
-    const datapoints = [0, 20, 20, 60, 60, 120, 180, 120, 125, 105, 110, 170];
-    const data = {
-        labels: labels,
-        datasets: [
-            {
-                label: "",
-                data: datapoints,
-                fill: false,
-                tension: 0.4,
-            },
-        ],
-    };
-    if(chartCanva){
+    if (chartCanva) {
+        const datapoints = Object.values(JSON.parse(chartCanva.dataset.data));
+        const labels = Object.keys(JSON.parse(chartCanva.dataset.data));
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Price",
+                    backgroundColor: "#f87979",
+                    borderColor: "#f87979",
+                    data: datapoints,
+                    fill: "red",
+                    tension: 0.4,
+                },
+            ],
+        };
         const myChart = new Chart(chartCanva, {
             type: "line",
             data: data,
@@ -130,21 +128,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Text editor
     tinymce.init({
-        selector: '#text-editor',
-        license_key: 'gpl',
-        directionality: lang === 'ar' ? 'rtl' : 'ltr',
-        language: 'ar',
+        selector: "#text-editor",
+        license_key: "gpl",
+        directionality: lang === "ar" ? "rtl" : "ltr",
+        language: "ar",
         menubar: false,
         plugins: [
-            'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-            'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            "advlist",
+            "autolink",
+            "lists",
+            "link",
+            "image",
+            "charmap",
+            "preview",
+            "anchor",
+            "searchreplace",
+            "visualblocks",
+            "code",
+            "fullscreen",
+            "insertdatetime",
+            "media",
+            "table",
+            "help",
+            "wordcount",
         ],
-        toolbar: 'undo redo | blocks | ' +
-            'bold italic backcolor | alignleft aligncenter ' +
-            'alignright alignjustify | bullist numlist outdent indent | ' +
-            'removeformat | help',
-        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        toolbar:
+            "undo redo | blocks | " +
+            "bold italic backcolor | alignleft aligncenter " +
+            "alignright alignjustify | bullist numlist outdent indent | " +
+            "removeformat | help",
+        content_style:
+            "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
     });
 
     // DataTable

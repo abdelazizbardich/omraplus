@@ -56,7 +56,7 @@
         </div>
         <div class="bg-white rounded-xl shadow-lg px-3 py-3 mb-6">
             <span class="text-lg mb-3 block">{{ __('index.reservations tracking') }}</span>
-            <canvas id="chart" height="100"></canvas>
+            <canvas id="chart" height="100" data-data="{{ json_encode($ordersByMonths) }}" ></canvas>
         </div>
         <div class="bg-white rounded-xl shadow-lg px-3 py-3">
             <span class="text-lg mb-3 block">{{ __('index.last 10 reservations') }}</span>
