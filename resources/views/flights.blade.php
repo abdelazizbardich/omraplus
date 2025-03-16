@@ -76,12 +76,10 @@
                             </div>
                             <div class="mb-3">
                                 <label class="mb-1 block">{{__('index.Description')}}:</label>
-                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">
-                                    {{ old('description', $flight->description) }}
-                                </textarea>
+                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">{{ old('description', $flight->description) }}</textarea>
                                 </div>
                                 <div class="flex justify-start gap-3">
-                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
+                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
                                     <a href="{{ route('flights') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
                                 </div>
                             </form>
@@ -149,9 +147,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="mb-1 block">{{__('index.Description')}}:</label>
-                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">
-                                {{ old('description') }}
-                                </textarea>
+                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">{{ old('description') }}</textarea>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
