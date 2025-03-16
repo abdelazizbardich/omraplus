@@ -8,9 +8,6 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 Artisan::command('deploy', function () {
-    $output = shell_exec('git reset --hard');
-    $output = shell_exec('git pull origin main');
-    $output = shell_exec('npm run build');
-    $output = shell_exec('php artisan optimize');
+    $output = shell_exec('git reset --hard && git pull && npm run build && php artisan optimize');
     return $this->comment($output);
 })->purpose('Deploy the latest changes from GitHub');
