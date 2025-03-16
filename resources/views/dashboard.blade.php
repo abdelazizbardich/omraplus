@@ -5,52 +5,52 @@
             <div class="stats shadow-xl">
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('index.reservations')}}</div>
-                    <div class="stat-value text-blue-950 mb-1">8940</div>
-                    <div class="stat-desc text-blue-950">15 {{__('index.Not confirmed yet')}}</div>
+                    <div class="stat-value text-blue-950 mb-1">{{ $orders }}</div>
+                    <div class="stat-desc text-blue-950">{{$pendingOrders}} {{__('index.Not confirmed yet')}}</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('index.Flights')}}</div>
-                    <div class="stat-value text-blue-950 mb-1">30</div>
-                    <div class="stat-desc text-blue-950">15 {{__('index.Hajj Flight')}} {{__('index.and')}} 15 {{__('index.Omra Flight')}}
+                    <div class="stat-value text-blue-950 mb-1">{{$flights}}</div>
+                    <div class="stat-desc text-blue-950">{{$hajj_flights}} {{__('index.Hajj Flight')}} {{__('index.and')}} {{$omra_flights}} {{__('index.Omra Flight')}}
                     </div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('index.Programs')}}</div>
-                    <div class="stat-value text-blue-950 mb-1">8940</div>
+                    <div class="stat-value text-blue-950 mb-1">{{$programs}}</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('index.Hotels')}}</div>
-                    <div class="stat-value text-blue-950 mb-1">8940</div>
+                    <div class="stat-value text-blue-950 mb-1">{{$hotels}}</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('index.Airlines')}}</div>
-                    <div class="stat-value text-blue-950 mb-1">8940</div>
+                    <div class="stat-value text-blue-950 mb-1">{{$airlines}}</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('index.Pricing')}}</div>
-                    <div class="stat-value text-blue-950 mb-1">8940</div>
+                    <div class="stat-value text-blue-950 mb-1">{{$prices}}</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('index.Discounts')}}</div>
-                    <div class="stat-value text-blue-950 mb-1">8940</div>
+                    <div class="stat-value text-blue-950 mb-1">{{$discounts}}</div>
                 </div>
             </div>
             <div class="stats shadow-xl">
                 <div class="stat">
                     <div class="stat-title text-yellow-600 mb-3">{{__('index.users')}}</div>
-                    <div class="stat-value text-blue-950 mb-1">8940</div>
+                    <div class="stat-value text-blue-950 mb-1">{{$users}}</div>
                 </div>
             </div>
         </div>
