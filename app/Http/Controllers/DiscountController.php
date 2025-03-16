@@ -25,7 +25,8 @@ class DiscountController extends Controller
             "name" => "required",
             "code" => "required|unique:discounts,code",
             "type" => "required",
-            "value" => "required"
+            "value" => "required",
+            "program" => "required"
         ]);
 
         // Save
@@ -33,7 +34,8 @@ class DiscountController extends Controller
             "name" => $request->name,
             "code" => $request->code,
             "type" => $request->type,
-            "value" => $request->value
+            "value" => $request->value,
+            "program_id" => $request->program
         ]);
 
         return redirect()->route('discounts');
@@ -58,7 +60,8 @@ class DiscountController extends Controller
             "name" => "required",
             "code" => "required|unique:discounts,code",
             "type" => "required",
-            "value" => "required"
+            "value" => "required",
+            "program" => "required"
         ]);
 
         // update
@@ -66,7 +69,8 @@ class DiscountController extends Controller
             "name" => $request->name,
             "code" => $request->code,
             "type" => $request->type,
-            "value" => $request->value
+            "value" => $request->value,
+            "program_id" => $request->program
         ]);
 
         return redirect()->route('discounts');
