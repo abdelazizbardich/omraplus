@@ -40,7 +40,7 @@ class FligthController extends Controller
         // Validate file primary_photo and hotel_photos
         $request->validate([
             'primary_photo' => 'required|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'fligth_photos.*' => 'mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            // 'fligth_photos.*' => 'mimes:jpeg,png,jpg,gif,svg,webp',
         ]);
 
         // Save data to database
@@ -64,14 +64,19 @@ class FligthController extends Controller
             "post_id" => $flight->id,
             "is_main" => true
         ]);
-        foreach ($request->file('fligth_photos') as $photo) {
-            $fligth_photos = $photo->store('flights', ["disk" => "public"]);
-            Photo::create([
-                "url" => $fligth_photos,
-                "type" => 'flight',
-                "post_id" => $flight->id,
-                "is_main" => false
+        if ($request->hasFile('fligth_photos')) {
+            $request->validate([
+                'fligth_photos.*' => 'mimes:jpeg,png,jpg,gif,svg,webp',
             ]);
+            foreach ($request->file('fligth_photos') as $photo) {
+                $fligth_photos = $photo->store('flights', ["disk" => "public"]);
+                Photo::create([
+                    "url" => $fligth_photos,
+                    "type" => 'flight',
+                    "post_id" => $flight->id,
+                    "is_main" => false
+                ]);
+            }
         }
         return redirect()->route('flights')->with('success', 'Flight created successfully');
     }
