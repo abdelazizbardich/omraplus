@@ -20,5 +20,5 @@ Route::get('/route/{value}', function(string $value){
 
 
 Route::any('/deploy', function () {
-    Artisan::call('deploy');
+    return Artisan::call('deploy');
 });
