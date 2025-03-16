@@ -206,7 +206,7 @@
                                     <td class="text-nowrap">{{ $flight->return_date }}</td>
                                     <td>{!! $flight->short_description() !!}</td>
                                     <td>{{ $flight->category->name }}</td>
-                                    <td>{{ __($flight->type) }}</td>
+                                    <td>{{ __('index.'.$flight->type) }}</td>
                                     <td>
                                         @if($flight->is_recommended)
                                             <em
