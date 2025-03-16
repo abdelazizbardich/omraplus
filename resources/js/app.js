@@ -23,21 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         ],
     };
-    const myChart = new Chart(chartCanva, {
-        type: "line",
-        data: data,
-        options: {
-            responsive: true,
-            interaction: {
-                intersect: false,
-            },
-            plugins: {
-                legend: {
-                    display: false,
+    if(chartCanva){
+        const myChart = new Chart(chartCanva, {
+            type: "line",
+            data: data,
+            options: {
+                responsive: true,
+                interaction: {
+                    intersect: false,
+                },
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
                 },
             },
-        },
-    });
+        });
+    }
 
     const carousels = document.querySelectorAll(".carousel-container");
     carousels.forEach((carouselContainer) => {
@@ -109,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
     // Dashboard menu toggler
     const dashboard = document.querySelector(".dashboard");
     if (dashboard) {
@@ -126,52 +129,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Text editor
-    const textEditor = document.querySelector("#text-editor");
-    console.log('textEditor',textEditor);
-    if (textEditor) {
-        $(textEditor).summernote({
-            tabsize: 4,
-            height: 520,
-            inheritPlaceholder: true,
-            dialogsInBody: false,
-            lang: getSummernoteLang(),
-            toolbar: [
-                ["style", ["style"]],
-                ["font", ["bold", "underline", "clear"]],
-                ["fontname", ["fontname"]],
-                ["color", ["color"]],
-                ["para", ["ul", "ol", "paragraph"]],
-                ["table", ["table"]],
-                ["insert", ["link", "picture"]],
-                ["view", ["codeview", "help"]],
-            ],
-            fontNames: [
-                "Arial",
-                "Arial Black",
-                "Comic Sans MS",
-                "Courier New",
-                "Bein black",
-                "Bein normal",
-                "Droid arabic kufi",
-                "Droid arabic kufi black",
-            ],
-            fontNamesIgnoreCheck: [
-                "Bein black",
-                "Bein normal",
-                "Droid arabic kufi",
-                "Droid arabic kufi black",
-            ],
-        });
-    }
-    function getSummernoteLang() {
-        if (lang === "ar") {
-            return "ar-AR";
-        } else if (lang === "fr") {
-            return "fr-FR";
-        } else {
-            return "en-US";
-        }
-    }
+    tinymce.init({
+        selector: '#text-editor',
+        license_key: 'gpl',
+        directionality: lang === 'ar' ? 'rtl' : 'ltr',
+        language: 'ar',
+        menubar: false,
+        plugins: [
+            'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+            'insertdatetime', 'media', 'table', 'help', 'wordcount'
+        ],
+        toolbar: 'undo redo | blocks | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat | help',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+    });
 
     // DataTable
     const datatable = document.querySelectorAll(".datatable");

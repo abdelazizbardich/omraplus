@@ -63,13 +63,14 @@
 
     <!-- api url meta -->
     <meta name="api-url" content="{{ config('app.url') }}/api">
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-ar-AR.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.6.0/plugins/help/js/i18n/keynav/ar.min.js"
+        integrity="sha512-hpNwTe+qAqGMTcLpaxFZ+IMfLlge+HFSCLqrNPLKPuSsnscSB2mbCn+L7pAditif87/0CyCpwPI16zXoVUJPXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.6.0/tinymce.min.js"
+        integrity="sha512-/4EpSbZW47rO/cUIb0AMRs/xWwE8pyOLf8eiDWQ6sQash5RP1Cl8Zi2aqa4QEufjeqnzTK8CLZWX7J5ZjLcc1Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Styles -->
     @vite('resources/js/app.js')
 
