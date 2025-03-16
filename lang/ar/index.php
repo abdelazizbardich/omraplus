@@ -310,4 +310,5 @@ return [
         "rejected" => "مرفوض",
         "User" => "المستخدم",
         "Client" => "الزبون",
+        "Edit flight" => "تعديل الرحلة",
 ];
