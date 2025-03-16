@@ -72,8 +72,7 @@
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th>{{__('index.Flight')}}</th>
-                                <th>{{__('index.Hotel')}}</th>
+                                <th>{{__('index.Program')}}</th>
                                 <th>{{__('index.Seats count')}}</th>
                                 <th>{{__('index.Economic')}}</th>
                                 <th>{{__('index.Meals included')}}</th>
@@ -85,13 +84,15 @@
                             <!-- row 1 -->
                              @foreach ($programs as $program)
                                 <tr>
-                                    <td class="w-6/12">{{ $program->flight->title }}</td>
                                     <td>
                                         <span class="block text-nowrap">
                                             <span class="font-bold">{{__('index.Mecca')}}</span>: {{ $program->hotelMecca->name }}
                                         </span>
                                         <span class="block text-nowrap">
                                             <span class="font-bold">{{__('index.Medina')}}</span>: {{ $program->hotelMedina->name }}
+                                        </span>
+                                        <span class="text-xs">
+                                            ({{ $program->flight->title }})
                                         </span>
                                     </td>
                                     <td>{{ $program->seat_count }}</td>
@@ -120,8 +121,8 @@
                                         @endif
                                     </td>
                                     <th>
-                                        <a href="#" class="btn btn-xs btn-info edit"></a>
-                                        <a href="#" class="btn btn-xs btn-error delete"></a>
+                                        <a href="{{ route('programs.edit', $program->id) }}" class="btn btn-xs btn-info edit"></a>
+                                        <a href="{{ route('programs.delete', $program->id) }}" class="btn btn-xs btn-error delete"></a>
                                     </th>
                                 </tr>
                             @endforeach 

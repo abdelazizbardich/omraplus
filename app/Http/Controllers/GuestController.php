@@ -37,7 +37,7 @@ class GuestController extends Controller
         })->toArray();
         $flightPrice = 0;
         $flightOldPrice = 0;
-        foreach ($data['flight']->programs as $index=>$program) {   
+        foreach ($data['flight']->programs as $program) {   
             foreach ($program->prices as $index=>$price) {
                 if($flightPrice == 0){
                     $flightPrice = $price->price;

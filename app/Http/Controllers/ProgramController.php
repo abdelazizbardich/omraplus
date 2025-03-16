@@ -44,4 +44,9 @@ class ProgramController extends Controller
 
         return redirect()->route('programs')->with('success', 'Flight created successfully');
     }
+
+    public function delete($id){
+        Program::where('id', $id)->delete();
+        return redirect()->route('programs')->with('success', 'Flight deleted successfully');
+    }
 }

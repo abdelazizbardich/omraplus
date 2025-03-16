@@ -45,7 +45,7 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     Route::post('/dashboard/programs/save', [App\Http\Controllers\ProgramController::class, 'save'])->name('programs.save');
     Route::get('/dashboard/programs/edit/{program:id}', [App\Http\Controllers\ProgramController::class, 'edit'])->name('programs.edit');
     Route::post('/dashboard/programs/update/{program:id}', [App\Http\Controllers\ProgramController::class, 'update'])->name('programs.update');
-    Route::delete('/dashboard/programs/delete/{program:id}', [App\Http\Controllers\ProgramController::class, 'delete'])->name('programs.delete');
+    Route::get('/dashboard/programs/delete/{program:id}', [App\Http\Controllers\ProgramController::class, 'delete'])->name('programs.delete');
 
     Route::get('/dashboard/hotels', [App\Http\Controllers\HotelController::class, 'index'])->name('hotels');
     Route::post('/dashboard/hotels/save', [App\Http\Controllers\HotelController::class, 'save'])->name('hotels.save');

@@ -1,4 +1,4 @@
-<div class="scroll-animate w-full packages">
+<div class="scroll-animate w-full packages booking-card">
     <div class="flex rounded-t-xl px-6 py-3 pb-5 w-full from-yellow-600  bg-gradient-to-l to-yellow-500">
         @if ($booking->is_economic)
             <span class="pe-3 text-center font-semibold inline-block">{{__('index.Economy Program')}}</span>
@@ -21,7 +21,7 @@
                 <div class="flex-1 h-full">
                     <div class="flex w-full gap-x-3 mb-2">
                         <div class="flex flex-1 gap-3 px-3">
-                            <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="aspect-square h-20" alt="{{__('index.Hotel in')}} {{__('index.Mecca')}}">
+                            <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="hotel-place-photo aspect-square h-20" alt="{{__('index.Hotel in')}} {{__('index.Mecca')}}">
                             <div class="flex-1">
                                 <span class="block text-sm mb-1 text-nowrap">{{__('index.Hotel in')}} <span class="font-bold">{{ __('index.Mecca') }}</span>:</span>
                                 <span class="block px-3 py-2 text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">{{ $booking->hotelMecca->name }}</span>
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="flex flex-1 gap-3 px-3">
-                            <img src="{{ Vite::asset('resources/images/media-hotel.webp') }}" class="aspect-square h-20" alt="{{__('index.Hotel in')}} {{ __('index.Medina')}}">
+                            <img src="{{ Vite::asset('resources/images/media-hotel.webp') }}" class="hotel-place-photo aspect-square h-20" alt="{{__('index.Hotel in')}} {{ __('index.Medina')}}">
                             <div class="flex-1">
                                 <span class="block text-sm mb-1 text-nowrap">{{__('index.Hotel in')}} <span class="font-bold">{{ __('index.Medina') }}</span>:</span>
                                 <span class="block px-3 py-2 text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">{{ $booking->hotelMedina->name }}</span>
@@ -42,13 +42,13 @@
                         <span class="underline w-fit underline-offset-3 text-nowrap">{{ __('index.Select room type') }}:</span>
                         @foreach ($booking->prices as $index=>$price)
                             <div class="h-auto w-fit">
-                                <input onclick="updateBookingcardPrice({{ $booking->id}})" @if($index==0) checked @endif hidden required class="peer hidden room-type room-{{ $booking->id }}" data-price="{{$price->price}}" data-old-price="{{$price->old_price}}" value="{{$price->room->id}}" type="radio" name="room" id="room-{{$price->room->id}}">
-                                <label for="room-{{$price->room->id}}" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">{{ $price->room->name }}</label>
+                                <input onclick="updateBookingcardPrice({{ $booking->id}})" @if($index==0) checked @endif hidden required class="peer hidden room-type room-{{ $booking->id }}" data-price="{{$price->price}}" data-old-price="{{$price->old_price}}" value="{{$price->room->id}}" type="radio" name="room" id="room-{{ $booking->id }}-{{$price->room->id}}">
+                                <label for="room-{{ $booking->id }}-{{$price->room->id}}" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">{{ $price->room->name }}</label>
                             </div>
                         @endforeach
                     </div>
                 </div>
-                <div class="flex flex-col justify-center items-start border-s border-black-200 ms-6 ps-6">
+                <div class="flex flex-col justify-center items-start border-s border-black-200 ms-6 ps-6 price">
                     <div class="w-full mb-6">
                         <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums"><span class="old-price-{{ $booking->id }}">{{$booking->getLowestPrice()->old_price}}</span> {{__('index.dh')}}</span>
                         <span class="text-xl block font-black lining-nums"><span class="text-3xl price-{{ $booking->id }}">{{$booking->getLowestPrice()->price}}</span> {{__('index.dh')}} {{__('index.For a person')}}</span>
@@ -93,8 +93,8 @@
                 let oldPrice = event.target.getAttribute('data-old-price');
                 document.querySelector(`.price-${bookingId}`).innerText = price;
                 document.querySelector(`.old-price-${bookingId}`).innerText = oldPrice;
-                document.querySelector(`.flight-old-price`).innerText = oldPrice;
-                document.querySelector(`.flight-price`).innerText = price;
+                if (document.querySelector(`.flight-old-price`)) document.querySelector(`.flight-old-price`).innerText = oldPrice;
+                if (document.querySelector(`.flight-price`)) document.querySelector(`.flight-price`).innerText = price;
             }
         </script>
     </div>
