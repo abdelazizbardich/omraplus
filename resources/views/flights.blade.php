@@ -30,7 +30,7 @@
                                     {{__('index.Type')}}:
                                     <select name="type" class="grow border-none focus:shadow-none shadow-none"
                                         value="{{ old('type', $flight->type) }}">
-                                        <option value="omra" @if(old('type', $flight->type) === "omra") selected @endif>
+                                        <option value="umrah" @if(old('type', $flight->type) === "umrah") selected @endif>
                                             {{__('index.Omra')}}</option>
                                         <option value="hajj" @if(old('type', $flight->type) === "hajj") selected @endif>
                                             {{__('index.Hajj')}}</option>
