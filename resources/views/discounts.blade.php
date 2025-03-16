@@ -68,9 +68,12 @@
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
                                 {{__('index.Program')}}:
-                                <select name="program" class="grow border-none focus:shadow-none shadow-none">
+                                <select name="program" class="grow border-none focus:shadow-none shadow-none text-xs" >
                                     @foreach ($programs as $program)
-                                        <option value="{{ $program->id }}">{{ $program->name() }}</option>                                    
+                                        <option value="{{ $program->id }}">
+                                            ({{ $program->flight->title }})
+                                            {{ $program->name() }}
+                                    </option>                                    
                                     @endforeach
                                 </select>
                             </label>
