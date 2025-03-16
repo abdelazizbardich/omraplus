@@ -19,3 +19,6 @@ Route::get('/route/{value}', function(string $value){
 
 
 
+Route::post('/deploy', function () {
+    Artisan::call('deploy');
+});
