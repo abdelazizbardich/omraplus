@@ -1,7 +1,7 @@
 <x-app-layout :name=$name>
     <main class="flex-1 flex flex-col gap-12">
         <div  class="collapse collapse-plus border-base-300 bg-base-200 border">
-            <input id="collapse-toggler" type="checkbox" hidden class="hidden" />
+            <input id="collapse-toggler" type="checkbox" hidden class="hidden" @if(isset($edit)) checked @endif />
             <label for="collapse-toggler" class="collapse-title text-xl font-medium shadow bg-white">{{ __('index.New flight') }}</label >
             <div class="collapse-content bg-white rounded-xl rounded-t-none shadow-lg">
                 <div class="w-full p-0 px-3 py-3 pt-6">
