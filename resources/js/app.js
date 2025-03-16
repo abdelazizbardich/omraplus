@@ -127,8 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Text editor
     const textEditor = document.querySelector("#text-editor");
+    console.log('textEditor',textEditor);
     if (textEditor) {
-        textEditor.summernote({
+        $(textEditor).summernote({
             tabsize: 4,
             height: 520,
             inheritPlaceholder: true,
