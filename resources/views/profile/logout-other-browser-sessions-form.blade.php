@@ -87,11 +87,11 @@
                     {{ __('index.Cancel') }}
                 </x-secondary-button>
 
-                <x-button class="ms-3"
+                <x-danger-button class="ms-3"
                             wire:click="logoutOtherBrowserSessions"
                             wire:loading.attr="disabled">
                     {{ __('index.Log Out Other Browser Sessions') }}
-                </x-button>
+                </x-danger-button>
             </x-slot>
         </x-dialog-modal>
     </x-slot>

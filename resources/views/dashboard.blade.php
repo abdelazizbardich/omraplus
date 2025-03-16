@@ -66,117 +66,55 @@
                     <!-- head -->
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th class="sortable">{{__('index.Client')}}</th>
+                            <th class="sortable">{{__('index.Program')}}</th>
+                            <th class="sortable">{{__('index.Pilgrims count')}}</th>
+                            <th class="sortable">{{__('index.Price')}}</th>
+                            <th class="sortable">{{__('index.Order status')}}</th>
+                            <th class="sortable">{{__('index.Payment status')}}</th>
+                            <th class="sortable">{{__('index.Payment method')}}</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- row 1 -->
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle h-12 w-12">
-                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-                                                alt="Avatar Tailwind CSS Component" />
+                        @foreach ($lastOrders as $order)
+                            <tr>
+                                <td>
+                                    <div class="flex items-center gap-3">
+                                        @if($order->user->photo)
+                                            <div class="avatar">
+                                                <div class="mask mask-squircle h-12 w-12">
+                                                    <img src="{{ @$order->user->photo->url}}" alt="user photo" />
+                                                </div>
+                                            </div>
+                                        @endif
+                                        <div>
+                                            <div class="font-bold">
+                                                {{ $order->user->name}}
+                                            </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="font-bold">Hart Hagerty</div>
-                                        <div class="text-sm opacity-50">United States</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                Zemlak, Daniel and Leannon
-                                <br />
-                                <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
-                            </td>
-                            <td>Purple</td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">...</button>
-                            </th>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle h-12 w-12">
-                                            <img src="https://img.daisyui.com/images/profile/demo/3@94.webp"
-                                                alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="font-bold">Brice Swyre</div>
-                                        <div class="text-sm opacity-50">China</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                Carroll Group
-                                <br />
-                                <span class="badge badge-ghost badge-sm">Tax Accountant</span>
-                            </td>
-                            <td>Red</td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle h-12 w-12">
-                                            <img src="https://img.daisyui.com/images/profile/demo/4@94.webp"
-                                                alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="font-bold">Marjy Ferencz</div>
-                                        <div class="text-sm opacity-50">Russia</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                Rowe-Schoen
-                                <br />
-                                <span class="badge badge-ghost badge-sm">Office Assistant I</span>
-                            </td>
-                            <td>Crimson</td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
-                        <!-- row 4 -->
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle h-12 w-12">
-                                            <img src="https://img.daisyui.com/images/profile/demo/5@94.webp"
-                                                alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="font-bold">Yancy Tear</div>
-                                        <div class="text-sm opacity-50">Brazil</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                Wyman-Ledner
-                                <br />
-                                <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
-                            </td>
-                            <td>Indigo</td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
+                                </td>
+                                <td>
+                                    {{ $order->flight()->title}}<br />
+                                    <span class="font-semibold">{{ $order->room()->name }}</span>:
+                                    {{ $order->program()->name()}}
+                                </td>
+                                <td>{{ $order->pilgrims_count}}</td>
+                                <td>{{ $order->total_price}} {{ __('index.dh') }}</td>
+                                <td><span class="badge text-xs p-3 {{getStatusBg($order->status)}}">{{ __('index.' . $order->status)}}</span></td>
+                                <td><span class="badge text-xs p-3 {{getStatusBg($order->payment_status)}}">{{ __('index.' . $order->payment_status)}}</span></td>
+                                <td>{{ __('index.' . $order->payment_method)}}</td>
+                                </td>
+                                <!-- <th>
+                                    <a href="{{ route('orders.edit', $order->id) }}"
+                                        class="btn btn-xs btn-info edit"></a>
+                                    <a href="{{ route('orders.delete', $order->id) }}"
+                                        class="btn btn-xs btn-error delete"></a>
+                                </th> -->
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

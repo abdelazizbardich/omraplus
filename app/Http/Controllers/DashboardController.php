@@ -27,8 +27,10 @@ class DashboardController extends Controller
             "airlines" => Airline::count(),
             "prices" => ProgramPrice::count(),
             "discounts" => Discount::count(),
-            "users" => User::count()
+            "users" => User::count(),
+            "lastOrders" => Order::with(["user"])->orderByDesc('id')->limit(10)->get()
         ];
+        // dd($data["lastOrders"][0]->user->photo->url);
         return view('dashboard', $data);
     }
 

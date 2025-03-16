@@ -58,7 +58,7 @@
                 <label for="logout" class="block w-4/12 h-8 flex items-center justify-center group-[.closed]:hidden">
                     <img src="{{ Vite::asset('resources/images/logout.png') }}" alt="{{ __('index.Logo') }}"  class="h-4/5 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
                 </label>
-                <a href="{{ route('profile') }}" class="block w-4/12 h-8 flex items-center justify-center group-[.closed]:hidden">
+                <a href="{{ route('profile.show') }}" class="block w-4/12 h-8 flex items-center justify-center group-[.closed]:hidden">
                     <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="{{ __('index.Logo') }}"  class="h-4/5 opacity-90 cursor-pointer hover:opacity-100 aspect-square">
                 </a>
                 <a href="{{ route('settings') }}" class="block w-4/12 group-[.closed]:w-full h-8 flex items-center justify-center">

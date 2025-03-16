@@ -38,14 +38,14 @@
                     </span>
                 </div>
 
-                <x-secondary-button class="mt-2 me-2" type="button" x-on:click.prevent="$refs.photo.click()">
+                <button class="mt-2 me-2 btn btn-sm" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('index.Select A New Photo') }}
-                </x-secondary-button>
+                </button>
 
                 @if ($this->user->profile_photo_path)
-                    <x-secondary-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
+                    <button type="button" class="mt-2 btn btn-sm" wire:click="deleteProfilePhoto">
                         {{ __('index.Remove Photo') }}
-                    </x-secondary-button>
+                    </button>
                 @endif
 
                 <x-input-error for="photo" class="mt-2" />

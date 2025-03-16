@@ -89,3 +89,6 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     Route::post('/dashboard/orders/update/{user:id}', [App\Http\Controllers\OrderController::class, 'update'])->name('orders.update');
     Route::get('/dashboard/orders/delete/{user:id}', [App\Http\Controllers\OrderController::class, 'delete'])->name('orders.delete');
 });
+
+
+require_once __DIR__ . '/jetstream.php';

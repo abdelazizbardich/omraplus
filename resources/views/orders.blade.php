@@ -30,8 +30,7 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <div class="font-bold">{{ $order->user->first_name}}
-                                                    {{ $order->user->last_name}}</div>
+                                                <div class="font-bold">{{ $order->user->name}}</div>
                                             </div>
                                         </div>
                                     </td>
