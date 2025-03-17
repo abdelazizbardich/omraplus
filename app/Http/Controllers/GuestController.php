@@ -11,6 +11,7 @@ use App\Models\Room;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class GuestController extends Controller
@@ -183,6 +184,32 @@ class GuestController extends Controller
         $flight['price'] = $flightPrice;
         $flight['old_price'] = $flightOldPrice;
         return response()->json($flight);
+    }
+
+    public function contactUsSend(Request $request){
+
+        $request->validate([
+            "name" => 'required',
+            "email" => 'required',
+            "message" => 'required'
+        ]);
+
+        // Send via email
+        $data = [
+            "name" => $request->name,
+            "email" => $request->email,
+            "body" => $request->message
+        ];
+        
+        $message = Mail::send('emails.contact', $data, function ($message) use ($data) {
+            $message->sender($data['email'], $data['name']);
+            $message->to(config('mail.from.address'), config('app.name'));
+            $message->subject('Message from contact page: '.config('app.name'));
+        });
+
+        dd($message);
+        // redirect
+        return redirect()->route('contact-us')->with('success', 'Message sent successfully');
     }
 
 }

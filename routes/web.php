@@ -9,11 +9,9 @@ Route::get('/', [App\Http\Controllers\GuestController::class, 'home'])->name('ho
 Route::get('/flight/{flight:id}', [App\Http\Controllers\GuestController::class, 'flight'])->name('flight');
 Route::get('/about-us', [App\Http\Controllers\GuestController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUs'])->name('contact-us');
+Route::post('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUsSend'])->name('contact-us-send');
 Route::get('/umrah-guide', [App\Http\Controllers\GuestController::class, 'umrahGuide'])->name('umrah-guide');
 Route::get('/faqs', [App\Http\Controllers\GuestController::class, 'faqs'])->name('faqs');
-
-Route::get('/about-us', [App\Http\Controllers\GuestController::class, 'aboutUs'])->name('about-us');
-Route::get('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUs'])->name('contact-us');
 Route::get('/checkout/{program:id}', [App\Http\Controllers\GuestController::class, 'checkout'])->name('checkout');
 Route::post('/checkout', [App\Http\Controllers\GuestController::class, 'confirmCheckout'])->name('checkout.save');
 Route::get('/checkout/success/{order:id}', [App\Http\Controllers\GuestController::class, 'checkoutSuccess'])->name('checkout.success');
