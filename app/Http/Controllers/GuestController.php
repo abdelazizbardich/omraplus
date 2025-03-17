@@ -204,7 +204,7 @@ class GuestController extends Controller
         $message = Mail::send('emails.contact', $data, function ($message) use ($data) {
             $message->sender($data['email'], $data['name']);
             $message->to(config('mail.from.address'), config('app.name'));
-            $message->subject('Message from contact page: '.config('app.name'));
+            $message->subject(__('index.Message from contact page').':'.config('app.name'));
         });
         // redirect
         return redirect()->route('contact-us')->with('success', 'Message sent successfully');
