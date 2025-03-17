@@ -206,8 +206,6 @@ class GuestController extends Controller
             $message->to(config('mail.from.address'), config('app.name'));
             $message->subject('Message from contact page: '.config('app.name'));
         });
-
-        dd($message);
         // redirect
         return redirect()->route('contact-us')->with('success', 'Message sent successfully');
     }
