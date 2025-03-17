@@ -8,10 +8,10 @@
     </h3>
     <div class="flex flex-col h-full">
       <div class="flex items-stretch mb-3">
-        <div class="w-6/12">
+        <div class="w-5/12">
           <x-slider :images="collect($data->photos)->pluck('url')->filter()->all()"></x-slider>
         </div>
-        <div class="w-6/12 px-3">
+        <div class="w-7/12 px-3">
           <span class="block text-2xl font-bold w-full block mb-6">{{ __('index.Description of the offer') }}</span>
           <div class="description h-96 overflow-y-auto no-scrollbar">
             {!! $data->description !!}
