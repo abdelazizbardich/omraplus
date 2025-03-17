@@ -7,18 +7,28 @@
 
         <div class="p-6 flex flex-col md:flex-row">
             <!-- success alert -->
-             <div class="w-full md:w-1/2 p-4">
+            <div class="w-full w-1/2 p-4">
                 @if(session('success'))
-                    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4" role="alert">
-                        <p>{{ session('success') }}</p>
+                    <div role="alert" class="alert alert-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>{{ session('success') }}</span>
                     </div>
                 @endif
             </div>
             <!-- error alert -->
-            <div class="w-full md:w-1/2 p-4">
+            <div class="w-full w-1/2 p-4">
                 @if(session('error'))
-                    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4" role="alert">
-                        <p>{{ session('error') }}</p>
+                    <div role="alert" class="alert alert-error">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>{{ session('error') }}</span>
                     </div>
                 @endif
             </div>
@@ -34,19 +44,27 @@
                 <form action="{{ route('contact-us-send') }}" method="POST" class="space-y-6">
                     @csrf
                     <div>
-                        <input type="text" id="name" name="name" value="{{ old('name') }}" class="w-full px-4 py-3 bg-gray-100 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="{{__('index.Enter your name')}}" required>
+                        <input type="text" id="name" name="name" value="{{ old('name') }}"
+                            class="w-full px-4 py-3 bg-gray-100 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            placeholder="{{__('index.Enter your name')}}" required>
                     </div>
 
                     <div>
-                        <input type="email" id="email" name="email" value="{{ old('email') }}" class="w-full px-4 py-3 bg-gray-100 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="{{__('index.Enter your email address')}}" required>
+                        <input type="email" id="email" name="email" value="{{ old('email') }}"
+                            class="w-full px-4 py-3 bg-gray-100 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            placeholder="{{__('index.Enter your email address')}}" required>
                     </div>
 
                     <div>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-gray-100 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="{{__('index.Go ahead, we are listening...')}}" required>{{ old('message') }}</textarea>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full px-4 py-3 bg-gray-100 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            placeholder="{{__('index.Go ahead, we are listening...')}}"
+                            required>{{ old('message') }}</textarea>
                     </div>
 
                     <div>
-                        <button type="submit" class="w-full btn bg-blue-950  text-white font-medium py-3 px-4 rounded-lg transition duration-300 ease-in-out">{{__('index.Submit')}}</button>
+                        <button type="submit"
+                            class="w-full btn bg-blue-950  text-white font-medium py-3 px-4 rounded-lg transition duration-300 ease-in-out">{{__('index.Submit')}}</button>
                     </div>
                 </form>
             </div>
@@ -92,11 +110,11 @@
                 <div class="bg-gray-50 shadow-xl p-3 rounded-l-lg mb-1">
                     <i class="fab fa-facebook-f"></i>
                 </div>
-    
+
                 <div class="bg-gray-50 shadow-xl p-3 rounded-l-lg mb-1">
                     <i class="fab fa-twitter"></i>
                 </div>
-    
+
                 <div class="bg-gray-50 shadow-xl p-3 rounded-l-lg">
                     <i class="fab fa-linkedin-in"></i>
                 </div>
