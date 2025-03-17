@@ -373,4 +373,5 @@ return [
 	"This is an automated message from your website contact form" => "هذه رسالة تلقائية من نموذج الاتصال بموقعك الإلكتروني",
 	"All rights reserved" => "جميع الحقوق محفوظة",
 	"Message from contact page" => "رسالة من صفحة الاتصال",
+	"Message sent successfully" => "تم إرسال الرسالة بنجاح"
 ];
