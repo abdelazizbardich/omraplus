@@ -6,29 +6,27 @@
     <div class="w-full max-w-6xl mx-auto p-4">
 
         <div class="p-6 flex flex-col md:flex-row">
-            <!-- success alert -->
             <div class="w-full w-1/2 p-4">
                 @if(session('success'))
-                    <div role="alert" class="alert alert-success">
+                    <div role="alert" class="alert alert-success text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>{{ session('success') }}</span>
+                        <span>{{ __('index.'.session('success')) }}</span>
                     </div>
                 @endif
             </div>
-            <!-- error alert -->
             <div class="w-full w-1/2 p-4">
                 @if(session('error'))
-                    <div role="alert" class="alert alert-error">
+                    <div role="alert" class="alert alert-error text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>{{ session('error') }}</span>
+                        <span>{{ __('index.'.session('error')) }}</span>
                     </div>
                 @endif
             </div>
