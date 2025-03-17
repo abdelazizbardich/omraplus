@@ -17,6 +17,11 @@ return [
 
     'domain' => env('APP_DOMAIN', '127.0.0.1:8000'),
 
+    'email' => env('APP_EMAIL', ''),
+
+    'whtasppNumber' => env('APP_WHATSAPP_NUMBER', '1234567890'),
+    'address' => env('APP_ADDRESS', ''),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
