@@ -33,37 +33,37 @@
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span class="opacity-60">الإقامة</span>
+                    <span class="opacity-60">{{__('index.Accommodation')}}</span>
                 </div>
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/flight icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span class="opacity-60">الطيران</span>
+                    <span class="opacity-60">{{__('index.Aviation')}}</span>
                 </div>
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/evisa icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span class="opacity-60">التأشيرة</span>
+                    <span class="opacity-60">{{__('index.Visa')}}</span>
                 </div>
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/transport icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span class="opacity-60">التنقل</span>
+                    <span class="opacity-60">{{__('index.Mobility')}}</span>
                 </div>
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
                         <img src="{{ Vite::asset('resources/images/mourchid icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
-                    <span class="opacity-60">المؤطرين</span>
+                    <span class="opacity-60">{{__('index.Framers')}}</span>
                 </div>
             </div>
             <hr class="my-3 opacity-30">
             <div class="flex justify-between items-center mb-2 flex-row lg:flex-col gap-y-3">
                 <div class="flex flex-col justify-center items-center">
-                    <span class="font-black lining-nums"><span class="text-xl">{{ money(@$data->getLowestPrice()->old_price) }}</span> {{__('index.dh')}} <span>{{__('index.For a person')}}</span></span>
+                    <span class="font-black lining-nums"><span class="text-xl">{{ money(@$data->getLowestPrice()->price) }}</span> {{__('index.dh')}} <span>{{__('index.For a person')}}</span></span>
                     <span class="text-xs text-nowrap">({{__('index.Price varies depending on the size of the collection')}})</span>
                 </div>
                 <a href="{{ route('checkout', $data->id) }}" class="text-center flex-nowrap bg-yellow-500 shadow w-full text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">

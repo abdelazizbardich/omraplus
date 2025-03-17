@@ -345,4 +345,10 @@ return [
 	"nov" => "نوفمبر",
 	"dec" => "ديسمبر",
 	"umrah" => "عمرة",
+	"Accommodation" => "الإقامة",
+	"Aviation" => "الطيران",
+	"Visa" => "التأشيرات",
+	"Mobility" => "التنقل",
+	"Framers" => "التأشيرات",
+	"Recommended Offer" => "العرض الموصي به",
 ];
