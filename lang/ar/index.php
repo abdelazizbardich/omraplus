@@ -351,4 +351,6 @@ return [
 	"Mobility" => "التنقل",
 	"Framers" => "التأشيرات",
 	"Recommended Offer" => "العرض الموصي به",
+	"Description of the offer" => "وصف العرض",
+	"Available reservations" => "الحجوزات المتاحة"
 ];
