@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{getLanguageDirection()}}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Contact Form Submission</title>
+  <title>{{__('index.New Contact Form Submission')}}</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -78,31 +78,31 @@
           <img src="{{ Vite::asset('resources/images/logo-w.png') }}" alt="{{ config('app.name') }}" style="max-width: 100px; height: auto;">
         </a>
       </div>
-      <h1>New Contact Form Submission</h1>
+      <h1>{{__('index.New Contact Form Submission')}}</h1>
     </div>
     
     <div class="content">
-      <p>You have received a new message from your website contact form. Here are the details:</p>
+      <p>{{__('index.You have received a new message from your website contact form. Here are the details')}}:</p>
       
       <div class="field">
-        <div class="field-label">Name:</div>
+        <div class="field-label">{{__('index.Name')}}:</div>
         <div class="field-value">{{$name}}</div>
       </div>
       
       <div class="field">
-        <div class="field-label">Email:</div>
+        <div class="field-label">{{__('index.Email')}}:</div>
         <div class="field-value">{{$email}}</div>
       </div>
       
       <div class="field">
-        <div class="field-label">Message:</div>
+        <div class="field-label">{{__('index.Message')}}:</div>
         <div class="field-value">{{$body}}</div>
       </div>
     </div>
     
     <div class="footer">
-      <p>This is an automated message from your website contact form.</p>
-      <p>© {{ date('Y') }} {{ config('app.name') }}. All rights reserved.</p>
+      <p>{{__('index.This is an automated message from your website contact form')}}.</p>
+      <p>© {{ date('Y') }} {{ config('app.name') }}. {{__('index.All rights reserved')}}.</p>
     </div>
   </div>
 </body>
