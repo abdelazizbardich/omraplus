@@ -10,13 +10,23 @@ Route::get('/flight/{flight:id}', [App\Http\Controllers\GuestController::class, 
 Route::get('/about-us', [App\Http\Controllers\GuestController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUs'])->name('contact-us');
 Route::post('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUsSend'])->name('contact-us-send');
+Route::get('/visa', [App\Http\Controllers\GuestController::class, 'visa'])->name('visa');
 Route::get('/umrah-guide', [App\Http\Controllers\GuestController::class, 'umrahGuide'])->name('umrah-guide');
+Route::get('/hajj-guide', [App\Http\Controllers\GuestController::class, 'hajjGuide'])->name('hajj-guide');
+
 Route::get('/faqs', [App\Http\Controllers\GuestController::class, 'faqs'])->name('faqs');
 Route::get('/checkout/{program:id}', [App\Http\Controllers\GuestController::class, 'checkout'])->name('checkout');
 Route::post('/checkout', [App\Http\Controllers\GuestController::class, 'confirmCheckout'])->name('checkout.save');
 Route::get('/checkout/success/{order:id}', [App\Http\Controllers\GuestController::class, 'checkoutSuccess'])->name('checkout.success');
 
-Route::get('/umrah-guide', [App\Http\Controllers\GuestController::class, 'umrahGuide'])->name('umrah-guide');
+Route::get('/booking-instructions', [App\Http\Controllers\GuestController::class, 'bookingInstructions'])->name('booking-instructions');
+Route::get('/omra-packs', [App\Http\Controllers\GuestController::class, 'omraPacks'])->name('omra-packs');
+Route::get('/ramadan-omra', [App\Http\Controllers\GuestController::class, 'ramadanOmra'])->name('ramadan-omra');
+Route::get('/personalizd-omra', [App\Http\Controllers\GuestController::class, 'personalizdOmra'])->name('personalizd-omra');
+Route::get('/hadj-2025', [App\Http\Controllers\GuestController::class, 'hadj2025'])->name('hadj-2025');
+Route::get('/learn-about-mecca', [App\Http\Controllers\GuestController::class, 'learnAboutMecca'])->name('learn-about-mecca');
+Route::get('/get-to-know-medina', [App\Http\Controllers\GuestController::class, 'getToKnowMedina'])->name('get-to-know-medina');
+
 
 
 

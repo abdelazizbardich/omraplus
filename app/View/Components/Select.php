@@ -22,9 +22,7 @@ class Select extends Component
         public bool $required = false,
         public string $placeholder = '',
     )
-    {
-        //
-    }
+    {}
 
     /**
      * Get the view / contents that represent the component.

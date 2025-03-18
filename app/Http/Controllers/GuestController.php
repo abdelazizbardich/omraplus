@@ -22,7 +22,15 @@ class GuestController extends Controller
 
         $data = [
             "hadjOffers" => $hadjOffers,
-            "umrahOffers" => $umrahOffers
+            "umrahOffers" => $umrahOffers,
+            "umrahs" => Flight::select('id','title as value')->where('type', 'umrah')->orderBy('id', 'desc')->get()->toArray(),
+            "programs" => Program::orderBy('id', 'desc')->get()->map(function($program){
+                return [
+                    'id' => $program['id'],
+                    'value' => $program->name(),
+                    'key' => $program->flight_id
+                ];
+            })->toArray()
         ];
         return view('guest.welcome', $data);
     }
@@ -210,4 +218,34 @@ class GuestController extends Controller
         return redirect()->route('contact-us')->with('success', 'Message sent successfully');
     }
 
+
+    public function visa(){
+        return view('guest.visa');
+    }
+
+    public function bookingInstructions(){
+        return view('guest.booking-instructions');
+    }
+
+    public function omraPacks(){
+        return view('guest.omra-packs');
+    }
+
+    public function ramadanOmra(){
+        return view('guest.ramadan-omra');
+    }
+
+    public function personalizdOmra(){
+        return view('guest.personalizd-omra');
+    }
+    public function hadj2025(){
+        return view('guest.hadj-2025');
+    }
+
+    public function learnAboutMecca(){
+        return view('guest.learn-about-mecca');
+    }
+    public function getToKnowMedina(){
+        return view('guest.get-to-know-medina');
+    }
 }

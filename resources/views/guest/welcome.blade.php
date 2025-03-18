@@ -1,6 +1,6 @@
 <x-guest-layout>
 <x-header active="Home"></x-header>
-<x-hero-header></x-hero-header>
+<x-hero-header :umrahs=$umrahs :programs=$programs></x-hero-header>
 <x-spacer></x-spacer>
 <div class="container m-auto flex justify-between items-start">
     <div class="w-4/12 flex items-start justify-center">

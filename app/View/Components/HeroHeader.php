@@ -11,9 +11,12 @@ class HeroHeader extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public mixed $umrahs = [],
+        public mixed $programs = []
+        )
     {
-        //
+        
     }
 
     /**
@@ -21,6 +24,11 @@ class HeroHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.hero-header');
+        return view('components.hero-header',
+        [
+            'umrahs' => $this->umrahs,
+            'programs' => $this->programs
+        ]
+    );
     }
 }
