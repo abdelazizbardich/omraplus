@@ -1,6 +1,6 @@
 <div class="flex gap-12">
     <div class="lg:w-6/12 xl:w-6/12">
-        <img src="{{ Vite::asset('resources/images/help-desk.jpg') }}" class="scroll-animate w-full object-cover rounded-3xl" alt="">
+        <img loading="lazy" src="{{ Vite::asset('resources/images/help-desk.jpg') }}" class="scroll-animate w-full object-cover rounded-3xl" alt="">
     </div>
     <div class="lg:w-6/12 xl:w-6/12">
         <div class="flex flex-row justify-start items-start mb-6">
@@ -10,7 +10,7 @@
         <p class="block mb-10 lg:text-xl xl:text-2xl">{{ __('index.We are Here to Help') }}</p>
         <div class="flex mb-3 gap-6">
             <div class="w-auto">
-                <img class="lg:w-32 xl:w-64" src="{{ Vite::asset('resources/images/help-desk-icon.webp') }}" alt="help desk">
+                <img loading="lazy" class="lg:w-32 xl:w-64" src="{{ Vite::asset('resources/images/help-desk-icon.webp') }}" alt="help desk">
             </div>
             <div class="w-full">
                 <div class="xl:text-2xl lg:text-xl rounded-full mb-4 bg-blue-50 xl:px-5 lg:px-2 lg:py-1 xl:py-3 w-fit block flex flex-row justify-between items-center w-full">

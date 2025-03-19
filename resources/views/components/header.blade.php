@@ -24,7 +24,7 @@
         <div class="container h-full mx-auto flex items-center justify-between">
             <div class="flex items *:center">
                 <a href="{{ route('home') }}">
-                    <img src="{{ Vite::asset('resources/images/logo.webp') }}" alt="{{ __('index.Logo') }}" class="h-16">
+                    <img loading="lazy" src="{{ Vite::asset('resources/images/logo.webp') }}" alt="{{ __('index.Logo') }}" class="h-16">
                 </a>
             </div>
             <div class="flex items-center">

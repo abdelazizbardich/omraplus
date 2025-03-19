@@ -59,7 +59,7 @@
     style="background-image: url('{{ Vite::asset('resources/images/Kaaba.webp') }}'); background-blend-mode: overlay; background-size: cover; background-position: center; background-attachment: fixed;">
     <div class="min-h-screen flex items-center justify-center flex-col">
         <div class="">
-            <img src="{{ Vite::asset('resources/images/logo.webp') }}"
+            <img loading="lazy" src="{{ Vite::asset('resources/images/logo.webp') }}"
                 alt="{{ __(config('app.name')) }} {{__('index.logo')}}" />
         </div>
         <div class="text-center mt-4 w-6/12">

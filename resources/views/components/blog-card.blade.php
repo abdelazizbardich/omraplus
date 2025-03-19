@@ -1,7 +1,7 @@
 <div class="scroll-animate w-full border border-black-200 p-3 rounded-3xl hover:shadow-md duration-300">
     <div class="rounded-3xl overflow-hidden bg-white mb-3 hover:shadow-md duration-300">
         <a href="#">
-            <img src="{{ Vite::asset('resources/images/blog-post.jpg') }}" class="h-60 object-cover w-full border border-black-200" alt="blog thumbnail">
+            <img loading="lazy" src="{{ Vite::asset('resources/images/blog-post.jpg') }}" class="h-60 object-cover w-full border border-black-200" alt="blog thumbnail">
         </a>
     </div>
     <div class="">
@@ -17,7 +17,7 @@
             <div class="flex items-center justify-start gap-2">
                 <div class="avatar">
                     <div class="w-12 rounded-full">
-                        <img src="{{ Vite::asset('resources/images/site-avatar.jpg') }}" />
+                        <img loading="lazy" src="{{ Vite::asset('resources/images/site-avatar.jpg') }}" />
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-start">

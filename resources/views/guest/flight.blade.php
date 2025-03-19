@@ -21,7 +21,7 @@
                         <span class="font-black text-lg">{{__('index.going')}}</span>
                         <span class="dots flex-1 border-b-2 mx-3 border-black-500 h-full"></span>
                         <span class="flex items-center">
-                            <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('index.Plane')}}"
+                            <img loading="lazy" src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('index.Plane')}}"
                                 class="w-8 h-8 me-3">
                             <span class="font-semibold text-lg">{{ $flight->going_date }}</span>
                         </span>
@@ -31,7 +31,7 @@
                         <span class="font-black text-lg">{{__('index.Return')}}</span>
                         <span class="dots flex-1 border-b-2 mx-3 border-black-500 h-full"></span>
                         <span class="flex items-center">
-                            <img src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('index.Plane')}}"
+                            <img loading="lazy" src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('index.Plane')}}"
                                 class="w-8 -scale-x-100 h-8 me-3">
                             <span class="font-semibold text-lg">{{ $flight->return_date }}</span>
                         </span>
@@ -45,7 +45,7 @@
                     @foreach ([1, 2, 3, 4, 5, 6] as $item)
                         <div class="flex items-start justify-start w-full gap-3">
                             <div class="bg-emerald-300 w-4/12 aspect-square rounded-xl mb-1 overflow-hidden p-1">
-                                <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}"
+                                <img loading="lazy" src="{{ Vite::asset('resources/images/hotel icon.svg')}}"
                                     class="w-full h-full object-cover aspect-square">
                             </div>
                             <div class="flex flex-col justify-start items-start w-8/12">
@@ -87,21 +87,21 @@
                 <div class="divider"></div>
                 <div class="mb-6">
                     <span class="text-base font-base block mb-3 flex items-center">
-                        <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
+                        <img loading="lazy" src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
                             class="w-6 h-6 inline-block text-emerald-550 me-2">
                         <span>
                             {{__('index.Book from any area in Morocco')}}
                         </span>
                     </span>
                     <span class="text-base font-base block mb-3 flex items-center">
-                        <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
+                        <img loading="lazy" src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
                             class="w-6 h-6 inline-block text-emerald-550 me-2">
                         <span>
                             {{__('index.Customer service center available 24/7')}}
                         </span>
                     </span>
                     <span class="text-base font-base block mb-3 flex items-center">
-                        <img src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
+                        <img loading="lazy" src="{{Vite::asset('resources/images/checked.webp')}}" alt="Offer"
                             class="w-6 h-6 inline-block text-emerald-550 me-2">
                         <span>
                             {{__('index.High quality services at competitive prices')}}
@@ -120,7 +120,7 @@
                 </div>
             </div>
             <!-- <div class="p-3 flex items-center justify-center w-full">
-            <img src="{{ Vite::asset('resources/images/google-reviews.webp') }}" class="w-10/12" alt="">
+            <img loading="lazy" src="{{ Vite::asset('resources/images/google-reviews.webp') }}" class="w-10/12" alt="">
         </div> -->
             <x-spacer></x-spacer>
         </div>

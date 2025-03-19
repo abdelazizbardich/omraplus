@@ -4,7 +4,7 @@
         <div class="w-full relative mb-8">
             <div class="w-full aspect-video bg-black-300">
                 <a href="{{route('flight', $data->id)}}">
-                    <img src="{{ @$data->photos()->where('is_main',1)->first()->url }}" class="w-full h-full object-cover"  alt="umrah">
+                    <img loading="lazy" src="{{ @$data->photos()->where('is_main',1)->first()->url }}" class="w-full h-full object-cover"  alt="umrah">
                 </a>
             </div>
             <span data-id="{{ $data->id }}" class="quick-view cursor-pointer hover:shadow-lg duration-300 bg-white w-fit py-2 px-3 border rounded-md block text-xl text-center font-bold flex items-center justify-center flex-row absolute m-auto start-0 end-0 -bottom-6">
@@ -31,31 +31,31 @@
             <div class="flex justify-between items-stretch mb-3 text-black-800 text-sm gap-1">
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
-                        <img src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
+                        <img loading="lazy" src="{{ Vite::asset('resources/images/hotel icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">{{__('index.Accommodation')}}</span>
                 </div>
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
-                        <img src="{{ Vite::asset('resources/images/flight icon.svg')}}" class="w-full h-full object-cover aspect-square">
+                        <img loading="lazy" src="{{ Vite::asset('resources/images/flight icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">{{__('index.Aviation')}}</span>
                 </div>
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
-                        <img src="{{ Vite::asset('resources/images/evisa icon.svg')}}" class="w-full h-full object-cover aspect-square">
+                        <img loading="lazy" src="{{ Vite::asset('resources/images/evisa icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">{{__('index.Visa')}}</span>
                 </div>
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
-                        <img src="{{ Vite::asset('resources/images/transport icon.svg')}}" class="w-full h-full object-cover aspect-square">
+                        <img loading="lazy" src="{{ Vite::asset('resources/images/transport icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">{{__('index.Mobility')}}</span>
                 </div>
                 <div class="flex flex-col items-center w-1/5">
                     <div class="bg-black-50 aspect-square w-full rounded-xl mb-1 overflow-hidden p-1">
-                        <img src="{{ Vite::asset('resources/images/mourchid icon.svg')}}" class="w-full h-full object-cover aspect-square">
+                        <img loading="lazy" src="{{ Vite::asset('resources/images/mourchid icon.svg')}}" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="opacity-60">{{__('index.Framers')}}</span>
                 </div>

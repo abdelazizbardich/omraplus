@@ -113,9 +113,9 @@
                                     <span>{{ __('index.Pay by bank transfer') }}</span>
                                 </div>
                                 <div class="flex gap-2">
-                                    <img src="{{ Vite::asset('resources/images/wafa-bank.jpg') }}" alt="cachplus logo"
+                                    <img loading="lazy" src="{{ Vite::asset('resources/images/wafa-bank.jpg') }}" alt="cachplus logo"
                                         class="h-12 aspect-video object-contain p-1">
-                                    <img src="{{ Vite::asset('resources/images/popularbank.jpg') }}" alt="cachplus logo"
+                                    <img loading="lazy" src="{{ Vite::asset('resources/images/popularbank.jpg') }}" alt="cachplus logo"
                                         class="h-12 aspect-video object-contain p-1">
 
                                 </div>
@@ -123,7 +123,7 @@
                             <div class="collapse-content text-sm">
                                 <div class="flex gap-3 mb-3">
                                     <div class="w-1/2">
-                                        <img src="{{ Vite::asset('resources/images/wafa-bank.jpg') }}"
+                                        <img loading="lazy" src="{{ Vite::asset('resources/images/wafa-bank.jpg') }}"
                                             alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
                                         <span class="block" dir="rtl"><span
                                                 class="font-bold">{{ __('index.Bank name') }}:</span>Wafa
@@ -133,7 +133,7 @@
                                             123456789</span>
                                     </div>
                                     <div class="w-1/2">
-                                        <img src="{{ Vite::asset('resources/images/popularbank.jpg') }}"
+                                        <img loading="lazy" src="{{ Vite::asset('resources/images/popularbank.jpg') }}"
                                             alt="cachplus logo" class="h-12 aspect-video object-contain p-1">
                                         <span class="block" dir="rtl"><span
                                                 class="font-bold">{{ __('index.Bank name') }}:</span>Wafa
@@ -159,7 +159,7 @@
                                     <span>{{ __('index.Pay by Card') }}</span>
                                 </div>
                                 <div class="flex gap-2">
-                                    <img src="{{ Vite::asset('resources/images/credit-card.jpg') }}" alt="cachplus logo"
+                                    <img loading="lazy" src="{{ Vite::asset('resources/images/credit-card.jpg') }}" alt="cachplus logo"
                                         class="h-12 aspect-video object-contain p-1">
                                 </div>
                             </label>
@@ -200,7 +200,7 @@
                                 <div class="flex items-center">
                                     <span>{{ __('index.Pay via Cashplus') }}</span>
                                 </div>
-                                <img src="{{ Vite::asset('resources/images/cachplus.jpg') }}" alt="cachplus logo"
+                                <img loading="lazy" src="{{ Vite::asset('resources/images/cachplus.jpg') }}" alt="cachplus logo"
                                     class="h-12 aspect-video object-contain p-1">
                             </label>
                             <div class="collapse-content text-sm">
@@ -219,7 +219,7 @@
                 <div class="border border-black-200 bg-white rounded-3xl p-6 mb-6 w-full">
                     <div class="flex items-center gap-6 mb-3">
                         <div class="w-4/12">
-                            <img src="{{ @$flight->mainPhoto->url }}"
+                            <img loading="lazy" src="{{ @$flight->mainPhoto->url }}"
                                 class="rounded-2xl w-full aspect-square object-cover" alt="offer photo">
                         </div>
                         <div class="w-8/12">

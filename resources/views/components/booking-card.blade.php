@@ -11,7 +11,7 @@
         <span class="ps-3 font-normal inline-block">{{ $booking->hotelMecca->distance }} {{__('index.Meters from the Haram')}}</span>
         @if($booking->is_recommended)
             <span class="flex-1 w-full flex justify-end ps-3 font-normal inline-block">
-                <img src="{{ Vite::asset('resources/images/medal.webp') }}" class="aspect-square h-full object-contain" alt="{{__('index.recommended')}}">
+                <img loading="lazy" src="{{ Vite::asset('resources/images/medal.webp') }}" class="aspect-square h-full object-contain" alt="{{__('index.recommended')}}">
             </span>
         @endif
     </div>
@@ -21,7 +21,7 @@
                 <div class="flex-1 h-full">
                     <div class="flex w-full gap-x-3 mb-2">
                         <div class="flex flex-1 gap-3 px-3">
-                            <img src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="hotel-place-photo aspect-square h-20" alt="{{__('index.Hotel in')}} {{__('index.Mecca')}}">
+                            <img loading="lazy" src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="hotel-place-photo aspect-square h-20" alt="{{__('index.Hotel in')}} {{__('index.Mecca')}}">
                             <div class="flex-1">
                                 <span class="block text-sm mb-1 text-nowrap">{{__('index.Hotel in')}} <span class="font-bold">{{ __('index.Mecca') }}</span>:</span>
                                 <span class="block px-3 py-2 text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">{{ $booking->hotelMecca->name }}</span>
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="flex flex-1 gap-3 px-3">
-                            <img src="{{ Vite::asset('resources/images/media-hotel.webp') }}" class="hotel-place-photo aspect-square h-20" alt="{{__('index.Hotel in')}} {{ __('index.Medina')}}">
+                            <img loading="lazy" src="{{ Vite::asset('resources/images/media-hotel.webp') }}" class="hotel-place-photo aspect-square h-20" alt="{{__('index.Hotel in')}} {{ __('index.Medina')}}">
                             <div class="flex-1">
                                 <span class="block text-sm mb-1 text-nowrap">{{__('index.Hotel in')}} <span class="font-bold">{{ __('index.Medina') }}</span>:</span>
                                 <span class="block px-3 py-2 text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">{{ $booking->hotelMedina->name }}</span>

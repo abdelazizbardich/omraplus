@@ -75,7 +75,7 @@
     <div class="header">
       <div class="logo">
         <a href="{{ config('app.url') }}" style="color: white; text-decoration: none;">
-          <img src="{{ Vite::asset('resources/images/logo-w.png') }}" alt="{{ config('app.name') }}" style="max-width: 100px; height: auto;">
+          <img loading="lazy" src="{{ Vite::asset('resources/images/logo-w.png') }}" alt="{{ config('app.name') }}" style="max-width: 100px; height: auto;">
         </a>
       </div>
       <h1>{{__('index.New Contact Form Submission')}}</h1>

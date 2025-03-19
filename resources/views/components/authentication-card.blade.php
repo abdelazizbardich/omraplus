@@ -1,7 +1,7 @@
 <div class="bg-white w-screen h-screen">
     <div class="flex h-full">
         <div class="w-3/5 relative flex items-center justify-center">
-            <img src="{{  Vite::asset('resources/images/mission-1.jpg')}}" alt="" class="w-full h-full object-cover opacity-15 absolute start-0 top-0">
+            <img loading="lazy" src="{{  Vite::asset('resources/images/mission-1.jpg')}}" alt="" class="w-full h-full object-cover opacity-15 absolute start-0 top-0">
             <div class="w-11/12 mx-auto">
                 <h1 class="drop-shadow-md text-4xl leading-relaxed mb-5 font-bold">{{ __('index.hero header title') }} <br> {{ __('index.hero header title 2') }}</h1>
                 <p class="text-xl leading-relaxed">{{ __('index.hero header description') }}</p>
