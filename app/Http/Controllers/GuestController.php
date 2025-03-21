@@ -218,6 +218,16 @@ class GuestController extends Controller
         return redirect()->route('contact-us')->with('success', 'Message sent successfully');
     }
 
+    // search for  flights
+    public function search(Request $request){
+        $flights = Flight::with(['category', 'photos', 'programs', 'programs.prices'])
+        ->orderBy('id', 'desc')->get();
+        $data = [
+            'flights' => $flights
+        ];
+        return view('guest.fligths', $data);
+    }
+
 
     public function visa(){
         return view('guest.visa');
@@ -247,5 +257,9 @@ class GuestController extends Controller
     }
     public function getToKnowMedina(){
         return view('guest.get-to-know-medina');
+    }
+
+    public function hajjGuide(){
+        return view('guest.hajj-guide');
     }
 }

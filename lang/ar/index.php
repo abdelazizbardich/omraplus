@@ -374,5 +374,6 @@ return [
 	"All rights reserved" => "جميع الحقوق محفوظة",
 	"Message from contact page" => "رسالة من صفحة الاتصال",
 	"Message sent successfully" => "تم إرسال الرسالة بنجاح",
-	"faqs" => "FAQs"
+	"faqs" => "FAQs",
+	"Fligths" => "الرحلات"
 ];

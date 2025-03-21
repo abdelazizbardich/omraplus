@@ -16,6 +16,7 @@
             :description="__('index.Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('index.24/7 support service')"></x-text-offer-card>
     </div>
 </div>
+@if($hadjOffers->count() > 0)
 <x-spacer></x-spacer>
 <div class="container m-auto flex justify-between items-start">
     <x-title :title="__('index.Hajj Agency: The best offers and distinguished services for pilgrims to the House of Allah')"
@@ -34,6 +35,8 @@
     </div>
 </div>
 <x-spacer></x-spacer>
+@endif
+@if($umrahOffers->count() > 0)
 <x-spacer></x-spacer>
 <div class="bg-blue-50">
     <x-spacer></x-spacer>
@@ -54,6 +57,7 @@
     <x-spacer></x-spacer>
 </div>
 <x-spacer></x-spacer>
+@endif
 <x-spacer></x-spacer>
 <div class="container m-auto">
     <x-help-desk></x-help-desk>

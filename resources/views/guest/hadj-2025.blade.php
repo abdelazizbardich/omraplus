@@ -1,6 +1,6 @@
 <x-guest-layout>
 <x-header active=""></x-header>
-<x-page-header :title="__('index.Umrah guide')" :breadcrumbs="['Home', 'Umrah guide']" />
+<x-page-header :title="__('index.Hadj 2025')" :breadcrumbs="['Home', 'Hadj 2025']" />
 <x-spacer></x-spacer>
 <div class="container m-auto">
     <div role="tablist" class="tabs tabs-lifted">

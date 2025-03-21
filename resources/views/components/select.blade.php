@@ -1,5 +1,5 @@
 <div class="grid items-center relative">
-  <select id="{{ $id }}" name="{{ $name }}" class="text-black-500 bg-none appearance-none row-start-1 col-start-1 bg-slate-50 w-full rounded-lg border-none py-3 px-3">
+  <select id="{{ $id }}" name="{{ $name }}" class="text-black-500 bg-none appearance-none row-start-1 col-start-1 bg-slate-50 w-full rounded-lg border-none py-3 px-3" @if($required) required @endif>
     <option>{{$label}}</option>
     @foreach ($options as $option)
       <option data-key="{{ @$option['key'] }}" value="{{$option['id']}}">{{$option['value']}}</option>

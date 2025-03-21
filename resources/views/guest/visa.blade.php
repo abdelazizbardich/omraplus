@@ -1,8 +1,6 @@
 <x-guest-layout>
 <x-header active=""></x-header>
-<x-page-header :title="__('index.Umrah guide')" :breadcrumbs="[__('index.Home'), __('index.Umrah guide')]" />
-<x-spacer></x-spacer>
-<x-title :title="''" :suTitle="'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى.'"></x-title>
+<x-page-header :title="__('index.Request e-visa')" :breadcrumbs="['Home', 'Request e-visa']" />
 <x-spacer></x-spacer>
 <div class="container m-auto">
     <div role="tablist" class="tabs tabs-lifted">

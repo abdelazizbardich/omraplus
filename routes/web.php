@@ -7,6 +7,7 @@ Route::get('/lang/{locale}', function ($locale) { })->name('lang');
 
 Route::get('/', [App\Http\Controllers\GuestController::class, 'home'])->name('home');
 Route::get('/flight/{flight:id}', [App\Http\Controllers\GuestController::class, 'flight'])->name('flight');
+Route::post('/flights', [App\Http\Controllers\GuestController::class, 'search'])->name('flights.search');
 Route::get('/about-us', [App\Http\Controllers\GuestController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUs'])->name('contact-us');
 Route::post('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUsSend'])->name('contact-us-send');
