@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        var lang = "{{ str_replace('_', '-', app()->getLocale()) }}";
+        var lang = "{{ str_replace('_', '-', $formLang ? $formLang : app()->getLocale()) }}";
     </script>
     <meta name="description" content="{{ __('index.main description') }}">
     <meta name="keywords" content="keyword1, keyword2, keyword3">

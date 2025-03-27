@@ -3,31 +3,44 @@
         <div class="w-2/5">
             <div class="bg-white rounded-xl shadow-lg px-3 @if(isset($edit)) border border-blue-950 @endif py-3">
                 @if(isset($edit))
-                    <form action="{{ route('categories.update', $category->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('categories.update', $category->id) }}" method="post" enctype="multipart/form-data" dir="{{getLanguageDirection($formLang)}}">
                         @csrf
-                        <div class="mb-3">
-                            <label class="input input-bordered flex items-center gap-2">
-                                {{__('index.Name')}}:
+                        <div class="mb-3 flex gap-2">
+                            <label class="text-nowrap input input-bordered flex items-center gap-2 w-2/6">
+                                {{__('index.language')}}:
+                                <select name="lang" class="form-lang-select grow border-none focus:shadow-none shadow-none" value="{{ old('lang', $category->lang) }}">
+                                    <option value="ar" @if(old('lang', $category->lang) === "ar") selected @endif>{{__('index.ar')}}</option>
+                                    <option value="fr" @if(old('lang', $category->lang) === "fr") selected @endif>{{__('index.fr')}}</option>
+                                </select>
+                            </label>
+                            <label class="input input-bordered flex items-center gap-2 w-4/6">
+                                {{__('index.Name',[],$formLang)}}:
                                 <input type="text" value="{{ $category->name }}" name="name" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                     <div class="flex justify-between">
-                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
-                            <a href="{{ route('categories') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
+                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit',[],$formLang)}}</button>
+                            <a href="{{ route('categories') }}" type="submit" class="btn btn-wide">{{__('index.Cansel',[],$formLang)}}</a>
                         </div>
                     </form>
                 @else
-                    <form action="{{ route('categories.save') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('categories.save') }}" method="post" enctype="multipart/form-data" dir="{{getLanguageDirection($formLang)}}">
                         @csrf
-                        <div class="mb-3">
+                        <div class="mb-3 flex gap-2">
+                            <label class="text-nowrap input input-bordered flex items-center gap-2 w-2/6">
+                                {{__('index.language',[],$formLang)}}: 
+                                <select name="lang" class="form-lang-select grow border-none focus:shadow-none shadow-none" value="{{ old('lang', $formLang) }}">
+                                    <option value="ar" @if(old('lang', $formLang) === "ar") selected @endif>{{__('index.ar',[],$formLang)}}</option>
+                                    <option value="fr" @if(old('lang', $formLang) === "fr") selected @endif>{{__('index.fr',[],$formLang)}}</option>
+                                </select>
+                            </label>
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('index.Name')}}:
-                                <input type="text" name="name" class="grow border-none focus:shadow-none shadow-none"
-                                    placeholder="" />
+                                {{__('index.Name',[],$formLang)}}:
+                                <input type="text" name="name" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                         <button type="submit"
-                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
+                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add',[],$formLang)}}</button>
                     </form>
                 @endif
             </div>

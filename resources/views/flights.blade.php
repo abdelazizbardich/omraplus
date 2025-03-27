@@ -12,38 +12,45 @@
             <div class="collapse-content bg-white rounded-xl rounded-t-none shadow-lg">
                 <div class="w-full p-0 px-3 py-3 pt-6">
                     @if(isset($edit))
-                        <form action="{{ route('flights.update', $flight->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('flights.update', $flight->id) }}" method="post" enctype="multipart/form-data" dir="{{getLanguageDirection($formLang)}}">
                             @csrf
-                            <div class="mb-3">
-                                <label class="input input-bordered inpu flex items-center gap-2">
-                                    {{__('index.Title')}}:
+                            <div class="mb-3 flex gap-2">
+                                <label class="text-nowrap input input-bordered flex items-center gap-2 w-2/6">
+                                    {{__('index.language',[],$formLang)}}:
+                                    <select name="lang" class="form-lang-select grow border-none focus:shadow-none shadow-none" value="{{ old('lang', $flight->lang) }}">
+                                        <option value="ar" @if(old('lang', $flight->type) === "ar") selected @endif>{{__('index.ar',[],$formLang)}}</option>
+                                        <option value="fr" @if(old('lang', $flight->type) === "fr") selected @endif>{{__('index.fr',[],$formLang)}}</option>
+                                    </select>
+                                </label>
+                                <label class="input input-bordered inpu flex items-center gap-2 w-4/6">
+                                    {{__('index.Title',[],$formLang)}}:
                                     <input type="text" id="fligth-title" name="title" value="{{ old('title', $flight->title) }}"
                                         class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                                 </label>
                             </div>
                             <div class="mb-3 grid grid-cols-3 gap-4 items-center">
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Going date')}}:
+                                    {{__('index.Going date',[],$formLang)}}:
                                     <input type="date" name="going_date" value="{{ old('going_date', $flight->going_date) }}"
                                         class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Return date')}}:
+                                    {{__('index.Return date',[],$formLang)}}:
                                     <input type="date" name="return_date" value="{{ old('return_date', $flight->return_date) }}"
                                         class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Type')}}:
+                                    {{__('index.Type',[],$formLang)}}:
                                     <select name="type" class="grow border-none focus:shadow-none shadow-none"
                                         value="{{ old('type', $flight->type) }}">
                                         <option value="umrah" @if(old('type', $flight->type) === "umrah") selected @endif>
-                                            {{__('index.Omra')}}</option>
+                                            {{__('index.Omra',[],$formLang)}}</option>
                                         <option value="hajj" @if(old('type', $flight->type) === "hajj") selected @endif>
-                                            {{__('index.Hajj')}}</option>
+                                            {{__('index.Hajj',[],$formLang)}}</option>
                                     </select>
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Category')}}:
+                                    {{__('index.Category',[],$formLang)}}:
                                     <select name="category" class="grow border-none focus:shadow-none shadow-none">
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}"
@@ -53,7 +60,7 @@
                                     </select>
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Aireline')}}:
+                                    {{__('index.Aireline',[],$formLang)}}:
                                     <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
                                         @foreach ($airelines as $aireline)
                                             <option value="{{ $aireline->id }}"
@@ -63,61 +70,68 @@
                                 </label>
                                 <div class="form-control">
                                     <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
-                                        <span class="label-text">{{__('index.Recomanded')}}</span>
+                                        <span class="label-text">{{__('index.Recomanded',[],$formLang)}}</span>
                                         <input type="checkbox" class="checkbox" checked="{{$flight->is_recommended == 1}}" name="is_recommended" />
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('index.Primary photo')}}
+                                        {{__('index.Primary photo',[],$formLang)}}
                                         <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('index.Fligth photos')}}
+                                        {{__('index.Fligth photos',[],$formLang)}}
                                         <input type="file" name="fligth_photos[]" class="grow w-full max-w-xs" multiple />
                                     </label>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="mb-1 block">{{__('index.Description')}}:</label>
-                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">{{ old('description', $flight->description) }}</textarea>
+                                <label class="mb-1 block">{{__('index.Description',[],$formLang)}}:</label>
+                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description',[],$formLang)}}" rows="12" class="textarea textarea-bordered w-full text-small">{{ old('description', $flight->description) }}</textarea>
                                 </div>
                                 <div class="flex justify-start gap-3">
-                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
-                                    <a href="{{ route('flights') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
+                                    <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit',[],$formLang)}}</button>
+                                    <a href="{{ route('flights') }}" type="submit" class="btn btn-wide">{{__('index.Cansel',[],$formLang)}}</a>
                                 </div>
                             </form>
                     @else
-                        <form action="{{ route('flights.save') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('flights.save') }}" method="post" enctype="multipart/form-data" dir="{{getLanguageDirection($formLang)}}">
                             @csrf
-                            <div class="mb-3">
-                                <label class="input input-bordered inpu flex items-center gap-2">
-                                    {{__('index.Title')}}:
+                            <div class="mb-3 flex gap-2">
+                                <label class="text-nowrap input input-bordered flex items-center gap-2 w-2/6">
+                                    {{__('index.language',[],$formLang)}}:
+                                    <select name="lang" class="form-lang-select grow border-none focus:shadow-none shadow-none" value="{{ old('lang') }}">
+                                        <option value="ar" @if(old('lang', $formLang) === "ar") selected @endif>{{__('index.ar',[],$formLang)}}</option>
+                                        <option value="fr" @if(old('lang', $formLang) === "fr") selected @endif>{{__('index.fr',[],$formLang)}}</option>
+                                    </select>
+                                </label>
+                                <label class="input input-bordered inpu flex items-center gap-2 w-4/6">
+                                    {{__('index.Title',[],$formLang)}}:
                                     <input type="text" id="fligth-title" name="title" value="{{ old('title') }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                                 </label>
                             </div>
                             <div class="mb-3 grid grid-cols-3 gap-4 items-center">
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Going date')}}:
+                                    {{__('index.Going date',[],$formLang)}}:
                                     <input type="date" name="going_date" value="{{ old('going_date') }}" class="grow border-none focus:shadow-none shadow-none"
                                         placeholder="" />
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Return date')}}:
+                                    {{__('index.Return date',[],$formLang)}}:
                                     <input type="date" name="return_date" value="{{ old('return_date') }}" class="grow border-none focus:shadow-none shadow-none"
                                         placeholder="" />
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Type')}}:
+                                    {{__('index.Type',[],$formLang)}}:
                                     <select name="type" class="grow border-none focus:shadow-none shadow-none">
-                                        <option value="umrah" @if(old('type') === 'umrah') selected @endif>{{__('index.Omra')}}</option>
-                                        <option value="hajj" @if(old('type') === 'hajj') selected @endif>{{__('index.Hajj')}}</option>
+                                        <option value="umrah" @if(old('type') === 'umrah') selected @endif>{{__('index.Omra',[],$formLang)}}</option>
+                                        <option value="hajj" @if(old('type') === 'hajj') selected @endif>{{__('index.Hajj',[],$formLang)}}</option>
                                     </select>
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Category')}}:
+                                    {{__('index.Category',[],$formLang)}}:
                                     <select name="category" class="grow border-none focus:shadow-none shadow-none">
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}" @if(old('category') == $category->id) selected @endif>{{ $category->name }}</option>
@@ -125,7 +139,7 @@
                                     </select>
                                 </label>
                                 <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Aireline')}}:
+                                    {{__('index.Aireline',[],$formLang)}}:
                                     <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
                                         @foreach ($airelines as $aireline)
                                             <option value="{{ $aireline->id }}" @if(old('aireline') == $aireline->id) selected @endif>{{ $aireline->name }}</option>
@@ -134,29 +148,29 @@
                                 </label>
                                 <div class="form-control">
                                     <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
-                                        <span class="label-text">{{__('index.Recomanded')}}</span>
+                                        <span class="label-text">{{__('index.Recomanded',[],$formLang)}}</span>
                                         <input type="checkbox" class="checkbox" name="is_recommended" checked="{{ old('is_recommended') }}" />
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('index.Primary photo')}}
+                                        {{__('index.Primary photo',[],$formLang)}}
                                         <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label class="input input-bordered flex items-center gap-2">
-                                        {{__('index.Fligth photos')}}
+                                        {{__('index.Fligth photos',[],$formLang)}}
                                         <input type="file" name="fligth_photos[]" class="grow w-full max-w-xs" multiple />
                                     </label>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="mb-1 block">{{__('index.Description')}}:</label>
-                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description')}}" rows="12" class="textarea textarea-bordered w-full text-small">{{ old('description') }}</textarea>
+                                <label class="mb-1 block">{{__('index.Description',[],$formLang)}}:</label>
+                                <textarea id="text-editor" name="description" placeholder="{{__('index.Fligth Description',[],$formLang)}}" rows="12" class="textarea textarea-bordered w-full text-small">{{ old('description') }}</textarea>
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
+                                <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add',[],$formLang)}}</button>
                             </div>
                         </form>
                     @endif

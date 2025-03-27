@@ -60,8 +60,10 @@ function getDiscountPrice($price,$discount,$type){
     return $price - $discount;
 }
 
-function getLanguageDirection(){
-    $lang = app()->getLocale();
+function getLanguageDirection($lang = null){
+    if(!$lang){
+        $lang = app()->getLocale();
+    }
     switch ($lang) {
         // Arabic variations
         case 'ar':

@@ -3,39 +3,46 @@
         <div class="w-2/5">
             <div class="bg-white rounded-xl shadow-lg px-3 py-3 @if(isset($edit)) border border-blue-950 @endif">
                 @if(isset($edit))
-                    <form action="{{ route('hotels.update', $hotel->id) }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="mb-3">
+                    <form action="{{ route('hotels.update', $hotel->id) }}" method="post" enctype="multipart/form-data" dir="{{getLanguageDirection($formLang)}}">
+                            @csrf
+                            <div class="mb-3 flex gap-2">
+                                <label class="text-nowrap input input-bordered flex items-center gap-2 w-2/6">
+                                    {{__('index.language',[],$formLang)}}:
+                                    <select name="lang" class="form-lang-select grow border-none focus:shadow-none shadow-none" value="{{ old('lang', $hotel->lang) }}">
+                                        <option value="ar" @if(old('lang', $hotel->type) === "ar") selected @endif>{{__('index.ar',[],$formLang)}}</option>
+                                        <option value="fr" @if(old('lang', $hotel->type) === "fr") selected @endif>{{__('index.fr',[],$formLang)}}</option>
+                                    </select>
+                                </label>
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('index.Name')}}:
+                                {{__('index.Name',[],$formLang)}}:
                                 <input type="text" name="name" value="{{ $hotel->name }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('index.Address')}}:
+                                {{__('index.Address',[],$formLang)}}:
                                 <input type="text" name="address" value="{{ $hotel->address }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                {{__('index.City')}}:
+                                {{__('index.City',[],$formLang)}}:
                                 <select name="city" class="grow border-none focus:shadow-none shadow-none">
-                                    <option value="macca" @if($hotel->city === 'macca') selected @endif>{{__('index.Mecca')}}</option>
-                                    <option value="medina" @if($hotel->city === 'medina') selected @endif>{{__('index.Medina')}}</option>
+                                    <option value="macca" @if($hotel->city === 'macca') selected @endif>{{__('index.Mecca',[],$formLang)}}</option>
+                                    <option value="medina" @if($hotel->city === 'medina') selected @endif>{{__('index.Medina',[],$formLang)}}</option>
                                 </select>
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2 text-nowrap">
-                                {{__('index.Distance from macca')}} ({{__('index.meter')}}):
+                                {{__('index.Distance from macca',[],$formLang)}} ({{__('index.meter',[],$formLang)}}):
                                 <input type="number" name="distance" value="{{ $hotel->distance }}" class="grow border-none focus:shadow-none shadow-none" placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3 flex gap-3">
                             <img src="{{ @$hotel->mainPhoto->url }}" alt="" class="h-12 aspect-square rounded-md object-cover">
                             <label class="w-full input input-bordered flex items-center gap-2">
-                                {{__('index.Primary photo')}}
+                                {{__('index.Primary photo',[],$formLang)}}
                                 <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
                             </label>
                         </div>
@@ -51,57 +58,64 @@
                             </div>
                         </div>
                         <div class="flex justify-between">
-                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
-                            <a href="{{ route('hotels') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
+                            <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit',[],$formLang)}}</button>
+                            <a href="{{ route('hotels') }}" type="submit" class="btn btn-wide">{{__('index.Cansel',[],$formLang)}}</a>
                         </div>
                     </form>
                 @else
-                    <form action="{{ route('hotels.save') }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="mb-3">
+                    <form action="{{ route('hotels.save') }}" method="post" enctype="multipart/form-data" dir="{{getLanguageDirection($formLang)}}">
+                            @csrf
+                            <div class="mb-3 flex gap-2">
+                                <label class="text-nowrap input input-bordered flex items-center gap-2 w-2/6">
+                                    {{__('index.language',[],$formLang)}}:
+                                    <select name="lang" class="form-lang-select grow border-none focus:shadow-none shadow-none" value="{{ old('lang', $formLang) }}">
+                                        <option value="ar" @if(old('lang', $formLang) === "ar") selected @endif>{{__('index.ar',[],$formLang)}}</option>
+                                        <option value="fr" @if(old('lang', $formLang) === "fr") selected @endif>{{__('index.fr',[],$formLang)}}</option>
+                                    </select>
+                                </label>
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('index.Name')}}:
+                                {{__('index.Name',[],$formLang)}}:
                                 <input type="text" name="name" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('index.Address')}}:
+                                {{__('index.Address',[],$formLang)}}:
                                 <input type="text" name="address" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                {{__('index.City')}}:
+                                {{__('index.City',[],$formLang)}}:
                                 <select name="city" class="grow border-none focus:shadow-none shadow-none">
-                                    <option value="{{__('index.macca')}}">{{__('index.Mecca')}}</option>
-                                    <option value="{{__('index.medina')}}">{{__('index.Medina')}}</option>
+                                    <option value="{{__('index.macca',[],$formLang)}}">{{__('index.Mecca',[],$formLang)}}</option>
+                                    <option value="{{__('index.medina',[],$formLang)}}">{{__('index.Medina',[],$formLang)}}</option>
                                 </select>
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2 text-nowrap">
-                                {{__('index.Distance from macca')}} ({{__('index.meter')}}):
+                                {{__('index.Distance from macca',[],$formLang)}} ({{__('index.meter',[],$formLang)}}):
                                 <input type="number" name="distance" class="grow border-none focus:shadow-none shadow-none"
                                     placeholder="" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('index.Primary photo')}}
+                                {{__('index.Primary photo',[],$formLang)}}
                                 <input type="file" name="primary_photo" class="grow w-full max-w-xs" />
                             </label>
                         </div>
                         <div class="mb-3">
                             <label class="input input-bordered flex items-center gap-2">
-                                {{__('index.Hotel photos')}}
+                                {{__('index.Hotel photos',[],$formLang)}}
                                 <input type="file" name="hotel_photos[]" class="grow w-full max-w-xs" multiple />
                             </label>
                         </div>
                         <button type="submit"
-                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
+                            class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add',[],$formLang)}}</button>
                     </form>
                 @endif
             </div>

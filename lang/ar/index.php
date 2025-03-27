@@ -375,5 +375,8 @@ return [
 	"Message from contact page" => "رسالة من صفحة الاتصال",
 	"Message sent successfully" => "تم إرسال الرسالة بنجاح",
 	"faqs" => "FAQs",
-	"Fligths" => "الرحلات"
+	"Fligths" => "الرحلات",
+	"language" => "اللغة",
+	"ar" => "العربية",
+	"fr" => "الفرنسية",
 ];

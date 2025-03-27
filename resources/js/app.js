@@ -199,4 +199,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
+    var formLangSelect = document.querySelector(".form-lang-select");
+    formLangSelect.addEventListener("change", function () {
+        var selectedLang = this.value;
+        window.location.href = window.location.origin+window.location.pathname+ "?l=" + selectedLang;
+    });
 });
