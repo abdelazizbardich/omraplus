@@ -16,7 +16,8 @@
         @endif
     </div>
     <div class="-mt-3 relative">
-        <form action="{{ route('checkout', $booking->id) }}" method="get">
+        <form action="{{ route('checkout') }}" method="post">
+            <input type="text" hidden name="program" value="{{ $booking->id }}">
             <div class="relative z-10 flex items-stretch justify-between w-full text-lg px-6 py-4 bg-white border border-black-200 rounded-xl shadow-md">
                 <div class="flex-1 h-full">
                     <div class="flex w-full gap-x-3 mb-2">

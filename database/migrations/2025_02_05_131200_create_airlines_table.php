@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('airlines', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            // en
+            $table->string('name_en');
+
+            // fr
+            $table->string('name_fr');
+
+            // ar
+            $table->string('name_ar');
             $table->timestamps();
         });
     }

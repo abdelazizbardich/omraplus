@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Text editor
     tinymce.init({
-        selector: "#text-editor",
+        selector: "#text-editor_en,#text-editor_fr,#text-editor_ar",
         license_key: "gpl",
         directionality: lang === "ar" ? "rtl" : "ltr",
         language: "ar",
@@ -200,9 +200,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    var formLangSelect = document.querySelector(".form-lang-select");
-    formLangSelect.addEventListener("change", function () {
-        var selectedLang = this.value;
-        window.location.href = window.location.origin+window.location.pathname+ "?l=" + selectedLang;
-    });
+    
 });

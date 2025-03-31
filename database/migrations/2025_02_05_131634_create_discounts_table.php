@@ -13,8 +13,15 @@ return new class extends Migration
     {
         Schema::create('discounts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            // en
+            $table->string('name_en');
+            // fr
+            $table->string('name_fr');
+            // ar
+            $table->string('name_ar');
+
             $table->string('code');
+
             $table->enum('type', ['percentage', 'fixed']);
             $table->decimal('value', 10, 2)->default(0);
             $table->unsignedBigInteger('program_id');

@@ -20,12 +20,18 @@ class CategoryController extends Controller
     public function save(Request $request){
 
         $request->validate([
-            'name' => 'required',
+            'name_en' => 'required|string|max:255',
+            'name_ar' => 'required|string|max:255',
+            'name_fr' => 'required|string|max:255',
         ]);
 
         Category::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name)
+            'name_en' => $request->name_en,
+            'name_ar' => $request->name_ar,
+            'name_fr' => $request->name_fr,
+            'slug_en' => Str::slug($request->name_en),
+            'slug_ar' => Str::slug($request->name_ar),
+            'slug_fr' => Str::slug($request->name_fr),
         ]);
 
         return redirect()->route('categories')->with('success', 'Category created successfully.');
@@ -44,12 +50,18 @@ class CategoryController extends Controller
 
     public function update(Request $request, Category $category){
         $request->validate([
-            'name' => 'required',
+            'name_en' => 'required',
+            'name_ar' => 'required',
+            'name_fr' => 'required',
         ]);
 
         $category->update([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name)
+            'name_en' => $request->name_en,
+            'name_ar' => $request->name_ar,
+            'name_fr' => $request->name_fr,
+            'slug_en' => Str::slug($request->name_en),
+            'slug_ar' => Str::slug($request->name_ar),
+            'slug_fr' => Str::slug($request->name_fr),
         ]);
 
         return redirect()->route('categories')->with('success', 'Category updated successfully.');

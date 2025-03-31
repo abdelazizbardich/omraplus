@@ -13,15 +13,27 @@ return new class extends Migration
     {
         Schema::create('flights', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug')->unique();
+
+            // en
+            $table->string('title_en');
+            $table->string('slug_en')->unique();
+            $table->text('description_en')->nullable();
+            // fr
+            $table->string('title_fr');
+            $table->string('slug_fr')->unique();
+            $table->text('description_fr')->nullable();
+            // ar
+            $table->string('title_ar');
+            $table->string('slug_ar')->unique();
+            $table->text('description_ar')->nullable();
+
             $table->date('going_date');
             $table->date('return_date');
-            $table->text('description')->nullable();
             $table->boolean('is_recommended')->default(false);
             $table->enum('type', ['hajj', 'umrah']);
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('airline_id');
+
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

@@ -17,13 +17,17 @@ class RoomController extends Controller
     }
 
     public function save(Request $request){
-        // Validate the request...
+        // Validate the request... (name_en or name_ar or name_fr is required)
         $request->validate([
-            'name' => 'required|max:255'
+            'name_en' => 'required|string|max:255',
+            'name_ar' => 'required|string|max:255',
+            'name_fr' => 'required|string|max:255',
         ]);
 
         Room::create([
-            'name' => $request->name
+            'name_en' => $request->name_en,
+            'name_ar' => $request->name_ar,
+            'name_fr' => $request->name_fr,
         ]);
         return redirect()->route('rooms');
     }
@@ -37,9 +41,24 @@ class RoomController extends Controller
         ];
         return view('rooms',$data);
     }
-    public function update(Room $room){
-        dd($room);
+    public function update(Room $room, Request $request){
+        // Validate the request... (name_en or name_ar or name_fr is required)
+        $request->validate([
+            'name_en' => 'required|string|max:255',
+            'name_ar' => 'required|string|max:255',
+            'name_fr' => 'required|string|max:255',
+        ]);
+
+        $room->update([
+            'name_en' => $request->name_en,
+            'name_ar' => $request->name_ar,
+            'name_fr' => $request->name_fr,
+        ]);
+        return redirect()->route('rooms');
+
     }
+
+    
     public function delete(Room $room){
         $room->delete();
         return redirect()->route('rooms');

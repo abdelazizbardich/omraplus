@@ -26,7 +26,7 @@
             </span>
         </div>
         <div class="relative z-20  w-full mx-auto">
-            <form action="{{ route('flights.search') }}" method="post" class="rounded-2xl w-12/12 mx-auto bg-emerald-500 bg-gradient-to-l from-emerald-550 to-emerald-500 flex items-center p-6 flex items-center justify-between shadow-2xl">
+            <form action="{{ route('checkout') }}" method="post" class="rounded-2xl w-12/12 mx-auto bg-emerald-500 bg-gradient-to-l from-emerald-550 to-emerald-500 flex items-center p-6 flex items-center justify-between shadow-2xl">
                 @csrf
                 <div class=" text-2xl font-bold text-nowrap text-white">
                     {{__('index.fast booking')}}
@@ -37,8 +37,11 @@
                 <div class="w-2/12">
                     <x-select :id="'count'" name="month" :label="__('index.travlers count')" :required=true :options='[["id"=>1,"value"=>1],["id"=>2,"value"=>2],["id"=>3,"value"=>3],["id"=>4,"value"=>4],["id"=>5,"value"=>5],["id"=>6,"value"=>6],["id"=>7,"value"=>7],["id"=>8,"value"=>8]]'></x-select>
                 </div>
-                <div class="w-4/12">
-                    <x-select :id="'program'" name="month" :label="__('index.programe')" :required=true :options=$programs></x-select>
+                <div class="w-2/12">
+                    <x-select :id="'room'" name="room" :label="__('index.Select room type')" :required=true :options=$rooms></x-select>
+                </div>
+                <div class="w-3/12">
+                    <x-select :id="'program'" name="program" :label="__('index.programe')" :required=true :options=$programs></x-select>
                 </div>
                 <div class="w-1/12">
                     <button class="btn border-none w-full bg-blue-950 px-6 py-3 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg hover:bg-blue-1000">{{ __('index.search') }}</button>
@@ -55,8 +58,6 @@
         id = event.target.value;
         options = document.querySelectorAll('select#program option');
         options.forEach(option => {
-            console.log(option.dataset.key);
-            
             if(option.dataset.key){
                 if (option.dataset.key == id) {
                     option.style.display = 'block';

@@ -18,11 +18,15 @@ class AirlineController extends Controller
 
     public function save(Request $request){
         $request->validate([
-            'name' => 'required'
+            'name_en' => 'required|string|max:255',
+            'name_ar' => 'required|string|max:255',
+            'name_fr' => 'required|string|max:255'
         ]);
 
         Airline::create([
-            'name' => $request->name
+            'name_en' => $request->name_en,
+            'name_ar' => $request->name_ar,
+            'name_fr' => $request->name_fr
         ]);
 
         return redirect()->route('airlines')->with('success', 'Airline created successfully');
@@ -39,11 +43,15 @@ class AirlineController extends Controller
     }
     public function update(Airline $airline, Request $request){
         $request->validate([
-            'name' => 'required'
+            'name_en' => 'required|string|max:255',
+            'name_ar' => 'required|string|max:255',
+            'name_fr' => 'required|string|max:255'
         ]);
 
         $airline->update([
-            'name' => $request->name
+            'name_en' => $request->name_en,
+            'name_ar' => $request->name_ar,
+            'name_fr' => $request->name_fr
         ]);
 
         return redirect()->route('airlines')->with('success', 'Airline updated successfully');

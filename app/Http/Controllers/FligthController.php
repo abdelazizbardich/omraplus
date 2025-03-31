@@ -27,14 +27,14 @@ class FligthController extends Controller
     public function save(Request $request)
     {
         $request->validate([
-            "title" => "required",
+            "title_en" => "required",
+            "title_ar" => "required",
+            "title_fr" => "required",
             "going_date" => "required",
             "return_date" => "required",
             "type" => "required",
             "category" => "required",
-            "aireline" => "required",
-            "is_recommended" => "required",
-            "description" => "required",
+            "aireline" => "required"
         ]);
 
         // Validate file primary_photo and hotel_photos
@@ -45,15 +45,21 @@ class FligthController extends Controller
 
         // Save data to database
         $flight = Flight::create([
-            "title" => $request->title,
-            "slug" => STR::slug($request->title),
+            "title_en" => $request->title_en,
+            "title_ar" => $request->title_ar,
+            "title_fr" => $request->title_fr,
+            "slug_en" => STR::slug($request->title_en),
+            "slug_ar" => STR::slug($request->title_ar),
+            "slug_fr" => STR::slug($request->title_fr),
             "going_date" => $request->going_date,
             "return_date" => $request->return_date,
             "type" => $request->type,
             "category_id" => $request->category,
             "airline_id" => $request->aireline,
             "is_recommended" => $request->is_recommended === "on",
-            "description" => $request->description
+            "description_en" => $request->description_en,
+            "description_ar" => $request->description_ar,
+            "description_fr" => $request->description_fr
         ]);
 
         $primary_photo = $request->file('primary_photo')->store('flights', ["disk" => "public"]);
@@ -98,28 +104,34 @@ class FligthController extends Controller
     public function update(Request $request, Flight $flight)
     {
         $request->validate([
-            "title" => "required",
+            "title_en" => "required",
+            "title_ar" => "required",
+            "title_fr" => "required",
             "going_date" => "required",
             "return_date" => "required",
             "type" => "required",
             "category" => "required",
             "aireline" => "required",
-            "is_recommended" => "required",
-            "description" => "required",
         ]);
 
         
         // Save data to database
         $flight->update([
-            "title" => $request->title,
-            "slug" => STR::slug($request->title),
+            "title_en" => $request->title_en,
+            "title_ar" => $request->title_ar,
+            "title_fr" => $request->title_fr,
+            "slug_en" => STR::slug($request->title_en),
+            "slug_ar" => STR::slug($request->title_ar),
+            "slug_fr" => STR::slug($request->title_fr),
             "going_date" => $request->going_date,
             "return_date" => $request->return_date,
             "type" => $request->type,
             "category_id" => $request->category,
             "airline_id" => $request->aireline,
             "is_recommended" => $request->is_recommended === "on",
-            "description" => $request->description
+            "description_en" => $request->description_en,
+            "description_ar" => $request->description_ar,
+            "description_fr" => $request->description_fr
         ]);
         
         if($request->hasFile('primary_photo')){

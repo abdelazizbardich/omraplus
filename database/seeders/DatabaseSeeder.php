@@ -19,16 +19,16 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@email.com',
             'password' => bcrypt('password')
         ]);
-        $this->call([
-            CategorySeeder::class,
-            AirlineSeeder::class,
-            FlightSeeder::class,
-            HotelSeeder::class,
-            ProgramSeeder::class,
-            DiscountSeeder::class,
-            RoomSeeder::class,
-            ProgramPriceSeeder::class,
-            PhotoSeeder::class
-        ]);
+        // $this->call([
+        //     CategorySeeder::class,
+        //     AirlineSeeder::class,
+        //     FlightSeeder::class,
+        //     HotelSeeder::class,
+        //     ProgramSeeder::class,
+        //     DiscountSeeder::class,
+        //     RoomSeeder::class,
+        //     ProgramPriceSeeder::class,
+        //     PhotoSeeder::class
+        // ]);
     }
 }

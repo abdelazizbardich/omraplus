@@ -138,6 +138,10 @@ function getLanguageDirection($lang = null){
     }
 }
 
+function getLocaleSufix(){
+    return '_'.app()->getLocale();
+}
+
 function getRoles(){
     return [
         'admin',

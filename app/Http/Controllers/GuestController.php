@@ -23,14 +23,15 @@ class GuestController extends Controller
         $data = [
             "hadjOffers" => $hadjOffers,
             "umrahOffers" => $umrahOffers,
-            "umrahs" => Flight::select('id','title as value')->where('type', 'umrah')->orderBy('id', 'desc')->get()->toArray(),
+            "umrahs" => Flight::select('id','title'.getLocaleSufix().' as value')->where('type', 'umrah')->orderBy('id', 'desc')->get()->toArray(),
             "programs" => Program::orderBy('id', 'desc')->get()->map(function($program){
                 return [
                     'id' => $program['id'],
                     'value' => $program->name(),
                     'key' => $program->flight_id
                 ];
-            })->toArray()
+            })->toArray(),
+            "rooms" => Room::select('id','name'.getLocaleSufix().' as value')->orderBy('id', 'desc')->get()->toArray()
         ];
         return view('guest.welcome', $data);
     }
@@ -77,8 +78,12 @@ class GuestController extends Controller
         return view('guest.contact-us');
     }
 
-    public function checkout(Program $program, Request $request){
-        $request->validate(['room' => 'required|exists:rooms,id']);
+    public function checkout(Request $request){
+        $request->validate([
+            'room' => 'required|exists:rooms,id',
+            'program' => 'required|exists:programs,id',
+        ]);
+        $program = Program::with(['flight', 'prices'])->where('id', $request->program)->first();
         $data = [
             'room' => Room::where('id',$request->room)->first(),
             'program' => $program,

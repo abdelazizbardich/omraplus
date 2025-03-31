@@ -23,8 +23,12 @@ class HotelController extends Controller
         try {
             // validate
             $request->validate([
-                "name" => 'required',
-                "address" => 'required',
+                "name_en" => 'required',
+                "name_ar" => 'required',
+                "name_fr" => 'required',
+                "address_en" => 'required',
+                "address_ar" => 'required',
+                "address_fr" => 'required',
                 "city" => 'required',
                 "distance" => 'required'
             ]);
@@ -37,10 +41,16 @@ class HotelController extends Controller
     
             // Save data to database
             $hotel = Hotel::create([
-                "name" => $request->name,
-                "slug" => STR::slug($request->name),
+                "name_en" => $request->name_en,
+                "name_ar" => $request->name_ar,
+                "name_fr" => $request->name_fr,
+                "slug_en" => STR::slug($request->name_en),
+                "slug_ar" => STR::slug($request->name_ar),
+                "slug_fr" => STR::slug($request->name_fr),
+                "address_en" => $request->address_en,
+                "address_ar" => $request->address_ar,
+                "address_fr" => $request->address_fr,
                 "city" => $request->city,
-                "address" => $request->address,
                 "distance" => $request->distance,
             ]);
     
@@ -85,8 +95,12 @@ class HotelController extends Controller
         try {
             // validate
             $request->validate([
-                "name" => 'required',
-                "address" => 'required',
+                "name_en" => 'required',
+                "name_ar" => 'required',
+                "name_fr" => 'required',
+                "address_en" => 'required',
+                "address_ar" => 'required',
+                "address_fr" => 'required',
                 "city" => 'required',
                 "distance" => 'required'
             ]);
@@ -99,8 +113,15 @@ class HotelController extends Controller
     
             // Save data to database
             $hotel->update([
-                "name" => $request->name,
-                "slug" => STR::slug($request->name),
+                "name_en" => $request->name_en,
+                "name_ar" => $request->name_ar,
+                "name_fr" => $request->name_fr,
+                "slug_en" => STR::slug($request->name_en),
+                "slug_ar" => STR::slug($request->name_ar),
+                "slug_fr" => STR::slug($request->name_fr),
+                "address_en" => $request->address_en,
+                "address_ar" => $request->address_ar,
+                "address_fr" => $request->address_fr,
                 "city" => $request->city,
                 "address" => $request->address,
                 "distance" => $request->distance,

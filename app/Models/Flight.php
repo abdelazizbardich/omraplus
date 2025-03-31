@@ -11,16 +11,64 @@ class Flight extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "title",
-        "slug",
+        "title_en",
+        "title_ar",
+        "title_fr",
+        "slug_en",
+        "slug_ar",
+        "slug_fr",
+        "description_en",
+        "description_ar",
+        "description_fr",
+
         "going_date",
         "return_date",
-        "description",
         "type",
         "is_recommended",
         "category_id",
         "airline_id"
     ];
+
+    public function title(): Attribute
+    {
+        $title = match (app()->getLocale()) {
+            'en' => $this->title_en,
+            'ar' => $this->title_ar,
+            'fr' => $this->title_fr,
+            default => $this->title_en,
+        };
+        return Attribute::make(
+            get: fn () => $title
+        );
+    }
+
+    public function slug(): Attribute
+    {
+        $slug = match (app()->getLocale()) {
+            'en' => $this->slug_en,
+            'ar' => $this->slug_ar,
+            'fr' => $this->slug_fr,
+            default => $this->slug_en,
+        };
+        return Attribute::make(
+            get: fn () => $slug
+        );
+    }
+
+    public function description(): Attribute
+    {
+        $description = match (app()->getLocale()) {
+            'en' => $this->description_en,
+            'ar' => $this->description_ar,
+            'fr' => $this->description_fr,
+            default => $this->description_en,
+        };
+        return Attribute::make(
+            get: fn () => $description
+        );
+    }
+
+    
 
     public function category()
     {

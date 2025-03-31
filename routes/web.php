@@ -16,8 +16,8 @@ Route::get('/umrah-guide', [App\Http\Controllers\GuestController::class, 'umrahG
 Route::get('/hajj-guide', [App\Http\Controllers\GuestController::class, 'hajjGuide'])->name('hajj-guide');
 
 Route::get('/faqs', [App\Http\Controllers\GuestController::class, 'faqs'])->name('faqs');
-Route::get('/checkout/{program:id}', [App\Http\Controllers\GuestController::class, 'checkout'])->name('checkout');
-Route::post('/checkout', [App\Http\Controllers\GuestController::class, 'confirmCheckout'])->name('checkout.save');
+Route::post('/checkout', [App\Http\Controllers\GuestController::class, 'checkout'])->name('checkout');
+Route::post('/checkout/save', [App\Http\Controllers\GuestController::class, 'confirmCheckout'])->name('checkout.save');
 Route::get('/checkout/success/{order:id}', [App\Http\Controllers\GuestController::class, 'checkoutSuccess'])->name('checkout.success');
 
 Route::get('/booking-instructions', [App\Http\Controllers\GuestController::class, 'bookingInstructions'])->name('booking-instructions');
