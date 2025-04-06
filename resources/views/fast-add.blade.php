@@ -49,8 +49,10 @@
                 stepperNavs.forEach((nav) => {
                     if(nav.dataset.step == currentStep){
                         nav.classList.add('bg-gray-400');
+                        nav.classList.add('font-black');
                     }else{
                         nav.classList.remove('bg-gray-400');
+                        nav.classList.remove('font-black');
                     }
                 });
                 stepperContents.forEach((content) => {
