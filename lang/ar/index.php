@@ -397,4 +397,6 @@ return [
 	"Fast add" => "إضافة سريعة",
 	"next" => "التالي",
 	"previous" => "السابق",
+	"Join our services publishers" => "انضم إلى مروجي خدماتنا",
+	"Join now" => "انضم الآن",
 ];

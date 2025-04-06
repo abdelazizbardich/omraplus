@@ -101,5 +101,8 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     Route::get('/dashboard/orders/delete/{user:id}', [App\Http\Controllers\OrderController::class, 'delete'])->name('orders.delete');
 });
 
+Route::middleware(['auth:sanctum', 'role:publisher'])->group(function () {
+    Route::get('/publisher/join', [App\Http\Controllers\GuestController::class, 'home'])->name('publisher.join');
+});
 
 require_once __DIR__ . '/jetstream.php';
