@@ -35,6 +35,8 @@ Route::get('/get-to-know-medina', [App\Http\Controllers\GuestController::class, 
 Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard/home', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
+    Route::get('/dashboard/fast-add', [App\Http\Controllers\FastAddController::class, 'index'])->name('fast-add');
+
     Route::get('/dashboard/profile', [App\Http\Controllers\DashboardController::class, 'profile'])->name('profile');
     Route::get('/dashboard/settings', [App\Http\Controllers\DashboardController::class, 'settings'])->name('settings');
 

@@ -10,6 +10,10 @@
                 <img src="{{ Vite::asset('resources/images/dashboard.png') }}" alt="{{__('index.Dashboard')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Dashboard')}}</span>
             </a>
+            <a href="{{ route('fast-add') }}" class="bg-gradient-to-br from-yellow-300 to-yellow-500 text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Fast add')}}">
+                <img src="{{ Vite::asset('resources/images/fast-add.png') }}" alt="{{__('index.Fast add')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Fast add')}}</span>
+            </a>
             <a href="{{ route('flights') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Hajj Flights')}}">
                 <img src="{{ Vite::asset('resources/images/flights.png') }}" alt="{{__('index.Hajj Flights')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Flights')}}</span>

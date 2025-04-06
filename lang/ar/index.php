@@ -393,5 +393,8 @@ return [
 	"Title_ar" => "العنوان بالعربية",
 	"Fligth Description_en" => "وصف الرحلة بالإنجليزية",
 	"Fligth Description_fr" => "وصف الرحلة بالفرنسية",
-	"Fligth Description_ar" => "وصف الرحلة بالعربية"
+	"Fligth Description_ar" => "وصف الرحلة بالعربية",
+	"Fast add" => "إضافة سريعة",
+	"next" => "التالي",
+	"previous" => "السابق",
 ];
