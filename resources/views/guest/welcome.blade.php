@@ -2,7 +2,7 @@
 <x-header active="Home"></x-header>
 <x-hero-header :umrahs=$umrahs :programs=$programs :rooms=$rooms></x-hero-header>
 <div class="relative z-50 container m-auto flex justify-between items-start">
-    <div class="rounded-b-2xl mt-2 w-fit mx-auto bg-yellow-500 bg-gradient-to-l from-yellow-550 to-yellow-500 flex p-6 px-32 items-center justify-center shadow-2xl gap-5">
+    <div class="rounded-b-2xl mt-2 w-fit mx-auto bg-yellow-500 bg-gradient-to-l from-yellow-550 to-yellow-500 flex p-6 px-32 items-center justify-center gap-5">
         <span class="text-xl font-bold">{{__('index.Join our services publishers')}}</span>
         <a href="{{ route('publisher.join') }}" class="btn btn-outline ml-4 ">{{__('index.Join now')}}</a>
     </div>
