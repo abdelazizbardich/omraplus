@@ -94,8 +94,8 @@
                             <label class="text-nowrap input input-bordered flex items-center gap-2">
                                 {{__('index.City')}}:
                                 <select name="city" class="grow border-none focus:shadow-none shadow-none">
-                                    <option value="{{__('index.macca')}}">{{__('index.Mecca')}}</option>
-                                    <option value="{{__('index.medina')}}">{{__('index.Medina')}}</option>
+                                    <option value="macca">{{__('index.Mecca')}}</option>
+                                    <option value="medina">{{__('index.Medina')}}</option>
                                 </select>
                             </label>
                         </div>
