@@ -121,7 +121,7 @@
                                         @endif
                                     </td>
                                     <th>
-                                        <a href="{{ route('programs.edit', $program->id) }}" class="btn btn-xs btn-info edit"></a>
+                                        <!-- <a href="{{ route('programs.edit', $program->id) }}" class="btn btn-xs btn-info edit"></a> -->
                                         <a href="{{ route('programs.delete', $program->id) }}" class="btn btn-xs btn-error delete"></a>
                                     </th>
                                 </tr>
