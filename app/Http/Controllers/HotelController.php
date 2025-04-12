@@ -62,14 +62,16 @@ class HotelController extends Controller
                 "post_id" => $hotel->id,
                 "is_main" => true
             ]);
-            foreach ($request->file('hotel_photos') as $photo) {
-                $hotel_photos = $photo->store('hotels', ["disk"=> "public"]);
-                Photo::create([
-                    "url" => $hotel_photos,
-                    "type" => 'hotel',
-                    "post_id" => $hotel->id,
-                    "is_main" => false
-                ]);
+            if($request->has('hotel_photos') && count($request->file('hotel_photos')) > 0){
+                foreach ($request->file('hotel_photos') as $photo) {
+                    $hotel_photos = $photo->store('hotels', ["disk"=> "public"]);
+                    Photo::create([
+                        "url" => $hotel_photos,
+                        "type" => 'hotel',
+                        "post_id" => $hotel->id,
+                        "is_main" => false
+                    ]);
+                }
             }
             \DB::commit();
             return redirect()->route('hotels')->with('success', 'Hotel created successfully');

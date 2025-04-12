@@ -16,6 +16,7 @@ class Program extends Model
         "is_recommended",
         "seat_count",
         "have_meals"
+
     ];
 
     public function flight()

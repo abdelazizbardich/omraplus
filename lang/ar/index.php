@@ -399,4 +399,6 @@ return [
 	"previous" => "السابق",
 	"Join our services publishers" => "انضم إلى مروجي خدماتنا",
 	"Join now" => "انضم الآن",
+	"Select flight" => "اختر الرحلة",
+	"Select hotel" => "اختر الفندق"
 ];
