@@ -11,9 +11,11 @@ class BlogCard extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public mixed $data
+    )
     {
-        //
+
     }
 
     /**
@@ -21,6 +23,8 @@ class BlogCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.blog-card');
+        return view('components.blog-card', [
+            'post' => $this->data
+        ]);
     }
 }

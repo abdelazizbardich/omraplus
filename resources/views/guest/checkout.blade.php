@@ -219,7 +219,7 @@
                 <div class="border border-black-200 bg-white rounded-3xl p-6 mb-6 w-full">
                     <div class="flex items-center gap-6 mb-3">
                         <div class="w-4/12">
-                            <img loading="lazy" src="{{ @$flight->mainPhoto->url }}"
+                            <img onerror="this.onerror=null;this.src='{{ Vite::asset('resources/images/not-found.webp') }}';" loading="lazy" src="{{ @$flight->mainPhoto->url }}"
                                 class="rounded-2xl w-full aspect-square object-cover" alt="offer photo">
                         </div>
                         <div class="w-8/12">

@@ -32,7 +32,8 @@ class User extends Authenticatable
         'first_name',
         'last_name',
         'city',
-        'phone'
+        'phone',
+        'job'
     ];
 
     /**

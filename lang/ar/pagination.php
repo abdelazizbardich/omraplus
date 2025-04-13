@@ -15,5 +15,12 @@ return [
 
     'previous' => '&laquo; السابق',
     'next' => 'التالي &raquo;',
+    "Go to page :page" => "اذهب إلى الصفحة :page",
+    "results" => "نتائج البحث",
+    "Showing" => "عرض",
+    "of" => "من",
+    "to" => "إلى",
+    "All" => "الكل",
+
 
 ];

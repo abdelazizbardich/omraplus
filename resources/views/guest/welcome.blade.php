@@ -77,21 +77,16 @@
     <x-title :subtitle="__('index.Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('index.Our Blog – Your Comprehensive Guide to Hajj and Umrah')"></x-title>
 </div>
 <x-spacer></x-spacer>
-<div class="container m-auto flex justify-center items-start flex-wrap">
-    <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
-        <x-blog-card></x-blog-card>
+@if ($blogPosts->count() > 0)
+    <div class="container m-auto flex justify-center items-start flex-wrap">
+        @foreach ($blogPosts as $blogPost)
+            <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
+                <x-blog-card :data=$blogPost></x-blog-card>
+            </div>
+        @endforeach
     </div>
-    <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
-        <x-blog-card></x-blog-card>
-    </div>
-    <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
-        <x-blog-card></x-blog-card>
-    </div>
-    <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
-        <x-blog-card></x-blog-card>
-    </div>
-</div>
 <x-spacer></x-spacer>
+@endif
 <div class="w-ful">
     <x-footer></x-footer>
 </div>

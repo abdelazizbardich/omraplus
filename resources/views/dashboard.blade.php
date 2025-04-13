@@ -85,7 +85,7 @@
                                         @if($order->user->photo)
                                             <div class="avatar">
                                                 <div class="mask mask-squircle h-12 w-12">
-                                                    <img src="{{ @$order->user->photo->url}}" alt="user photo" />
+                                                    <img onerror="this.onerror=null;this.src='{{ Vite::asset('resources/images/not-found.webp') }}';" src="{{ @$order->user->photo->url}}" alt="user photo" />
                                                 </div>
                                             </div>
                                         @endif

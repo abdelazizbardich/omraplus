@@ -216,7 +216,7 @@
                                             <div class="avatar">
                                                 <div class="mask mask-squircle h-12 w-12">
                                                 <a href="{{ route('flight', $flight->id) }}">
-                                                    <img src="{{ @$flight->mainPhoto->url }}" alt="{{ $flight->title }}" />
+                                                    <img onerror="this.onerror=null;this.src='{{ Vite::asset('resources/images/not-found.webp') }}';" src="{{ @$flight->mainPhoto->url }}" alt="{{ $flight->title }}" />
                                                 </a>    
                                                 </div>
                                             </div>

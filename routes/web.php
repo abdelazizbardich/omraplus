@@ -5,29 +5,33 @@ use Illuminate\Support\Facades\Route;
 // App::setLocale('ar');
 Route::get('/lang/{locale}', function ($locale) { })->name('lang');
 
-Route::get('/', [App\Http\Controllers\GuestController::class, 'home'])->name('home');
-Route::get('/flight/{flight:id}', [App\Http\Controllers\GuestController::class, 'flight'])->name('flight');
-Route::post('/flights', [App\Http\Controllers\GuestController::class, 'search'])->name('flights.search');
-Route::get('/about-us', [App\Http\Controllers\GuestController::class, 'aboutUs'])->name('about-us');
-Route::get('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUs'])->name('contact-us');
-Route::post('/contact-us', [App\Http\Controllers\GuestController::class, 'contactUsSend'])->name('contact-us-send');
-Route::get('/visa', [App\Http\Controllers\GuestController::class, 'visa'])->name('visa');
-Route::get('/umrah-guide', [App\Http\Controllers\GuestController::class, 'umrahGuide'])->name('umrah-guide');
-Route::get('/hajj-guide', [App\Http\Controllers\GuestController::class, 'hajjGuide'])->name('hajj-guide');
+Route::get('/', [App\Http\Controllers\Guest\GuestController::class, 'home'])->name('home');
+Route::get('/flight/{flight:id}', [App\Http\Controllers\Guest\GuestController::class, 'flight'])->name('flight');
+Route::post('/flights', [App\Http\Controllers\Guest\GuestController::class, 'search'])->name('flights.search');
+Route::get('/about-us', [App\Http\Controllers\Guest\GuestController::class, 'aboutUs'])->name('about-us');
+Route::get('/contact-us', [App\Http\Controllers\Guest\GuestController::class, 'contactUs'])->name('contact-us');
+Route::post('/contact-us', [App\Http\Controllers\Guest\GuestController::class, 'contactUsSend'])->name('contact-us-send');
+Route::get('/visa', [App\Http\Controllers\Guest\GuestController::class, 'visa'])->name('visa');
+Route::get('/umrah-guide', [App\Http\Controllers\Guest\GuestController::class, 'umrahGuide'])->name('umrah-guide');
+Route::get('/hajj-guide', [App\Http\Controllers\Guest\GuestController::class, 'hajjGuide'])->name('hajj-guide');
 
-Route::get('/faqs', [App\Http\Controllers\GuestController::class, 'faqs'])->name('faqs');
-Route::post('/checkout', [App\Http\Controllers\GuestController::class, 'checkout'])->name('checkout');
-Route::post('/checkout/save', [App\Http\Controllers\GuestController::class, 'confirmCheckout'])->name('checkout.save');
-Route::get('/checkout/success/{order:id}', [App\Http\Controllers\GuestController::class, 'checkoutSuccess'])->name('checkout.success');
+Route::get('/faqs', [App\Http\Controllers\Guest\GuestController::class, 'faqs'])->name('faqs');
+Route::post('/checkout', [App\Http\Controllers\Guest\GuestController::class, 'checkout'])->name('checkout');
+Route::post('/checkout/save', [App\Http\Controllers\Guest\GuestController::class, 'confirmCheckout'])->name('checkout.save');
+Route::get('/checkout/success/{order:id}', [App\Http\Controllers\Guest\GuestController::class, 'checkoutSuccess'])->name('checkout.success');
 
-Route::get('/booking-instructions', [App\Http\Controllers\GuestController::class, 'bookingInstructions'])->name('booking-instructions');
-Route::get('/omra-packs', [App\Http\Controllers\GuestController::class, 'omraPacks'])->name('omra-packs');
-Route::get('/ramadan-omra', [App\Http\Controllers\GuestController::class, 'ramadanOmra'])->name('ramadan-omra');
-Route::get('/personalizd-omra', [App\Http\Controllers\GuestController::class, 'personalizdOmra'])->name('personalizd-omra');
-Route::get('/hadj-2025', [App\Http\Controllers\GuestController::class, 'hadj2025'])->name('hadj-2025');
-Route::get('/learn-about-mecca', [App\Http\Controllers\GuestController::class, 'learnAboutMecca'])->name('learn-about-mecca');
-Route::get('/get-to-know-medina', [App\Http\Controllers\GuestController::class, 'getToKnowMedina'])->name('get-to-know-medina');
+Route::get('/booking-instructions', [App\Http\Controllers\Guest\GuestController::class, 'bookingInstructions'])->name('booking-instructions');
+Route::get('/omra-packs', [App\Http\Controllers\Guest\GuestController::class, 'omraPacks'])->name('omra-packs');
+Route::get('/ramadan-omra', [App\Http\Controllers\Guest\GuestController::class, 'ramadanOmra'])->name('ramadan-omra');
+Route::get('/personalizd-omra', [App\Http\Controllers\Guest\GuestController::class, 'personalizdOmra'])->name('personalizd-omra');
+Route::get('/hadj-2025', [App\Http\Controllers\Guest\GuestController::class, 'hadj2025'])->name('hadj-2025');
+Route::get('/learn-about-mecca', [App\Http\Controllers\Guest\GuestController::class, 'learnAboutMecca'])->name('learn-about-mecca');
+Route::get('/get-to-know-medina', [App\Http\Controllers\Guest\GuestController::class, 'getToKnowMedina'])->name('get-to-know-medina');
 
+Route::prefix('/blog')->group(function () {
+    Route::get('/', [App\Http\Controllers\Guest\BlogController::class, 'index'])->name('blog');
+    Route::get('/{blogPost:slug}', [App\Http\Controllers\Guest\BlogController::class, 'show'])->name('blog.show');
+});
 
 
 
@@ -102,7 +106,7 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
 });
 
 Route::middleware(['auth:sanctum', 'role:publisher'])->group(function () {
-    Route::get('/publisher/join', [App\Http\Controllers\GuestController::class, 'home'])->name('publisher.join');
+    Route::get('/publisher/join', [App\Http\Controllers\Guest\GuestController::class, 'home'])->name('publisher.join');
 });
 
 require_once __DIR__ . '/jetstream.php';

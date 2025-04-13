@@ -14,11 +14,10 @@ class PageHeader extends Component
     public function __construct(
         public string $title,
         public string $subtitle = '',
-        public array $breadcrumbs = []
+        public array $breadcrumbs = [],
+        public string $background = ''
     )
-    {
-        //
-    }
+    {}
 
     /**
      * Get the view / contents that represent the component.
@@ -28,7 +27,8 @@ class PageHeader extends Component
         return view('components.page-header', [
             'title' => $this->title,
             'subtitle' => $this->subtitle,
-            'breadcrumbs' => $this->breadcrumbs
+            'breadcrumbs' => $this->breadcrumbs,
+            'background' => $this->background,
         ]);
     }
 }

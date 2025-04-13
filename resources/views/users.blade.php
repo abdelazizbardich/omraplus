@@ -67,8 +67,7 @@
                                         <div class="flex items-center gap-3">
                                             <div class="avatar">
                                                 <div class="mask mask-squircle h-12 w-12">
-                                                    <img src="{{ @$user->photo->url }}"
-                                                        alt="Avatar Tailwind CSS Component" />
+                                                    <img onerror="this.onerror=null;this.src='{{ Vite::asset('resources/images/not-found.webp') }}';" src="{{ @$user->photo->url }}" alt="Avatar Tailwind CSS Component" />
                                                 </div>
                                             </div>
                                             <div>

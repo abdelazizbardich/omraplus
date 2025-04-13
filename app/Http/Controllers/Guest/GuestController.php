@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Guest;
 
+use App\Http\Controllers\Controller;
+use App\Models\BlogPost;
 use App\Models\Flight;
 use App\Models\Order;
 use App\Models\Photo;
@@ -31,7 +33,8 @@ class GuestController extends Controller
                     'key' => $program->flight_id
                 ];
             })->toArray(),
-            "rooms" => Room::select('id','name'.getLocaleSufix().' as value')->orderBy('id', 'desc')->get()->toArray()
+            "rooms" => Room::select('id','name'.getLocaleSufix().' as value')->orderBy('id', 'desc')->get()->toArray(),
+            "blogPosts" => BlogPost::orderByDesc('published_at')->limit(4)->get()
         ];
         return view('guest.welcome', $data);
     }

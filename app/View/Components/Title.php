@@ -15,6 +15,7 @@ class Title extends Component
     public function __construct(
         public string $title,
         public string $subtitle = '',
+        public bool $centred = true
     )
     {
         //
@@ -27,7 +28,8 @@ class Title extends Component
     {
         return view('components.title',[
             'title' => $this->title,
-            'subtitle' => $this->subtitle
+            'subtitle' => $this->subtitle,
+            'centred' => $this->centred,
         ]);
     }
 }
