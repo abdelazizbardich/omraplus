@@ -73,11 +73,11 @@
     <x-mission></x-mission>
 </div>
 <x-spacer></x-spacer>
-<div class="container m-auto flex justify-between items-start">
-    <x-title :subtitle="__('index.Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('index.Our Blog – Your Comprehensive Guide to Hajj and Umrah')"></x-title>
-</div>
-<x-spacer></x-spacer>
 @if ($blogPosts->count() > 0)
+    <div class="container m-auto flex justify-between items-start">
+        <x-title :subtitle="__('index.Dedicated to Making Umrah and Hajj a Seamless Experience')" :title="__('index.Our Blog – Your Comprehensive Guide to Hajj and Umrah')"></x-title>
+    </div>
+    <x-spacer></x-spacer>
     <div class="container m-auto flex justify-center items-start flex-wrap">
         @foreach ($blogPosts as $blogPost)
             <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
