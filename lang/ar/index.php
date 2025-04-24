@@ -358,7 +358,6 @@ return [
 	"Enter your phone number" => "أدخل رقم هاتفك",
 	"Enter your message" => "أدخل رسالتك",
 	"Go ahead, we are listening..." =>  "نحن نستمع إلىك...",
-	"Contact Us" => "اتصل بنا",
 	"Get In Touch" => "تواصل معنا",
 	"We are here for you! How can we help?" => "نحن هنا من أجلك! كيف يمكننا مساعدتك",
 	"Send Message" => "إرسال الرسالة",
@@ -407,4 +406,10 @@ return [
 	"Published on" => "نشر في",
 	"About Us" => "من نحن",
 	"Get to know us" => "تعرف علينا",
+	"Welcome to" => "مرحباً بك في",
+	"Our support desk is here to serve you and provide the help you need at any time." => "مكتب الدعم الخاص بنا هنا لخدمتك وتقديم المساعدة التي تحتاجها في أي وقت.",
+	"Always ready to listen to you and provide support quickly and efficiently" => "على استعداد دائم للاستماع إليك وتقديم الدعم بسرعة وكفاءة",
+	"Whether you are planning to perform Umrah, have questions about our packages and services, or need post-booking support, our" => "سواء كنت تخطط لأداء العمرة، أو لديك استفسارات حول باقاتنا وخدماتنا، أو تحتاج إلى دعم بعد الحجز، فإن فريق",
+	"in" => "في",
+	"The comfort and satisfaction of our customers is our top priority. Feel free to reach out to us at any time - we are here for you." => "راحة ورضا عملائنا هي أولويتنا القصوى. لا تتردد في التواصل معنا في أي وقت – نحن هنا من أجلك."
 ];
