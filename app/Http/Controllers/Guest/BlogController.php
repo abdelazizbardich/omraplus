@@ -17,9 +17,9 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        // Show single blog post
-        $post = BlogPost::with('blogCategories')->where('slug_'.app()->getLocale(), $slug)->firstOrFail();
-        $relatedPosts = BlogPost::take(0)->get();
+        $post = BlogPost::with('blogCategories','blogTags','author')->where('slug_'.app()->getLocale(), $slug)->firstOrFail();
+        $categoryIds = $post->blogCategories->pluck('id');
+        $relatedPosts = BlogPost::whereHas('blogCategories', function($query) use ($categoryIds) {$query->whereIn('blog_categories.id', $categoryIds);})->where('id', '!=', $post->id)->orderBy('created_at', 'desc')->limit(3)->get();
         return view('guest.blog.show', compact('post', 'relatedPosts'));
     }
 

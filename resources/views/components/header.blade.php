@@ -10,6 +10,7 @@
                 <a href="{{ route('policy.show') }}" class="me-4 text-sm">{{__('index.Privacy policy')}}</a>
                 <a href="{{ route('contact-us') }}" class="me-4 text-sm">{{__('index.Contact us')}}</a>
                 <a href="{{ route('faqs') }}" class="me-4 text-sm">{{__('index.faqs')}}</a>
+                <a href="{{ route('blog') }}" class="me-4 text-sm">{{__('index.Blog')}}</a>
                 <x-language-switcher></x-language-switcher>
                 <x-theme-switcher></x-theme-switcher>
                 @if(Auth::check())

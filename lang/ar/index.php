@@ -401,5 +401,10 @@ return [
 	"Join now" => "انضم الآن",
 	"Select flight" => "اختر الرحلة",
 	"Select hotel" => "اختر الفندق",
-	"Blog" => "المدونة"
+	"Blog" => "المدونة",
+	"tags" => "وسوم",
+	"By" => "بواسطة",
+	"Published on" => "نشر في",
+	"About Us" => "من نحن",
+	"Get to know us" => "تعرف علينا",
 ];
