@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guest\GuestController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
 use Laravel\Jetstream\Http\Controllers\Livewire\ApiTokenController;
@@ -12,8 +13,8 @@ use Laravel\Jetstream\Jetstream;
 
 Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
     if (Jetstream::hasTermsAndPrivacyPolicyFeature()) {
-        Route::get('/terms-of-service', [TermsOfServiceController::class, 'show'])->name('terms.show');
-        Route::get('/privacy-policy', [PrivacyPolicyController::class, 'show'])->name('policy.show');
+        Route::get('/terms-of-service', [GuestController::class, 'termsOfService'])->name('terms.show');
+        Route::get('/privacy-policy', [GuestController::class, 'privacyPolicy'])->name('policy.show');
     }
 
     $authMiddleware = config('jetstream.guard')

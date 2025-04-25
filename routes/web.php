@@ -28,6 +28,7 @@ Route::get('/hadj-2025', [App\Http\Controllers\Guest\GuestController::class, 'ha
 Route::get('/learn-about-mecca', [App\Http\Controllers\Guest\GuestController::class, 'learnAboutMecca'])->name('learn-about-mecca');
 Route::get('/get-to-know-medina', [App\Http\Controllers\Guest\GuestController::class, 'getToKnowMedina'])->name('get-to-know-medina');
 
+
 Route::prefix('/blog')->group(function () {
     Route::get('/', [App\Http\Controllers\Guest\BlogController::class, 'index'])->name('blog');
     Route::get('/{blogPost:slug}', [App\Http\Controllers\Guest\BlogController::class, 'show'])->name('blog.show');

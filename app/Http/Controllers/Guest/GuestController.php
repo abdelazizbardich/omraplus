@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Laravel\Jetstream\Jetstream;
 
 class GuestController extends Controller
 {
@@ -269,5 +271,16 @@ class GuestController extends Controller
 
     public function hajjGuide(){
         return view('guest.hajj-guide');
+    }
+
+    public function privacyPolicy(){
+        $policyFile = localizedView('policy');
+        return view('guest.privacy-policy', [
+            'policy' => view('guest.'.$policyFile)->render(),
+        ]);
+    }
+    
+    public function termsOfService(){
+        return view('guest.terms-of-service');
     }
 }

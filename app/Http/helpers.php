@@ -174,3 +174,17 @@ function getStatusBg($status){
             return 'bg-gray-200';
     }
 }
+
+
+/**
+     * Find the path to a localized Markdown resource.
+     *
+     * @param  string  $name
+     * @return string|null
+     */
+    function localizedView($name)
+    {
+        // $localName = preg_replace('#(\.blade.php)$#i', '.'.app()->getLocale().'$1', $name);
+        $localName = $name.'-'.app()->getLocale();
+        return 'localized.'.$localName;
+    }

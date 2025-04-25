@@ -411,5 +411,6 @@ return [
 	"Always ready to listen to you and provide support quickly and efficiently" => "على استعداد دائم للاستماع إليك وتقديم الدعم بسرعة وكفاءة",
 	"Whether you are planning to perform Umrah, have questions about our packages and services, or need post-booking support, our" => "سواء كنت تخطط لأداء العمرة، أو لديك استفسارات حول باقاتنا وخدماتنا، أو تحتاج إلى دعم بعد الحجز، فإن فريق",
 	"in" => "في",
-	"The comfort and satisfaction of our customers is our top priority. Feel free to reach out to us at any time - we are here for you." => "راحة ورضا عملائنا هي أولويتنا القصوى. لا تتردد في التواصل معنا في أي وقت – نحن هنا من أجلك."
+	"The comfort and satisfaction of our customers is our top priority. Feel free to reach out to us at any time - we are here for you." => "راحة ورضا عملائنا هي أولويتنا القصوى. لا تتردد في التواصل معنا في أي وقت – نحن هنا من أجلك.",
+	"Omraplus" => "عمرة بلس",
 ];

@@ -39,7 +39,7 @@
         <div class="w-3/12">
             <span class="block font-bold text-xl mb-3">{{__('index.Our Services')}}</span>
             <ul class="ps-6">
-                <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Privacy Policy')}}</a></li>
+                <li><a href="{{ route('policy.show') }}" class="text-light">{{__('index.Privacy Policy')}}</a></li>
                 <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Payment Policy')}}</a></li>
                 <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Terms and Conditions')}}</a></li>
                 <li><a href="{{ route('about-us') }}" class="text-light">{{__('index.Umrati partner program')}}</a></li>
