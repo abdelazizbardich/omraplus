@@ -95,7 +95,7 @@
                     <img src="{{ Vite::asset('resources/images/logo.webp') }}" alt="{{ __('Logo') }}" class="h-10">
                 </a>
                 <label for="drawer-toggle" class="p-3">
-                    <em class="fa fa-close text-white"></em>
+                    <em class="fa fa-close text-white text-5xl"></em>
                 </label>
             </div>
             <div class="flex flex-col items-center justify-center w-full h-full">
