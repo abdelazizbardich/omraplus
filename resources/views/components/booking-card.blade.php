@@ -41,9 +41,9 @@
                     </div>
                     <hr class="my-3 opacity-30">
                     <div class="flex justify-start flex-wrap items-center gap-3">
-                        <span class="underline w-fit underline-offset-3 text-nowrap">{{ __('index.Select room type') }}:</span>
+                        <span class="underline w-full md:w-fit underline-offset-3 text-nowrap">{{ __('index.Select room type') }}:</span>
                         @foreach ($booking->prices as $index=>$price)
-                            <div class="h-auto w-fit">
+                            <div class="w-1/2 h-auto md:w-fit">
                                 <input onclick="updateBookingcardPrice({{ $booking->id}})" @if($index==0) checked @endif hidden required class="peer hidden room-type room-{{ $booking->id }}" data-price="{{$price->price}}" data-old-price="{{$price->old_price}}" value="{{$price->room->id}}" type="radio" name="room" id="room-{{ $booking->id }}-{{$price->room->id}}">
                                 <label for="room-{{ $booking->id }}-{{$price->room->id}}" class="peer-checked:bg-black-1000 border-black-300 peer-checked:text-white btn btn-outline w-full px-3 py-1 text-wrap text-base text-nowrap font-bold">{{ $price->room->name }}</label>
                             </div>
