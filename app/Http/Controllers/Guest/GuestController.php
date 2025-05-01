@@ -283,4 +283,8 @@ class GuestController extends Controller
     public function termsOfService(){
         return view('guest.terms-of-service');
     }
+
+    public function paymentPolicy(){
+        return view('guest.payment-policy');
+    }
 }

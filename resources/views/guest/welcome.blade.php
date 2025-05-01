@@ -1,23 +1,17 @@
 <x-guest-layout>
 <x-header active="Home"></x-header>
 <x-hero-header :umrahs=$umrahs :programs=$programs :rooms=$rooms></x-hero-header>
-<div class="relative z-50 container m-auto flex justify-between items-start">
-    <div class="rounded-b-2xl mt-2 w-fit mx-auto bg-yellow-500 bg-gradient-to-l from-yellow-550 to-yellow-500 flex py-3 px-32 items-center justify-center gap-5">
-        <span class="text-xl font-bold">{{__('index.Join our services publishers')}}</span>
-        <a href="{{ route('publisher.join') }}" class="btn btn-outline ml-4 ">{{__('index.Join now')}}</a>
-    </div>
-</div>
 <x-spacer></x-spacer>
-<div class="container m-auto flex justify-between items-start">
-    <div class="w-4/12 flex items-start justify-center">
+<div class="container m-auto md:flex-row flex-col flex justify-between items-start">
+    <div class="w-full md:w-4/12 flex items-start justify-center">
         <x-text-offer-card :index="'0'" icon="{{ Vite::asset('resources/images/booking.webp') }}"
             :description="__('index.Effortless Booking Anywhere in Morocco')" :title="__('index.Book Umrah from anywhere in Morocco')"></x-text-offer-card>
     </div>
-    <div class="w-4/12 flex items-start justify-center">
+    <div class="w-full md:w-4/12 flex items-start justify-center">
         <x-text-offer-card :index="'1'" icon="{{ Vite::asset('resources/images/customer-offer.webp') }}"
             :description="__('index.Exclusive Packages and Seasonal Offers at Competitive Prices')" :title="__('index.Special packages and offers throughout the year')"></x-text-offer-card>
     </div>
-    <div class="w-4/12 flex items-start justify-center">
+    <div class="w-full md:w-4/12 flex items-start justify-center">
         <x-text-offer-card :index="'2'" icon="{{ Vite::asset('resources/images/customer-service.webp') }}"
             :description="__('index.Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('index.24/7 support service')"></x-text-offer-card>
     </div>

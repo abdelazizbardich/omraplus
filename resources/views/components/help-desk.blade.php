@@ -1,4 +1,4 @@
-<div class="flex gap-12">
+<div class="flex gap-12 md:flex-row flex-col justify-between items-start">
     <div class="lg:w-6/12 xl:w-6/12">
         <img loading="lazy" src="{{ Vite::asset('resources/images/help-desk.jpg') }}" class="scroll-animate w-full object-cover rounded-3xl" alt="">
     </div>
@@ -9,7 +9,7 @@
         </div>
         <p class="block mb-10 lg:text-xl xl:text-2xl">{{ __('index.We are Here to Help') }}</p>
         <div class="flex mb-3 gap-6">
-            <div class="w-auto">
+            <div class="w-auto md:block hidden">
                 <img loading="lazy" class="lg:w-32 xl:w-64" src="{{ Vite::asset('resources/images/help-desk-icon.webp') }}" alt="help desk">
             </div>
             <div class="w-full">

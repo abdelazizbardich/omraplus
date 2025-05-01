@@ -27,6 +27,10 @@ Route::get('/personalizd-omra', [App\Http\Controllers\Guest\GuestController::cla
 Route::get('/hadj-2025', [App\Http\Controllers\Guest\GuestController::class, 'hadj2025'])->name('hadj-2025');
 Route::get('/learn-about-mecca', [App\Http\Controllers\Guest\GuestController::class, 'learnAboutMecca'])->name('learn-about-mecca');
 Route::get('/get-to-know-medina', [App\Http\Controllers\Guest\GuestController::class, 'getToKnowMedina'])->name('get-to-know-medina');
+Route::get('/payment-policy', [App\Http\Controllers\Guest\GuestController::class, 'paymentPolicy'])->name('payment-policy');
+Route::get('/terms-and-conditions', [App\Http\Controllers\Guest\GuestController::class, 'termsOfService'])->name('terms-and-conditions');
+Route::get('/umrati-partner-program', [App\Http\Controllers\Guest\GuestController::class, 'umratiPartnerProgram'])->name('umrati-partner-program');
+Route::get('/our-services', [App\Http\Controllers\Guest\GuestController::class, 'ourServices'])->name('our-services');
 
 
 Route::prefix('/blog')->group(function () {
