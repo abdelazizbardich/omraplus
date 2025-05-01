@@ -1,19 +1,19 @@
 <!-- Open the modal using ID.showModal() method -->
 <dialog class="modal" id="m-{{ $data->id }}">
-  <div class="modal-box w-11/12 max-w-7xl no-scrollbar">
+  <div class="modal-box w-11/12 max-w-7xl no-scrollbar p-3 md:p-6">
     <h3 class="text-lg font-bold mb-3 block title">
       <a href="{{ route('flight', $data->id) }}">
         {{ $data->title }}
       </a>
     </h3>
     <div class="flex flex-col h-full">
-      <div class="flex items-stretch mb-3">
-        <div class="w-5/12">
+      <div class="flex flex-col md:flex-row items-stretch mb-3">
+        <div class="w-full md:w-5/12">
           <x-slider :images="collect($data->photos)->pluck('url')->filter()->all()"></x-slider>
         </div>
-        <div class="w-7/12 px-3">
-          <span class="block text-2xl font-bold w-full block mb-6">{{ __('index.Description of the offer') }}</span>
-          <div class="description h-96 overflow-y-auto no-scrollbar">
+        <div class="w-full md:w-7/12 px-3">
+          <span class="text-xl md:text-2xl font-bold w-full block mb-3 md:mb-6">{{ __('index.Description of the offer') }}</span>
+          <div class="description md:h-96 overflow-y-auto no-scrollbar">
             {!! $data->description !!}
           </div>
         </div>
