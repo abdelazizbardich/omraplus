@@ -66,7 +66,7 @@
                     <span class="font-black lining-nums"><span class="text-xl">{{ money(@$data->getLowestPrice()->price) }}</span> {{__('index.dh')}} <span>{{__('index.For a person')}}</span></span>
                     <span class="text-xs text-nowrap">({{__('index.Price varies depending on the size of the collection')}})</span>
                 </div>
-                <a href="{{ route('checkout', $data->id) }}" class="text-center flex-nowrap bg-yellow-500 shadow w-full text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
+                <a href="{{ route('flight', $data->id) }}" class="text-center flex-nowrap bg-yellow-500 shadow w-full text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
                     <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> <span class="inline-block text-nowrap">{{__('index.Book now')}}</span>
                 </a>
             </div>
