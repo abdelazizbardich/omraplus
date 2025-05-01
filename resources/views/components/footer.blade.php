@@ -50,10 +50,10 @@
         </div>
         <div class="w-auto flex flex-row justify-center items-center gap-4">
             <div class="w-auto">
-                <img loading="lazy" src="{{ Vite::asset('resources/images/logo-w.png') }}" class="h-8" alt="logo">
+                <img loading="lazy" src="{{ Vite::asset('resources/images/logo-w.png') }}" class="md:h-8" alt="logo">
             </div>
             <div class="w-auto">
-                <img loading="lazy" src="{{ Vite::asset('resources/images/payment method.png') }}" class="h-8" alt="logo">
+                <img loading="lazy" src="{{ Vite::asset('resources/images/payment method.png') }}" class="md:h-8" alt="logo">
             </div>
         </div>
     </div>

@@ -1,16 +1,16 @@
 <div class="scroll-animate w-full packages booking-card">
-    <div class="flex rounded-t-xl px-6 py-3 pb-5 w-full from-yellow-600  bg-gradient-to-l to-yellow-500">
+    <div class="flex rounded-t-xl px-1 py-1 md:px-6 md:py-3 pb-5 w-full from-yellow-600  bg-gradient-to-l to-yellow-500">
         @if ($booking->is_economic)
-            <span class="pe-3 text-center font-semibold inline-block">{{__('index.Economy Program')}}</span>
+            <span class="pe-3 text-xs md:text-base text-center font-semibold inline-block">{{__('index.Economy Program')}}</span>
             <span class="border-e border-black-700"></span>
         @endif
-        <span class="px-3 text-center font-normal inline-block"><span class="font-block">{{ $booking->seat_count }}</span> {{__('index.Seats')}}</span>
+        <span class="px-3 text-xs md:text-base text-center font-normal inline-block"><span class="font-block">{{ $booking->seat_count }}</span> {{__('index.Seats')}}</span>
         <span class="border-e border-black-700"></span>
-        <span class="px-3 text-center font-normal inline-block">{{($booking->have_meals)?__('index.No Meals'):__('index.Meals included')}}</span>
+        <span class="px-3 text-xs md:text-base text-center font-normal inline-block">{{($booking->have_meals)?__('index.No Meals'):__('index.Meals included')}}</span>
         <span class="border-e border-black-700"></span>
-        <span class="ps-3 font-normal inline-block">{{ $booking->hotelMecca->distance }} {{__('index.Meters from the Haram')}}</span>
+        <span class="ps-3 text-xs md:text-base font-normal inline-block">{{ $booking->hotelMecca->distance }} {{__('index.Meters from the Haram')}}</span>
         @if($booking->is_recommended)
-            <span class="flex-1 w-full flex justify-end ps-3 font-normal inline-block">
+            <span class="flex-1 w-full flex justify-end ps-1 md:ps-3 font-normal inline-block">
                 <img loading="lazy" src="{{ Vite::asset('resources/images/medal.webp') }}" class="aspect-square h-full object-contain" alt="{{__('index.recommended')}}">
             </span>
         @endif
@@ -19,23 +19,23 @@
         <form action="{{ route('checkout') }}" method="post">
             @csrf
             <input type="text" hidden name="program" value="{{ $booking->id }}">
-            <div class="relative z-10 flex items-stretch justify-between w-full text-lg px-6 py-4 bg-white border border-black-200 rounded-xl shadow-md">
-                <div class="flex-1 h-full">
+            <div class="relative z-10 flex-col md:flex-row flex items-stretch justify-between w-full text-lg md:px-6 px-3 md:py-4 py-2 bg-white border border-black-200 rounded-xl shadow-md">
+                <div class="flex-1 h-full flex-col md:flex-row">
                     <div class="flex w-full gap-x-3 mb-2">
-                        <div class="flex flex-1 gap-3 px-3">
-                            <img loading="lazy" src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="hotel-place-photo aspect-square h-20" alt="{{__('index.Hotel in')}} {{__('index.Mecca')}}">
+                        <div class="flex flex-1 gap-3 md:px-3">
+                            <img loading="lazy" src="{{ Vite::asset('resources/images/mekka-hotel.webp') }}" class="hotel-place-photo aspect-square h-12 md:h-20" alt="{{__('index.Hotel in')}} {{__('index.Mecca')}}">
                             <div class="flex-1">
-                                <span class="block text-sm mb-1 text-nowrap">{{__('index.Hotel in')}} <span class="font-bold">{{ __('index.Mecca') }}</span>:</span>
-                                <span class="block px-3 py-2 text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">{{ $booking->hotelMecca->name }}</span>
-                                <a data-photos="" class="show-photos hover:underline text-nowrap block text-xs w-fit">{{__('index.View hotel photos')}}</a>
+                                <span class="block text-xs md:text-sm mb-1 md:text-nowrap">{{__('index.Hotel in')}} <span class="font-bold">{{ __('index.Mecca') }}</span>:</span>
+                                <span class="block px-1 md:px-3 py-1 md:py-2 text-sm md:text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">{{ $booking->hotelMecca->name }}</span>
+                                <a data-photos="" class="show-photos hover:underline md:text-nowrap block text-xs w-fit">{{__('index.View hotel photos')}}</a>
                             </div>
                         </div>
-                        <div class="flex flex-1 gap-3 px-3">
-                            <img loading="lazy" src="{{ Vite::asset('resources/images/media-hotel.webp') }}" class="hotel-place-photo aspect-square h-20" alt="{{__('index.Hotel in')}} {{ __('index.Medina')}}">
+                        <div class="flex flex-1 gap-3 md:px-3">
+                            <img loading="lazy" src="{{ Vite::asset('resources/images/media-hotel.webp') }}" class="hotel-place-photo aspect-square h-12 md:h-20" alt="{{__('index.Hotel in')}} {{ __('index.Medina')}}">
                             <div class="flex-1">
-                                <span class="block text-sm mb-1 text-nowrap">{{__('index.Hotel in')}} <span class="font-bold">{{ __('index.Medina') }}</span>:</span>
-                                <span class="block px-3 py-2 text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">{{ $booking->hotelMedina->name }}</span>
-                                <a data-photos="" class="show-photos hover:underline text-nowrap block text-xs w-fit">{{__('index.View hotel photos')}}</a>
+                                <span class="block text-xs md:text-sm mb-1 md:text-nowrap">{{__('index.Hotel in')}} <span class="font-bold">{{ __('index.Medina') }}</span>:</span>
+                                <span class="block px-1 md:px-3 py-1 md:py-2 text-sm md:text-xl font-black bg-emerald-300 rounded-xl w-fit mb-1">{{ $booking->hotelMedina->name }}</span>
+                                <a data-photos="" class="show-photos hover:underline md:text-nowrap block text-xs w-fit">{{__('index.View hotel photos')}}</a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="flex flex-col justify-center items-start border-s border-black-200 ms-6 ps-6 price">
+                <div class="flex flex-col justify-center items-start md:border-s md:border-black-200 md:ms-6 md:ps-6 price">
                     <div class="w-full mb-6">
                         <span class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums"><span class="old-price-{{ $booking->id }}">{{@$booking->getLowestPrice()->old_price}}</span> {{__('index.dh')}}</span>
                         <span class="text-xl block font-black lining-nums"><span class="text-3xl price-{{ $booking->id }}">{{@$booking->getLowestPrice()->price}}</span> {{__('index.dh')}} {{__('index.For a person')}}</span>

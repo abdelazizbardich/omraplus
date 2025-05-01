@@ -9,7 +9,7 @@
   <div class="slider-nav flex justify-start items-start gap-3 mt-1 w-full">
     @foreach ($images as $index => $image)
     <span data-id="item-{{ $index + 1 }}" class="slider-nev-item rounded-xl cursor-pointer">
-      <img loading="lazy" src="{{ $image }}" class="aspect-square object-cover w-full rounded-xl max-h-36">
+      <img loading="lazy" src="{{ $image }}" class="aspect-square object-cover w-full rounded-xl max-h-16 md:max-h-36">
     </span>
   @endforeach
   </div>

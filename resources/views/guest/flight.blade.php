@@ -3,12 +3,12 @@
     <x-page-header :title="__('index.Offer')" :breadcrumbs="['Home', 'Flight']" />
     <x-spacer></x-spacer>
     <div class="container w-full mx-auto">
-        <div class="w-full mb-12">
-            <h1 class="text-3xl font-bold">{{ $flight->title }}</h1>
+        <div class="w-full mb-3 md:mb-12">
+            <h1 class="text-2xl md:text-3xl font-bold">{{ $flight->title }}</h1>
         </div>
     </div>
-    <div class="container w-full mx-auto flex gap-12 items-start relative">
-        <div class="w-8/12">
+    <div class="container w-full mx-auto flex-col md:flex-row flex gap-12 items-start relative">
+        <div class="w-full md:w-8/12">
             <x-slider :images="$flight->photos"></x-slider>
             <x-spacer></x-spacer>
             <div class="w-full">
@@ -22,7 +22,7 @@
                         <span class="dots flex-1 border-b-2 mx-3 border-black-500 h-full"></span>
                         <span class="flex items-center">
                             <img loading="lazy" src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('index.Plane')}}"
-                                class="w-8 h-8 me-3">
+                                class="w-4 md:w-8 h-4 md:h-8 me-3">
                             <span class="font-semibold text-lg">{{ $flight->going_date }}</span>
                         </span>
                     </div>
@@ -32,7 +32,7 @@
                         <span class="dots flex-1 border-b-2 mx-3 border-black-500 h-full"></span>
                         <span class="flex items-center">
                             <img loading="lazy" src="{{ Vite::asset('resources/images/plane.webp') }}" alt="{{__('index.Plane')}}"
-                                class="w-8 -scale-x-100 h-8 me-3">
+                                class="w-4 md:w-8 -scale-x-100 h-4 md:h-8 me-3">
                             <span class="font-semibold text-lg">{{ $flight->return_date }}</span>
                         </span>
                     </div>
@@ -43,12 +43,12 @@
                 <span class="block text-2xl font-bold w-full block mb-6">{{__('index.Features of this offer')}}</span>
                 <div class="rounded-lg bg-emerald-200 p-6 grid grid-cols-3 grid-rows-2 gap-x-6 gap-y-6">
                     @foreach ([1, 2, 3, 4, 5, 6] as $item)
-                        <div class="flex items-start justify-start w-full gap-3">
-                            <div class="bg-emerald-300 w-4/12 aspect-square rounded-xl mb-1 overflow-hidden p-1">
+                        <div class="flex flex-col md:flex-row items-start justify-start w-full gap-3">
+                            <div class="bg-emerald-300 w-full md:w-4/12 aspect-square rounded-xl mb-1 overflow-hidden p-1">
                                 <img loading="lazy" src="{{ Vite::asset('resources/images/hotel icon.svg')}}"
                                     class="w-full h-full object-cover aspect-square">
                             </div>
-                            <div class="flex flex-col justify-start items-start w-8/12">
+                            <div class="flex flex-col justify-start items-start w-full md:w-8/12">
                                 <span class="text-lg font-semibold">{{__('index.Accommodation')}}</span>
                                 <p class="text-xs line-clamp-4">يتم توفير الإقامة في فنادق مميزة بالقرب من المسجد الحرام
                                     والمعالم الدينية، لتجربة إقامة مريحة ولائقة برحلتكم.</p>
@@ -75,7 +75,7 @@
             </div>
             <x-spacer></x-spacer>
         </div>
-        <div class="w-4/12 h-auto sticky top-10">
+        <div class="w-full md:w-4/12 h-auto sticky top-10">
             <div class="border border-black-200 bg-white rounded-3xl p-6 mb-6 w-full">
                 <span
                     class="block opacity-45 text-base font-bold line-through line-clamp-2 lining-nums"><span class="flight-old-price">{{ $flight->old_price }}</span>
@@ -132,23 +132,23 @@
     <x-spacer></x-spacer>
     <div class="container m-auto flex justify-center items-start gap-6">
         @foreach ($nexFligths as $index => $nexFligth)
-            <div class="w-3/12 flex items-start justify-center">
+            <div class="w-full md:w-3/12 flex items-start justify-center">
                 <x-offer-card-minimal-with-preview :data="$nexFligth"></x-offer-card-minimal-with-preview>
             </div>
         @endforeach
     </div>
     <x-spacer></x-spacer>
-    <div class="container m-auto flex justify-between items-start">
-        <div class="w-4/12 flex items-start justify-center">
+    <div class="container m-auto flex-col md:flex-row flex justify-between items-start">
+        <div class="w-full md:w-4/12 flex items-start justify-center">
             <x-text-offer-card icon="{{ Vite::asset('resources/images/booking.webp') }}"
                 :description="__('index.Effortless Booking Anywhere in Morocco')" :title="__('index.Book Umrah from anywhere in Morocco')"></x-text-offer-card>
         </div>
-        <div class="w-4/12 flex items-start justify-center">
+        <div class="w-full md:w-4/12 flex items-start justify-center">
             <x-text-offer-card icon="{{ Vite::asset('resources/images/customer-offer.webp') }}"
                 :description="__('index.Exclusive Packages and Seasonal Offers at Competitive Prices')"
                 :title="__('index.Special packages and offers throughout the year')"></x-text-offer-card>
         </div>
-        <div class="w-4/12 flex items-start justify-center">
+        <div class="w-full md:w-4/12 flex items-start justify-center">
             <x-text-offer-card icon="{{ Vite::asset('resources/images/customer-service.webp') }}"
                 :description="__('index.Our team is ready to answer all your inquiries and provide assistance at any time to ensure the comfort and tranquility of the pilgrims.')" :title="__('index.24/7 support service')"></x-text-offer-card>
         </div>
