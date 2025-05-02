@@ -288,7 +288,10 @@ class GuestController extends Controller
     }
     public function hadj2025()
     {
-        return view('guest.hadj-2025');
+        $data = [
+            'hadjOffers' => Flight::with(['category', 'photos', 'programs', 'programs.prices'])->where('type', 'hajj')->orderBy('id', 'desc')->paginate(12),
+        ];
+        return view('guest.hadj-2025', $data);
     }
 
     public function learnAboutMecca()
