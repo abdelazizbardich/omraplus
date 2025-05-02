@@ -1,5 +1,5 @@
 <div class="relative carousel-container">
-    <div class="carousel flex overflow-y-hidden overflow-x-auto space-x-4 pb-3">
+    <div class="carousel flex justify-center overflow-y-hidden overflow-x-auto space-x-4 pb-3">
         {{ $slot }}
     </div>
     <button
