@@ -14,13 +14,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // super admin user
-        User::factory()->create([
-            'name' => 'Super Admin',
-            'email' => 'admin@email.com',
-            'password' => bcrypt('password')
-        ]);
-        // $this->call([
-        //     CategorySeeder::class,
+        // User::factory()->create([
+        //     'name' => 'Super Admin',
+        //     'email' => 'admin@email.com',
+        //     'password' => bcrypt('password')
+        // ]);
+        $this->call([
+            CategorySeeder::class,
         //     AirlineSeeder::class,
         //     FlightSeeder::class,
         //     HotelSeeder::class,
@@ -29,6 +29,6 @@ class DatabaseSeeder extends Seeder
         //     RoomSeeder::class,
         //     ProgramPriceSeeder::class,
         //     PhotoSeeder::class
-        // ]);
+        ]);
     }
 }

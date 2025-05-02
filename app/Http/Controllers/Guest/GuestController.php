@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogPost;
+use App\Models\Category;
 use App\Models\Flight;
 use App\Models\Order;
 use App\Models\Photo;
@@ -20,45 +21,47 @@ use Laravel\Jetstream\Jetstream;
 
 class GuestController extends Controller
 {
-    public function home(){
-        $hadjOffers = Flight::with(['category','photos','programs', 'programs.prices'])->where('type', 'hajj')->orderBy('id', 'desc')->get();
-        $umrahOffers = Flight::with(['category','photos','programs', 'programs.prices'])->where('type', 'umrah')->orderBy('id', 'desc')->get();
+    public function home()
+    {
+        $hadjOffers = Flight::with(['category', 'photos', 'programs', 'programs.prices'])->where('type', 'hajj')->orderBy('id', 'desc')->get();
+        $umrahOffers = Flight::with(['category', 'photos', 'programs', 'programs.prices'])->where('type', 'umrah')->orderBy('id', 'desc')->get();
 
         $data = [
             "hadjOffers" => $hadjOffers,
             "umrahOffers" => $umrahOffers,
-            "umrahs" => Flight::select('id','title'.getLocaleSufix().' as value')->where('type', 'umrah')->orderBy('id', 'desc')->get()->toArray(),
-            "programs" => Program::orderBy('id', 'desc')->get()->map(function($program){
+            "umrahs" => Flight::select('id', 'title' . getLocaleSufix() . ' as value')->where('type', 'umrah')->orderBy('id', 'desc')->get()->toArray(),
+            "programs" => Program::orderBy('id', 'desc')->get()->map(function ($program) {
                 return [
                     'id' => $program['id'],
                     'value' => $program->name(),
                     'key' => $program->flight_id
                 ];
             })->toArray(),
-            "rooms" => Room::select('id','name'.getLocaleSufix().' as value')->orderBy('id', 'desc')->get()->toArray(),
+            "rooms" => Room::select('id', 'name' . getLocaleSufix() . ' as value')->orderBy('id', 'desc')->get()->toArray(),
             "blogPosts" => BlogPost::orderByDesc('published_at')->limit(4)->get()
         ];
         return view('guest.welcome', $data);
     }
 
-    public function flight(Flight $flight){
+    public function flight(Flight $flight)
+    {
         $data = [
-            'flight' => Flight::with(['airline','category','photos','programs', 'programs.prices', 'programs.hotelMecca', 'programs.hotelMedina','programs.discounts'])->where('id',$flight->id)->first(),
-            'nexFligths' => Flight::with(['category','photos','programs', 'programs.prices'])->where('category_id', $flight->category_id)->orderBy('id', 'desc')->limit(4)->get()
+            'flight' => Flight::with(['airline', 'category', 'photos', 'programs', 'programs.prices', 'programs.hotelMecca', 'programs.hotelMedina', 'programs.discounts'])->where('id', $flight->id)->first(),
+            'nexFligths' => Flight::with(['category', 'photos', 'programs', 'programs.prices'])->where('category_id', $flight->category_id)->orderBy('id', 'desc')->limit(4)->get()
         ];
         // map photos
-        $data['flight']->photos = $data['flight']->photos->map(function($photo){
+        $data['flight']->photos = $data['flight']->photos->map(function ($photo) {
             return $photo->url;
         })->toArray();
         $flightPrice = 0;
         $flightOldPrice = 0;
-        foreach ($data['flight']->programs as $program) {   
-            foreach ($program->prices as $index=>$price) {
-                if($flightPrice == 0){
+        foreach ($data['flight']->programs as $program) {
+            foreach ($program->prices as $index => $price) {
+                if ($flightPrice == 0) {
                     $flightPrice = $price->price;
                     $flightOldPrice = $price->old_price;
-                }else{
-                    if($flightPrice > $price->price){
+                } else {
+                    if ($flightPrice > $price->price) {
                         $flightPrice = $price->price;
                         $flightOldPrice = $price->old_price;
                     }
@@ -68,37 +71,42 @@ class GuestController extends Controller
         $data['flight']['price'] = $flightPrice;
         $data['flight']['old_price'] = $flightOldPrice;
         // dd($data);
-        return view('guest.flight',$data);
+        return view('guest.flight', $data);
     }
 
-    public function faqs(){
+    public function faqs()
+    {
         return view('guest.faqs');
     }
 
-    public function aboutUs(){
+    public function aboutUs()
+    {
         return view('guest.about-us');
     }
 
-    public function contactUs(){
+    public function contactUs()
+    {
         return view('guest.contact-us');
     }
 
-    public function checkout(Request $request){
+    public function checkout(Request $request)
+    {
         $request->validate([
             'room' => 'required|exists:rooms,id',
             'program' => 'required|exists:programs,id',
         ]);
         $program = Program::with(['flight', 'prices'])->where('id', $request->program)->first();
         $data = [
-            'room' => Room::where('id',$request->room)->first(),
+            'room' => Room::where('id', $request->room)->first(),
             'program' => $program,
-            'price' => ProgramPrice::where('room_id',$request->room)->where('program_id',$program->id)->first(),
+            'price' => ProgramPrice::where('room_id', $request->room)->where('program_id', $program->id)->first(),
             "flight" => $program->load('flight')->flight
         ];
-        return view('guest.checkout',$data);
+        return view('guest.checkout', $data);
     }
 
-    public function confirmCheckout(Request $request){
+    public function confirmCheckout(Request $request)
+    {
         $request->validate([
             "flight_id" => 'required|numeric',
             "price_id" => 'required|numeric',
@@ -113,7 +121,7 @@ class GuestController extends Controller
             "payment_way" => 'required'
         ]);
 
-        if($request->payment_way === "PAY_BY_CARD"){
+        if ($request->payment_way === "PAY_BY_CARD") {
             $request->validate([
                 "card_number" => 'required',
                 "expiry_date" => 'required',
@@ -121,7 +129,7 @@ class GuestController extends Controller
             ]);
         }
 
-        if(!User::where('email', $request->email)->exists()){
+        if (!User::where('email', $request->email)->exists()) {
             // save the user
             $user = new User();
             $user->name = $request->first_name;
@@ -130,16 +138,16 @@ class GuestController extends Controller
             $user->city = $request->city;
             $user->phone = $request->phone;
             $user->email = $request->email;
-            $user->password = Hash::make(rand(100000,999999));
+            $user->password = Hash::make(rand(100000, 999999));
             $user->save();
 
             $photo = new Photo();
             $photo->post_id = $user->id;
             $photo->type = "user";
             $file = getFakeAvatar($user->name);
-            $photo->url = Storage::put('user/'.$file->name, $file->contents,['disk' => 'public']);
+            $photo->url = Storage::put('user/' . $file->name, $file->contents, ['disk' => 'public']);
             $photo->save();
-        }else{
+        } else {
             $user = User::where('email', $request->email)->first();
         }
 
@@ -153,24 +161,26 @@ class GuestController extends Controller
         $order->status = "pending";
         $order->payment_status = "pending";
         $order->pilgrims_count = $request->pilgrims_count;
-        $order->total_price = $request->pilgrims_count * ProgramPrice::where('id',$request->price_id)->first()->price;
+        $order->total_price = $request->pilgrims_count * ProgramPrice::where('id', $request->price_id)->first()->price;
         $order->save();
 
         return redirect()->route('checkout.success', $order->id);
     }
 
-    public function checkoutSuccess(Order $order){
+    public function checkoutSuccess(Order $order)
+    {
         $data = [
             "name" => "Checkout Success",
             'order' => $order,
-            'program' => Program::where('id',$order->programPrice->program_id)->first(),
-            'price' => ProgramPrice::where('id',$order->program_price_id)->first(),
-            "flight" => Program::where('id',$order->programPrice->program_id)->first()->load('flight')->flight
+            'program' => Program::where('id', $order->programPrice->program_id)->first(),
+            'price' => ProgramPrice::where('id', $order->program_price_id)->first(),
+            "flight" => Program::where('id', $order->programPrice->program_id)->first()->load('flight')->flight
         ];
-        return view('guest.checkout-success',$data);
+        return view('guest.checkout-success', $data);
     }
 
-    public function umrahGuide(){
+    public function umrahGuide()
+    {
         return view('guest.umrah-guide');
     }
 
@@ -179,20 +189,20 @@ class GuestController extends Controller
 
     public function apiGetFight(Flight $flight)
     {
-        $flight = Flight::with(['airline','category','photos','programs', 'programs.prices', 'programs.hotelMecca', 'programs.hotelMedina','programs.discounts'])->where('id',$flight->id)->first();
+        $flight = Flight::with(['airline', 'category', 'photos', 'programs', 'programs.prices', 'programs.hotelMecca', 'programs.hotelMedina', 'programs.discounts'])->where('id', $flight->id)->first();
         // map photos
-        $flight["photos"] = $flight->photos->map(function($photo){
+        $flight["photos"] = $flight->photos->map(function ($photo) {
             return $photo->url;
         })->toArray();
         $flightPrice = 0;
         $flightOldPrice = 0;
-        foreach ($flight->programs as $program) {   
-            foreach ($program->prices as $index=>$price) {
-                if($flightPrice == 0){
+        foreach ($flight->programs as $program) {
+            foreach ($program->prices as $index => $price) {
+                if ($flightPrice == 0) {
                     $flightPrice = $price->price;
                     $flightOldPrice = $price->old_price;
-                }else{
-                    if($flightPrice > $price->price){
+                } else {
+                    if ($flightPrice > $price->price) {
                         $flightPrice = $price->price;
                         $flightOldPrice = $price->old_price;
                     }
@@ -204,7 +214,8 @@ class GuestController extends Controller
         return response()->json($flight);
     }
 
-    public function contactUsSend(Request $request){
+    public function contactUsSend(Request $request)
+    {
 
         $request->validate([
             "name" => 'required',
@@ -218,20 +229,21 @@ class GuestController extends Controller
             "email" => $request->email,
             "body" => $request->message
         ];
-        
+
         $message = Mail::send('emails.contact', $data, function ($message) use ($data) {
             $message->sender($data['email'], $data['name']);
             $message->to(config('mail.from.address'), config('app.name'));
-            $message->subject(__('index.Message from contact page').':'.config('app.name'));
+            $message->subject(__('index.Message from contact page') . ':' . config('app.name'));
         });
         // redirect
         return redirect()->route('contact-us')->with('success', 'Message sent successfully');
     }
 
     // search for  flights
-    public function search(Request $request){
+    public function search(Request $request)
+    {
         $flights = Flight::with(['category', 'photos', 'programs', 'programs.prices'])
-        ->orderBy('id', 'desc')->get();
+            ->orderBy('id', 'desc')->get();
         $data = [
             'flights' => $flights
         ];
@@ -239,52 +251,71 @@ class GuestController extends Controller
     }
 
 
-    public function visa(){
+    public function visa()
+    {
         return view('guest.visa');
     }
 
-    public function bookingInstructions(){
+    public function bookingInstructions()
+    {
         return view('guest.booking-instructions');
     }
 
-    public function omraPacks(){
-        return view('guest.omra-packs');
+    public function omraPacks()
+    {
+        $data = [
+            'omraPacks' => Flight::with(['category', 'photos', 'programs', 'programs.prices'])->where('type', 'umrah')->orderBy('id', 'desc')->paginate(12),
+        ];
+        return view('guest.omra-packs', $data);
     }
 
-    public function ramadanOmra(){
-        return view('guest.ramadan-omra');
+    public function ramadanOmra()
+    {
+        $category = Category::where('slug_en', 'ramadan-omrah')->first();
+        $data = [
+            'ramadanOmra' => Flight::with(['category', 'photos', 'programs', 'programs.prices'])->where('category_id', $category->id)->orderBy('id', 'desc')->paginate(12),
+        ];
+        return view('guest.ramadan-omra', $data);
     }
 
-    public function personalizdOmra(){
+    public function personalizdOmra()
+    {
         return view('guest.personalizd-omra');
     }
-    public function hadj2025(){
+    public function hadj2025()
+    {
         return view('guest.hadj-2025');
     }
 
-    public function learnAboutMecca(){
+    public function learnAboutMecca()
+    {
         return view('guest.learn-about-mecca');
     }
-    public function getToKnowMedina(){
+    public function getToKnowMedina()
+    {
         return view('guest.get-to-know-medina');
     }
 
-    public function hajjGuide(){
+    public function hajjGuide()
+    {
         return view('guest.hajj-guide');
     }
 
-    public function privacyPolicy(){
+    public function privacyPolicy()
+    {
         $policyFile = localizedView('policy');
         return view('guest.privacy-policy', [
-            'policy' => view('guest.'.$policyFile)->render(),
+            'policy' => view('guest.' . $policyFile)->render(),
         ]);
     }
-    
-    public function termsOfService(){
+
+    public function termsOfService()
+    {
         return view('guest.terms-of-service');
     }
 
-    public function paymentPolicy(){
+    public function paymentPolicy()
+    {
         return view('guest.payment-policy');
     }
 }
