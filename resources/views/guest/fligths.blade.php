@@ -3,7 +3,7 @@
     <x-page-header :title="__('index.Fligths')" :breadcrumbs="['Home', 'Fligths']" />
     <x-spacer></x-spacer>
     <div class="container m-auto">
-    <div class="flex">
+    <div class="flex flex-wrap justify-center">
         @foreach ($flights as $flight)
             <div class="min-w-[350px] xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
                 @if ($flight->type === 'umrah')

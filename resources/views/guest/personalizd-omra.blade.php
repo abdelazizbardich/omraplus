@@ -3,7 +3,7 @@
     <x-page-header :title="__('index.Personalizd omra')" :breadcrumbs="['Home', 'Personalizd omra']" />
     <x-spacer></x-spacer>
     <div class="container mx-auto">
-    <div class="flex">
+    <div class="flex flex-wrap justify-center">
         @foreach ($packs as $pack)
             <div class="min-w-[350px] xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
                 <x-offer-card :data=$pack></x-offer-card>
