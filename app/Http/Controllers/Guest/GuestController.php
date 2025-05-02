@@ -280,7 +280,11 @@ class GuestController extends Controller
 
     public function personalizdOmra()
     {
-        return view('guest.personalizd-omra');
+        $category = Category::where('slug_en', 'customized-omrah')->first();
+        $data = [
+            'packs' => Flight::with(['category', 'photos', 'programs', 'programs.prices'])->where('category_id', $category->id)->orderBy('id', 'desc')->paginate(12),
+        ];
+        return view('guest.personalizd-omra', $data);
     }
     public function hadj2025()
     {
