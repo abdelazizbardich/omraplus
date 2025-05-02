@@ -3,7 +3,7 @@
         {{ $slot }}
     </div>
     <button
-        class="prev bg-white absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-1 aspect-square rounded-full shadow-md focus:outline-none">
+        class="prev bg-white absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-1 aspect-square rounded-md md:px-3 shadow-md focus:outline-none">
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -16,7 +16,7 @@
         </svg>
     </button>
     <button
-        class="next bg-white absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-1 aspect-square rounded-full shadow-md focus:outline-none">
+        class="next bg-white absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-1 aspect-square rounded-md md:px-3 shadow-md focus:outline-none">
         <svg class="rotate-180 w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
