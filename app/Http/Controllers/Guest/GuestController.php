@@ -330,4 +330,9 @@ class GuestController extends Controller
     {
         return view('guest.our-services');
     }
+
+    public function umratiPartnerProgram()
+    {
+        return view('guest.umrati-partner-program');
+    }
 }
