@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogCategory;
+use App\Models\BlogComment;
 use Illuminate\Http\Request;
 use App\Models\BlogPost;
 class BlogController extends Controller
@@ -17,10 +18,41 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        $post = BlogPost::with('blogCategories','blogTags','author')->where('slug_'.app()->getLocale(), $slug)->firstOrFail();
+        $post = BlogPost::with('blogCategories','blogTags','author', 'comments')->where('slug_'.app()->getLocale(), $slug)->firstOrFail();
         $categoryIds = $post->blogCategories->pluck('id');
         $relatedPosts = BlogPost::whereHas('blogCategories', function($query) use ($categoryIds) {$query->whereIn('blog_categories.id', $categoryIds);})->where('id', '!=', $post->id)->orderBy('created_at', 'desc')->limit(3)->get();
+
+        $post->increment('view_count');
+        $post->save();
         return view('guest.blog.show', compact('post', 'relatedPosts'));
+    }
+
+    public function share($slug,$platform){
+        $post = BlogPost::where('slug_'.app()->getLocale(), $slug)->firstOrFail();
+        $postUrl = urlencode(config('app.url').'/blog/'.$post['slug_'.app()->getLocale()]);
+        switch ($platform) {  
+            case 'facebook':
+                $url = 'https://www.facebook.com/sharer/sharer.php?u='.$postUrl;
+                break;
+            case 'twitter':
+                $url = 'https://twitter.com/intent/tweet?url='.$postUrl.'&text='.__('index.Check out this blog post I just read');
+                break;
+            case 'linkedin':
+                $url = 'https://www.linkedin.com/sharing/share-offsite/?url='.$postUrl;
+                break;
+            case 'whatsapp':
+                $url = 'https://api.whatsapp.com/send?text='.__('index.Check out this blog post I just read').'%20'.$postUrl;
+                break;
+        }
+
+        $post->increment('share_count');
+        $post->save();
+        // Redirect to the appropriate sharing URL
+        if($url){
+            return redirect()->away($url);
+        }else{
+            return redirect()->back()->with('error', __('index.Invalid sharing platform'));
+        }
     }
 
     public function search(Request $request)
@@ -70,5 +102,28 @@ class BlogController extends Controller
             $query->where('name', $author);
         })->orderBy('created_at', 'desc')->paginate(10);
         return view('guest.blog.author', compact('posts', 'author'));
+    }
+
+    public function comment($slug, Request $request)
+    {
+        // Add a comment to a blog post
+        $post = BlogPost::where('slug_'.app()->getLocale(), $slug)->firstOrFail();
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'content' => 'required|string',
+        ]);
+
+        BlogComment::create([
+            'guest_name' => $request->name,
+            'guest_email' => $request->email,
+            'content' => $request->content,
+            'lang' => app()->getLocale(),
+            'is_approved' => false, // Default to false, admin will approve later
+            'is_spam' => false, // Default to false, spam detection can be added later
+            'blog_post_id' => $post->id,
+        ]);
+
+        return redirect()->back()->with('success', __('index.Comment added successfully'));
     }
 }

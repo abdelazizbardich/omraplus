@@ -9,6 +9,10 @@
     display: none;
 }
 
+svg{
+    @apply fill-blue-950;
+}
+
 /* import fonts from fonts woff folder */
 @font-face {
     font-family: "bein-black";

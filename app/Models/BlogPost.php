@@ -22,7 +22,9 @@ class BlogPost extends Model
         'content_fr',
         'excerpt',
         'published_at',
-        'is_published'
+        'is_published',
+        'view_count',
+        'share_count',
     ];
 
     public function blogCategories()
@@ -35,9 +37,9 @@ class BlogPost extends Model
         return $this->belongsToMany(BlogTag::class, 'blog_post_tags');
     }
 
-    public function blogComments()
+    public function comments()
     {
-        return $this->hasMany(BlogComment::class);
+        return $this->hasMany(BlogComment::class)->where('lang', app()->getLocale())->where('is_approved', true)->where('is_spam', false)->orderBy('created_at', 'desc');
     }
 
     public function author()

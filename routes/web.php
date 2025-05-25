@@ -36,6 +36,8 @@ Route::get('/our-services', [App\Http\Controllers\Guest\GuestController::class, 
 Route::prefix('/blog')->group(function () {
     Route::get('/', [App\Http\Controllers\Guest\BlogController::class, 'index'])->name('blog');
     Route::get('/{blogPost:slug}', [App\Http\Controllers\Guest\BlogController::class, 'show'])->name('blog.show');
+    Route::get('/share/{blogPost:slug}/{platform}', [App\Http\Controllers\Guest\BlogController::class, 'share'])->name('blog.share');
+    Route::post('/comment/{blogPost:slug}', [App\Http\Controllers\Guest\BlogController::class, 'comment'])->name('blog.comment');
 });
 
 
