@@ -442,5 +442,9 @@ return [
 	"content_ar" => "المحتوى بالعربية",
 	"publish" => "نشر",
 	"Edit Article" => "تعديل المقالة",
-	"New Article" => "مقالة جديدة"
+	"New Article" => "مقالة جديدة",
+	"Approved" => "تمت الموافقة",
+	"Not Approved" => "لم تتم الموافقة",
+	"Not Spam" => "ليس سبام",
+	"Spam" => "سبام",
 ];

@@ -117,6 +117,10 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     Route::post('/dashboard/blog/update/{id}', [App\Http\Controllers\BlogController::class, 'update'])->name('admin.blog.update');
     Route::get('/dashboard/blog/delete/{id}', [App\Http\Controllers\BlogController::class, 'delete'])->name('admin.blog.delete');
     Route::get('/dashboard/blog/publish/{id}', [App\Http\Controllers\BlogController::class, 'publish'])->name('admin.blog.publish');
+    
+    Route::get('/dashboard/comment', [App\Http\Controllers\BlogController::class, 'comments'])->name('admin.comments');
+    Route::get('/dashboard/comment/approve/{id}', [App\Http\Controllers\BlogController::class, 'approveComment'])->name('admin.comments.approve');
+    Route::get('/dashboard/comment/delete/{id}', [App\Http\Controllers\BlogController::class, 'deleteComment'])->name('admin.comments.delete');
 });
 
 Route::middleware(['auth:sanctum', 'role:publisher'])->group(function () {

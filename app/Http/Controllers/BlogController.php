@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogComment;
 use App\Models\BlogPost;
 use App\Models\Photo;
 use DB;
@@ -163,5 +164,31 @@ class BlogController extends Controller
         $post->published_at = now();
         $post->save();
         return redirect()->route('admin.blog')->with('success', 'Post published successfully');
+    }
+
+    public function comments(){
+        $data = [
+            "comments" => BlogComment::orderByDesc('created_at')->get(),
+            "name" => "Comments"
+        ];
+        return view('comments', $data);
+    }
+
+    public function approveComment($id){
+        $comment = BlogComment::find($id);
+        if (!$comment) {
+            return redirect()->back()->withErrors(['Comment not found']);
+        }
+        $comment->is_approved = true;
+        $comment->save();
+        return redirect()->route('admin.comments')->with('success', 'Comment approved successfully');
+    }
+    public function deleteComment($id){
+        $comment = BlogComment::find($id);
+        if (!$comment) {
+            return redirect()->back()->withErrors(['Comment not found']);
+        }
+        $comment->delete();
+        return redirect()->route('admin.comments')->with('success', 'Comment deleted successfully');
     }
 }

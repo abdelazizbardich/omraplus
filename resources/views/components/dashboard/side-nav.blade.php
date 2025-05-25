@@ -62,6 +62,10 @@
                 <img src="{{ Vite::asset('resources/images/articles.png') }}" alt="{{__('index.Articles')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Articles')}}</span>
             </a>
+            <a href="{{ route('admin.comments') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Comments')}}">
+                <img src="{{ Vite::asset('resources/images/comments.png') }}" alt="{{__('index.Comments')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Comments')}}</span>
+            </a>
         </div>
         <div>
             <hr class="border-0 border-b opacity-65 mb-5">

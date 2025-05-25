@@ -108,6 +108,15 @@ body {
         background-size: 60% auto;
         background-repeat: no-repeat;
     }
+    .approve{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: white !important;
+        background-image: url('../images/approve.png');
+        background-position: center;
+        background-size: 60% auto;
+        background-repeat: no-repeat;
+    }
     input:focus{
         box-shadow: none;
     }
