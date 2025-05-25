@@ -2,7 +2,7 @@
     <x-header active=""></x-header>
     <div class="w-full flex">
         <div class="w-2/5 relative">
-            <img src="{{ $post->photo->url }}" class="object-cover aspect-video w-full" alt="Post Image">
+            <img src="{{ @$post->photo->url }}" onerror="this.onerror=null;this.src='{{ Vite::asset('resources/images/not-found.webp') }}';" class="object-cover aspect-video w-full" alt="Post Image">
             <div class="absolute flex flex-row w-fit justify-center items-center gap-2 bottom-8 start-8">
                 @foreach ($post->blogCategories as $category)
                     <span class="badge p-3">{{ $category->name }}</span>

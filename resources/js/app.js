@@ -126,40 +126,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Text editor
-    tinymce.init({
-        selector: "#text-editor_en,#text-editor_fr,#text-editor_ar",
-        license_key: "gpl",
-        directionality: lang === "ar" ? "rtl" : "ltr",
-        language: "ar",
-        menubar: false,
-        plugins: [
-            "advlist",
-            "autolink",
-            "lists",
-            "link",
-            "image",
-            "charmap",
-            "preview",
-            "anchor",
-            "searchreplace",
-            "visualblocks",
-            "code",
-            "fullscreen",
-            "insertdatetime",
-            "media",
-            "table",
-            "help",
-            "wordcount",
-        ],
-        toolbar:
-            "undo redo | blocks | " +
-            "bold italic backcolor | alignleft aligncenter " +
-            "alignright alignjustify | bullist numlist outdent indent | " +
-            "removeformat | help",
-        content_style:
-            "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-    });
+    const editors = document.querySelectorAll(".text-editor");
+    if (editors.length > 0) {
+        editors.forEach((editor) => {
+            const editorLang = editor.dataset.lang;
+            // Text editor
+            tinymce.init({
+                target: editor,
+                license_key: "gpl",
+                directionality: (editorLang || lang) === "ar" ? "rtl" : "ltr",
+                language: lang,
+                menubar: false,
+                plugins: [
+                    "advlist",
+                    "autolink",
+                    "lists",
+                    "link",
+                    "image",
+                    "charmap",
+                    "preview",
+                    "anchor",
+                    "searchreplace",
+                    "visualblocks",
+                    "code",
+                    "fullscreen",
+                    "insertdatetime",
+                    "media",
+                    "table",
+                    "help",
+                    "wordcount",
+                ],
+                toolbar:
+                    "undo redo | blocks | " +
+                    "bold italic backcolor | alignleft aligncenter " +
+                    "alignright alignjustify | bullist numlist outdent indent | " +
+                    "removeformat | help",
+                content_style:
+                    "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+            });
+        });
+    }
 
     // DataTable
     const datatable = document.querySelectorAll(".datatable");

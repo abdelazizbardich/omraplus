@@ -177,14 +177,34 @@ function getStatusBg($status){
 
 
 /**
-     * Find the path to a localized Markdown resource.
-     *
-     * @param  string  $name
-     * @return string|null
-     */
-    function localizedView($name)
-    {
-        // $localName = preg_replace('#(\.blade.php)$#i', '.'.app()->getLocale().'$1', $name);
-        $localName = $name.'-'.app()->getLocale();
-        return 'localized.'.$localName;
-    }
+ * Find the path to a localized Markdown resource.
+ *
+ * @param  string  $name
+ * @return string|null
+ */
+function localizedView($name)
+{
+    // $localName = preg_replace('#(\.blade.php)$#i', '.'.app()->getLocale().'$1', $name);
+    $localName = $name.'-'.app()->getLocale();
+    return 'localized.'.$localName;
+}
+
+function getExcerptFromContent($content){
+    // 1. Remove HTML tags
+    $text = strip_tags($content);
+
+    // 2. Decode HTML entities
+    $text = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+    // 3. Normalize whitespace (replace multiple spaces/newlines with a single space)
+    $text = preg_replace('/\s+/', ' ', $text);
+
+    // 4. Trim and split into words
+    $words = explode(' ', trim($text));
+
+    // 5. Take the first 150 words
+    $firstWords = array_slice($words, 0, 150);
+
+    // 6. Return them as a string
+    return implode(' ', $firstWords) . (count($words) > 150 ? '...' : '');
+}

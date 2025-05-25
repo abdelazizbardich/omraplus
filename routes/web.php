@@ -110,6 +110,13 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     Route::get('/dashboard/orders/edit/{user:id}', [App\Http\Controllers\OrderController::class, 'edit'])->name('orders.edit');
     Route::post('/dashboard/orders/update/{user:id}', [App\Http\Controllers\OrderController::class, 'update'])->name('orders.update');
     Route::get('/dashboard/orders/delete/{user:id}', [App\Http\Controllers\OrderController::class, 'delete'])->name('orders.delete');
+
+    Route::get('/dashboard/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('admin.blog');
+    Route::post('/dashboard/blog/save', [App\Http\Controllers\BlogController::class, 'save'])->name('admin.blog.save');
+    Route::get('/dashboard/blog/edit/{id}', [App\Http\Controllers\BlogController::class, 'edit'])->name('admin.blog.edit');
+    Route::post('/dashboard/blog/update/{id}', [App\Http\Controllers\BlogController::class, 'update'])->name('admin.blog.update');
+    Route::get('/dashboard/blog/delete/{id}', [App\Http\Controllers\BlogController::class, 'delete'])->name('admin.blog.delete');
+    Route::get('/dashboard/blog/publish/{id}', [App\Http\Controllers\BlogController::class, 'publish'])->name('admin.blog.publish');
 });
 
 Route::middleware(['auth:sanctum', 'role:publisher'])->group(function () {
