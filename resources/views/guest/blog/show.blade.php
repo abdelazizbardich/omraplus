@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-header active=""></x-header>
-    <div class="w-full flex">
-        <div class="w-2/5 relative">
+    <div class="w-full flex flex-col md:flex-row items-center justify-between bg-blue-50">
+        <div class="w-full md:w-2/5 relative">
             <img src="{{ @$post->photo->url }}" onerror="this.onerror=null;this.src='{{ Vite::asset('resources/images/not-found.webp') }}';" class="object-cover aspect-video w-full" alt="Post Image">
             <div class="absolute flex flex-row w-fit justify-center items-center gap-2 bottom-8 start-8">
                 @foreach ($post->blogCategories as $category)
@@ -9,8 +9,8 @@
                 @endforeach
             </div>
         </div>
-        <div class="w-3/5 flex justify-center flex-col items-start px-24 bg-blue-50">
-            <h1 class="text-5xl font-bold text-blue-950 pb-4 mb-3">{{ $post->title }}</h1>
+        <div class="w-full h-full md:w-3/5 flex justify-center flex-col items-start p-4 md:px-24">
+            <h1 class="text-3xl md:text-5xl font-bold text-blue-950 pb-4 mb-3">{{ $post->title }}</h1>
             <div class="flex text-blue-950 gap-3 items-center mb-3">
                 <span>{{ __('index.Share this post') }}</span>
                 <a href="{{ route('blog.share',[$post->slug, 'facebook']) }}"><img src="{{ Vite::asset('resources/images/facebook.svg')}}" class="w-6 fill-blue-950 aspect-square" /></a>
