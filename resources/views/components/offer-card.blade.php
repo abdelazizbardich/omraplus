@@ -35,7 +35,7 @@
                 <span class="text-xs block font-black lining-nums"><span class="text-3xl">{{ money(@$data->getLowestPrice()->price) }}</span> {{__('index.dh')}} {{__('index.For a person')}}</span>
                 <span class="text-md">({{__('index.Price varies depending on the size of the collection')}})</span>
             </div>
-            <div class="flex justify-between gap-2">
+            <div class="flex-wrap flex justify-between gap-2">
                 <a href="{{ whatsappLink('fast_booking',route('flight', $data->id)) }}" class="text-nowrap w-fit flex-row flex-nowrap text-white text-base flex font-black justify-center bg-gradient-to-l from-emerald-500 to-emerald-600 items-center btn bg-emerald-550 flex-1 hover:shadow-lg">
                     <em class="fa-brands fa-whatsapp xl:text-2xl me-1 xl:me-2"></em> <span class="text-nowrap" >{{__('index.The Fast booking')}}</span>
                 </a>

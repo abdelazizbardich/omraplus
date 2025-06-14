@@ -50,8 +50,7 @@
                             </div>
                             <div class="flex flex-col justify-start items-start w-full md:w-8/12">
                                 <span class="text-lg font-semibold">{{__('index.Accommodation')}}</span>
-                                <p class="text-xs line-clamp-4">يتم توفير الإقامة في فنادق مميزة بالقرب من المسجد الحرام
-                                    والمعالم الدينية، لتجربة إقامة مريحة ولائقة برحلتكم.</p>
+                                <p class="text-xs line-clamp-4">{{ __('index.Accommodation is provided in distinctive hotels near the Grand Mosque and religious landmarks, for a comfortable and convenient stay on your trip.') }}</p>
                             </div>
                         </div>
                     @endforeach
