@@ -32,7 +32,7 @@ class LanguageMiddleware
         }else{
             $language = new UserLanguage();
             $language->mac_address = $mac;
-            $language->lang = 'en';
+            $language->lang = 'ar';
             $language->save();
             App::setLocale($language->lang);
             App::setFallbackLocale($language->lang);
