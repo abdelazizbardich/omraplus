@@ -1,6 +1,12 @@
 <div class="relative carousel-container">
-    <div class="carousel flex justify-center overflow-y-hidden overflow-x-auto space-x-4 pb-3">
-        {{ $slot }}
+    <div class="md:p-16">
+        <div class="carousel flex justify-center overflow-y-hidden overflow-x-auto space-x-4 pb-3">
+            {{ $slot }}
+            {{ $slot }}
+            {{ $slot }}
+            {{ $slot }}
+            {{ $slot }}
+        </div>
     </div>
     <button
         class="prev bg-white absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-1 aspect-square rounded-md md:px-3 shadow-md focus:outline-none">
