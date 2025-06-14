@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('blog_comments', function (Blueprint $table) {
-            // $table->dropConstrainedForeignId(column: 'user_id');
+        Schema::create('user_languages', function (Blueprint $table) {
+            $table->id();
+            // mac address
+            $table->string('mac_address')->nullable();
+            // language
+            $table->string('lang')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -21,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('blog_comments', function (Blueprint $table) {
-            // $table->foreignId('user_id')->constrained()->onDelete('cascade');
-        });
+        Schema::dropIfExists('user_languages');
     }
 };

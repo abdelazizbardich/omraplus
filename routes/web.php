@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-// App::setLocale('ar');
-Route::get('/lang/{locale}', function ($locale) { })->name('lang');
-
 Route::get('/', [App\Http\Controllers\Guest\GuestController::class, 'home'])->name('home');
 Route::get('/flight/{flight:id}', [App\Http\Controllers\Guest\GuestController::class, 'flight'])->name('flight');
 Route::post('/flights', [App\Http\Controllers\Guest\GuestController::class, 'search'])->name('flights.search');
