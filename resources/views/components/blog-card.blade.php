@@ -29,7 +29,7 @@
             </div>
             <div class="float-end flex w-auto">
                 <a href="{{ route('blog.show', $post->slug) }}" hreflang="{{ app()->getLocale() }}" class="border border-black-200 w-fit text-nowrap  rounded-md h-full py-2 px-3 text-gl font-black group duration-300 transition-colors cursor-pointer">
-                    <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.Discover more')}}
+                    <em class="fa-solid fa-chevron-{{directionLeft()}} me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.Discover more')}}
                 </a>
             </div>
         </div>

@@ -87,7 +87,7 @@
                     <span class="text-xs text-nowrap">({{__('index.Price varies depending on the size of the collection')}})</span>
                 </div>
                 <a href="{{ route('flight', $data->id) }}" class="bg-yellow-500 shadow w-fit text-nowrap shadow-yellow-700 rounded-md h-full py-2 px-4 text-xl font-black group duration-300 transition-colors cursor-pointer">
-                    <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.Book now')}}
+                    <em class="fa-solid fa-chevron-{{directionLeft()}} me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.Book now')}}
                 </a>
             </div>
         </div>

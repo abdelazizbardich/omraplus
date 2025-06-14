@@ -57,7 +57,7 @@
                         <span class="text-sm font-base block">({{__('index.Price varies depending on the size of the collection')}})</span>
                     </div>
                     <button type="submit" class="btn border-0 rounded-xl w-full from-yellow-600  bg-gradient-to-l to-yellow-500 shadow hover:shadow-md duration-300 text-nowrap shadow-yellow-700 hover:shadow-yellow-600 px-4 text-xl font-bein-black group duration-300 transition-colors cursor-pointer">
-                        <em class="text-base fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.Booook now')}}
+                        <em class="text-base fa-solid fa-chevron-{{directionLeft()}} me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.Booook now')}}
                     </button>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                         {{__('index.Group discounts available')}}
                     </span>
                     <span class="w-full duration-300 text-nowrap  py-2 px-4 text-xl font-black group cursor-pointer">
-                        <em class="fa-solid fa-chevron-left me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.push here')}}
+                        <em class="fa-solid fa-chevron-{{directionLeft()}} me-2 group-hover:me-1 group-hover:ps-1 duration-300"></em> {{__('index.push here')}}
                     </span>
                 </label>
             </div>

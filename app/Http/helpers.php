@@ -208,3 +208,7 @@ function getExcerptFromContent($content){
     // 6. Return them as a string
     return implode(' ', $firstWords) . (count($words) > 150 ? '...' : '');
 }
+
+function directionLeft(){
+    return getLanguageDirection() == 'rtl' ? 'left' : 'right';
+}
