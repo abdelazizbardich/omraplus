@@ -2,10 +2,6 @@
     <div class="md:p-16">
         <div class="carousel flex justify-center overflow-y-hidden overflow-x-auto space-x-4 pb-3">
             {{ $slot }}
-            {{ $slot }}
-            {{ $slot }}
-            {{ $slot }}
-            {{ $slot }}
         </div>
     </div>
     <button
