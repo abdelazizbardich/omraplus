@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-DmFlbOGp.css",
+    "file": "assets/app-CkhwUTix.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -20,9 +20,69 @@
     "file": "assets/droid-arabic-kufi-C6Wv-IVi.woff",
     "src": "resources/fonts/woff/droid-arabic-kufi.woff"
   },
+  "resources/images/1337318592-مطعم-فندق-الماسة-دار-الفائزين.jpg": {
+    "file": "assets/1337318592-مطعم-فندق-الماسة-دار-الفائزين-CAdazVQL.jpg",
+    "src": "resources/images/1337318592-مطعم-فندق-الماسة-دار-الفائزين.jpg"
+  },
+  "resources/images/852383506-غرفة-ثنائية--فندق-الماسة-دار-الفائزين.jpg": {
+    "file": "assets/852383506-غرفة-ثنائية--فندق-الماسة-دار-الفائزين-aaqhSnoz.jpg",
+    "src": "resources/images/852383506-غرفة-ثنائية--فندق-الماسة-دار-الفائزين.jpg"
+  },
+  "resources/images/Abraj Al Tayseer 1.jpeg": {
+    "file": "assets/Abraj Al Tayseer 1-CDZUE3No.jpeg",
+    "src": "resources/images/Abraj Al Tayseer 1.jpeg"
+  },
+  "resources/images/Abraj Al Tayseer.jpeg": {
+    "file": "assets/Abraj Al Tayseer-w0TSelsW.jpeg",
+    "src": "resources/images/Abraj Al Tayseer.jpeg"
+  },
+  "resources/images/AlbedoBase_XL_Photos_of_the_Kaaba_Mecca_Saudi_airplane_mosque_1.jpg": {
+    "file": "assets/AlbedoBase_XL_Photos_of_the_Kaaba_Mecca_Saudi_airplane_mosque_1-BHUHoEmB.jpg",
+    "src": "resources/images/AlbedoBase_XL_Photos_of_the_Kaaba_Mecca_Saudi_airplane_mosque_1.jpg"
+  },
+  "resources/images/Barakah Mawaddah.jpg": {
+    "file": "assets/Barakah Mawaddah-BTb8kPzL.jpg",
+    "src": "resources/images/Barakah Mawaddah.jpg"
+  },
+  "resources/images/Barakah Mawaddah2.jpg": {
+    "file": "assets/Barakah Mawaddah2-CdgPl3h-.jpg",
+    "src": "resources/images/Barakah Mawaddah2.jpg"
+  },
+  "resources/images/Barakah Mawaddah3.jpg": {
+    "file": "assets/Barakah Mawaddah3-Bgf_rXJ-.jpg",
+    "src": "resources/images/Barakah Mawaddah3.jpg"
+  },
+  "resources/images/Grand Plaza 1.jpeg": {
+    "file": "assets/Grand Plaza 1-4VBCLpZp.jpeg",
+    "src": "resources/images/Grand Plaza 1.jpeg"
+  },
+  "resources/images/Grand Plaza.jpeg": {
+    "file": "assets/Grand Plaza-DylDbCmR.jpeg",
+    "src": "resources/images/Grand Plaza.jpeg"
+  },
+  "resources/images/Grand Plaza2.jpeg": {
+    "file": "assets/Grand Plaza2-D22h68wc.jpeg",
+    "src": "resources/images/Grand Plaza2.jpeg"
+  },
+  "resources/images/Infinity-Hotel-Makkah-Mecca-Exterior (1).jpeg": {
+    "file": "assets/Infinity-Hotel-Makkah-Mecca-Exterior (1)-C43N_2xs.jpeg",
+    "src": "resources/images/Infinity-Hotel-Makkah-Mecca-Exterior (1).jpeg"
+  },
+  "resources/images/Infinity-Hotel-Makkah-Mecca-Exterior.jpeg": {
+    "file": "assets/Infinity-Hotel-Makkah-Mecca-Exterior-Zd2TyrZS.jpeg",
+    "src": "resources/images/Infinity-Hotel-Makkah-Mecca-Exterior.jpeg"
+  },
   "resources/images/Kaaba.webp": {
     "file": "assets/Kaaba-DxOYsQrj.webp",
     "src": "resources/images/Kaaba.webp"
+  },
+  "resources/images/Voco hotel 1.jpg": {
+    "file": "assets/Voco hotel 1-DB20cyT-.jpg",
+    "src": "resources/images/Voco hotel 1.jpg"
+  },
+  "resources/images/Voco hotel.jpg": {
+    "file": "assets/Voco hotel-sKiwwAD7.jpg",
+    "src": "resources/images/Voco hotel.jpg"
   },
   "resources/images/affiliation.png": {
     "file": "assets/affiliation-CB2qPzNQ.png",
@@ -31,6 +91,14 @@
   "resources/images/airline.png": {
     "file": "assets/airline-Bep8eBou.png",
     "src": "resources/images/airline.png"
+  },
+  "resources/images/approve.png": {
+    "file": "assets/approve--CA3pVMO.png",
+    "src": "resources/images/approve.png"
+  },
+  "resources/images/articles.png": {
+    "file": "assets/articles-DScMcN8b.png",
+    "src": "resources/images/articles.png"
   },
   "resources/images/blog-post.jpg": {
     "file": "assets/blog-post-DChHjhhC.jpg",
@@ -48,9 +116,29 @@
     "file": "assets/categories-D3zt3eo1.png",
     "src": "resources/images/categories.png"
   },
+  "resources/images/central-area-hotel-1.jpg": {
+    "file": "assets/central-area-hotel-1-bTz42FK1.jpg",
+    "src": "resources/images/central-area-hotel-1.jpg"
+  },
+  "resources/images/central-area-hotel-2.jpg": {
+    "file": "assets/central-area-hotel-2-dU3e9OJw.jpg",
+    "src": "resources/images/central-area-hotel-2.jpg"
+  },
+  "resources/images/central-area-hotel-3.jpg": {
+    "file": "assets/central-area-hotel-3-DUELYWGe.jpg",
+    "src": "resources/images/central-area-hotel-3.jpg"
+  },
+  "resources/images/central-area-hotel-main.jpg": {
+    "file": "assets/central-area-hotel-main-Bubj2dwo.jpg",
+    "src": "resources/images/central-area-hotel-main.jpg"
+  },
   "resources/images/checked.webp": {
     "file": "assets/checked-DSH1lPFd.webp",
     "src": "resources/images/checked.webp"
+  },
+  "resources/images/comments.png": {
+    "file": "assets/comments-Dyxd2PzZ.png",
+    "src": "resources/images/comments.png"
   },
   "resources/images/credit-card.jpg": {
     "file": "assets/credit-card-Dqwmicv5.jpg",
@@ -84,6 +172,14 @@
     "file": "assets/evisa icon-CZi9Nn4y.svg",
     "src": "resources/images/evisa icon.svg"
   },
+  "resources/images/facebook.svg": {
+    "file": "assets/facebook-njOafVWk.svg",
+    "src": "resources/images/facebook.svg"
+  },
+  "resources/images/fast-add.png": {
+    "file": "assets/fast-add-B-FEko5-.png",
+    "src": "resources/images/fast-add.png"
+  },
   "resources/images/favicon.ico": {
     "file": "assets/favicon-C6edU8Sm.ico",
     "src": "resources/images/favicon.ico"
@@ -104,6 +200,10 @@
     "file": "assets/google-reviews-D0wagO7S.webp",
     "src": "resources/images/google-reviews.webp"
   },
+  "resources/images/hadj-2025.jpg": {
+    "file": "assets/hadj-2025-DaUajA6W.jpg",
+    "src": "resources/images/hadj-2025.jpg"
+  },
   "resources/images/help-desk-icon.webp": {
     "file": "assets/help-desk-icon-DVtt6Oot.webp",
     "src": "resources/images/help-desk-icon.webp"
@@ -113,7 +213,7 @@
     "src": "resources/images/help-desk.jpg"
   },
   "resources/images/hero-header.webp": {
-    "file": "assets/hero-header-DwEDWNff.webp",
+    "file": "assets/hero-header-t_5mgG48.webp",
     "src": "resources/images/hero-header.webp"
   },
   "resources/images/home.png": {
@@ -128,6 +228,14 @@
     "file": "assets/hotel-DU_wswzB.png",
     "src": "resources/images/hotel.png"
   },
+  "resources/images/image-placeholder.svg": {
+    "file": "assets/image-placeholder-CZ-kMC-7.svg",
+    "src": "resources/images/image-placeholder.svg"
+  },
+  "resources/images/instagram.svg": {
+    "file": "assets/instagram-CsVaprva.svg",
+    "src": "resources/images/instagram.svg"
+  },
   "resources/images/kaaba-1.jpg": {
     "file": "assets/kaaba-1-RfCmUxxG.jpg",
     "src": "resources/images/kaaba-1.jpg"
@@ -135,6 +243,10 @@
   "resources/images/kaaba-2.jpg": {
     "file": "assets/kaaba-2-BItF2R2c.jpg",
     "src": "resources/images/kaaba-2.jpg"
+  },
+  "resources/images/linkedin.svg": {
+    "file": "assets/linkedin-CXDl9ixw.svg",
+    "src": "resources/images/linkedin.svg"
   },
   "resources/images/logo-d.png": {
     "file": "assets/logo-d-CJ66b5cm.png",
@@ -184,6 +296,18 @@
     "file": "assets/mourchid icon-UouNJRXl.svg",
     "src": "resources/images/mourchid icon.svg"
   },
+  "resources/images/nama moda.jpg": {
+    "file": "assets/nama moda-DCe653Li.jpg",
+    "src": "resources/images/nama moda.jpg"
+  },
+  "resources/images/nama moda1.jpg": {
+    "file": "assets/nama moda1-DdMmTzVG.jpg",
+    "src": "resources/images/nama moda1.jpg"
+  },
+  "resources/images/not-found.webp": {
+    "file": "assets/not-found-BSiMtJRn.webp",
+    "src": "resources/images/not-found.webp"
+  },
   "resources/images/orders.png": {
     "file": "assets/orders-CM8JW3hn.png",
     "src": "resources/images/orders.png"
@@ -191,6 +315,10 @@
   "resources/images/payment method.png": {
     "file": "assets/payment method-DnzAUsEj.png",
     "src": "resources/images/payment method.png"
+  },
+  "resources/images/phone-mokup.png": {
+    "file": "assets/phone-mokup-CgzBqDnc.png",
+    "src": "resources/images/phone-mokup.png"
   },
   "resources/images/plane-taking.svg": {
     "file": "assets/plane-taking-DjFZUvgG.svg",
@@ -216,6 +344,10 @@
     "file": "assets/programs-w2GNgAHf.png",
     "src": "resources/images/programs.png"
   },
+  "resources/images/publish.png": {
+    "file": "assets/publish-CdHcPEez.png",
+    "src": "resources/images/publish.png"
+  },
   "resources/images/room.png": {
     "file": "assets/room-p-d-DfwJ.png",
     "src": "resources/images/room.png"
@@ -228,9 +360,17 @@
     "file": "assets/site-avatar-BzIZj2Fv.jpg",
     "src": "resources/images/site-avatar.jpg"
   },
+  "resources/images/timeline-bg.jpg": {
+    "file": "assets/timeline-bg-BelkzyUF.jpg",
+    "src": "resources/images/timeline-bg.jpg"
+  },
   "resources/images/transport icon.svg": {
     "file": "assets/transport icon-ea16Lpga.svg",
     "src": "resources/images/transport icon.svg"
+  },
+  "resources/images/twitter.svg": {
+    "file": "assets/twitter-CzHiKhTj.svg",
+    "src": "resources/images/twitter.svg"
   },
   "resources/images/umrah-offer-main.webp": {
     "file": "assets/umrah-offer-main-Q4EKWy9s.webp",
@@ -244,6 +384,14 @@
     "file": "assets/umrah2-D5ipDe6U.jpg",
     "src": "resources/images/umrah2.jpg"
   },
+  "resources/images/unnamed (1).jpg": {
+    "file": "assets/unnamed (1)-5UfVat2n.jpg",
+    "src": "resources/images/unnamed (1).jpg"
+  },
+  "resources/images/unnamed.jpg": {
+    "file": "assets/unnamed-D3gQeTlQ.jpg",
+    "src": "resources/images/unnamed.jpg"
+  },
   "resources/images/users.png": {
     "file": "assets/users-JKShSEp5.png",
     "src": "resources/images/users.png"
@@ -252,17 +400,39 @@
     "file": "assets/wafa-bank-DSeDlFY6.jpg",
     "src": "resources/images/wafa-bank.jpg"
   },
+  "resources/images/whatsapp.svg": {
+    "file": "assets/whatsapp-CMtMseH5.svg",
+    "src": "resources/images/whatsapp.svg"
+  },
+  "resources/images/الماسة الفائزين(رمادا الفائزين).jpg": {
+    "file": "assets/الماسة الفائزين(رمادا الفائزين)-ysMsIuep.jpg",
+    "src": "resources/images/الماسة الفائزين(رمادا الفائزين).jpg"
+  },
+  "resources/images/شيراتون.jpeg": {
+    "file": "assets/شيراتون-BLmKjS6i.jpeg",
+    "src": "resources/images/شيراتون.jpeg"
+  },
+  "resources/images/شيراتون2.avif": {
+    "file": "assets/شيراتون2-DfacnCpE.avif",
+    "src": "resources/images/شيراتون2.avif"
+  },
+  "resources/images/مودة الحسنين.jpg": {
+    "file": "assets/مودة الحسنين-BA_n3fc0.jpg",
+    "src": "resources/images/مودة الحسنين.jpg"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-DA8kynag.js",
+    "file": "assets/app-CfMcL5OF.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-DmFlbOGp.css"
+      "assets/app-CkhwUTix.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",
       "assets/edit-MIk-D_ps.png",
+      "assets/publish-CdHcPEez.png",
+      "assets/approve--CA3pVMO.png",
       "assets/bein-black-DgIw4-Hw.woff",
       "assets/bein-normal-6Drpe53X.woff",
       "assets/droid-arabic-kufi-C6Wv-IVi.woff",
