@@ -69,7 +69,7 @@
     </div>
 </div>
 <div class="container mx-auto px-4 py-8 rounded-3xl p-4">
-    <div class="flex items-center mb-8">
+    <div class="flex items-center mb-8 gap-4">
         <div class="w-1/2">
             <h3 class="text-xl font-bold mb-4">وكالة أسفار للحج والعمرة في المغرب</h3>
             <p class="mb-4 leading-relaxed">
@@ -78,7 +78,7 @@
             <p class="mb-4 leading-relaxed">
                 تكون رحلتك إلى بيت الله الحرام مبنية أتناس ومثمة، تعمل بشغف على خدمة ضيوف الرحمن بأعلى مستويات الاحترافية والرعاية، بأعلى مستويات الاحترافية والرعاية
             </p>
-            <span class="bg-yellow-600 ms-auto">المغرب</span>
+            <span class="bg-yellow-600 ms-auto rounded-full px-6 py-1 text-sm block w-fit">المغرب</span>
         </div>
         <div class="w-1/2">
             <img src="{{ Vite::asset('resources/images/about-us/section-image.png') }}" alt="وكالة أسفار للحج والعمرة في المغرب">
