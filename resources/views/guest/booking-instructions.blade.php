@@ -18,7 +18,7 @@
 
             <!-- Step 1 -->
             <div class="flex flex-col md:flex-row items-center gap-8">
-                <img src="https://placehold.co/300x200" alt="اختيار الباقة" class="rounded shadow w-full md:w-1/2" />
+                <img src="{{ Vite::asset('resources/images/booking-instructions/1.png') }}" alt="اختيار الباقة" class="rounded shadow w-full md:w-1/2" />
                 <div class="md:w-1/2">
                     <h2 class="text-2xl font-bold text-yellow-600 mb-2">1. اختيار الباقة المناسبة</h2>
                     <p class="mb-2">نقدم لك باقات تناسب جميع الفئات:</p>
@@ -33,7 +33,7 @@
 
             <!-- Step 2 -->
             <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-                <img src="https://placehold.co/300x200" alt="إرسال الطلب" class="rounded shadow w-full md:w-1/2" />
+                <img src="{{ Vite::asset('resources/images/booking-instructions/2.png') }}" alt="إرسال الطلب" class="rounded shadow w-full md:w-1/2" />
                 <div class="md:w-1/2">
                     <h2 class="text-2xl font-bold text-yellow-600 mb-2">2. إرسال طلب الحجز</h2>
                     <p class="mb-2">طرق التقديم:</p>
@@ -49,7 +49,7 @@
 
             <!-- Step 3 -->
             <div class="flex flex-col md:flex-row items-center gap-8">
-                <img src="https://placehold.co/300x200" alt="تقديم الوثائق" class="rounded shadow w-full md:w-1/2" />
+                <img src="{{ Vite::asset('resources/images/booking-instructions/3.png') }}" alt="تقديم الوثائق" class="rounded shadow w-full md:w-1/2" />
                 <div class="md:w-1/2">
                     <h2 class="text-2xl font-bold text-yellow-600 mb-2">3. تقديم الوثائق المطلوبة</h2>
                     <ul class="list-disc pr-6 space-y-1 text-gray-700">
@@ -62,7 +62,7 @@
 
             <!-- Step 4 -->
             <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-                <img src="https://placehold.co/300x200" alt="الدفع والتأكيد" class="rounded shadow w-full md:w-1/2" />
+                <img src="{{ Vite::asset('resources/images/booking-instructions/4.png') }}" alt="الدفع والتأكيد" class="rounded shadow w-full md:w-1/2" />
                 <div class="md:w-1/2">
                     <h2 class="text-2xl font-bold text-yellow-600 mb-2">4. تأكيد الحجز والدفع</h2>
                     <ul class="list-disc pr-6 space-y-1 text-gray-700">
@@ -76,7 +76,7 @@
 
             <!-- Step 5 -->
             <div class="flex flex-col md:flex-row items-center gap-8">
-                <img src="https://placehold.co/300x200" alt="استلام البرنامج" class="rounded shadow w-full md:w-1/2" />
+                <img src="{{ Vite::asset('resources/images/booking-instructions/5.png') }}" alt="استلام البرنامج" class="rounded shadow w-full md:w-1/2" />
                 <div class="md:w-1/2">
                     <h2 class="text-2xl font-bold text-yellow-600 mb-2">5. استلام البرنامج والتوجيهات</h2>
                     <ul class="list-disc pr-6 space-y-1 text-gray-700">

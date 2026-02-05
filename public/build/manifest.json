@@ -104,6 +104,26 @@
     "file": "assets/blog-post-DChHjhhC.jpg",
     "src": "resources/images/blog-post.jpg"
   },
+  "resources/images/booking-instructions/1.png": {
+    "file": "assets/1-BLE9EkRr.png",
+    "src": "resources/images/booking-instructions/1.png"
+  },
+  "resources/images/booking-instructions/2.png": {
+    "file": "assets/2-DfL39yB-.png",
+    "src": "resources/images/booking-instructions/2.png"
+  },
+  "resources/images/booking-instructions/3.png": {
+    "file": "assets/3-Dwe_eax2.png",
+    "src": "resources/images/booking-instructions/3.png"
+  },
+  "resources/images/booking-instructions/4.png": {
+    "file": "assets/4--c9VFxJv.png",
+    "src": "resources/images/booking-instructions/4.png"
+  },
+  "resources/images/booking-instructions/5.png": {
+    "file": "assets/5-CXsTbIIJ.png",
+    "src": "resources/images/booking-instructions/5.png"
+  },
   "resources/images/booking.webp": {
     "file": "assets/booking-BezrIu1n.webp",
     "src": "resources/images/booking.webp"
@@ -181,7 +201,7 @@
     "src": "resources/images/fast-add.png"
   },
   "resources/images/favicon.ico": {
-    "file": "assets/favicon-C6edU8Sm.ico",
+    "file": "assets/favicon-DTmnP3Su.ico",
     "src": "resources/images/favicon.ico"
   },
   "resources/images/flight icon.svg": {
@@ -249,11 +269,11 @@
     "src": "resources/images/linkedin.svg"
   },
   "resources/images/logo-d.png": {
-    "file": "assets/logo-d-CJ66b5cm.png",
+    "file": "assets/logo-d-B2mBsSxV.png",
     "src": "resources/images/logo-d.png"
   },
   "resources/images/logo-w.png": {
-    "file": "assets/logo-w-BJCJuo6C.png",
+    "file": "assets/logo-w-BotE84Pw.png",
     "src": "resources/images/logo-w.png"
   },
   "resources/images/logo.webp": {
