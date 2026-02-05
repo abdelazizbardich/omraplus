@@ -2,48 +2,90 @@
 <x-header active=""></x-header>
 <x-page-header :title="__('index.About us')"></x-page-header>
 
-<div class="container mx-auto px-4 py-8">
-    <div class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">{{ __('index.'.config('app.name')) }}</h2>
-        <p class="text-lg leading-relaxed">
-            عمرة بلس هي وكالة متخصصة في تنظيم رحلات الحج والعمرة، تجمع بين الخبرة العالية والخدمة الممتازة لتوفير تجربة روحانية مميزة ومريحة للمعتمرين والحجاج. نحرص في عمرة بلس على أن تكون رحلتك إلى بيت الله الحرام ميسّرة، آمنة، ومليئة بالطمأنينة والسكينة، من لحظة الحجز وحتى العودة. نعمل بشغف على خدمة ضيوف الرحمن بأعلى مستويات الاحترافية والرعاية.
+<div class="container mx-auto px-4 py-3 mt-8 mb-4">
+    <div class="flex justify-between items-center">
+        <h2 class="text-lg font-bold">وكالة أسفار للحج والعمرة في المغرب</h2>
+        <p class="text-base leading-relaxed">وكالة أسفار للحج والعمرة في المغرب</p>
+    </div>
+</div>
+<div class="container mx-auto px-4 py-8 bg-gray-900 rounded-3xl p-4 flex">
+    <div class="w-1/3 p-4 bg-white rounded-3xl py-8 flex flex-col text-center items-center justify-center">
+        <img src="{{ Vite::asset('resources/images/logo-d.png') }}" alt="وكالة أسفار للحج والعمرة في المغرب" class="rounded-3xl w-full h-auto object-cover">
+        <div class="mb-4 flex flex-col items-center justify-center text-center">
+            <span class="text-sm">Agence de Voyage Hajj et Omra - Maroc</span>
+            <span class="text-sm">وكالة أسفار للحج والعمرة - المغرب</span>
+        </div>
+        <span class="text-sm">www.<strong>omraplus.com</strong></span>
+        <span class="text-sm">contact@omraplus.com</span>
+    </div>
+    <div class="w-1/3 p-4">
+        <h3 class="text-xl font-bold mb-4 text-white">وكالة أسفار للحج والعمرة في المغرب</h3>
+        <p class="text-white leading-relaxed mb-4">
+            عمرة بلس هي وكالة متخصصة في تنظيم رحلات الحج والعمرة، تجمع بين الخبرة العالية والاحدمة الممتازة لتوفير تجربة إيمانية مميزة ومريحة
+        </p>
+        <p class="text-white leading-relaxed">
+            للمعتمرين والحجاج. نحرص في عمرة بلس على أن تكون رحلتك إلى بيت الله الحرام مبنية أتناس ومثمة، مع التأكد من تلبية احتياجات الراحة والسكن, من لحظة الحجز وحتى العودة، تعمل بشغف على خدمة ضيوف الرحمن بأعلى مستويات الاحترافية والرعاية
         </p>
     </div>
+    <div class="w-1/3 p-4 grid grid-cols-2 grid-rows-2 gap-4">
+        <div class="rounded-xl bg-gray-700 text-white p-4 flex flex-col items-center justify-center text-center">
+            <span>+45 آلف</span>
+            <span>عميل سعداء</span>
+        </div>
 
-    <div>
-        <h3 class="text-xl font-bold mb-4">لماذا تختار عمرة بلس؟ إليك ٩ أسباب مميزة:</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="p-4 bg-white rounded-lg shadow">
-                <h4 class="font-bold mb-2">خبرة ميدانية واسعة</h4>
-                <p>سنوات من الخبرة في تنظيم رحلات العمرة والحج تجعلنا نعرف كل التفاصيل الصغيرة التي تهمك.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow">
-                <h4 class="font-bold mb-2">برامج متنوعة ومخصصة</h4>
-                <p>نقدم باقات مرنة تلائم جميع الميزانيات والفئات، سواءً كانت اقتصادية أو فاخرة.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow">
-                <h4 class="font-bold mb-2">خدمة عملاء 24/7</h4>
-                <p>فريق دعم جاهز لخدمتك في أي وقت، قبل وأثناء وبعد الرحلة.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow">
-                <h4 class="font-bold mb-2">مرشدين ذوي كفاءة</h4>
-                <p>نخبة من المرشدين المؤهلين دينيًا وثقافيًا لمرافقتك وتسهيل جميع الشعائر.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow">
-                <h4 class="font-bold mb-2">تنقلات مريحة وآمنة</h4>
-                <p>وسائل نقل حديثة ومكيفة لتنقلاتك داخل مكة والمدينة.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow">
-                <h4 class="font-bold mb-2">إقامات مختارة بعناية</h4>
-                <p>فنادق قريبة من الحرم توفر راحة وسهولة في الوصول لأداء المناسك.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow">
-                <h4 class="font-bold mb-2">خدمة إلكترونية متطورة</h4>
-                <p>يمكنك الحجز وتتبع رحلتك بسهولة عبر منصتنا الرقمية.</p>
-            </div>
+        <div class="rounded-xl bg-gray-700 text-white p-4 flex flex-col items-center justify-center text-center">
+            <span>+45 آلف</span>
+            <span>عميل سعداء</span>
+        </div>
+
+        <div class="rounded-xl bg-gray-700 text-white p-4 flex flex-col items-center justify-center text-center">
+            <span>+45 آلف</span>
+            <span>عميل سعداء</span>
+        </div>
+
+        <div class="rounded-xl bg-gray-700 text-white p-4 flex flex-col items-center justify-center text-center">
+            <span>+45 آلف</span>
+            <span>عميل سعداء</span>
         </div>
     </div>
 </div>
+<div class="container mx-auto px-4 py-8 rounded-3xl p-4">
+    <div class="mb-8">
+        <x-title 
+        subtitle="وكالة أسفار للحج والعمرة في المغرب" 
+        title="وكالة أسفار للحج أسفار للحج والعمرة في المغرب"
+        ></x-title>
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+        @for ($i = 0; $i < 8; $i++)
+            <div class="w-full">
+                <img src="{{ Vite::asset('resources/images/about-us/badge.png') }}" alt="خبرة ميدانية واسعة" class="rounded-3xl w-3/12 h-auto object-cover">
+                <div class="border rounded-xl p-4 mt-4 text-start">
+                    <span class="text-xl">خبرة ميدانية واسعة</span>
+                    <p class="">سنوات من الخبرة في تنظيم رحلات العمرة والحج نجعلنا نعرف كل التفاصيل المغربة التي تضمن</p>
+                </div>
+            </div>
+        @endfor
+    </div>
+</div>
+<div class="container mx-auto px-4 py-8 rounded-3xl p-4">
+    <div class="flex items-center mb-8">
+        <div class="w-1/2">
+            <h3 class="text-xl font-bold mb-4">وكالة أسفار للحج والعمرة في المغرب</h3>
+            <p class="mb-4 leading-relaxed">
+                عمرة بلس هي وكالة متخصصة في تنظيم رحلات الحج والعمرة، تجمع بين الخبرة العالية والاحدمة الممتازة لتوفير تجربة إيمانية مميزة ومريحة للمعتمرين والحجاج. نحرص في عمرة بلس على أن تكون رحلتك إلى بيت الله الحرام مبنية أتناس ومثمة، مع التأكد من تلبية احتياجات الراحة والسكن، من لحظة الحجز وحتى العودة
+            </p>
+            <p class="mb-4 leading-relaxed">
+                تكون رحلتك إلى بيت الله الحرام مبنية أتناس ومثمة، تعمل بشغف على خدمة ضيوف الرحمن بأعلى مستويات الاحترافية والرعاية، بأعلى مستويات الاحترافية والرعاية
+            </p>
+            <span class="bg-yellow-600 ms-auto">المغرب</span>
+        </div>
+        <div class="w-1/2">
+            <img src="{{ Vite::asset('resources/images/about-us/section-image.png') }}" alt="وكالة أسفار للحج والعمرة في المغرب">
+        </div>
+    </div>
+</div>
+
 
     
 <x-footer></x-footer>

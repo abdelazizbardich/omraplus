@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-CkhwUTix.css",
+    "file": "assets/app--9XI-3d1.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -83,6 +83,14 @@
   "resources/images/Voco hotel.jpg": {
     "file": "assets/Voco hotel-sKiwwAD7.jpg",
     "src": "resources/images/Voco hotel.jpg"
+  },
+  "resources/images/about-us/badge.png": {
+    "file": "assets/badge-BnJrg87t.png",
+    "src": "resources/images/about-us/badge.png"
+  },
+  "resources/images/about-us/section-image.png": {
+    "file": "assets/section-image-CxowUyFl.png",
+    "src": "resources/images/about-us/section-image.png"
   },
   "resources/images/affiliation.png": {
     "file": "assets/affiliation-CB2qPzNQ.png",
@@ -441,12 +449,12 @@
     "src": "resources/images/مودة الحسنين.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CfMcL5OF.js",
+    "file": "assets/app-DLFPqTqw.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-CkhwUTix.css"
+      "assets/app--9XI-3d1.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",
