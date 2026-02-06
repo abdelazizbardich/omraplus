@@ -60,7 +60,7 @@ body {
         /* height: 550px; */
     }
     .container {
-        @apply px-3 md:px-0 mx-auto max-w-screen-xl;
+        @apply px-3 md:px-0;
     }
     .overley {
         @apply relative before:content-[''] before:h-full before:absolute before:left-0 before:bottom-0 before:w-full before:bg-gradient-to-t before:bg-midnight before:opacity-45 before:z-10;
