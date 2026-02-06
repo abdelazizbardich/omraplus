@@ -13,83 +13,80 @@
                     الآن</a>
             </div>
         </section>
-
-        <!-- Why Choose Us -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-10">لماذا تختار الحج معنا؟</h2>
-                <div class="grid md:grid-cols-3 gap-8 text-right">
-                    <div>
-                        <img src="https://placehold.co/400x300" class="mx-auto mb-4" alt="Icon">
-                        <h3 class="font-bold text-xl mb-2">تنظيم شامل</h3>
-                        <p>نهتم بكل التفاصيل من التصاريح حتى العودة لتتفرغ للعبادة.</p>
+        
+        <section class="container mx-auto px-4 py-8 rounded-3xl p-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-lg font-bold">سجل الأن واضمن مقعدك في رحلة الحج القادمة</h2>
+                <p class="text-base leading-relaxed">وكالة أسفار للحج والعمرة في المغرب</p>
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+                @for ($i = 0; $i < 4; $i++)
+                    <div class="w-full border rounded-xl p-4">
+                        <img src="{{ Vite::asset('resources/images/about-us/badge.png') }}" alt="خبرة ميدانية واسعة" class="ms-auto d-block rounded-3xl w-3/12 h-auto object-cover">
+                        <div class="mt-4 text-start">
+                            <span class="text-xl">خبرة ميدانية واسعة</span>
+                            <p class="">سنوات من الخبرة في تنظيم رحلات العمرة والحج نجعلنا نعرف كل التفاصيل المغربة التي تضمن</p>
+                        </div>
                     </div>
-                    <div>
-                        <img src="https://placehold.co/400x300" class="mx-auto mb-4" alt="Icon">
-                        <h3 class="font-bold text-xl mb-2">مرشدون مؤهلون</h3>
-                        <p>يرافقك مرشدون خبراء لتيسير أداء المناسك والإجابة عن الأسئلة.</p>
+                @endfor
+            </div>
+        </section>
+        
+        <section class="container mx-auto px-4 py-8 rounded-3xl p-4">
+            <div class="mb-8">
+                <x-title 
+                title="باقات الحج 2025"
+                subtitle="وكالة أسفار للحج والعمرة في المغرب" 
+                ></x-title>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Package Card -->
+                <div class="bg-white shadow rounded-lg overflow-hidden border-2 flex p-2 items-center">
+                    <img src="{{ Vite::asset('resources/images/hajj-2025/pack-icon.png') }}" class="w-3/12 aspect-square object-contain bg-gray-500 rounded-lg"
+                        alt="الباقة الاقتصادية">
+                    <div class="px-3">
+                        <h3 class="text-base font-bold mb-1">الباقة الاقتصادية</h3>
+                        <p class="mb-1 text-base">تنظيم جيد وسعر مناسب مع إقامة مريحة وخدمات أساسية.</p>
+                        <a href="#" class="text-yellow-600 hover:underline">تفاصيل الباقة</a>
                     </div>
-                    <div>
-                        <img src="https://placehold.co/400x300" class="mx-auto mb-4" alt="Icon">
-                        <h3 class="font-bold text-xl mb-2">دعم 24/7</h3>
-                        <p>نحن معك دائمًا طوال الرحلة، قبلها وأثناءها وحتى العودة.</p>
+                </div>
+                <!-- Package Card -->
+                <div class="bg-white shadow rounded-lg overflow-hidden border-2 flex p-2 items-center">
+                    <img src="{{ Vite::asset('resources/images/hajj-2025/pack-icon.png') }}" class="w-3/12 h-fit aspect-square object-contain bg-yellow-500 rounded-lg"
+                        alt="الباقة الفاخرة">
+                    <div class="px-3">
+                        <h3 class="text-base font-bold mb-1">الباقة الفاخرة ⭐</h3>
+                        <p class="mb-1 text-base">إقامة 5 نجوم وخدمة شخصية وتنقلات مميزة.</p>
+                        <a href="#" class="text-yellow-600 hover:underline">تفاصيل الباقة</a>
+                    </div>
+                </div>
+                <!-- Package Card -->
+                <div class="bg-white shadow rounded-lg overflow-hidden border-2 flex p-2 items-center">
+                    <img src="{{ Vite::asset('resources/images/hajj-2025/pack-icon.png') }}" class="w-3/12 aspect-square object-contain bg-gray-50 invert rounded-lg"
+                        alt="باقات العائلات">
+                    <div class="px-3">
+                        <h3 class="text-base font-bold mb-1">باقات العائلات والمجموعات</h3>
+                        <p class="mb-1 text-base">خدمة مخصصة ومرنة حسب احتياجاتك الخاصة.</p>
+                        <a href="#" class="text-yellow-600 hover:underline">تفاصيل الباقة</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Packages -->
-        <section id="packages" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">باقات الحج 2025</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Package Card -->
-                    <div class="bg-white shadow rounded-lg overflow-hidden">
-                        <img src="https://placehold.co/400x300" class="w-full h-52 object-cover"
-                            alt="الباقة الاقتصادية">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">الباقة الاقتصادية</h3>
-                            <p class="mb-4">تنظيم جيد وسعر مناسب مع إقامة مريحة وخدمات أساسية.</p>
-                            <a href="#" class="text-yellow-600 hover:underline">تفاصيل الباقة</a>
-                        </div>
-                    </div>
-                    <!-- Package Card -->
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden border-2 border-yellow-500">
-                        <img src="https://placehold.co/400x300" class="w-full h-52 object-cover"
-                            alt="الباقة الفاخرة">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">الباقة الفاخرة ⭐</h3>
-                            <p class="mb-4">إقامة 5 نجوم وخدمة شخصية وتنقلات مميزة.</p>
-                            <a href="#" class="text-yellow-600 hover:underline">تفاصيل الباقة</a>
-                        </div>
-                    </div>
-                    <!-- Package Card -->
-                    <div class="bg-white shadow rounded-lg overflow-hidden">
-                        <img src="https://placehold.co/400x300" class="w-full h-52 object-cover"
-                            alt="باقات العائلات">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">باقات العائلات والمجموعات</h3>
-                            <p class="mb-4">خدمة مخصصة ومرنة حسب احتياجاتك الخاصة.</p>
-                            <a href="#" class="text-yellow-600 hover:underline">تفاصيل الباقة</a>
-                        </div>
-                    </div>
-                </div>
+        <section class="container mx-auto px-4 py-8 rounded-3xl p-4" id="packages">
+            <div class="mb-8">
+                <x-title 
+                title="باقات الحج 2025"
+                subtitle="وكالة أسفار للحج والعمرة في المغرب" 
+                ></x-title>
             </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="py-16 bg-yellow-100 text-center">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-4">احجز رحلتك الآن!</h2>
-                <p class="mb-6 text-lg">كن من أوائل المسجلين لحج 2025 وتمتع بخدماتنا الاستثنائية</p>
-                <x-carousel>
-                    @foreach ($hadjOffers as $hadjOffer)
-                        <div class="min-w-[350px] xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
-                            <x-offer-card :data=$hadjOffer></x-offer-card>
-                        </div>
-                    @endforeach
-                </x-carousel>
-            </div>
+            <x-carousel>
+                @foreach ($hadjOffers as $hadjOffer)
+                    <div class="min-w-[350px] xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 xs:w-full p-3 pb-6">
+                        <x-offer-card :data=$hadjOffer></x-offer-card>
+                    </div>
+                @endforeach
+            </x-carousel>
         </section>
 
         <section class="py-16 bg-white">
@@ -176,85 +173,61 @@
             </div>
         </section>
 
-        <section class="bg-yellow-50 py-16 text-center px-6">
-            <h2 class="text-3xl font-bold mb-6">فضائل الحج</h2>
-            <p class="text-lg max-w-2xl mx-auto mb-6">
-                قال ﷺ: "من حج فلم يرفث ولم يفسق رجع كيوم ولدته أمه"
-            </p>
-            <blockquote class="italic text-gray-700">
-                اللهم يسّر لنا حج بيتك الحرام، وتقبّله منا ومن جميع المسلمين.
-            </blockquote>
+        <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">شاهد كيف ننظم رحلات الحج</h2>
+            <div class="aspect-video max-w-4xl mx-auto rounded overflow-hidden shadow-lg">
+            <iframe 
+                src="https://www.youtube.com/embed/VIDEO_ID" 
+                title="فيديو الحج 2025" 
+                frameborder="0" 
+                allowfullscreen 
+                class="w-full h-full">
+            </iframe>
+            </div>
+        </div>
         </section>
 
-        <section class="py-16 bg-white">
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">من أجواء رحلاتنا السابقة</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="https://placehold.co/400x300" alt="صورة 1" class="rounded shadow">
-      <img src="https://placehold.co/400x300" alt="صورة 2" class="rounded shadow">
-      <img src="https://placehold.co/400x300" alt="صورة 3" class="rounded shadow">
-      <img src="https://placehold.co/400x300" alt="صورة 4" class="rounded shadow">
-    </div>
-  </div>
-</section>
+        <section class="py-16 bg-yellow-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">تواصل معنا الآن</h2>
+            <p class="mb-6 text-lg">فريقنا جاهز للإجابة عن استفساراتك ومساعدتك في اختيار الباقة الأنسب.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+            <a href="https://wa.me/YOUR_PHONE" target="_blank"
+                class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded text-lg bg-emerald-600">
+                💬 تواصل عبر واتساب
+            </a>
+            <a href="#contact-form" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded text-lg">
+                📧 إرسال رسالة
+            </a>
+            </div>
+        </div>
+        </section>
 
-<section class="py-16 bg-gray-100">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">شاهد كيف ننظم رحلات الحج</h2>
-    <div class="aspect-video max-w-4xl mx-auto rounded overflow-hidden shadow-lg">
-      <iframe 
-        src="https://www.youtube.com/embed/VIDEO_ID" 
-        title="فيديو الحج 2025" 
-        frameborder="0" 
-        allowfullscreen 
-        class="w-full h-full">
-      </iframe>
-    </div>
-  </div>
-</section>
+        <!-- نموذج تواصل -->
+        <section id="contact-form" class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h3 class="text-2xl font-bold mb-6 text-center">أرسل لنا رسالة</h3>
+            <form class="space-y-4">
+            <input type="text" placeholder="الاسم الكامل" class="w-full p-3 border rounded" required>
+            <input type="email" placeholder="البريد الإلكتروني" class="w-full p-3 border rounded" required>
+            <textarea rows="4" placeholder="رسالتك..." class="w-full p-3 border rounded" required></textarea>
+            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded">إرسال</button>
+            </form>
+        </div>
+        </section>
 
-<section class="py-16 bg-yellow-100">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4">تواصل معنا الآن</h2>
-    <p class="mb-6 text-lg">فريقنا جاهز للإجابة عن استفساراتك ومساعدتك في اختيار الباقة الأنسب.</p>
-    <div class="flex justify-center gap-4 flex-wrap">
-      <a href="https://wa.me/YOUR_PHONE" target="_blank"
-         class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded text-lg">
-        💬 تواصل عبر واتساب
-      </a>
-      <a href="#contact-form" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded text-lg">
-        📧 إرسال رسالة
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- نموذج تواصل -->
-<section id="contact-form" class="py-16 bg-white">
-  <div class="container mx-auto px-6 max-w-2xl">
-    <h3 class="text-2xl font-bold mb-6 text-center">أرسل لنا رسالة</h3>
-    <form class="space-y-4">
-      <input type="text" placeholder="الاسم الكامل" class="w-full p-3 border rounded" required>
-      <input type="email" placeholder="البريد الإلكتروني" class="w-full p-3 border rounded" required>
-      <textarea rows="4" placeholder="رسالتك..." class="w-full p-3 border rounded" required></textarea>
-      <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded">إرسال</button>
-    </form>
-  </div>
-</section>
-
-<section class="py-16 bg-gray-50">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-8">شركاؤنا في النجاح</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
-      <img src="https://placehold.co/150x60?text=Airline" alt="شركة طيران" class="mx-auto grayscale hover:grayscale-0 transition">
-      <img src="https://placehold.co/150x60?text=Hotel" alt="فندق" class="mx-auto grayscale hover:grayscale-0 transition">
-      <img src="https://placehold.co/150x60?text=Transport" alt="نقل" class="mx-auto grayscale hover:grayscale-0 transition">
-      <img src="https://placehold.co/150x60?text=Visa" alt="تأشيرات" class="mx-auto grayscale hover:grayscale-0 transition">
-    </div>
-  </div>
-</section>
-
-
+        <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">شركاؤنا في النجاح</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
+            <img src="https://placehold.co/150x60?text=Airline" alt="شركة طيران" class="mx-auto grayscale hover:grayscale-0 transition">
+            <img src="https://placehold.co/150x60?text=Hotel" alt="فندق" class="mx-auto grayscale hover:grayscale-0 transition">
+            <img src="https://placehold.co/150x60?text=Transport" alt="نقل" class="mx-auto grayscale hover:grayscale-0 transition">
+            <img src="https://placehold.co/150x60?text=Visa" alt="تأشيرات" class="mx-auto grayscale hover:grayscale-0 transition">
+            </div>
+        </div>
+        </section>
     </div>
     <x-footer></x-footer>
 </x-guest-layout>

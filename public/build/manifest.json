@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app--9XI-3d1.css",
+    "file": "assets/app-DDiLaoG-.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -232,6 +232,10 @@
     "file": "assets/hadj-2025-DaUajA6W.jpg",
     "src": "resources/images/hadj-2025.jpg"
   },
+  "resources/images/hajj-2025/pack-icon.png": {
+    "file": "assets/pack-icon-BeP8dWFX.png",
+    "src": "resources/images/hajj-2025/pack-icon.png"
+  },
   "resources/images/help-desk-icon.webp": {
     "file": "assets/help-desk-icon-DVtt6Oot.webp",
     "src": "resources/images/help-desk-icon.webp"
@@ -449,12 +453,12 @@
     "src": "resources/images/مودة الحسنين.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DLFPqTqw.js",
+    "file": "assets/app-Bze_4r2X.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app--9XI-3d1.css"
+      "assets/app-DDiLaoG-.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",
