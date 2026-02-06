@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-DDiLaoG-.css",
+    "file": "assets/app-Si2rjyB0.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -428,6 +428,10 @@
     "file": "assets/users-JKShSEp5.png",
     "src": "resources/images/users.png"
   },
+  "resources/images/visa/morocco-flag.png": {
+    "file": "assets/morocco-flag-Clfkx4Sj.png",
+    "src": "resources/images/visa/morocco-flag.png"
+  },
   "resources/images/wafa-bank.jpg": {
     "file": "assets/wafa-bank-DSeDlFY6.jpg",
     "src": "resources/images/wafa-bank.jpg"
@@ -453,12 +457,12 @@
     "src": "resources/images/مودة الحسنين.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-Bze_4r2X.js",
+    "file": "assets/app-kYo524hZ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-DDiLaoG-.css"
+      "assets/app-Si2rjyB0.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",
