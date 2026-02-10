@@ -17,7 +17,7 @@
     <!-- Open Graph Meta Tags (for social media sharing) -->
     <meta property="og:title" content="{{ __(config('app.name')) }} - {{ __('index.Home') }}">
     <meta property="og:description" content="{{ __('index.main description') }}">
-    <meta property="og:image" content="{{ Vite::asset('resources/images/logo.webp') }}">
+    <meta property="og:image" content="{{ Vite::asset('resources/images/logo-d.png') }}">
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:type" content="website">
 
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ __(config('app.name')) }} - {{ __('index.Home') }}">
     <meta name="twitter:description" content="{{ __('index.main description') }}">
-    <meta name="twitter:image" content="{{ Vite::asset('resources/images/logo.webp') }}">
+    <meta name="twitter:image" content="{{ Vite::asset('resources/images/logo-d.png') }}">
     <meta name="twitter:site" content="@agenceomramarrakech">
 
     <!-- Favicon -->

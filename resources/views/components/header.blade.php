@@ -26,7 +26,7 @@
         <div class="container px-6 h-full mx-auto flex items-center justify-between">
             <div class="flex items *:center">
                 <a href="{{ route('home') }}">
-                    <img loading="lazy" src="{{ Vite::asset('resources/images/logo.webp') }}"
+                    <img loading="lazy" src="{{ Vite::asset('resources/images/logo-w.png') }}"
                         alt="{{ __('index.Logo') }}" class="h-10 md:h-16">
                 </a>
             </div>
@@ -92,7 +92,7 @@
         <div class="bg-blue-950 w-full h-full py-6 relative">
             <div class="start-3 end-3 top-3 flex justify-between items-center absolute">
                 <a href="{{ route('home') }}">
-                    <img src="{{ Vite::asset('resources/images/logo.webp') }}" alt="{{ __('Logo') }}" class="h-10">
+                    <img src="{{ Vite::asset('resources/images/logo-w.png') }}" alt="{{ __('Logo') }}" class="h-10">
                 </a>
                 <label for="drawer-toggle" class="p-3">
                     <em class="fa fa-close text-white text-5xl"></em>

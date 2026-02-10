@@ -15,7 +15,7 @@
     <!-- Open Graph Meta Tags (for social media sharing) -->
     <meta property="og:title" content="{{ __(config('app.name')) }} - {{ __('index.Home') }}">
     <meta property="og:description" content="{{ __('index.main description') }}">
-    <meta property="og:image" content="{{ Vite::asset('resources/images/logo.webp') }}">
+    <meta property="og:image" content="{{ Vite::asset('resources/images/logo-w.png') }}">
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:type" content="website">
 
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ __(config('app.name')) }} - {{ __('index.Home') }}">
     <meta name="twitter:description" content="{{ __('index.main description') }}">
-    <meta name="twitter:image" content="{{ Vite::asset('resources/images/logo.webp') }}">
+    <meta name="twitter:image" content="{{ Vite::asset('resources/images/logo-w.png') }}">
     <meta name="twitter:site" content="@agenceomramarrakech">
 
     <!-- Favicon -->
@@ -59,7 +59,7 @@
     style="background-image: url('{{ Vite::asset('resources/images/Kaaba.webp') }}'); background-blend-mode: overlay; background-size: cover; background-position: center; background-attachment: fixed;">
     <div class="min-h-screen flex items-center justify-center flex-col">
         <div class="">
-            <img loading="lazy" src="{{ Vite::asset('resources/images/logo.webp') }}"
+            <img loading="lazy" src="{{ Vite::asset('resources/images/logo-w.png') }}"
                 alt="{{ __(config('app.name')) }} {{__('index.logo')}}" />
         </div>
         <div class="text-center mt-4 w-6/12">
