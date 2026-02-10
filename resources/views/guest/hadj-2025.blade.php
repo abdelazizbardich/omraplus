@@ -89,6 +89,25 @@
             </x-carousel>
         </section>
 
+        <section class="container mx-auto px-4 py-8 rounded-3xl p-4" id="packages">
+            <div class="flex gap-8">
+                <div class="w-1/4">
+                    <span class="text-3xl mb-8 block">وكالة أسفار للحج والعمرة في المغرب</span>
+                    <p class="text-xl leading-loose">عمرة بلس هي وكالة متخصصة في تنظيم
+                        <br><br> رحلات الحج والعمرة تجمع بين الخبرة العالية والخدمة الممتازة لتوفير تجربة روحانية مميزة ومريحة للمعتمرين والحجاج نحرص في عمرة بلس على أن تكون رحلتك إلى بيت الله الحرام ميسرة آمنة ومليئة بالطمأنينة والسكينة، من الاحترافية والرعاية ومليئة بالطمأنينة</p>
+                </div>
+                <div class="w-1/4">
+                    <span class="text-3xl mb-8 block">وكالة أسفار للحج والعمرة في المغرب</span>
+                    <p class="text-xl leading-loose">عمرة بلس هي وكالة متخصصة في تنظيم
+                        <br><br> رحلات الحج والعمرة تجمع بين الخبرة العالية والخدمة الممتازة لتوفير تجربة روحانية مميزة ومريحة للمعتمرين والحجاج نحرص في عمرة بلس على أن تكون رحلتك إلى بيت الله الحرام ميسرة آمنة ومليئة بالطمأنينة والسكينة، من الاحترافية والرعاية ومليئة بالطمأنينة</p>
+                </div>
+                <div class="w-2/4">
+            <img src="{{ Vite::asset('resources/images/hajj-2025/section-image.png') }}" alt="وكالة أسفار للحج والعمرة في المغرب">
+
+                </div>
+            </div>
+        </section>
+
         <section class="py-16 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12">مراحل رحلة الحج مع عمرة بلس</h2>
@@ -184,47 +203,6 @@
                 allowfullscreen 
                 class="w-full h-full">
             </iframe>
-            </div>
-        </div>
-        </section>
-
-        <section class="py-16 bg-yellow-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">تواصل معنا الآن</h2>
-            <p class="mb-6 text-lg">فريقنا جاهز للإجابة عن استفساراتك ومساعدتك في اختيار الباقة الأنسب.</p>
-            <div class="flex justify-center gap-4 flex-wrap">
-            <a href="https://wa.me/YOUR_PHONE" target="_blank"
-                class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded text-lg bg-emerald-600">
-                💬 تواصل عبر واتساب
-            </a>
-            <a href="#contact-form" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded text-lg">
-                📧 إرسال رسالة
-            </a>
-            </div>
-        </div>
-        </section>
-
-        <!-- نموذج تواصل -->
-        <section id="contact-form" class="py-16 bg-white">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <h3 class="text-2xl font-bold mb-6 text-center">أرسل لنا رسالة</h3>
-            <form class="space-y-4">
-            <input type="text" placeholder="الاسم الكامل" class="w-full p-3 border rounded" required>
-            <input type="email" placeholder="البريد الإلكتروني" class="w-full p-3 border rounded" required>
-            <textarea rows="4" placeholder="رسالتك..." class="w-full p-3 border rounded" required></textarea>
-            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded">إرسال</button>
-            </form>
-        </div>
-        </section>
-
-        <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">شركاؤنا في النجاح</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
-            <img src="https://placehold.co/150x60?text=Airline" alt="شركة طيران" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="https://placehold.co/150x60?text=Hotel" alt="فندق" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="https://placehold.co/150x60?text=Transport" alt="نقل" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="https://placehold.co/150x60?text=Visa" alt="تأشيرات" class="mx-auto grayscale hover:grayscale-0 transition">
             </div>
         </div>
         </section>
