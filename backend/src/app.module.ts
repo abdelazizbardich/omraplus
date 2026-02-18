@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './modules/auth/auth.module';
+import { FlightsModule } from './modules/flights/flights.module';
 import databaseConfig from './config/database.config';
 import appConfig from './config/app.config';
 import jwtConfig from './config/jwt.config';
@@ -25,6 +26,7 @@ import jwtConfig from './config/jwt.config';
             },
         }),
         AuthModule,
+        FlightsModule,
     ],
     controllers: [AppController],
     providers: [AppService],
