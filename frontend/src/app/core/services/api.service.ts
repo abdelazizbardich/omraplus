@@ -11,7 +11,7 @@ export class ApiService {
   private apiUrl: string;
 
   constructor(private http: HttpClient) {
-    this.apiUrl = environment?.apiUrl || 'http://localhost:8000/api';
+    this.apiUrl = environment?.apiUrl || 'http://localhost:3000/api';
   }
 
   get<T>(endpoint: string, params?: HttpParams): Observable<T> {
