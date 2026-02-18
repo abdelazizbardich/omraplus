@@ -61,26 +61,29 @@ export class CreateFlightDto {
     @ApiProperty({
         description: 'Flight description in English',
         example: 'Premium Hajj flight package with excellent service',
+        required: false,
     })
     @IsString()
-    @IsNotEmpty()
-    description_en: string;
+    @IsOptional()
+    description_en?: string;
 
     @ApiProperty({
         description: 'Flight description in Arabic',
         example: 'باقة رحلة حج متميزة مع خدمة ممتازة',
+        required: false,
     })
     @IsString()
-    @IsNotEmpty()
-    description_ar: string;
+    @IsOptional()
+    description_ar?: string;
 
     @ApiProperty({
         description: 'Flight description in French',
         example: 'Forfait de vol Hajj premium avec un excellent service',
+        required: false,
     })
     @IsString()
-    @IsNotEmpty()
-    description_fr: string;
+    @IsOptional()
+    description_fr?: string;
 
     @ApiProperty({
         description: 'Departure date',
