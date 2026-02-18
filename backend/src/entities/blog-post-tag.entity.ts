@@ -4,26 +4,30 @@ import {
     Column,
     ManyToOne,
     JoinColumn,
+    CreateDateColumn,
 } from 'typeorm';
 import { BlogPost } from './blog-post.entity';
 import { BlogTag } from './blog-tag.entity';
 
-@Entity('blog_post_tag')
+@Entity('blog_post_tags')
 export class BlogPostTag {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'int' })
-    blog_post_id: number;
-
-    @Column({ type: 'int' })
-    blog_tag_id: number;
+    @Column()
+    post_id: number;
 
     @ManyToOne(() => BlogPost, (post) => post.post_tags)
-    @JoinColumn({ name: 'blog_post_id' })
+    @JoinColumn({ name: 'post_id' })
     post: BlogPost;
 
+    @Column()
+    tag_id: number;
+
     @ManyToOne(() => BlogTag, (tag) => tag.post_tags)
-    @JoinColumn({ name: 'blog_tag_id' })
+    @JoinColumn({ name: 'tag_id' })
     tag: BlogTag;
+
+    @CreateDateColumn()
+    created_at: Date;
 }

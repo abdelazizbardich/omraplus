@@ -14,24 +14,19 @@ import { User } from '../../entities/user.entity';
         PassportModule.register({ defaultStrategy: 'jwt' }),
         JwtModule.registerAsync({
             imports: [ConfigModule],
-            useFactory: (configService: ConfigService) => {
-                const expiresIn =
-                    configService.get<string>('jwt.expiresIn') || '1d';
-                return {
-                    secret:
-                        configService.get<string>('jwt.secret') ||
-                        'default-secret',
-                    signOptions: {
-                        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-                        expiresIn: expiresIn as any,
-                    },
-                };
-            },
+            useFactory: (configService: ConfigService) => ({
+                secret:
+                    configService.get<string>('JWT_SECRET') ||
+                    'your-secret-key',
+                signOptions: {
+                    expiresIn: '24h',
+                },
+            }),
             inject: [ConfigService],
         }),
     ],
     controllers: [AuthController],
     providers: [AuthService, JwtStrategy],
-    exports: [AuthService],
+    exports: [AuthService, JwtStrategy, PassportModule],
 })
 export class AuthModule {}

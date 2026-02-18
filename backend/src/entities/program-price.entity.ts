@@ -5,44 +5,43 @@ import {
     CreateDateColumn,
     UpdateDateColumn,
     ManyToOne,
-    OneToMany,
     JoinColumn,
 } from 'typeorm';
 import { Program } from './program.entity';
-import { Room } from './room.entity';
-import { Order } from './order.entity';
 
 @Entity('program_prices')
 export class ProgramPrice {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'int' })
+    @Column()
     program_id: number;
 
-    @Column({ type: 'int' })
-    room_id: number;
+    @ManyToOne(() => Program, (program) => program.prices)
+    @JoinColumn({ name: 'program_id' })
+    program: Program;
+
+    @Column()
+    room_type: string;
 
     @Column({ type: 'decimal', precision: 10, scale: 2 })
     price: number;
 
-    @Column({ type: 'decimal', precision: 10, scale: 2, nullable: true })
-    old_price: number;
+    @Column({ default: 0 })
+    min_occupancy: number;
+
+    @Column({ default: 0 })
+    max_occupancy: number;
+
+    @Column({ nullable: true, type: 'text' })
+    description: string;
+
+    @Column({ default: true })
+    is_active: boolean;
 
     @CreateDateColumn()
     created_at: Date;
 
     @UpdateDateColumn()
     updated_at: Date;
-
-    @ManyToOne(() => Program, (program) => program.prices)
-    @JoinColumn({ name: 'program_id' })
-    program: Program;
-
-    @ManyToOne(() => Room, (room) => room.program_prices)
-    @JoinColumn({ name: 'room_id' })
-    room: Room;
-
-    @OneToMany(() => Order, (order) => order.program_price)
-    orders: Order[];
 }

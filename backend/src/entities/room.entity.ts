@@ -4,33 +4,59 @@ import {
     Column,
     CreateDateColumn,
     UpdateDateColumn,
-    OneToMany,
+    ManyToOne,
+    JoinColumn,
 } from 'typeorm';
-import { ProgramPrice } from './program-price.entity';
+import { Hotel } from './hotel.entity';
 
 @Entity('rooms')
 export class Room {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_en: string;
+    @Column()
+    hotel_id: number;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_ar: string;
+    @ManyToOne(() => Hotel, (hotel) => hotel.rooms)
+    @JoinColumn({ name: 'hotel_id' })
+    hotel: Hotel;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_fr: string;
+    @Column()
+    name: string;
 
-    @Column({ type: 'int', nullable: true })
-    capacity: number;
+    @Column({ nullable: true, type: 'text' })
+    description: string;
+
+    @Column()
+    room_type: string;
+
+    @Column({ type: 'decimal', precision: 10, scale: 2 })
+    price_per_night: number;
+
+    @Column({ default: 0 })
+    max_occupancy: number;
+
+    @Column({ default: 0 })
+    available_rooms: number;
+
+    @Column({ nullable: true })
+    bed_type: string;
+
+    @Column({ nullable: true })
+    size: string;
+
+    @Column({ type: 'simple-array', nullable: true })
+    amenities: string[];
+
+    @Column({ nullable: true })
+    image: string;
+
+    @Column({ default: true })
+    is_active: boolean;
 
     @CreateDateColumn()
     created_at: Date;
 
     @UpdateDateColumn()
     updated_at: Date;
-
-    @OneToMany(() => ProgramPrice, (price) => price.room)
-    program_prices: ProgramPrice[];
 }

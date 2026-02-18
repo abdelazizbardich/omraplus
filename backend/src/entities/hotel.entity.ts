@@ -5,60 +5,70 @@ import {
     CreateDateColumn,
     UpdateDateColumn,
     OneToMany,
+    ManyToMany,
 } from 'typeorm';
+import { Room } from './room.entity';
 import { Program } from './program.entity';
-import { Photo } from './photo.entity';
 
 @Entity('hotels')
 export class Hotel {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_en: string;
+    @Column()
+    name: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_ar: string;
+    @Column({ unique: true })
+    slug: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_fr: string;
+    @Column({ nullable: true, type: 'text' })
+    description: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    slug_en: string;
+    @Column()
+    address: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    slug_ar: string;
-
-    @Column({ type: 'varchar', length: 255 })
-    slug_fr: string;
-
-    @Column({ type: 'text', nullable: true })
-    address_en: string;
-
-    @Column({ type: 'text', nullable: true })
-    address_ar: string;
-
-    @Column({ type: 'text', nullable: true })
-    address_fr: string;
-
-    @Column({ type: 'varchar', length: 255, nullable: true })
+    @Column()
     city: string;
 
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    distance: string;
+    @Column()
+    country: string;
+
+    @Column({ type: 'decimal', precision: 10, scale: 7, nullable: true })
+    latitude: number;
+
+    @Column({ type: 'decimal', precision: 10, scale: 7, nullable: true })
+    longitude: number;
+
+    @Column({ default: 0 })
+    star_rating: number;
+
+    @Column({ nullable: true })
+    phone: string;
+
+    @Column({ nullable: true })
+    email: string;
+
+    @Column({ nullable: true })
+    website: string;
+
+    @Column({ nullable: true })
+    image: string;
+
+    @Column({ type: 'simple-array', nullable: true })
+    amenities: string[];
+
+    @Column({ default: true })
+    is_active: boolean;
+
+    @OneToMany(() => Room, (room) => room.hotel)
+    rooms: Room[];
+
+    @ManyToMany(() => Program, (program) => program.hotels)
+    programs: Program[];
 
     @CreateDateColumn()
     created_at: Date;
 
     @UpdateDateColumn()
     updated_at: Date;
-
-    @OneToMany(() => Program, (program) => program.hotel_mecca)
-    programs_mecca: Program[];
-
-    @OneToMany(() => Program, (program) => program.hotel_medina)
-    programs_medina: Program[];
-
-    @OneToMany(() => Photo, (photo) => photo.hotel)
-    photos: Photo[];
 }

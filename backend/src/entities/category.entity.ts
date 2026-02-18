@@ -6,50 +6,40 @@ import {
     UpdateDateColumn,
     OneToMany,
 } from 'typeorm';
-import { Flight } from './flight.entity';
-import { Photo } from './photo.entity';
+import { Program } from './program.entity';
 
 @Entity('categories')
 export class Category {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_en: string;
+    @Column()
+    name: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_ar: string;
+    @Column({ unique: true })
+    slug: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_fr: string;
+    @Column({ nullable: true, type: 'text' })
+    description: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    slug_en: string;
+    @Column({ nullable: true })
+    icon: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    slug_ar: string;
+    @Column({ nullable: true })
+    image: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    slug_fr: string;
+    @Column({ default: 0 })
+    order: number;
 
-    @Column({ type: 'text', nullable: true })
-    description_en: string;
+    @Column({ default: true })
+    is_active: boolean;
 
-    @Column({ type: 'text', nullable: true })
-    description_ar: string;
-
-    @Column({ type: 'text', nullable: true })
-    description_fr: string;
+    @OneToMany(() => Program, (program) => program.category)
+    programs: Program[];
 
     @CreateDateColumn()
     created_at: Date;
 
     @UpdateDateColumn()
     updated_at: Date;
-
-    @OneToMany(() => Flight, (flight) => flight.category)
-    flights: Flight[];
-
-    @OneToMany(() => Photo, (photo) => photo.category)
-    photos: Photo[];
 }

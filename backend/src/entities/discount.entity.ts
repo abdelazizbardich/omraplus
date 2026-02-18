@@ -4,41 +4,47 @@ import {
     Column,
     CreateDateColumn,
     UpdateDateColumn,
-    ManyToOne,
-    JoinColumn,
 } from 'typeorm';
-import { Program } from './program.entity';
 
 @Entity('discounts')
 export class Discount {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    name_en: string;
-
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    name_ar: string;
-
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    name_fr: string;
-
-    @Column({ type: 'int', nullable: true })
-    program_id: number;
-
-    @Column({ type: 'varchar', length: 100, unique: true })
+    @Column({ unique: true })
     code: string;
 
-    @Column({ type: 'varchar', length: 50, default: 'percentage' })
-    type: string;
+    @Column()
+    name: string;
+
+    @Column({ nullable: true, type: 'text' })
+    description: string;
+
+    @Column()
+    discount_type: string;
 
     @Column({ type: 'decimal', precision: 10, scale: 2 })
-    value: number;
+    discount_value: number;
 
-    @Column({ type: 'timestamp', nullable: true })
-    valid_until: Date;
+    @Column({ nullable: true, type: 'decimal', precision: 10, scale: 2 })
+    max_discount_amount: number;
 
-    @Column({ type: 'boolean', default: true })
+    @Column({ nullable: true, type: 'decimal', precision: 10, scale: 2 })
+    min_purchase_amount: number;
+
+    @Column({ nullable: true })
+    start_date: Date;
+
+    @Column({ nullable: true })
+    end_date: Date;
+
+    @Column({ default: 0 })
+    usage_limit: number;
+
+    @Column({ default: 0 })
+    used_count: number;
+
+    @Column({ default: true })
     is_active: boolean;
 
     @CreateDateColumn()
@@ -46,8 +52,4 @@ export class Discount {
 
     @UpdateDateColumn()
     updated_at: Date;
-
-    @ManyToOne(() => Program, (program) => program.discounts)
-    @JoinColumn({ name: 'program_id' })
-    program: Program;
 }

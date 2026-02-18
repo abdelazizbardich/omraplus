@@ -13,30 +13,21 @@ export class BlogTag {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_en: string;
+    @Column()
+    name: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_ar: string;
+    @Column({ unique: true })
+    slug: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_fr: string;
+    @Column({ default: true })
+    is_active: boolean;
 
-    @Column({ type: 'varchar', length: 255 })
-    slug_en: string;
-
-    @Column({ type: 'varchar', length: 255 })
-    slug_ar: string;
-
-    @Column({ type: 'varchar', length: 255 })
-    slug_fr: string;
+    @OneToMany(() => BlogPostTag, (postTag) => postTag.tag)
+    post_tags: BlogPostTag[];
 
     @CreateDateColumn()
     created_at: Date;
 
     @UpdateDateColumn()
     updated_at: Date;
-
-    @OneToMany(() => BlogPostTag, (junction) => junction.tag)
-    post_tags: BlogPostTag[];
 }

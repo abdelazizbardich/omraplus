@@ -13,24 +13,27 @@ export class Airline {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_en: string;
+    @Column()
+    name: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_ar: string;
+    @Column({ unique: true })
+    code: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    name_fr: string;
-
-    @Column({ type: 'varchar', length: 500, nullable: true })
+    @Column({ nullable: true })
     logo: string;
+
+    @Column({ nullable: true, type: 'text' })
+    description: string;
+
+    @Column({ default: true })
+    is_active: boolean;
+
+    @OneToMany(() => Flight, (flight) => flight.airline)
+    flights: Flight[];
 
     @CreateDateColumn()
     created_at: Date;
 
     @UpdateDateColumn()
     updated_at: Date;
-
-    @OneToMany(() => Flight, (flight) => flight.airline)
-    flights: Flight[];
 }

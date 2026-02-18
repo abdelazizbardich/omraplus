@@ -1,11 +1,11 @@
 import {
     Injectable,
-    ConflictException,
     UnauthorizedException,
+    ConflictException,
 } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { User } from '../../entities/user.entity';
 import { RegisterDto } from './dto/register.dto';
@@ -15,11 +15,11 @@ import { LoginDto } from './dto/login.dto';
 export class AuthService {
     constructor(
         @InjectRepository(User)
-        private readonly userRepository: Repository<User>,
-        private readonly jwtService: JwtService,
+        private userRepository: Repository<User>,
+        private jwtService: JwtService,
     ) {}
 
-    async register(registerDto: RegisterDto): Promise<User> {
+    async register(registerDto: RegisterDto) {
         const existingUser = await this.userRepository.findOne({
             where: { email: registerDto.email },
         });
@@ -35,19 +35,28 @@ export class AuthService {
             password: hashedPassword,
         });
 
-        return await this.userRepository.save(user);
+        await this.userRepository.save(user);
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { password, ...userWithoutPassword } = user;
+        return {
+            user: userWithoutPassword,
+            access_token: this.generateToken(user),
+        };
     }
 
-    async login(loginDto: LoginDto): Promise<{ access_token: string }> {
+    async login(loginDto: LoginDto) {
         const user = await this.validateUser(loginDto.email, loginDto.password);
 
         if (!user) {
             throw new UnauthorizedException('Invalid credentials');
         }
 
-        const payload = { sub: user.id, email: user.email };
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { password, ...userWithoutPassword } = user;
         return {
-            access_token: this.jwtService.sign(payload),
+            user: userWithoutPassword,
+            access_token: this.generateToken(user),
         };
     }
 
@@ -64,6 +73,20 @@ export class AuthService {
             return null;
         }
 
+        if (!user.is_active) {
+            throw new UnauthorizedException('Account is inactive');
+        }
+
         return user;
+    }
+
+    private generateToken(user: User): string {
+        const payload = {
+            sub: user.id,
+            email: user.email,
+            role: user.role,
+        };
+
+        return this.jwtService.sign(payload);
     }
 }

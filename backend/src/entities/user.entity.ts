@@ -6,7 +6,6 @@ import {
     UpdateDateColumn,
     OneToMany,
 } from 'typeorm';
-import { Exclude } from 'class-transformer';
 import { UserRole } from './user-role.enum';
 import { Order } from './order.entity';
 import { BlogPost } from './blog-post.entity';
@@ -17,15 +16,44 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'varchar', length: 255 })
+    @Column()
     name: string;
 
-    @Column({ type: 'varchar', length: 255, unique: true })
+    @Column({ unique: true })
     email: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    @Exclude()
+    @Column({ nullable: true })
+    email_verified_at: Date;
+
+    @Column()
     password: string;
+
+    @Column({ nullable: true })
+    phone: string;
+
+    @Column({ nullable: true })
+    address: string;
+
+    @Column({ nullable: true })
+    city: string;
+
+    @Column({ nullable: true })
+    country: string;
+
+    @Column({ nullable: true })
+    postal_code: string;
+
+    @Column({ nullable: true })
+    passport_number: string;
+
+    @Column({ nullable: true })
+    passport_expiry: Date;
+
+    @Column({ nullable: true })
+    date_of_birth: Date;
+
+    @Column({ nullable: true })
+    gender: string;
 
     @Column({
         type: 'enum',
@@ -34,50 +62,17 @@ export class User {
     })
     role: UserRole;
 
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    first_name: string;
+    @Column({ default: true })
+    is_active: boolean;
 
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    last_name: string;
+    @Column({ nullable: true })
+    avatar: string;
 
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    city: string;
+    @Column({ nullable: true, type: 'text' })
+    bio: string;
 
-    @Column({ type: 'varchar', length: 50, nullable: true })
-    phone: string;
-
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    job: string;
-
-    @Column({ type: 'varchar', length: 10, default: 'en' })
-    lang: string;
-
-    @Column({ type: 'varchar', length: 2048, nullable: true })
-    profile_photo_path: string;
-
-    @Column({ type: 'text', nullable: true })
-    @Exclude()
-    two_factor_secret: string;
-
-    @Column({ type: 'text', nullable: true })
-    @Exclude()
-    two_factor_recovery_codes: string;
-
-    @Column({ type: 'timestamp', nullable: true })
-    two_factor_confirmed_at: Date;
-
-    @Column({ type: 'varchar', length: 100, nullable: true })
-    @Exclude()
+    @Column({ nullable: true })
     remember_token: string;
-
-    @Column({ type: 'timestamp', nullable: true })
-    email_verified_at: Date;
-
-    @CreateDateColumn()
-    created_at: Date;
-
-    @UpdateDateColumn()
-    updated_at: Date;
 
     @OneToMany(() => Order, (order) => order.user)
     orders: Order[];
@@ -87,4 +82,10 @@ export class User {
 
     @OneToMany(() => BlogComment, (comment) => comment.user)
     blog_comments: BlogComment[];
+
+    @CreateDateColumn()
+    created_at: Date;
+
+    @UpdateDateColumn()
+    updated_at: Date;
 }

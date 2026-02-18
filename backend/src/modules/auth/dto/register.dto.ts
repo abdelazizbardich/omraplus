@@ -1,85 +1,72 @@
-import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import {
     IsEmail,
     IsNotEmpty,
     IsString,
     MinLength,
     IsOptional,
-    MaxLength,
+    IsDateString,
 } from 'class-validator';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
 export class RegisterDto {
-    @ApiProperty({
-        description: 'User full name',
-        example: 'John Doe',
-    })
+    @ApiProperty({ example: 'John Doe' })
     @IsString()
-    @IsNotEmpty({ message: 'Name is required' })
-    @MaxLength(255, { message: 'Name must not exceed 255 characters' })
+    @IsNotEmpty()
     name: string;
 
-    @ApiProperty({
-        description: 'User email address',
-        example: 'user@example.com',
-    })
-    @IsEmail({}, { message: 'Please provide a valid email address' })
-    @IsNotEmpty({ message: 'Email is required' })
-    @MaxLength(255, { message: 'Email must not exceed 255 characters' })
+    @ApiProperty({ example: 'user@example.com' })
+    @IsEmail()
+    @IsNotEmpty()
     email: string;
 
-    @ApiProperty({
-        description: 'User password',
-        example: 'password123',
-        minLength: 6,
-    })
+    @ApiProperty({ example: 'password123' })
     @IsString()
-    @IsNotEmpty({ message: 'Password is required' })
-    @MinLength(6, { message: 'Password must be at least 6 characters long' })
-    @MaxLength(255, { message: 'Password must not exceed 255 characters' })
+    @IsNotEmpty()
+    @MinLength(6)
     password: string;
 
-    @ApiPropertyOptional({
-        description: 'User first name',
-        example: 'John',
-    })
-    @IsOptional()
+    @ApiPropertyOptional({ example: '+1234567890' })
     @IsString()
-    @MaxLength(255, { message: 'First name must not exceed 255 characters' })
-    first_name?: string;
-
-    @ApiPropertyOptional({
-        description: 'User last name',
-        example: 'Doe',
-    })
     @IsOptional()
-    @IsString()
-    @MaxLength(255, { message: 'Last name must not exceed 255 characters' })
-    last_name?: string;
-
-    @ApiPropertyOptional({
-        description: 'User city',
-        example: 'New York',
-    })
-    @IsOptional()
-    @IsString()
-    @MaxLength(255, { message: 'City must not exceed 255 characters' })
-    city?: string;
-
-    @ApiPropertyOptional({
-        description: 'User phone number',
-        example: '+1234567890',
-    })
-    @IsOptional()
-    @IsString()
-    @MaxLength(50, { message: 'Phone must not exceed 50 characters' })
     phone?: string;
 
-    @ApiPropertyOptional({
-        description: 'User job title',
-        example: 'Software Engineer',
-    })
-    @IsOptional()
+    @ApiPropertyOptional({ example: '123 Main St' })
     @IsString()
-    @MaxLength(255, { message: 'Job must not exceed 255 characters' })
-    job?: string;
+    @IsOptional()
+    address?: string;
+
+    @ApiPropertyOptional({ example: 'New York' })
+    @IsString()
+    @IsOptional()
+    city?: string;
+
+    @ApiPropertyOptional({ example: 'USA' })
+    @IsString()
+    @IsOptional()
+    country?: string;
+
+    @ApiPropertyOptional({ example: '10001' })
+    @IsString()
+    @IsOptional()
+    postal_code?: string;
+
+    @ApiPropertyOptional({ example: 'AB123456' })
+    @IsString()
+    @IsOptional()
+    passport_number?: string;
+
+    @ApiPropertyOptional({ example: '2025-12-31' })
+    @IsDateString()
+    @IsOptional()
+    passport_expiry?: string;
+
+    @ApiPropertyOptional({ example: '1990-01-01' })
+    @IsDateString()
+    @IsOptional()
+    date_of_birth?: string;
+
+    @ApiPropertyOptional({ example: 'male' })
+    @IsString()
+    @IsOptional()
+    gender?: string;
 }

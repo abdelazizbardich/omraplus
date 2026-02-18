@@ -1,5 +1,8 @@
 export enum UserRole {
     ADMIN = 'admin',
     USER = 'user',
-    MODERATOR = 'moderator',
+    SUPER_ADMIN = 'super_admin',
+    CONTENT_MANAGER = 'content_manager',
+    SALES_MANAGER = 'sales_manager',
+    PUBLISHER = 'publisher',
 }

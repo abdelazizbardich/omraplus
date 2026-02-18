@@ -5,89 +5,74 @@ import {
     CreateDateColumn,
     UpdateDateColumn,
     ManyToOne,
-    OneToMany,
     JoinColumn,
+    OneToMany,
 } from 'typeorm';
 import { User } from './user.entity';
+import { BlogComment } from './blog-comment.entity';
 import { BlogPostCategory } from './blog-post-category.entity';
 import { BlogPostTag } from './blog-post-tag.entity';
-import { BlogComment } from './blog-comment.entity';
 
 @Entity('blog_posts')
 export class BlogPost {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'varchar', length: 255 })
-    title_en: string;
+    @Column()
+    title: string;
 
-    @Column({ type: 'varchar', length: 255 })
-    title_ar: string;
-
-    @Column({ type: 'varchar', length: 255 })
-    title_fr: string;
-
-    @Column({ type: 'varchar', length: 255 })
-    slug_en: string;
-
-    @Column({ type: 'varchar', length: 255 })
-    slug_ar: string;
-
-    @Column({ type: 'varchar', length: 255 })
-    slug_fr: string;
+    @Column({ unique: true })
+    slug: string;
 
     @Column({ type: 'text' })
-    content_en: string;
+    content: string;
 
-    @Column({ type: 'text' })
-    content_ar: string;
+    @Column({ nullable: true, type: 'text' })
+    excerpt: string;
 
-    @Column({ type: 'text' })
-    content_fr: string;
+    @Column()
+    author_id: number;
 
-    @Column({ type: 'text', nullable: true })
-    excerpt_en: string;
+    @ManyToOne(() => User, (user) => user.blog_posts)
+    @JoinColumn({ name: 'author_id' })
+    author: User;
 
-    @Column({ type: 'text', nullable: true })
-    excerpt_ar: string;
-
-    @Column({ type: 'text', nullable: true })
-    excerpt_fr: string;
-
-    @Column({ type: 'varchar', length: 500, nullable: true })
+    @Column({ nullable: true })
     featured_image: string;
 
-    @Column({ type: 'int', nullable: true })
-    user_id: number;
+    @Column({ nullable: true, type: 'text' })
+    meta_title: string;
 
-    @Column({ type: 'int', default: 0 })
-    view_count: number;
+    @Column({ nullable: true, type: 'text' })
+    meta_description: string;
 
-    @Column({ type: 'int', default: 0 })
-    share_count: number;
+    @Column({ nullable: true, type: 'simple-array' })
+    meta_keywords: string[];
 
-    @Column({ type: 'boolean', default: false })
-    is_published: boolean;
+    @Column({ default: 0 })
+    views_count: number;
 
-    @Column({ type: 'timestamp', nullable: true })
+    @Column({ default: false })
+    is_featured: boolean;
+
+    @Column({ default: 'draft' })
+    status: string;
+
+    @Column({ nullable: true })
     published_at: Date;
+
+    @OneToMany(() => BlogComment, (comment) => comment.post)
+    comments: BlogComment[];
+
+    @OneToMany(() => BlogPostCategory, (postCategory) => postCategory.post)
+    post_categories: BlogPostCategory[];
+
+    @OneToMany(() => BlogPostTag, (postTag) => postTag.post)
+    post_tags: BlogPostTag[];
 
     @CreateDateColumn()
     created_at: Date;
 
     @UpdateDateColumn()
     updated_at: Date;
-
-    @ManyToOne(() => User, (user) => user.blog_posts)
-    @JoinColumn({ name: 'user_id' })
-    author: User;
-
-    @OneToMany(() => BlogPostCategory, (junction) => junction.post)
-    post_categories: BlogPostCategory[];
-
-    @OneToMany(() => BlogPostTag, (junction) => junction.post)
-    post_tags: BlogPostTag[];
-
-    @OneToMany(() => BlogComment, (comment) => comment.blog_post)
-    comments: BlogComment[];
 }
