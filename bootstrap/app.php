@@ -16,8 +16,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'role' => RoleMiddleware::class
         ]);
-        $middleware->append(\Illuminate\Session\Middleware\StartSession::class);
-        $middleware->append(\App\Http\Middleware\LanguageMiddleware::class);
+        $middleware->appendToGroup('web', [
+            \App\Http\Middleware\LanguageMiddleware::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
