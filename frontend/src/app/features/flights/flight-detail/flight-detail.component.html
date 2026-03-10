@@ -1,0 +1,262 @@
+<div class="min-h-screen bg-gray-50">
+  <!-- Loading State -->
+  <div *ngIf="loading" class="flex justify-center items-center min-h-screen">
+    <div class="text-center">
+      <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+      <p class="text-gray-600">Loading flight details...</p>
+    </div>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading && !flight" class="max-w-3xl mx-auto px-4 py-12">
+    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <svg class="h-6 w-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="ml-3">
+          <p class="text-red-700">{{ error }}</p>
+          <button 
+            (click)="goBack()"
+            class="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-300"
+          >
+            Back to Flights
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flight Detail Content -->
+  <div *ngIf="!loading && flight" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Back Button -->
+    <button 
+      (click)="goBack()"
+      class="flex items-center text-indigo-600 hover:text-indigo-700 mb-6 transition duration-150"
+    >
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      Back to Flights
+    </button>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Main Content -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- Flight Header -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-indigo-600 to-blue-700 text-white p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h1 class="text-3xl font-bold mb-2">{{ flight.airline }}</h1>
+                <p class="text-blue-100 text-lg">{{ flight.flightNumber }}</p>
+              </div>
+              <span class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-full text-sm font-semibold">
+                {{ flight.class }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Flight Route -->
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-8">
+              <div class="text-center flex-1">
+                <p class="text-3xl font-bold text-gray-900 mb-2">{{ flight.departureCity }}</p>
+                <p class="text-xl text-gray-600 mb-1">{{ formatTime(flight.departureTime) }}</p>
+                <p class="text-sm text-gray-500">{{ formatDate(flight.departureTime) }}</p>
+              </div>
+
+              <div class="flex-shrink-0 px-8">
+                <div class="flex flex-col items-center">
+                  <svg class="w-12 h-12 text-indigo-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                  </svg>
+                  <div class="h-px w-32 bg-gray-300 mb-2"></div>
+                  <p class="text-sm text-gray-600 font-medium">
+                    {{ calculateDuration(flight.departureTime, flight.arrivalTime) }}
+                  </p>
+                </div>
+              </div>
+
+              <div class="text-center flex-1">
+                <p class="text-3xl font-bold text-gray-900 mb-2">{{ flight.arrivalCity }}</p>
+                <p class="text-xl text-gray-600 mb-1">{{ formatTime(flight.arrivalTime) }}</p>
+                <p class="text-sm text-gray-500">{{ formatDate(flight.arrivalTime) }}</p>
+              </div>
+            </div>
+
+            <!-- Flight Details Grid -->
+            <div class="border-t pt-6 grid grid-cols-2 gap-6">
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Available Seats</p>
+                <p class="text-lg font-semibold text-gray-900">{{ flight.availableSeats }} seats</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Price per Person</p>
+                <p class="text-lg font-semibold text-indigo-600">{{ formatPrice(flight.price) }}</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Departure Date</p>
+                <p class="text-lg font-semibold text-gray-900">{{ formatDateShort(flight.departureTime) }}</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Arrival Date</p>
+                <p class="text-lg font-semibold text-gray-900">{{ formatDateShort(flight.arrivalTime) }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flight Information -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Flight Information</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                What's Included
+              </h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Complimentary meals and beverages</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">30kg checked baggage allowance</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">In-flight entertainment</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Travel insurance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div *ngIf="flight.descriptionEn || flight.descriptionAr">
+              <h3 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                Additional Details
+              </h3>
+              <p class="text-gray-700">{{ flight.descriptionEn || flight.descriptionAr }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Card (Sticky) -->
+      <div class="lg:col-span-1">
+        <div class="bg-white rounded-lg shadow-lg p-6 sticky top-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Book Your Flight</h2>
+
+          <!-- Error Alert -->
+          <div *ngIf="error" class="mb-4 bg-red-50 border-l-4 border-red-500 p-4 rounded">
+            <p class="text-sm text-red-700">{{ error }}</p>
+          </div>
+
+          <!-- Passengers Selector -->
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Number of Passengers</label>
+            <div class="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+              <button 
+                (click)="decrementPassengers()"
+                [disabled]="selectedPassengers <= 1"
+                class="w-10 h-10 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition duration-150"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                </svg>
+              </button>
+              <span class="text-2xl font-bold text-gray-900">{{ selectedPassengers }}</span>
+              <button 
+                (click)="incrementPassengers()"
+                [disabled]="selectedPassengers >= flight.availableSeats"
+                class="w-10 h-10 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition duration-150"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </button>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">Maximum {{ flight.availableSeats }} passengers available</p>
+          </div>
+
+          <!-- Price Breakdown -->
+          <div class="border-t border-b py-4 mb-6 space-y-3">
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Price per person</span>
+              <span class="font-medium text-gray-900">{{ formatPrice(flight.price) }}</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Passengers</span>
+              <span class="font-medium text-gray-900">× {{ selectedPassengers }}</span>
+            </div>
+            <div class="flex justify-between text-lg font-bold">
+              <span class="text-gray-900">Total</span>
+              <span class="text-indigo-600">{{ formatPrice(calculateTotalPrice()) }}</span>
+            </div>
+          </div>
+
+          <!-- Book Button -->
+          <button
+            (click)="bookFlight()"
+            [disabled]="bookingLoading || flight.availableSeats === 0"
+            class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition duration-300 shadow-lg hover:shadow-xl"
+          >
+            <span *ngIf="!bookingLoading && flight.availableSeats > 0">
+              {{ isAuthenticated ? 'Book Now' : 'Login to Book' }}
+            </span>
+            <span *ngIf="!bookingLoading && flight.availableSeats === 0">Sold Out</span>
+            <span *ngIf="bookingLoading" class="flex items-center justify-center">
+              <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Processing...
+            </span>
+          </button>
+
+          <!-- Additional Info -->
+          <div class="mt-6 space-y-2">
+            <div class="flex items-start text-sm text-gray-600">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Free cancellation up to 24 hours before departure</span>
+            </div>
+            <div class="flex items-start text-sm text-gray-600">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Instant confirmation via email</span>
+            </div>
+            <div class="flex items-start text-sm text-gray-600">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Secure payment processing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
