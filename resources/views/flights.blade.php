@@ -98,7 +98,7 @@
                             </div>
                                 <div class="flex justify-start gap-3">
                                     <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
-                                    <a href="{{ route('flights') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
+                                    <a href="{{ route('flights') }}" type="submit" class="btn btn-wide">{{__('index.Cancel')}}</a>
                                 </div>
                             </form>
                     @else

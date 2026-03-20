@@ -249,7 +249,7 @@ return [
 	"Edit Room" => "تعديل الغرفة",
 	"Edit" => "تعديل",
 	"City" => "المدينة",
-	"Cansel" => "إلغاء",
+	"Cancel" => "إلغاء",
 	"Edit Category" => "تعديل القسم",
 	"Omra" => "عمرة",
 	"Hajj" => "حج",
@@ -448,5 +448,6 @@ return [
 	"Not Spam" => "ليس سبام",
 	"Spam" => "سبام",
 	"EN" => "إنجليزية",
-	"Accommodation is provided in distinctive hotels near the Grand Mosque and religious landmarks, for a comfortable and convenient stay on your trip."=>"يتم توفير الإقامة في فنادق مميزة بالقرب من المسجد الحرام والمعالم الدينية، لتجربة إقامة مريحة ولائقة برحلتكم."
+	"Accommodation is provided in distinctive hotels near the Grand Mosque and religious landmarks, for a comfortable and convenient stay on your trip."=>"يتم توفير الإقامة في فنادق مميزة بالقرب من المسجد الحرام والمعالم الدينية، لتجربة إقامة مريحة ولائقة برحلتكم.",
+	"Settings" => "الإعدادات",
 ];

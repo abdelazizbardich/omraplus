@@ -22,5 +22,10 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::defaultView('vendor.pagination.tailwind');
         Paginator::defaultSimpleView('vendor.pagination.tailwind');
+
+        // Set locale from session if available
+        if (session()->has('locale')) {
+            app()->setLocale(session('locale'));
+        }
     }
 }

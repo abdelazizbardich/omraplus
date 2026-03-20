@@ -25,7 +25,7 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             </div>
 
-            <div class="flex items-center justify-between mt-4">
+            <div class="flex items-center justify-between mt-4 flex-col">
                 <x-button class="btn btn-primary bg-blue-950 hover:bg-blue-1000">
                     {{ __('index.Send') }}
                 </x-button>

@@ -47,7 +47,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
-                                <a href="{{ route('admin.blog') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
+                                <a href="{{ route('admin.blog') }}" type="submit" class="btn btn-wide">{{__('index.Cancel')}}</a>
                             </div>
                         </form>
                     @else
@@ -119,7 +119,7 @@
                                     <td>{{ $post->excerpt}}</td>
                                     <td>
                                         @if($post->is_published)
-                                            {{__('index.is_published')}} {{__('index.at')}}
+                                            {{__('index.published')}} {{__('index.at')}}
                                             {{moment($post->published_at)->format("M d, Y")}}
                                         @else
                                             {{__('index.not published')}}

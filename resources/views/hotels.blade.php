@@ -62,7 +62,7 @@
                         </div>
                         <div class="flex justify-between">
                             <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Edit')}}</button>
-                            <a href="{{ route('hotels') }}" type="submit" class="btn btn-wide">{{__('index.Cansel')}}</a>
+                            <a href="{{ route('hotels') }}" type="submit" class="btn btn-wide">{{__('index.Cancel')}}</a>
                         </div>
                     </form>
                 @else

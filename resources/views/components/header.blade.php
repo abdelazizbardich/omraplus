@@ -13,7 +13,7 @@
                 <a href="{{ route('faqs') }}" class="me-4 text-sm">{{__('index.faqs')}}</a>
                 <a href="{{ route('blog') }}" class="me-4 text-sm">{{__('index.Blog')}}</a>
                 <x-language-switcher></x-language-switcher>
-                <x-theme-switcher></x-theme-switcher>
+                @if(false)<x-theme-switcher></x-theme-switcher>@endif
                 @if(Auth::check())
                     <a href="{{ route('dashboard') }}" class="ms-4 text-sm font-black">{{__('index.Dashboard')}}</a>
                 @else

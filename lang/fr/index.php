@@ -252,7 +252,7 @@ return [
     "Edit Room" => "Modifier la chambre",
     "Edit" => "Modifier",
     "City" => "Ville",
-    "Cansel" => "Annuler",
+    "Cancel" => "Annuler",
     "Edit Category" => "Modifier la catégorie",
     "Omra" => "Omra",
     "Hajj" => "Hajj",
@@ -448,5 +448,6 @@ return [
 "Not Approved" => "Non approuvé",
 "Not Spam" => "Non spam",
 "Spam" => "Spam",
-"Accommodation is provided in distinctive hotels near the Grand Mosque and religious landmarks, for a comfortable and convenient stay on your trip."=>"L'hébergement est assuré dans des hôtels de qualité situés à proximité de la Grande Mosquée et des sites religieux, pour un séjour confortable et pratique lors de votre voyage."
+"Accommodation is provided in distinctive hotels near the Grand Mosque and religious landmarks, for a comfortable and convenient stay on your trip."=>"L'hébergement est assuré dans des hôtels de qualité situés à proximité de la Grande Mosquée et des sites religieux, pour un séjour confortable et pratique lors de votre voyage.",
+"Settings" => "Paramètres",
 ];

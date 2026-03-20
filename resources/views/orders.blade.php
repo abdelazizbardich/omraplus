@@ -45,12 +45,12 @@
                                     <td><span class="badge text-xs p-3 {{getStatusBg($order->payment_status)}}">{{ __('index.' . $order->payment_status)}}</span></td>
                                     <td>{{ __('index.' . $order->payment_method)}}</td>
                                     </td>
-                                    <!-- <th>
+                                    <th>
                                         <a href="{{ route('orders.edit', $order->id) }}"
                                             class="btn btn-xs btn-info edit"></a>
                                         <a href="{{ route('orders.delete', $order->id) }}"
                                             class="btn btn-xs btn-error delete"></a>
-                                    </th> -->
+                                    </th>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -1,4 +1,4 @@
-<div class="p-4 max-w-96 h-full dashboard-side-menu group {{getLanguageDirection()}}">
+<div class="p-4 max-w-96 h-full dashboard-side-menu group closed {{getLanguageDirection()}}">
     <div class="w-full h-full flex flex-col py-4 px-3 text-gray-900 bg-white rounded-lg shadow-lg capitalize font-medium">
         <div class="flex-1 flex flex-col">
             <a href="{{ route('dashboard') }}">
@@ -7,7 +7,7 @@
             </a>
             <hr class="border-0 border-b opacity-65 mb-5">
         </div>
-        <div class="overflow-y-auto h-max no-scrollbar">
+        <div class="overflow-y-auto h-max no-scrollbar flex flex-col">
             <a href="{{ route('dashboard') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Dashboard')}}">
                 <img src="{{ Vite::asset('resources/images/dashboard.png') }}" alt="{{__('index.Dashboard')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Dashboard')}}</span>
