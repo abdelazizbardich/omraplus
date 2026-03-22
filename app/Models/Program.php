@@ -54,10 +54,8 @@ class Program extends Model
         return $price->first();
     }
 
-    public function name(): Attribute
+    public function name()
     {
-        return Attribute::make(
-            get: fn () => $this->hotelMecca->name . ' - ' . $this->hotelMedina->name
-        );
+        return $this->hotelMecca->name . ' - ' . $this->hotelMedina->name;
     }
 }

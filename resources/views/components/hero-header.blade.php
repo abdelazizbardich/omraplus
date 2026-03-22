@@ -26,7 +26,7 @@
             </span>
         </div>
         <div class="relative z-20  w-full mx-auto">
-            <form action="{{ route('checkout') }}" method="post" class="rounded-2xl w-12/12 mx-auto bg-emerald-500 bg-gradient-to-l from-emerald-550 to-emerald-500 p-3 md:p-6 flex-col md:flex-row flex items-center justify-between shadow-2xl">
+            <form action="{{ route('checkout') }}" method="post" class="rounded-2xl w-12/12 mx-auto bg-emerald-500 bg-gradient-to-l from-emerald-550 to-emerald-500 p-3 md:p-6 flex-col md:flex-row flex items-center justify-between shadow-2xl gap-3">
                 @csrf
                 <div class="text-2xl font-bold text-nowrap text-white mb-3 md:mb-0">
                     {{__('index.fast booking')}}
