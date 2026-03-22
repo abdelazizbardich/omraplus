@@ -450,4 +450,5 @@ return [
 	"EN" => "إنجليزية",
 	"Accommodation is provided in distinctive hotels near the Grand Mosque and religious landmarks, for a comfortable and convenient stay on your trip."=>"يتم توفير الإقامة في فنادق مميزة بالقرب من المسجد الحرام والمعالم الدينية، لتجربة إقامة مريحة ولائقة برحلتكم.",
 	"Settings" => "الإعدادات",
+	"for" => "لـ"
 ];

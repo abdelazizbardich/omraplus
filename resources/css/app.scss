@@ -181,3 +181,18 @@ body {
         opacity: 1;
     }
 }
+
+.toggle:checked, .toggle[aria-checked="true"] {
+    position: relative;
+}
+.toggle:checked:after, .toggle[aria-checked="true"]:after {
+    content: '';
+    background: #ffffff;
+    position: absolute;
+    margin-inline: 0.1rem;
+    top: 50%;
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
