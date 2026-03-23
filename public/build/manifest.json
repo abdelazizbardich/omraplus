@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-Bm0Nmxhh.css",
+    "file": "assets/app-Cb1hqVvH.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -461,12 +461,12 @@
     "src": "resources/images/مودة الحسنين.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-Co_VKo28.js",
+    "file": "assets/app-BvkEzB_Q.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-Bm0Nmxhh.css"
+      "assets/app-Cb1hqVvH.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",
