@@ -28,7 +28,7 @@
                                 {{__('index.Program')}}:
                                 <select name="program" class="grow border-none focus:shadow-none shadow-none">
                                     @foreach ($programs as $program)
-                                        <option value="{{ $program->id }}">{{ $program->name }}</option>                                    
+                                        <option value="{{ $program->id }}">{{ $program->name() }}</option>                                    
                                     @endforeach
                                 </select>
                             </label>
