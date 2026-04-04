@@ -71,4 +71,10 @@ class OrderController extends Controller
         $order->delete();
         return redirect()->route('orders');
     }
+
+    public function invoice(Order $order){
+        return view('orders.invoice', [
+            'order' => $order->load('partner'),
+        ]);
+    }
 }

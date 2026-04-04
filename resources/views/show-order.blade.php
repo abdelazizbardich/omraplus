@@ -7,6 +7,11 @@
                 {{ __('index.Order Preview') }} <span class="font-mono text-gray-500">#{{ $order->id }}</span>
             </h1>
             <div class="flex gap-2">
+                <a href="{{ route('orders.invoice', $order->id) }}" target="_blank"
+                   class="btn btn-sm btn-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a1 1 0 001-1v-5H8v5a1 1 0 001 1zm1-9V5a1 1 0 011-1h2a1 1 0 011 1v3"/></svg>
+                    {{ __('index.Print Invoice') }}
+                </a>
                 <a href="{{ route('orders.edit', $order->id) }}" class="btn btn-sm btn-info">
                     {{ __('index.Edit') }}
                 </a>

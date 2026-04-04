@@ -109,6 +109,7 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     Route::get('/dashboard/orders/edit/{order:id}', [App\Http\Controllers\OrderController::class, 'edit'])->name('orders.edit');
     Route::post('/dashboard/orders/update/{order:id}', [App\Http\Controllers\OrderController::class, 'update'])->name('orders.update');
     Route::get('/dashboard/orders/delete/{order:id}', [App\Http\Controllers\OrderController::class, 'delete'])->name('orders.delete');
+    Route::get('/dashboard/orders/invoice/{order:id}', [App\Http\Controllers\OrderController::class, 'invoice'])->name('orders.invoice');
 
     Route::get('/dashboard/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('admin.blog');
     Route::post('/dashboard/blog/save', [App\Http\Controllers\BlogController::class, 'save'])->name('admin.blog.save');
