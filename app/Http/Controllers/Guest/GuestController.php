@@ -146,8 +146,7 @@ class GuestController extends Controller
             $photo->post_id = $user->id;
             $photo->type = "user";
             $file = getFakeAvatar($user->name);
-            dd($file);
-            $photo->url = Storage::put('user/' . $file->name, $file->contents, ['disk' => 'public']);
+            $photo->url = Storage::put('user/' . $file->name, $file->content, ['disk' => 'public']);
             $photo->save();
         } else {
             $user = User::where('email', $request->email)->first();
