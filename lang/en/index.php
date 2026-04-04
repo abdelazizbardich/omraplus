@@ -362,6 +362,7 @@ return [
     "Account" => "Account",
     "Edit Order" => "Edit Order",
     "View profile" => "View Profile",
+    "View partner" => "View Partner",
     "payment_status" => "Payment Status",
     "status" => "Status",
     "Order Preview" => "Order Preview",

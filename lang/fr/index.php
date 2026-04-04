@@ -464,6 +464,7 @@ return [
     "Account" => "Compte",
     "Edit Order" => "Modifier la commande",
     "View profile" => "Voir le profil",
+    "View partner" => "Voir le partenaire",
     "payment_status" => "Statut du paiement",
     "status" => "Statut",
     "Order Preview" => "Aperçu de la commande",

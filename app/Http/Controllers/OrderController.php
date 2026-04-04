@@ -25,14 +25,14 @@ class OrderController extends Controller
     public function show(Order $order){
         $data = [
             'name' => 'Orders',
-            'order' => $order,
+            'order' => $order->load('partner'),
         ];
         return view('show-order', $data);
     }
     public function edit(Order $order){
         $data = [
             'name' => 'Orders',
-            'order' => $order,
+            'order' => $order->load('partner'),
         ];
         return view('edit-orders', $data);
     }

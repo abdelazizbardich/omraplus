@@ -461,6 +461,7 @@ return [
 	"Account" => "الحساب",
 	"Edit Order" => "تعديل الطلب",
 	"View profile" => "عرض الملف الشخصي",
+	"View partner" => "عرض الشريك",
 	"Your order has been updated" => "تم تحديث طلبك",
 	"The following changes were made to your order" => "تم إجراء التغييرات التالية على طلبك",
 	"Hello" => "مرحباً",

@@ -131,6 +131,56 @@
                 </a>
             </div>
 
+            {{-- ── Partner / Referral card ───────────────── --}}
+            @if ($order->partner)
+            <div class="flex-1 min-w-72 bg-white rounded-xl shadow-lg px-5 py-5 border-l-4 border-yellow-400">
+                <h2 class="font-bold text-base text-blue-950 mb-3 border-b pb-2 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c5.33 0 8 2.67 8 4v2H4v-2c0-1.33 2.67-4 8-4z"/></svg>
+                    {{ __('index.Partner') }}
+                </h2>
+
+                <div class="mb-2 flex justify-between">
+                    <span class="text-gray-500 text-sm">{{ __('index.Referral code') }}</span>
+                    <span class="font-mono font-bold tracking-wider text-blue-950">{{ $order->partner->referral_code }}</span>
+                </div>
+
+                <div class="divider my-1"></div>
+
+                <div class="mb-2 flex justify-between">
+                    <span class="text-gray-500 text-sm">{{ __('index.Name') }}</span>
+                    <span class="font-semibold">{{ $order->partner->name }}</span>
+                </div>
+                <div class="mb-2 flex justify-between">
+                    <span class="text-gray-500 text-sm">{{ __('index.Company name') }}</span>
+                    <span>{{ $order->partner->company_name }}</span>
+                </div>
+                <div class="mb-2 flex justify-between">
+                    <span class="text-gray-500 text-sm">{{ __('index.Commission rate') }}</span>
+                    <span class="font-semibold text-yellow-600">{{ $order->partner->commission_rate }}%</span>
+                </div>
+
+                <div class="divider my-1"></div>
+
+                <div class="mb-2 flex justify-between">
+                    <span class="text-gray-500 text-sm">{{ __('index.Commission amount') }}</span>
+                    <span class="font-bold text-green-600">{{ money($order->commission_amount) }} {{ __('index.dh') }}</span>
+                </div>
+                <div class="mb-2 flex justify-between items-center">
+                    <span class="text-gray-500 text-sm">{{ __('index.Commission paid') }}</span>
+                    <span class="badge text-xs p-3 {{ $order->commission_paid ? 'badge-success' : 'badge-warning' }}">
+                        {{ $order->commission_paid ? __('index.paid') : __('index.pending') }}
+                    </span>
+                </div>
+
+                <div class="divider my-1"></div>
+
+                <a href="{{ route('partners.show', $order->partner->id) }}"
+                   class="btn btn-sm btn-outline btn-warning w-full">
+                    {{ __('index.View partner') }}
+                </a>
+            </div>
+            @endif
+
             {{-- ── Trip card ─────────────────────────────── --}}
             <div class="w-full bg-white rounded-xl shadow-lg px-5 py-5">
                 <h2 class="font-bold text-base text-blue-950 mb-3 border-b pb-2">{{ __('index.Trip Details') }}</h2>

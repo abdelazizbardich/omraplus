@@ -179,5 +179,49 @@
             </div>
 
         </div>
+
+        {{-- Partner / Referral Details --}}
+        @if ($order->partner)
+        <div class="bg-white rounded-xl shadow-lg px-4 py-4 border-l-4 border-yellow-400">
+            <h2 class="font-bold text-lg text-blue-950 mb-3 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c5.33 0 8 2.67 8 4v2H4v-2c0-1.33 2.67-4 8-4z"/></svg>
+                {{ __('index.Partner') }}
+            </h2>
+            <div class="flex flex-wrap gap-x-8 gap-y-3">
+                <div>
+                    <span class="font-semibold text-gray-600">{{ __('index.Referral code') }}:</span>
+                    <span class="ml-1 font-mono font-bold tracking-wider text-blue-950">{{ $order->partner->referral_code }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-600">{{ __('index.Name') }}:</span>
+                    <span class="ml-1">{{ $order->partner->name }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-600">{{ __('index.Company name') }}:</span>
+                    <span class="ml-1">{{ $order->partner->company_name }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-600">{{ __('index.Commission rate') }}:</span>
+                    <span class="ml-1 font-semibold text-yellow-600">{{ $order->partner->commission_rate }}%</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-600">{{ __('index.Commission amount') }}:</span>
+                    <span class="ml-1 font-bold text-green-600">{{ money($order->commission_amount) }} {{ __('index.dh') }}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold text-gray-600">{{ __('index.Commission paid') }}:</span>
+                    <span class="badge text-xs p-3 {{ $order->commission_paid ? 'badge-success' : 'badge-warning' }}">
+                        {{ $order->commission_paid ? __('index.paid') : __('index.pending') }}
+                    </span>
+                </div>
+                <div>
+                    <a href="{{ route('partners.show', $order->partner->id) }}" class="btn btn-sm btn-outline btn-warning">
+                        {{ __('index.View partner') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        @endif
+
     </main>
 </x-app-layout>
