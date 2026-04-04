@@ -18,8 +18,9 @@ class RoleMiddleware
     {
         if(Auth::check() && Auth::user()->role != $role){
             auth()->guard('web')->logout();
-            // Redirect back to home page
-            return redirect('/')->with('error', __('index.Unauthorized access. Please log in with the correct account.'));
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect()->route('login')->withErrors(['email' => __('index.Unauthorized access. Please log in with the correct account.')]);
         }
         return $next($request);
     }
