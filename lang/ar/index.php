@@ -535,4 +535,5 @@ return [
 	"Please change your password after first login" => "لأسباب أمنية، يرجى تغيير كلمة المرور بعد تسجيل الدخول الأول.",
 	"Go to your dashboard" => "انتقل إلى لوحة التحكم",
 	"Unauthorized access. Please log in with the correct account." => "وصول غير مصرح به. يرجى تسجيل الدخول باستخدام الحساب الصحيح.",
+	"Partenaires" => "الشركاء",
 ];

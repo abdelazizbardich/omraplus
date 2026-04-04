@@ -534,4 +534,5 @@ return [
     "Please change your password after first login" => "Pour des raisons de sécurité, veuillez changer votre mot de passe après votre première connexion.",
     "Go to your dashboard" => "Accéder à votre tableau de bord",
     "Unauthorized access. Please log in with the correct account." => "Accès non autorisé. Veuillez vous connecter avec le compte correct.",
+    "Partenaires" => "Partenaires",
 ];
