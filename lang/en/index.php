@@ -432,4 +432,5 @@ return [
     "Please change your password after first login" => "For security reasons, please change your password after your first login.",
     "Go to your dashboard" => "Go to Your Dashboard",
     "Unauthorized access. Please log in with the correct account." => "Unauthorized access. Please log in with the correct account.",
+    "Partenaires" => "Partners",
 ];
