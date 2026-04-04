@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-Cb1hqVvH.css",
+    "file": "assets/app-BvcAl3o1.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -91,6 +91,10 @@
   "resources/images/about-us/section-image.png": {
     "file": "assets/section-image--1F3j0mH.png",
     "src": "resources/images/about-us/section-image.png"
+  },
+  "resources/images/add-option.svg": {
+    "file": "assets/add-option-B8P_5Ond.svg",
+    "src": "resources/images/add-option.svg"
   },
   "resources/images/affiliation.png": {
     "file": "assets/affiliation-CB2qPzNQ.png",
@@ -432,6 +436,10 @@
     "file": "assets/users-JKShSEp5.png",
     "src": "resources/images/users.png"
   },
+  "resources/images/view.png": {
+    "file": "assets/view-C8rUB_n8.png",
+    "src": "resources/images/view.png"
+  },
   "resources/images/visa/morocco-flag.png": {
     "file": "assets/morocco-flag-Clfkx4Sj.png",
     "src": "resources/images/visa/morocco-flag.png"
@@ -461,16 +469,18 @@
     "src": "resources/images/مودة الحسنين.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BvkEzB_Q.js",
+    "file": "assets/app-bCDb8XVB.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-Cb1hqVvH.css"
+      "assets/app-BvcAl3o1.css"
     ],
     "assets": [
       "assets/delete-BoW6drIl.png",
       "assets/edit-MIk-D_ps.png",
+      "assets/view-C8rUB_n8.png",
+      "assets/add-option-B8P_5Ond.svg",
       "assets/publish-CdHcPEez.png",
       "assets/approve--CA3pVMO.png",
       "assets/bein-black-DgIw4-Hw.woff",

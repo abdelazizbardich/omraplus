@@ -7,6 +7,7 @@ use App\Models\BlogPost;
 use App\Models\Category;
 use App\Models\Flight;
 use App\Models\Order;
+use App\Models\Partner;
 use App\Models\Photo;
 use App\Models\Program;
 use App\Models\ProgramPrice;
@@ -145,6 +146,7 @@ class GuestController extends Controller
             $photo->post_id = $user->id;
             $photo->type = "user";
             $file = getFakeAvatar($user->name);
+            dd($file);
             $photo->url = Storage::put('user/' . $file->name, $file->contents, ['disk' => 'public']);
             $photo->save();
         } else {
@@ -163,6 +165,20 @@ class GuestController extends Controller
         $order->pilgrims_count = $request->pilgrims_count;
         $order->total_price = $request->pilgrims_count * ProgramPrice::where('id', $request->price_id)->first()->price;
         $order->save();
+
+        // link partner via referral code
+        if ($request->filled('referral_code')) {
+            $partner = Partner::where('referral_code', $request->referral_code)
+                ->where('status', 'approved')
+                ->first();
+            if ($partner) {
+                $commission = round($order->total_price * $partner->commission_rate / 100, 2);
+                $order->update([
+                    'partner_id'        => $partner->id,
+                    'commission_amount' => $commission,
+                ]);
+            }
+        }
 
         return redirect()->route('checkout.success', $order->id);
     }
@@ -333,6 +349,32 @@ class GuestController extends Controller
 
     public function umratiPartnerProgram()
     {
-        return view('guest.umrati-partner-program');
+        return view('guest.umrati-partner-program', ['name' => __('index.Umrati partner program')]);
+    }
+
+    public function partnerApply(Request $request)
+    {
+        $request->validate([
+            'name'         => 'required|string|max:255',
+            'email'        => 'required|email|max:255',
+            'phone'        => 'required|string|max:50',
+            'company_name' => 'nullable|string|max:255',
+            'motivation'   => 'nullable|string|max:2000',
+        ]);
+
+        if (Partner::where('email', $request->email)->where('status', '!=', 'rejected')->exists()) {
+            return redirect()->back()->with('error', __('index.Application already submitted'));
+        }
+
+        Partner::create([
+            'name'         => $request->name,
+            'email'        => $request->email,
+            'phone'        => $request->phone,
+            'company_name' => $request->company_name,
+            'motivation'   => $request->motivation,
+            'status'       => 'pending',
+        ]);
+
+        return redirect()->back()->with('success', __('index.Application submitted successfully'));
     }
 }

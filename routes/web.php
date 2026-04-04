@@ -27,6 +27,7 @@ Route::get('/get-to-know-medina', [App\Http\Controllers\Guest\GuestController::c
 Route::get('/payment-policy', [App\Http\Controllers\Guest\GuestController::class, 'paymentPolicy'])->name('payment-policy');
 Route::get('/terms-and-conditions', [App\Http\Controllers\Guest\GuestController::class, 'termsOfService'])->name('terms-and-conditions');
 Route::get('/umrati-partner-program', [App\Http\Controllers\Guest\GuestController::class, 'umratiPartnerProgram'])->name('umrati-partner-program');
+Route::post('/umrati-partner-program/apply', [App\Http\Controllers\Guest\GuestController::class, 'partnerApply'])->name('partner.apply');
 Route::get('/our-services', [App\Http\Controllers\Guest\GuestController::class, 'ourServices'])->name('our-services');
 
 
@@ -104,9 +105,10 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     
     Route::get('/dashboard/orders', [App\Http\Controllers\OrderController::class, 'index'])->name('orders');
     Route::post('/dashboard/orders/save', [App\Http\Controllers\OrderController::class, 'save'])->name('orders.save');
-    Route::get('/dashboard/orders/edit/{user:id}', [App\Http\Controllers\OrderController::class, 'edit'])->name('orders.edit');
-    Route::post('/dashboard/orders/update/{user:id}', [App\Http\Controllers\OrderController::class, 'update'])->name('orders.update');
-    Route::get('/dashboard/orders/delete/{user:id}', [App\Http\Controllers\OrderController::class, 'delete'])->name('orders.delete');
+    Route::get('/dashboard/orders/show/{order:id}', [App\Http\Controllers\OrderController::class, 'show'])->name('orders.show');
+    Route::get('/dashboard/orders/edit/{order:id}', [App\Http\Controllers\OrderController::class, 'edit'])->name('orders.edit');
+    Route::post('/dashboard/orders/update/{order:id}', [App\Http\Controllers\OrderController::class, 'update'])->name('orders.update');
+    Route::get('/dashboard/orders/delete/{order:id}', [App\Http\Controllers\OrderController::class, 'delete'])->name('orders.delete');
 
     Route::get('/dashboard/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('admin.blog');
     Route::post('/dashboard/blog/save', [App\Http\Controllers\BlogController::class, 'save'])->name('admin.blog.save');
@@ -118,10 +120,17 @@ Route::middleware(['auth:sanctum', 'role:super_admin', config('jetstream.auth_se
     Route::get('/dashboard/comment', [App\Http\Controllers\BlogController::class, 'comments'])->name('admin.comments');
     Route::get('/dashboard/comment/approve/{id}', [App\Http\Controllers\BlogController::class, 'approveComment'])->name('admin.comments.approve');
     Route::get('/dashboard/comment/delete/{id}', [App\Http\Controllers\BlogController::class, 'deleteComment'])->name('admin.comments.delete');
+
+    Route::get('/dashboard/partners', [App\Http\Controllers\PartnerController::class, 'index'])->name('partners');
+    Route::get('/dashboard/partners/show/{partner:id}', [App\Http\Controllers\PartnerController::class, 'show'])->name('partners.show');
+    Route::get('/dashboard/partners/approve/{partner:id}', [App\Http\Controllers\PartnerController::class, 'approve'])->name('partners.approve');
+    Route::get('/dashboard/partners/reject/{partner:id}', [App\Http\Controllers\PartnerController::class, 'reject'])->name('partners.reject');
+    Route::post('/dashboard/partners/update/{partner:id}', [App\Http\Controllers\PartnerController::class, 'update'])->name('partners.update');
 });
 
-Route::middleware(['auth:sanctum', 'role:publisher'])->group(function () {
-    Route::get('/publisher/join', [App\Http\Controllers\Guest\GuestController::class, 'home'])->name('publisher.join');
+Route::middleware(['auth:sanctum', 'role:partner', config('jetstream.auth_session'), 'verified'])->group(function () {
+    Route::get('/partner/join', [App\Http\Controllers\Guest\GuestController::class, 'home'])->name('partner.join');
+    Route::get('/partner/dashboard', [App\Http\Controllers\PartnerController::class, 'dashboard'])->name('partner.dashboard');
 });
 
 require_once __DIR__ . '/jetstream.php';

@@ -55,11 +55,10 @@
     @vite('resources/js/app.js')
 </head>
 
-<body class="font-sans antialiased bg-blue-950"
-    style="background-image: url('{{ Vite::asset('resources/images/Kaaba.webp') }}'); background-blend-mode: overlay; background-size: cover; background-position: center; background-attachment: fixed;">
+<body class="font-sans antialiased bg-blue-950">
     <div class="min-h-screen flex items-center justify-center flex-col">
         <div class="">
-            <img loading="lazy" src="{{ Vite::asset('resources/images/logo-w.png') }}"
+            <img loading="lazy" class="w-36" src="{{ Vite::asset('resources/images/logo-w.png') }}"
                 alt="{{ __(config('app.name')) }} {{__('index.logo')}}" />
         </div>
         <div class="text-center mt-4 w-6/12">

@@ -174,7 +174,6 @@ class HotelController extends Controller
             return redirect()->route('hotels')->with('success', 'Hotel created successfully');
         } catch (\Throwable $th) {
             \DB::rollback();
-            dd($th);
             throw $th;
         }
     }

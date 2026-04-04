@@ -2,7 +2,6 @@
 
 namespace App\Livewire\Rooms;
 
-use App\Http\Livewire\Rooms\View;
 use Livewire\Component;
 
 class Create extends Component

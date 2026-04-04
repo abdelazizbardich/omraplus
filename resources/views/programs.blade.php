@@ -17,26 +17,10 @@
                         </label>
                     </div>
                     <div class="mb-3">
-                        <label class="input input-bordered flex items-center gap-2 text-nowrap">
-                            {{__('index.Hotel in macca')}}:
-                            <select name="hotel_macca" class="grow border-none focus:shadow-none shadow-none">
-                                <option value="0" disabled selected>{{__('index.Select hotel')}}</option>
-                                @foreach ($maccaHotels as $maccaHotel)
-                                    <option value="{{ $maccaHotel->id }}" @if(old('hotel_macca',$program->hotel_id_mecca) === $maccaHotel->id) selected @endif>{{ $maccaHotel->name }}</option>
-                                @endforeach
-                            </select>
-                        </label>
+                        @livewire('hotels.dropdown', ['selected' => $program->hotel_id_mecca, 'name' => 'hotel_macca'])
                     </div>
                     <div class="mb-3">
-                        <label class="input input-bordered flex items-center gap-2">
-                            {{__('index.Hotel in medina')}}:
-                            <select name="hotel_medina" class="grow border-none focus:shadow-none shadow-none">
-                                <option value="0" disabled selected>{{__('index.Select hotel')}}</option>
-                                @foreach ($medinaHotels as $medinaHotel)
-                                    <option value="{{ $medinaHotel->id }}" @if(old('hotel_medina',$program->hotel_id_medina) === $medinaHotel->id) selected @endif>{{ $medinaHotel->name }}</option>
-                                @endforeach
-                            </select>
-                        </label>
+                        @livewire('hotels.dropdown', ['selected' => $program->hotel_id_medina, 'name' => 'hotel_medina'])
                     </div>
                     <div class="mb-3">
                         <label class="input input-bordered flex items-center gap-2">
@@ -80,24 +64,10 @@
                         </label>
                     </div>
                     <div class="mb-3">
-                        <label class="input input-bordered flex items-center gap-2 text-nowrap">
-                            {{__('index.Hotel in macca')}}:
-                            <select name="hotel_macca" class="grow border-none focus:shadow-none shadow-none">
-                                @foreach ($maccaHotels as $maccaHotel)
-                                    <option value="{{ $maccaHotel->id }}">{{ $maccaHotel->name }}</option>
-                                @endforeach
-                            </select>
-                        </label>
+                        @livewire('hotels.dropdown', ['name' => 'hotel_macca'])
                     </div>
                     <div class="mb-3">
-                        <label class="input input-bordered flex items-center gap-2">
-                            {{__('index.Hotel in medina')}}:
-                            <select name="hotel_medina" class="grow border-none focus:shadow-none shadow-none">
-                                @foreach ($medinaHotels as $medinaHotel)
-                                    <option value="{{ $medinaHotel->id }}">{{ $medinaHotel->name }}</option>
-                                @endforeach
-                            </select>
-                        </label>
+                        @livewire('hotels.dropdown', ['name' => 'hotel_medina'])
                     </div>
                     <div class="mb-3">
                         <label class="input input-bordered flex items-center gap-2">
@@ -195,4 +165,7 @@
             </div>
         </div>
     </main>
+
+    <!-- add hotel modal -->
+     @livewire('hotels.create')
 </x-app-layout>

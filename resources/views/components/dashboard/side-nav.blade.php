@@ -8,61 +8,61 @@
             <hr class="border-0 border-b opacity-65 mb-5">
         </div>
         <div class="overflow-y-auto h-max no-scrollbar flex flex-col">
-            <a href="{{ route('dashboard') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Dashboard')}}">
+            <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Dashboard')}}">
                 <img src="{{ Vite::asset('resources/images/dashboard.png') }}" alt="{{__('index.Dashboard')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Dashboard')}}</span>
             </a>
-            <a href="{{ route('fast-add') }}" class="bg-gradient-to-br from-yellow-300 to-yellow-500 text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Fast add')}}">
-                <img src="{{ Vite::asset('resources/images/fast-add.png') }}" alt="{{__('index.Fast add')}}" class="w-8 inline-block">
-                <span class="mx-2 group-[.closed]:hidden">{{__('index.Fast add')}}</span>
-            </a>
-            <a href="{{ route('flights') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Hajj Flights')}}">
+            <a href="{{ route('flights') }}" class="{{ request()->routeIs('flights') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Hajj Flights')}}">
                 <img src="{{ Vite::asset('resources/images/flights.png') }}" alt="{{__('index.Hajj Flights')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Flights')}}</span>
             </a>
-            <a href="{{ route('categories') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Flights Categories')}}">
+            <a href="{{ route('categories') }}" class="{{ request()->routeIs('categories') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Flights Categories')}}">
                 <img src="{{ Vite::asset('resources/images/categories.png') }}" alt="{{__('index.Flights Categories')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Flights Categories')}}</span>
             </a>
-            <a href="{{ route('programs') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Programs')}}">
+            <a href="{{ route('programs') }}" class="{{ request()->routeIs('programs') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Programs')}}">
                 <img src="{{ Vite::asset('resources/images/programs.png') }}" alt="{{__('index.Programs')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Programs')}}</span>
             </a>
-            <a href="{{ route('hotels') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Hotels')}}">
+            <a href="{{ route('hotels') }}" class="{{ request()->routeIs('hotels') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Hotels')}}">
                 <img src="{{ Vite::asset('resources/images/hotel.png') }}" alt="{{__('index.Hotels')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Hotels')}}</span>
             </a>
-            <a href="{{ route('airlines') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Airlines')}}">
+            <a href="{{ route('airlines') }}" class="{{ request()->routeIs('airlines') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Airlines')}}">
                 <img src="{{ Vite::asset('resources/images/airline.png') }}" alt="{{__('index.Airlines')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Airlines')}}</span>
             </a>
-            <a href="{{ route('pricing') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Pricing')}}">
+            <a href="{{ route('pricing') }}" class="{{ request()->routeIs('pricing') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Pricing')}}">
                 <img src="{{ Vite::asset('resources/images/prices.png') }}" alt="{{__('index.Pricing')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Pricing')}}</span>
             </a>
-            <a href="{{ route('discounts') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Discounts')}}">
+            <a href="{{ route('discounts') }}" class="{{ request()->routeIs('discounts') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Discounts')}}">
                 <img src="{{ Vite::asset('resources/images/discount.png') }}" alt="{{__('index.Discounts')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Discounts')}}</span>
             </a>
-            <a href="{{ route('rooms') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Rooms')}}">
+            <a href="{{ route('rooms') }}" class="{{ request()->routeIs('rooms') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Rooms')}}">
                 <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('index.Rooms')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Rooms')}}</span>
             </a>
-            <a href="{{ route('users') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Users')}}">
+            <a href="{{ route('users') }}" class="{{ request()->routeIs('users') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Users')}}">
                 <img src="{{ Vite::asset('resources/images/room.png') }}" alt="{{__('index.Users')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Users')}}</span>
             </a>
             <div class="divider  divider-start">{{__('index.Orders')}}</div>
-            <a href="{{ route('orders') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Orders')}}">
+            <a href="{{ route('orders') }}" class="{{ request()->routeIs('orders') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Orders')}}">
                 <img src="{{ Vite::asset('resources/images/orders.png') }}" alt="{{__('index.Orders')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Orders')}}</span>
             </a>
+            <a href="{{ route('partners') }}" class="{{ request()->routeIs('partners*') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Partners')}}">
+                <img src="{{ Vite::asset('resources/images/orders.png') }}" alt="{{__('index.Partners')}}" class="w-8 inline-block">
+                <span class="mx-2 group-[.closed]:hidden">{{__('index.Partners')}}</span>
+            </a>
             <div class="divider  divider-start">{{__('index.Blog')}}</div>
-            <a href="{{ route('admin.blog') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Articles')}}">
+            <a href="{{ route('admin.blog') }}" class="{{ request()->routeIs('admin.blog') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Articles')}}">
                 <img src="{{ Vite::asset('resources/images/articles.png') }}" alt="{{__('index.Articles')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Articles')}}</span>
             </a>
-            <a href="{{ route('admin.comments') }}" class="text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Comments')}}">
+            <a href="{{ route('admin.comments') }}" class="{{ request()->routeIs('admin.comments') ? 'bg-gradient-to-br from-yellow-300 to-yellow-500' : '' }} text-start cursor-pointer px-2 py-3 hover:bg-gray-200 hover:text-gray-700 rounded block group-[.closed]:tooltip group-[.closed.ltr]:tooltip-right group-[.closed.rtl]:tooltip-left block" data-tip="{{__('index.Comments')}}">
                 <img src="{{ Vite::asset('resources/images/comments.png') }}" alt="{{__('index.Comments')}}" class="w-8 inline-block">
                 <span class="mx-2 group-[.closed]:hidden">{{__('index.Comments')}}</span>
             </a>

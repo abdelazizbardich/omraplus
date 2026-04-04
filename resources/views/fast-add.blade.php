@@ -18,31 +18,41 @@
                     <span data-step="7" class="stepper-nav cursor-pointer hover:bg-gray-300 duration-300 w-fit rounded p-2 outline-3 outline-gray-200 outline flex justify-center items-center text-sm">{{__('index.Discounts')}}</span>
                 </div>
                 <div class="w-full mb-3">
-                    <div id="step-1" class="stepper-content w-full min-h-96 flex justify-start items-start p-3">
-                        @livewire('rooms.view')
+                    <div id="step-1" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 gap-6">
+                        <div class="w-auto">
+                            @livewire('rooms.create')
+                        </div>
+                        <div class="w-max">
+                            @livewire('rooms.view')
+                        </div>
                     </div>
-                    <div id="step-2" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 hidden">
-                        @livewire('hotels.view')
+                    <div id="step-2" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 gap-6 hidden">
+                         <div class="w-auto">
+                            @livewire('hotels.create')
+                        </div>
+                        <div class="w-max">
+                            @livewire('hotels.view')
+                        </div>
                     </div>
-                    <div id="step-3" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 hidden">
+                    <div id="step-3" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 gap-6 hidden">
                         @livewire('airlines.view')
                     </div>
-                    <div id="step-4" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 hidden">
+                    <div id="step-4" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 gap-6 hidden">
                         @livewire('flights.view')
                     </div>
-                    <div id="step-5" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 hidden">
+                    <div id="step-5" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 gap-6 hidden">
                         @livewire('programs.view')
                     </div>
-                    <div id="step-6" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 hidden">
+                    <div id="step-6" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 gap-6 hidden">
                         @livewire('pricing.view')
                     </div>
-                    <div id="step-7" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 hidden">
+                    <div id="step-7" class="stepper-content w-full min-h-96 flex justify-start items-start p-3 gap-6 hidden">
                         @livewire('discounts.view')
                     </div>
                 </div>
                 <div class="full flex justify-between items-center gap-2">
-                    <button class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000 save hidden">{{__('index.Save')}}</button>
-                    <button class="btn back hidden">{{__('index.previous')}}</button>
+                    <button class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000 save gap-6 hidden">{{__('index.Save')}}</button>
+                    <button class="btn back gap-6 hidden">{{__('index.previous')}}</button>
                     <button class="btn next btn-primary bg-blue-950">{{__('index.next')}}</button>
                 </div>
             </div>

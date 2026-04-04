@@ -11,17 +11,7 @@
                             <form action="{{ route('pricing.update', $price->id) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                    <label class="input input-bordered flex items-center gap-2">
-                                        {{__('index.Program')}}:
-                                        <select name="program" class="grow border-none focus:shadow-none shadow-none"
-                                            required>
-                                            @foreach ($programs as $program)
-                                                <option value="{{ $program->id }}" @if($program->id == old('program',$price->id)) selected @endif>{{ $program->flight->title }}- {{ $program->hotelMecca->name }} -
-                                                    {{ $program->hotelMedina->name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </label>
+                                    @livewire('programs.dropdown', ['selected' => old('program', $price->program_id), 'name' => 'program'])
                                 </div>
                                 <div class="flex gap-3 w-full overflow-x-auto mb-3">
                                     @foreach ($rooms as $key => $room)
@@ -59,17 +49,7 @@
                             <form action="{{ route('pricing.save') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                    <label class="input input-bordered flex items-center gap-2">
-                                        {{__('index.Program')}}:
-                                        <select name="program" class="grow border-none focus:shadow-none shadow-none"
-                                            required>
-                                            @foreach ($programs as $program)
-                                                <option value="{{ $program->id }}" @if($program->id == old('program')) selected
-                                                @endif>{{ $program->flight->title }}- {{ $program->hotelMecca->name }} -
-                                                    {{ $program->hotelMedina->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </label>
+                                    @livewire('programs.dropdown', ['selected' => old('program'), 'name' => 'program'])
                                 </div>
                                 <div class="flex gap-3 w-full overflow-x-auto mb-3">
                                     @foreach ($rooms as $room)
@@ -159,4 +139,7 @@
             </div>
         </div>
     </main>
+
+    <!-- add program modal -->
+    @livewire('programs.create')
 </x-app-layout>

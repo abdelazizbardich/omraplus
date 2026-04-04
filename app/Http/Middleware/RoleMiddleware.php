@@ -16,10 +16,11 @@ class RoleMiddleware
      */
     public function handle(Request $request, Closure $next, string $role): Response
     {
-        // if(Auth::check() && Auth::user()->roles != $role){
-        //     auth()->guard('web')->logout();
-        //     return redirect()->route('login');
-        // }
+        if(Auth::check() && Auth::user()->role != $role){
+            auth()->guard('web')->logout();
+            // Redirect back to home page
+            return redirect('/')->with('error', __('index.Unauthorized access. Please log in with the correct account.'));
+        }
         return $next($request);
     }
 

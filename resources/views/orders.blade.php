@@ -46,6 +46,8 @@
                                     <td>{{ __('index.' . $order->payment_method)}}</td>
                                     </td>
                                     <th>
+                                        <a href="{{ route('orders.show', $order->id) }}"
+                                            class="btn btn-xs btn-success view"></a>
                                         <a href="{{ route('orders.edit', $order->id) }}"
                                             class="btn btn-xs btn-info edit"></a>
                                         <a href="{{ route('orders.delete', $order->id) }}"

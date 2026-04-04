@@ -99,6 +99,27 @@ body {
         background-size: 60% auto;
         background-repeat: no-repeat;
     }
+    .view{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: white !important;
+        background-image: url('../images/view.png');
+        background-position: center;
+        background-size: 60% auto;
+        background-repeat: no-repeat;
+    }
+    .add{
+        &:hover{
+            transform: scale(1.01);
+        }
+        transition: transform 0.3s;
+        height: 100%;
+        background-image: url('../images/add-option.svg');
+        background-position: center;
+        background-size: 60% auto;
+        background-repeat: no-repeat;
+        aspect-ratio: 1 / 1;
+    }
     .publish{
         width: 1.5rem;
         height: 1.5rem;

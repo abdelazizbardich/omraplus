@@ -46,25 +46,8 @@
                                             {{__('index.Hajj')}}</option>
                                     </select>
                                 </label>
-                                <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Category')}}:
-                                    <select name="category" class="grow border-none focus:shadow-none shadow-none">
-                                        @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}"
-                                                @if(old('category', $flight->category->id) == $category->id) selected @endif>
-                                                {{ $category->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </label>
-                                <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Aireline')}}:
-                                    <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
-                                        @foreach ($airelines as $aireline)
-                                            <option value="{{ $aireline->id }}"
-                                                @if(old('aireline', $flight->airline->id) == $aireline->id) selected @endif>{{ $aireline->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </label>
+                                @livewire('category.dropdown', ['selected' => old('category', $flight->category_id)])
+                                @livewire('airlines.dropdown', ['selected' => old('aireline', $flight->airline_id)])
                                 <div class="form-control">
                                     <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
                                         <span class="label-text">{{__('index.Recomanded')}}</span>
@@ -133,22 +116,8 @@
                                         <option value="hajj" @if(old('type') === 'hajj') selected @endif>{{__('index.Hajj')}}</option>
                                     </select>
                                 </label>
-                                <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Category')}}:
-                                    <select name="category" class="grow border-none focus:shadow-none shadow-none">
-                                        @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}" @if(old('category') == $category->id) selected @endif>{{ $category->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </label>
-                                <label class="text-nowrap input input-bordered flex items-center gap-2">
-                                    {{__('index.Aireline')}}:
-                                    <select name="aireline" class="grow border-none focus:shadow-none shadow-none">
-                                        @foreach ($airelines as $aireline)
-                                            <option value="{{ $aireline->id }}" @if(old('aireline') == $aireline->id) selected @endif>{{ $aireline->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </label>
+                                @livewire('category.dropdown', ['selected' => old('category')])
+                                @livewire('airlines.dropdown', ['selected' => old('aireline')])
                                 <div class="form-control">
                                     <label class="label cursor-pointer flex-row-reverse w-fit gap-3">
                                         <span class="label-text">{{__('index.Recomanded')}}</span>
@@ -253,4 +222,9 @@
             </div>
         </div>
     </main>
+
+    <!-- add category -->
+    @livewire('category.create')
+    <!-- add airline -->
+    @livewire('airlines.create')
 </x-app-layout>

@@ -15,6 +15,9 @@ class Order extends Model
         'payment_status',
         'pilgrims_count',
         'total_price',
+        'partner_id',
+        'commission_amount',
+        'commission_paid',
     ];
 
     
@@ -23,6 +26,11 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    public function partner()
+    {
+        return $this->belongsTo(Partner::class, 'partner_id', 'id');
     }
 
     public function programPrice()

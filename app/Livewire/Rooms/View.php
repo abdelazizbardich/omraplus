@@ -7,16 +7,24 @@ use Livewire\Component;
 
 class View extends Component
 {
+
+    public $rooms;
+
     public function render()
     {
-        $rooms = \App\Models\Room::all();
-        return view('livewire.rooms.view', compact('rooms'));
+        $this->rooms = \App\Models\Room::all();
+        return view('livewire.rooms.view', ['rooms' => $this->rooms]);
     }
 
     #[On('room-created')]
     public function refreshPosts()
     {
-        // Executes when event is received
-        session()->flash('message', "New room created, refreshing list...");
+        $this->rooms = \App\Models\Room::all();
+    }
+
+    public function delete($id)
+    {
+        \App\Models\Room::find($id)->delete();
+        $this->rooms = \App\Models\Room::all();
     }
 }

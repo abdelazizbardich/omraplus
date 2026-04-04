@@ -269,6 +269,16 @@
         <input type="text" name="price_id" value="{{ $price->id }}" hidden>
         <input type="text" name="room_id" value="{{ $room->id }}" hidden>
         <input type="text" name="program_id" value="{{ $program->id }}" hidden>
+        <div class="container w-full mx-auto mb-6">
+            <div class="w-8/12">
+                <div class="rounded-lg shadow-md bg-white mb-6 p-4 flex items-center gap-4">
+                    <span class="text-sm text-gray-500 text-nowrap">{{ __('index.Referral code (optional)') }}:</span>
+                    <input type="text" name="referral_code" value="{{ old('referral_code') }}"
+                        placeholder="{{ __('index.Enter referral code') }}"
+                        class="input input-bordered input-sm grow font-mono" />
+                </div>
+            </div>
+        </div>
     </form>
     <script>
         const travelersCountInput = document.getElementById('travelers-count-input');

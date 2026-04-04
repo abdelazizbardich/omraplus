@@ -15,6 +15,8 @@
             @error('name_ar') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
     <div class="flex justify-between">
-        <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">{{__('index.Add')}}</button>
+        <button type="submit" class="btn btn-wide btn-primary bg-blue-950 border-none hover:bg-blue-1000">
+        <span wire:loading class="loading loading-spinner loading-xs me-1 inline-block"></span>{{__('index.Add')}}
+        </button>
     </div>
 </form>

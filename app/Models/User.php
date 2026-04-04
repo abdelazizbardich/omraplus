@@ -33,6 +33,7 @@ class User extends Authenticatable
         'last_name',
         'city',
         'phone',
+        'role',
         'job'
     ];
 
